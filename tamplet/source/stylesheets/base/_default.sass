@@ -1,0 +1,303 @@
+html 
+	// overflow-y: hidden
+body
+	background-color: $white//#3C4512
+	font-family: Helvetica, arial,'Heiti TC','Microsoft JhengHei UI', "Kozuka Gothic Pro", "Myriad Pro"
+.header
+	position: relative
+	z-index: $idx_normal
+	display: -webkit-flex
+	display: flex
+
+	@media screen and (max-width: 480px)
+		padding: $gap 0
+
+
+
+.header-band
+	background: #fff
+	padding: 0 23px
+	margin: 0
+	width: 257px
+	font-size: 16px
+
+	@media screen and (max-width: 480px)
+		height: 50px
+		width: 50px
+		margin-left: 10px
+		margin-top: 10px
+		padding-top: 2px
+		text-align: center
+		& > img
+			height: 35px
+	p
+		font-size: $font-lg
+		margin-right: 15px
+		margin-top: 7px
+.header-right
+	-webkit-flex: 1
+	flex: 1
+
+.wrap
+	background-color: $white
+	
+.body
+	position: relative
+	z-index: $idx_normal
+	top: 510px
+	width: 100%
+	background-color: $white
+
+
+.header-menu
+	position: relative
+	font-size: $font-lg
+	list-style: none
+	margin-bottom: 0
+	padding-left: 0
+	background: $lg-bg
+	@media screen and (max-width: 736px)
+		padding-left: 0
+		margin-top: $gap
+		opacity: 0
+		width: 70vw
+		+transf(.2s)
+		&.active
+			opacity: 1
+	.menu-item
+		position: relative
+		display: inline-block
+		margin-left: 30px
+		padding-top: 18px
+		height: 55px
+		text-align: center
+		cursor: pointer
+		@media screen and (max-width: 736px)
+			display: block
+			text-align: left
+			border-bottom: 1px dotted $subC-g
+			height: auto
+		& > a
+			color: $mainC
+			text-decoration: none
+			@media screen and (max-width: 736px)
+				color: $white
+		&:before
+			content: ""
+			position: absolute
+			display: inline-block
+			background-color: transparent
+			height: 3px
+			top: 0
+			width: 0%
+			left: 50%
+			+transf(.3s, width)
+			@media screen and (max-width: 736px)
+				display: none
+				
+		&:hover:before,&.active:before
+			width: 100%
+			left: 0
+			background-color: $white
+		@media screen and (max-width: 736px)
+			&.active:after
+				content: ""
+				position: absolute
+				display: inline-block
+				background-color: $subC-o
+				height: 100%
+				top: 0
+				width: 4px
+				left: 0
+			&:first-child:after
+				display: none
+
+.mob-menu
+	float: right
+	margin: $gap $gap*1.5 0
+	background-color: $subC-g
+	height: 2px
+	width: $gap
+	position: relative
+	&.index,&.index:after,&.index:before
+		background: $white
+	&:after,&:before
+		content: ""
+		height: 2px
+		width: $gap
+		position: absolute
+		background-color: $subC-g
+		display: inline-block
+		left: 0
+		
+	&:after
+		top: 6px
+	&:before
+		top: 12px
+
+
+
+
+
+.deco-line
+	position: relative
+	height: 3px
+	display: block
+	&:after,&:before
+		content: ""
+		display: inline-block
+		position: absolute
+		top: 0
+		height: 3px
+
+	&:before
+		width: 70%
+		background-color: $subC-g
+		left: 0
+	&:after
+		width: 30%
+		background-color: $mainC
+		right: 0
+	&.rotate-invert
+		+rotate(180deg)
+	&.index
+		z-index: $idx_hest
+
+footer
+	background: #819429
+	border-bottom: #3C4512 10px solid
+	padding: 38px 0
+	color: $white
+	font-size: $font-sm
+	
+
+.link-group
+	list-style: none
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		background-color: $white
+		width: 1px
+		height: 40px
+		top: 31.5%
+		right: 0
+
+	li
+		padding: 5px 0
+	a
+		color: $white
+		
+		&:hover,:active
+			text-decoration: none
+.shop
+	padding-top: 13px
+
+.shop-img
+	background-color: $white
+	overflow: hidden
+	float: left
+	border-radius: 100%
+	width: 38px
+	height: 38px
+	margin-right: 38px
+
+	img
+		width: 100%
+		height: auto
+		padding-top: 3px
+
+.shop-info
+	padding-top: 5px
+	line-height: 2em
+
+.page-title
+	margin: 0
+	padding: $gap*2 25px
+	@media screen and (max-width: 480px) 
+		padding: $gap 25px
+.content-gap
+	padding: 0 25px
+
+// oocss
+
+.maB1x 
+	margin-bottom: $gap
+.maB2x 
+	margin-bottom: $gap*2
+.maT2x
+	margin-top: $gap*2
+.lh2x
+	line-height: $font-lg
+.pdL2x
+	padding-left: $gap*2 
+.pdT2x
+	padding-top: $gap*2 
+.btn-style
+	display: inline-block
+	background-color: $subC-o
+	color: $white
+	cursor: pointer
+	+transf(.3s)
+	&:hover,&:active
+		opacity: .85
+		color: $white
+		text-decoration: none
+
+.mob-menu-list
+	display: none
+
+.navy
+	color: $navy
+
+
+// rwd
+@media screen and (min-width: 768px) and (max-width: 1024px)
+	.container
+		width: 970px
+	.banner
+		overflow: hidden
+		width: 100%
+@media screen and (max-width: 768px)
+	.container
+		width: 100%
+
+@media screen and (max-width: 736px)
+	.container
+		width: 100%
+	.banner
+		overflow: hidden
+		width: 100%
+	.mob-menu-list
+		width: 70vw
+		height: 100%
+		height: 100vh
+		position: fixed
+		top: 0
+		right: 0vw
+		overflow: hidden
+		background-color: $mainC
+		opacity: 0
+		display: block
+		+transf(.2s,opacity)
+		&.active
+			opacity: 1
+
+
+	.wrap
+		position: relative
+		left: 0vw
+		z-index: 2
+		webkit-transition: left .3s, -webkit-filter .3s
+		-o-transition: left .3s, -webkit-filter .3s
+		transition: left .3s, -webkit-filter .3s
+		-webkit-transition-timing-function: linear
+		transition-timing-function: linear
+		&.active
+			left: -70vw
+			overflow: hidden
+
+
+
+
+
