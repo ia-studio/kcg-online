@@ -7,6 +7,9 @@
 	
 	function myCtrl($http){
 		var vm = this; 
+		vm.caseActive = false;
+
+
 		vm.isActive = false;
 		vm.data = {};
 		$http.get('javascripts/data.json').success(function(data) {

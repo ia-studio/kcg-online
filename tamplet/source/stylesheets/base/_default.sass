@@ -10,7 +10,8 @@ body
 	display: flex
 
 	@media screen and (max-width: 480px)
-		padding: $gap 0
+		padding: 0 $gap
+		display: block
 
 
 
@@ -22,18 +23,14 @@ body
 	font-size: 16px
 
 	@media screen and (max-width: 480px)
-		height: 50px
-		width: 50px
-		margin-left: 10px
-		margin-top: 10px
-		padding-top: 2px
-		text-align: center
-		& > img
-			height: 35px
+		padding: 5px 5px
 	p
+		display: inline-block
 		font-size: $font-lg
 		margin-right: 15px
 		margin-top: 7px
+	img
+		vertical-align: top
 .header-right
 	-webkit-flex: 1
 	flex: 1
@@ -44,7 +41,6 @@ body
 .body
 	position: relative
 	z-index: $idx_normal
-	top: 510px
 	width: 100%
 	background-color: $white
 
@@ -111,6 +107,10 @@ body
 				left: 0
 			&:first-child:after
 				display: none
+		.fa
+			padding: 5px 10px
+			border-radius: 50%
+			border: $white 1px solid
 
 .mob-menu
 	float: right
@@ -136,8 +136,39 @@ body
 		top: 12px
 
 
+.article-header
+	position: relative
+	width: 100%
+	padding-bottom: $gap
+	&:after
+		content: ""
+		position: absolute
+		top: 50%
+		left: 0
+		z-index: $idx_normal
+		height: 1px
+		width: 100%
+		background-color: $mainC
+	&:before
+		content: ""
+		box-sizing: content-box
+		position: absolute
+		top: -30px
+		left: -15px
+		z-index: $idx_normal
+		height: 30px
+		width: 100%
+		padding: 0 $gap
+		background-color: $white
 
-
+.article-title
+	display: inline-block
+	position: relative
+	z-index: $idx_her
+	padding-left: 30px
+	padding-right: 30px
+	color: $mainC
+	background-color: $white
 
 .deco-line
 	position: relative
@@ -164,36 +195,52 @@ body
 		z-index: $idx_hest
 
 footer
-	background: #819429
-	border-bottom: #3C4512 10px solid
-	padding: 38px 0
-	color: $white
+	background: #F7F7F7
+	padding: $gap 0
+	color: #797C83
 	font-size: $font-sm
-	
+
+.body-content
+	padding-bottom: 150px !important
 
 .link-group
 	list-style: none
 	position: relative
+	padding-left: 20px
+	margin-top: 20px
 	&:after
 		content: ""
 		position: absolute
-		background-color: $white
+		background-color: #EEEEEE
 		width: 1px
-		height: 40px
-		top: 31.5%
-		right: 0
+		height: 100%
+		top: 0
+		left: 0
 
 	li
 		padding: 5px 0
+		position: relative
+		cursor: pointer
+		a
+			display: inline-block
+			position: relative
+		a:hover:after
+			position: absolute
+			content: ""
+			bottom: -2px
+			left: 0
+			width: 100%
+			height: 1px
+			background-color: #4DB6AC
 	a
-		color: $white
+		color: #4DB6AC
 		
-		&:hover,:active
+		&:hover,&:focus
 			text-decoration: none
-.shop
+.footer
 	padding-top: 13px
 
-.shop-img
+.footer-img
 	background-color: $white
 	overflow: hidden
 	float: left
@@ -207,7 +254,7 @@ footer
 		height: auto
 		padding-top: 3px
 
-.shop-info
+.footer-info
 	padding-top: 5px
 	line-height: 2em
 
@@ -219,6 +266,25 @@ footer
 .content-gap
 	padding: 0 25px
 
+
+.link
+	display: inline-block
+	position: relative
+	color: #F49A44
+	text-decoration: none
+	cursor: pointer
+	&:hover
+		text-decoration: none
+		color: #F38933
+
+	&:after
+		content: ""
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 1px
+		background-color: #F49A44
 // oocss
 
 .maB1x 
@@ -231,18 +297,40 @@ footer
 	line-height: $font-lg
 .pdL2x
 	padding-left: $gap*2 
+.pdR1x
+	padding-right: $gap 
 .pdT2x
 	padding-top: $gap*2 
+.pdT1x
+	padding-top: $gap
+.pdLR1x
+	padding: 0 $gap
 .btn-style
-	display: inline-block
-	background-color: $subC-o
+	display: block
+	background-color: #F49A44
 	color: $white
 	cursor: pointer
-	+transf(.3s)
+	+transf(.3s ,"opacity")
 	&:hover,&:active
 		opacity: .85
 		color: $white
 		text-decoration: none
+.contact-phone
+	text-align: center
+	text-decoration: none
+	width: 100%
+	padding: 10px 0
+	border-radius: 20px
+	font-size: $font-xl
+
+.font-sm
+	font-size: $font-sm
+.font-md
+	font-size: $font-md
+.font-lg
+	font-size: $font-lg
+.font-xl
+	font-size: $font-xl
 
 .mob-menu-list
 	display: none
@@ -261,7 +349,8 @@ footer
 @media screen and (max-width: 768px)
 	.container
 		width: 100%
-
+	.body-content
+		padding-bottom: 40px
 @media screen and (max-width: 736px)
 	.container
 		width: 100%

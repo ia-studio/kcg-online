@@ -8,23 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="Author" content="Ilandy">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-    <% if page_classes == "contact" %>
-      <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-      <!--引用百度地图API-->
-      <style type="text/css">
-          html,body{margin:0;padding:0;}
-          .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
-          .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
-      </style>
-      <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
-      <script type="text/javascript" src="javascripts/baidu.js"></script>
-    <% end %>
     <!-- Use title if it's in the page YAML frontmatter -->
     <% page_name = page_classes.split(' ').last %>
     <% file_name = page_name.to_sym %>
     <title><%= data.pageInfo[file_name].Title %></title>
-
+    <script src="https://use.fontawesome.com/2c72f40202.js"></script>
     <link href="stylesheets/all.css?v=<% v=Time.new v2=Time.now.sec %><%= v2 %>" rel="stylesheet" type="text/css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
     <script src="javascripts/all.js"></script>
@@ -46,7 +36,7 @@
       <% if page_classes == 'index' %>
         <%= partial "partials/index.html.erb"%>
       <% end %>
-      <!-- <%= partial "partials/footer.html.erb" %> -->
+      <%= partial "partials/footer.html.erb" %>
     </div>
     <div class="mob-menu-list" ng-class="{'active':m.isActive}">
         <ul class="header-menu" ng-class="{'active':m.isActive}">
