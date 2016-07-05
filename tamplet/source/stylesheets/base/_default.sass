@@ -11,8 +11,9 @@ body
 	display: flex
 
 	@media screen and (max-width: 480px)
-		padding: 0 $gap
 		display: block
+		padding: 0
+		width: 100%
 
 
 
@@ -25,13 +26,29 @@ body
 
 	@media screen and (max-width: 480px)
 		padding: 5px 5px
+		width: 100vw
+		background-image: $lg-bg
 	p
 		display: inline-block
 		font-size: $font-lg
 		margin-right: 15px
 		margin-top: 7px
+		@media screen and (max-width: 480px)
+			font-size: $font-md
+			margin-bottom: 7px
+			& > .navy
+				color: $white
 	img
 		vertical-align: top
+		@media screen and (max-width: 480px)
+			background: rgba(255,255,255,.6)
+			border: 1px solid $white
+			border-radius: 50%
+			width: 34px
+			height: 34px
+			padding: 5px 7px
+			vertical-align: inherit 
+
 .header-right
 	-webkit-flex: 1
 	flex: 1
@@ -117,7 +134,7 @@ body
 .mob-menu
 	float: right
 	margin: $gap $gap*1.5 0
-	background-color: $subC-g
+	background-color: $white
 	height: 2px
 	width: $gap
 	position: relative
@@ -128,7 +145,7 @@ body
 		height: 2px
 		width: $gap
 		position: absolute
-		background-color: $subC-g
+		background-color: $white
 		display: inline-block
 		left: 0
 		

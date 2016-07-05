@@ -6,8 +6,9 @@
         <span class="navy">線上即時服務系統</span><br>
         <small class="navy">Service online</small>
       </p>
+      <div class="mob-menu visible-xs-block"></div>
     </h1>
-  <div class="header-right hidden-sm-block">
+  <div class="header-right hidden-sm hidden-xs">
     <ul class="header-menu">
       <li class="menu-item <%= is_page_selected('')%>"><a href="index.html">市長信箱</a></li>
       <li class="menu-item <%= is_page_selected('Case.html') %>"><a href="Case.html">案件查詢</a></li>
@@ -18,8 +19,5 @@
       <li class="menu-item"><a href="http://disdp.kcg.gov.tw/exchange/feedback.php" target="_blank">廉政案件</a></li>
       <li class="menu-item"><a href="http://disdp.kcg.gov.tw/exchange/feedback.php" target="_blank"><i class="fa fa-info"></i></a></li>
     </ul>
-  </div>
-
-  <div class="mob-menu visible-xs-block" ng-click="m.menuActive()">
   </div>
 </nav>
