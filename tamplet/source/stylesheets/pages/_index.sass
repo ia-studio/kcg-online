@@ -1,11 +1,3 @@
-.wrap
-	&.index
-		background-color: transparent
-		.header-menu 
-			a
-				color: $white
-				text-shadow: 0 0 4px rgba(0,0,0,.5)
-
 .index-header
 	position: relative
 	width: 100%
@@ -55,6 +47,83 @@
 	height: 588px
 	background-image: url($slash-bg)
 	opacity: .3
+
+.header-content
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	width: 245px
+	height: 210px
+	margin: auto
+	color: $white
+	text-shadow: 0 0 3px #000
+	.header-content-bg
+		position: absolute
+		overflow: hidden
+		width: 100%
+		height: 100%
+		border: 4px solid $white
+		box-shadow: 0 3px 20px #000
+
+		&:after
+			content: ""
+			position: absolute
+			top: -5px
+			left: -5px
+			z-index: 1
+			width: 105%
+			height: 105%
+			background: url("../images/index/big-header.png")
+			background-position: center -368px
+			background-size: 100vw auto
+			-webkit-filter: blur(5px)
+			-moz-filter: blur(5px)
+			-ms-filter: blur(5px)
+			filter: blur(5px)
+	.header-content-info
+		position: relative
+		z-index: 2
+		padding: 20px
+	.contact-phone
+		margin-top: 70px
+		border: 3px solid #F49A44
+		text-shadow: none
+		box-shadow: 0 3px 20px #000
+		&:hover
+			background: $white
+			opacity: 1
+			color: #F49A44
+			& > i
+				webkit-animation-duration: 1s
+				animation-duration: 1s
+				-webkit-animation-fill-mode: both
+				animation-fill-mode: both
+				animation-iteration-count: infinite
+				-webkit-animation-iteration-count: infinite
+				z-index: 100
+				@extend .tada
+
+
+
+
+.phone-call
+	position: relative
+	color: $white
+	&:after
+		content: ""
+		position: absolute
+		bottom: -5px
+		left: 2px
+		width: 100%
+		height: 1px
+		background-color: $white
+		box-shadow: 0 0 3px #000
+	&:hover
+		text-decoration: none
+		color: $white
+
 
 .out-conatainer
 	position: relative
