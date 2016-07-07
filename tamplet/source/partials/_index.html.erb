@@ -21,23 +21,20 @@
 			</div>
 		</div>
 		<div class="row pdLR1x body-content">
-			<% 3.times do |num|%>
+			<% 3.times do |f|%>
 				<div class="col-md-4">
-					<% 7.times do |num|%>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
+					<div class="case-type" ng-click="m.caseActive(case.id,m.case)" ng-class="{'active':case.active}" ng-repeat="case in m.case | filter:'colm<%=f+1%>'">
+						<p class="case-type-name"><span class="case-type-num"> {{ case.id }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> {{case.type}} <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-45':m.case[$index].active}"></i></span></p>
 						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
+						<ul class="case-list" ng-if="case.item.length !== 0">
+							<li class="case-item" ng-repeat="item in case.item"><a href="###">{{item.name}}</a></li>
 						</ul>
 					</div>
-					<% end %>
 				</div>
 			<% end %>
 		</div>
+		<!-- <pre>
+			{{ m.case | json }}
+		</pre> -->
 	</div>
 </div>

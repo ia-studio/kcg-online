@@ -1,19 +1,38 @@
 {
-	 "index":{
-	 	"Title": "市長信箱 - 高雄市政府線上即時服務平台",
-		"PageBanner": "about_banner.png"
-	 	},
-	 "about":{
-	 	"Title": "企業情報 | 廣西金秀松源林產有限公司",
-		"PageBanner": "about_banner.png"
-	 	},
-	 "contact":{
-	 	"Title": "客戶服務 | 廣西金秀松源林產有限公司",
-		"PageBanner": "contact_banner.png"
-	 },
-	 "product":{
-	 	"Title": "產品介紹 | 廣西金秀松源林產有限公司",
-		"PageBanner": "product_banner.png"
-	}
+    "index": {
+        "Title": "市長信箱 - 高雄市政府線上即時服務平台",
+        "PageBanner": "about_banner.png",
+        "case": [{
+            "type": "路燈維護",
+            "item": [{
+                "name": "故障不亮",
+                "link": ""
+            }, {
+                "name": "白天未熄",
+                "link": ""
+            }]
+        }, {
+            "type": "道路維護",
+            "item": [{
+                "name": "道路凹陷坑洞",
+                "link": ""
+            }, {
+                "name": "施工回填不實",
+                "link": ""
+            }]
+        }]
+    },
+    "about": {
+        "Title": "企業情報 | 廣西金秀松源林產有限公司",
+        "PageBanner": "about_banner.png"
+    },
+    "contact": {
+        "Title": "客戶服務 | 廣西金秀松源林產有限公司",
+        "PageBanner": "contact_banner.png"
+    },
+    "product": {
+        "Title": "產品介紹 | 廣西金秀松源林產有限公司",
+        "PageBanner": "product_banner.png"
+    }
 
 }

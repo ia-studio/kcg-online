@@ -61,6 +61,7 @@ a
 .header-right
 	-webkit-flex: 1
 	flex: 1
+	background: $lg-bg
 
 .heade-news
 	position: absolute
@@ -87,6 +88,8 @@ a
 		white-space: nowrap
 		text-overflow: ellipsis
 		vertical-align: middle
+		@media screen and (max-width: 480px)
+			width: 75vw
 	span
 		position: absolute
 		display: inline-block
@@ -97,6 +100,7 @@ a
 		text-align: center
 		cursor: pointer
 	@media screen and (max-width: 480px)
+		top: 58px
 		width: 100%
 
 
@@ -116,7 +120,6 @@ a
 	list-style: none
 	margin-bottom: 0
 	padding-left: 0
-	background: $lg-bg
 	@media screen and (max-width: 736px)
 		padding-left: 0
 		margin-top: $gap
@@ -265,7 +268,11 @@ footer
 	font-size: $font-sm
 
 .body-content
-	padding-bottom: 150px !important
+	min-height: 750px
+	@media screen and (max-width: 480px)
+		min-height: inherit
+		padding-bottom: 150px !important
+
 
 .link-group
 	list-style: none
