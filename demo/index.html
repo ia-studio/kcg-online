@@ -11,7 +11,7 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>市長信箱 - 高雄市政府線上即時服務平台</title>
     <script src="https://use.fontawesome.com/2c72f40202.js"></script>
-    <link href="stylesheets/all.css?v=31" rel="stylesheet" type="text/css">
+    <link href="stylesheets/all.css?v=3" rel="stylesheet" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
@@ -31,10 +31,12 @@
         <span class="navy">線上即時服務系統</span><br>
         <small class="navy">Service online</small>
       </p>
+      
       <div class="mob-menu visible-xs-block"></div>
     </h1>
-  <div class="header-right hidden-sm hidden-xs">
-    <ul class="header-menu">
+  <div class="header-right hidden-xs">
+    <div class="mob-menu visible-md visible-sm"></div>
+    <ul class="header-menu visible-lg">
       <li class="menu-item active"><a href="index.html">市長信箱</a></li>
       <li class="menu-item "><a href="Case.html">案件查詢</a></li>
       <li class="menu-item "><a href="Service.html">服務流程</a></li>
@@ -76,243 +78,36 @@
 		</div>
 		<div class="row pdLR1x body-content">
 				<div class="col-md-4">
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
+					<div class="case-type" ng-click="m.caseActive(case.id,m.case)" ng-class="{'active':case.active}" ng-repeat="case in m.case | filter:'colm1'">
+						<p class="case-type-name"><span class="case-type-num"> {{ case.id }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> {{case.type}} <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-45':m.case[$index].active}"></i></span></p>
 						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
+						<ul class="case-list" ng-if="case.item.length !== 0">
+							<li class="case-item" ng-repeat="item in case.item"><a href="###">{{item.name}}</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
+					<div class="case-type" ng-click="m.caseActive(case.id,m.case)" ng-class="{'active':case.active}" ng-repeat="case in m.case | filter:'colm2'">
+						<p class="case-type-name"><span class="case-type-num"> {{ case.id }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> {{case.type}} <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-45':m.case[$index].active}"></i></span></p>
 						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
+						<ul class="case-list" ng-if="case.item.length !== 0">
+							<li class="case-item" ng-repeat="item in case.item"><a href="###">{{item.name}}</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
+					<div class="case-type" ng-click="m.caseActive(case.id,m.case)" ng-class="{'active':case.active}" ng-repeat="case in m.case | filter:'colm3'">
+						<p class="case-type-name"><span class="case-type-num"> {{ case.id }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> {{case.type}} <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-45':m.case[$index].active}"></i></span></p>
 						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
-						</ul>
-					</div>
-					<div class="case-type" ng-click="!m.caseActive" ng-class="{'active':m.caseActive == true}">
-						<p class="case-type-name"><span class="case-type-num">01 <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 路燈維護 <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-90':m.caseActive == true}"></i></span></p>
-						<div class="clearfix"></div>
-						<ul class="case-list">
-							<li class="case-item"><a href="###">故障不亮</a></li>
-							<li class="case-item"><a href="###">白天未熄</a></li>
-							<li class="case-item"><a href="###">路燈損毀</a></li>
-							<li class="case-item"><a href="###">路燈遷移</a></li>
-							<li class="case-item"><a href="###">其他事項</a></li>
+						<ul class="case-list" ng-if="case.item.length !== 0">
+							<li class="case-item" ng-repeat="item in case.item"><a href="###">{{item.name}}</a></li>
 						</ul>
 					</div>
 				</div>
 		</div>
+		<!-- <pre>
+			{{ m.case | json }}
+		</pre> -->
 	</div>
 </div>
 
