@@ -19,11 +19,11 @@
       <li class="menu-item"><a href="http://work1999.kcg.gov.tw/Rptdownload.aspx" target="_blank">案件反應排行榜</a></li>
       <li class="menu-item <%= is_page_selected('Satisfaction.html') %>"><a href="Satisfaction.html">案件處理滿意度</a></li>
       <li class="menu-item"><a href="http://disdp.kcg.gov.tw/exchange/feedback.php" target="_blank">廉政案件</a></li>
-      <li class="menu-item"><a href="http://disdp.kcg.gov.tw/exchange/feedback.php" target="_blank"><i class="fa fa-info"></i></a></li>
+      <li class="menu-item" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></li>
     </ul>
   </div>
-  <div class="heade-news">
+  <div class="heade-news" ng-if="m.newsActive">
     <a href="">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a>
-    <span class="pull-right"><i class="fa fa-times-circle"></i></span>
+    <span class="pull-right" ng-click="m.newsActive = false"><i class="fa fa-times-circle"></i></span>
   </div>
 </nav>
