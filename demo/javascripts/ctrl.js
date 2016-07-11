@@ -12,9 +12,10 @@
 		vm.isActive = false;
 		vm.data = {};
 		vm.caseActive = getItemActive;
-		vm.itemActive,
-		vm.activeVal = true,
+		vm.itemActive;
+		vm.activeVal = true;
 		vm.normalVal = false;
+		vm.newsActive = true;
 
 		$http.get('javascripts/data.json').success(function(data) {
             vm.data = data;
