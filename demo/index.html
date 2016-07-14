@@ -7,12 +7,12 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="Author" content="Ilandy &nbsp; Austin">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>市長信箱 - 高雄市政府線上即時服務平台</title>
     <script src="https://use.fontawesome.com/2c72f40202.js"></script>
-    <link href="stylesheets/all.css?v=48" rel="stylesheet" type="text/css">
+    <link href="stylesheets/all.css?v=51" rel="stylesheet" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
@@ -34,11 +34,11 @@
       </p>
       
       <div class="news visible-xs maT1x" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></div>
-      <div class="mob-menu visible-xs"></div>
+      <div class="mob-menu visible-xs" ng-click="m.isActive=!m.isActive"></div>
     </h1>
   <div class="header-right hidden-xs">
     
-    <div class="mob-menu visible-md visible-sm"></div>
+    <div class="mob-menu visible-md visible-sm" ng-click="m.isActive=!m.isActive"></div>
     <div class="news visible-md visible-sm maT1x" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></div>
     <ul class="header-menu visible-lg">
       <li class="menu-item active"><a href="index.html">市長信箱</a></li>
@@ -144,14 +144,24 @@
 	</div>
 </footer>
     </div>
-    <div class="mob-menu-list" ng-class="{'active':m.isActive}">
-        <ul class="header-menu" ng-class="{'active':m.isActive}">
-          <li class="menu-item" ng-click="m.menuActive()"><a href="###"><i class="glyphicon glyphicon-chevron-left"></i>&nbsp;&nbsp;返回</a></li>
-          <li class="menu-item active"><a href="index.html">網站首頁</a></li>
-          <li class="menu-item "><a href="about.html">企業情報</a></li>
-          <li class="menu-item "><a href="product.html">產品介紹</a></li>
-          <li class="menu-item "><a href="contact.html">客戶服務</a></li>
-        </ul>
-      </div>
+      <div class="mob-menu-list" ng-class="{'active':m.isActive}">
+	
+    <div class="mob-menu-close" ng-class="{'active':m.isActive}" ng-click="m.isActive = !m.isActive"></div>
+	<ul class="header-menu" ng-class="{'active':m.isActive}"> 
+	  <li class="menu-item active"><a href="index.html">市長信箱</a></li>
+	  <li class="menu-item "><a href="">即時服務案件查詢</a></li>
+	  <li class="menu-item "><a href="">服務流程</a></li>
+	  <li class="menu-item "><a href="">常見問題集 FAQ</a></li>
+	  <li class="menu-item"><a href="http://work1999.kcg.gov.tw/Rptdownload.aspx" target="_blank">案件反應排行榜</a></li>
+	  <li class="menu-item "><a href="">案件處理滿意度</a>
+		<ul class="mob-sub-menu">
+			<li class="menu-item"><a href="">各項滿意度調查</a></li>
+			<li class="menu-item"><a href="">各問題次數分配表</a></li>
+			<li class="menu-item"><a href="">各問題有效值與遺漏值</a></li>
+		</ul>
+	  </li>
+	  <li class="menu-item"><a href="http://disdp.kcg.gov.tw/exchange/feedback.php" target="_blank">廉政案件</a></li>
+	</ul>
+</div>
   </body>
 </html>
