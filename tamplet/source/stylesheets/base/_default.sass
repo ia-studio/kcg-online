@@ -11,102 +11,6 @@ a
 		color: #4075AA
 		text-decoration: none
 
-.header
-	position: relative
-	z-index: $idx_normal
-	display: -webkit-flex
-	display: flex
-
-	@media screen and (max-width: 480px)
-		display: block
-		padding: 0
-		width: 100%
-		position: fixed
-		z-index: $idx_hest
-
-
-
-.header-band
-	background: #fff
-	padding: 0 23px
-	margin: 0
-	width: 257px
-	font-size: 16px
-
-	@media screen and (max-width: 767px)
-		padding: 5px 5px
-		width: 100vw
-		background-image: $lg-bg
-	p
-		display: inline-block
-		font-size: $font-lg
-		margin-right: 15px
-		margin-top: 7px
-		@media screen and (max-width: 767px)
-			font-size: $font-md
-			margin-bottom: 7px
-			& > .navy
-				color: $white
-	img
-		vertical-align: top
-		@media screen and (max-width: 767px)
-			background: rgba(255,255,255,.6)
-			border: 1px solid $white
-			border-radius: 50%
-			width: 34px
-			height: 34px
-			padding: 5px 7px
-			vertical-align: inherit 
-
-.header-right
-	-webkit-flex: 1
-	flex: 1
-	background: $lg-bg
-
-.header-news
-	position: absolute
-	top: 62px
-	right: 0
-	width: 475px
-	padding: 12px 20px
-	background-color: rgba(255,255,255,.7)
-	&:after
-		content: ""
-		position: absolute
-		top: -5px
-		right: 53px
-		width: 0
-		height: 0
-		border-style: solid
-		border-width: 0 3.5px 5px 3.5px
-		border-color: transparent transparent rgba(255,255,255,.7) transparent
-		@media screen and (max-width: 1200px)
-			right: 62px
-
-
-	a
-		display: inline-block
-		overflow: hidden
-		width: 400px
-		white-space: nowrap
-		text-overflow: ellipsis
-		vertical-align: middle
-		@media screen and (max-width: 480px)
-			width: 75vw
-	span
-		position: absolute
-		display: inline-block
-		top: 0
-		right: 0
-		width: 45px
-		padding: 15px 0
-		text-align: center
-		cursor: pointer
-	@media screen and (max-width: 480px)
-		top: 58px
-		width: 100%
-
-
 .wrap
 	background-color: $white
 	
@@ -115,103 +19,6 @@ a
 	z-index: $idx_normal
 	width: 100%
 	background-color: $white
-
-
-.header-menu
-	position: relative
-	font-size: $font-lg
-	list-style: none
-	margin-bottom: 0
-	padding-left: 0
-	@media screen and (max-width: 736px)
-		padding-left: 0
-		margin-top: $gap
-		opacity: 0
-		width: 70vw
-		+transf(.2s)
-		&.active
-			opacity: 1
-	.menu-item
-		position: relative
-		display: inline-block
-		margin-left: 30px
-		padding-top: 18px
-		height: 55px
-		text-align: center
-		cursor: pointer
-		@media screen and (max-width: 736px)
-			display: block
-			text-align: left
-			border-bottom: 1px dotted $subC-g
-			height: auto
-		& > a
-			color: $white
-			text-decoration: none
-		&:before
-			content: ""
-			position: absolute
-			display: inline-block
-			background-color: transparent
-			height: 3px
-			top: 0
-			width: 0%
-			left: 50%
-			+transf(.3s, width)
-			@media screen and (max-width: 736px)
-				display: none
-				
-		&:hover:before,&.active:before
-			width: 100%
-			left: 0
-			top: -3px
-			background-color: $white
-		@media screen and (max-width: 736px)
-			&.active:after
-				content: ""
-				position: absolute
-				display: inline-block
-				background-color: $subC-o
-				height: 100%
-				top: 0
-				width: 4px
-				left: 0
-			&:first-child:after
-				display: none
-		.fa
-			padding: 5px 10px
-			border-radius: 50%
-			border: $white 1px solid
-
-.news
-	position: absolute
-	top: 0px
-	right: 52px
-	.fa
-		padding: 5px 10px
-		border-radius: 50%
-		border: $white 1px solid
-		color: $white
-
-.mob-menu
-	position: absolute
-	top: 5px
-	right: 0px
-	width: $gap
-	height: 2px
-	margin: $gap $gap*1.5 0
-	background-color: $white
-	box-shadow: 0 6px 0 $white,0 12px 0 $white
-	cursor: pointer
-	&:after
-		content: ""
-		position: absolute
-		top: -20px
-		left: -15px
-		width: 55px
-		height: 55px
-		z-index: 1
-
-	
 
 .article-header
 	position: relative
@@ -279,7 +86,7 @@ footer
 
 .body-content
 	min-height: 550px
-	@media screen and (max-width: 480px)
+	@media screen and (max-width: 768px)
 		min-height: inherit
 		padding-bottom: 150px !important
 
@@ -420,9 +227,6 @@ footer
 .font-2xl
 	font-size: $font-2xl
 
-.mob-menu-list
-	display: none
-
 .navy
 	color: $navy
 
@@ -445,33 +249,14 @@ footer
 	.banner
 		overflow: hidden
 		width: 100%
-	.mob-menu-list
-		width: 70vw
-		height: 100%
-		height: 100vh
-		position: fixed
-		top: 0
-		right: 0vw
-		overflow: hidden
-		background-color: $mainC
-		opacity: 0
-		display: block
-		+transf(.2s,opacity)
-		&.active
-			opacity: 1
-
 
 	.wrap
 		position: relative
 		left: 0vw
 		z-index: 2
-		webkit-transition: left .3s, -webkit-filter .3s
-		-o-transition: left .3s, -webkit-filter .3s
-		transition: left .3s, -webkit-filter .3s
-		-webkit-transition-timing-function: linear
-		transition-timing-function: linear
+		transition: left .7s
 		&.active
-			left: -70vw
+			left: -100vw
 			overflow: hidden
 
 

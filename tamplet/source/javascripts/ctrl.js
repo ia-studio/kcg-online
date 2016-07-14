@@ -30,9 +30,6 @@
 		function showSZ (idx){
 			vm.szImg = vm.szData[idx].Pic;
 		 }
-		function menuActive (){
-			vm.isActive = !vm.isActive;
-		}
 		function getItemActive (actStatus,idx,colm){
 			// 有效能的問題目前宣告一個變數裝這個狀態以防止持續的建立物件
 			colm.forEach(function(element,index,array){

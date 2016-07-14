@@ -8,11 +8,11 @@
       </p>
       
       <div class="news visible-xs maT1x" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></div>
-      <div class="mob-menu visible-xs"></div>
+      <div class="mob-menu visible-xs" ng-click="m.isActive=!m.isActive"></div>
     </h1>
   <div class="header-right hidden-xs">
     
-    <div class="mob-menu visible-md visible-sm"></div>
+    <div class="mob-menu visible-md visible-sm" ng-click="m.isActive=!m.isActive"></div>
     <div class="news visible-md visible-sm maT1x" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></div>
     <ul class="header-menu visible-lg">
       <li class="menu-item <%= is_page_selected('')%>"><a href="index.html">市長信箱</a></li>

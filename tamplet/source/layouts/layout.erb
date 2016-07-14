@@ -39,14 +39,6 @@
       <% end %>
       <%= partial "partials/footer.html.erb" %>
     </div>
-    <div class="mob-menu-list" ng-class="{'active':m.isActive}">
-        <ul class="header-menu" ng-class="{'active':m.isActive}">
-          <li class="menu-item" ng-click="m.menuActive()"><a href="###"><i class="glyphicon glyphicon-chevron-left"></i>&nbsp;&nbsp;返回</a></li>
-          <li class="menu-item <%= is_page_selected('') %>"><a href="index.html">網站首頁</a></li>
-          <li class="menu-item <%= is_page_selected('about.html') %>"><a href="about.html">企業情報</a></li>
-          <li class="menu-item <%= is_page_selected('product.html') %>"><a href="product.html">產品介紹</a></li>
-          <li class="menu-item <%= is_page_selected('contact.html') %>"><a href="contact.html">客戶服務</a></li>
-        </ul>
-      </div>
+      <%= partial "partials/mob-menu.html.erb" %>
   </body>
 </html>
