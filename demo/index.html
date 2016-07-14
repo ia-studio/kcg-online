@@ -7,12 +7,12 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="Author" content="Ilandy &nbsp; Austin">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>市長信箱 - 高雄市政府線上即時服務平台</title>
     <script src="https://use.fontawesome.com/2c72f40202.js"></script>
-    <link href="stylesheets/all.css?v=13" rel="stylesheet" type="text/css">
+    <link href="stylesheets/all.css?v=48" rel="stylesheet" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
@@ -33,10 +33,13 @@
         <small class="navy">Service online</small>
       </p>
       
-      <div class="mob-menu visible-xs-block"></div>
+      <div class="news visible-xs maT1x" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></div>
+      <div class="mob-menu visible-xs"></div>
     </h1>
   <div class="header-right hidden-xs">
+    
     <div class="mob-menu visible-md visible-sm"></div>
+    <div class="news visible-md visible-sm maT1x" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></div>
     <ul class="header-menu visible-lg">
       <li class="menu-item active"><a href="index.html">市長信箱</a></li>
       <li class="menu-item "><a href="Case.html">案件查詢</a></li>
@@ -48,7 +51,7 @@
       <li class="menu-item" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></li>
     </ul>
   </div>
-  <div class="heade-news" ng-if="m.newsActive">
+  <div class="header-news" ng-if="m.newsActive">
     <a href="">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a>
     <span class="pull-right" ng-click="m.newsActive = false"><i class="fa fa-times-circle"></i></span>
   </div>
@@ -79,7 +82,7 @@
 		</div>
 		<div class="row pdLR1x body-content">
 				<div class="col-md-4">
-					<div class="case-type" ng-click="m.caseActive(case.id,m.case)" ng-class="{'active':case.active}" ng-repeat="case in m.case | filter:'colm1'">
+					<div class="case-type" ng-click="m.caseActive(case.active,$index+0,m.case)" ng-class="{'active':case.active}" ng-repeat="case in m.case | filter:'colm1'">
 						<p class="case-type-name"><span class="case-type-num"> {{ case.id }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> {{case.type}} <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-45':m.case[$index].active}"></i></span></p>
 						<div class="clearfix"></div>
 						<ul class="case-list" ng-if="case.item.length !== 0">
@@ -88,7 +91,7 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="case-type" ng-click="m.caseActive(case.id,m.case)" ng-class="{'active':case.active}" ng-repeat="case in m.case | filter:'colm2'">
+					<div class="case-type" ng-click="m.caseActive(case.active,$index+7,m.case)" ng-class="{'active':case.active}" ng-repeat="case in m.case | filter:'colm2'">
 						<p class="case-type-name"><span class="case-type-num"> {{ case.id }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> {{case.type}} <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-45':m.case[$index].active}"></i></span></p>
 						<div class="clearfix"></div>
 						<ul class="case-list" ng-if="case.item.length !== 0">
@@ -97,7 +100,7 @@
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="case-type" ng-click="m.caseActive(case.id,m.case)" ng-class="{'active':case.active}" ng-repeat="case in m.case | filter:'colm3'">
+					<div class="case-type" ng-click="m.caseActive(case.active,$index+14,m.case)" ng-class="{'active':case.active}" ng-repeat="case in m.case | filter:'colm3'">
 						<p class="case-type-name"><span class="case-type-num"> {{ case.id }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> {{case.type}} <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-45':m.case[$index].active}"></i></span></p>
 						<div class="clearfix"></div>
 						<ul class="case-list" ng-if="case.item.length !== 0">
@@ -115,8 +118,8 @@
       <footer>
 	<div class="container">
 		<div class="row pdLR1x">
-			<div class="footer col-md-10 col-sm-11 col-sm-10 col-xs-11">
-				<img class="pull-left pdR1x visible-lg" src="images/qrcode.png" alt="">
+			<div class="footer col-md-10 col-sm-12 col-xs-12">
+				<img class="pull-left pdR1x visible-lg visible-md" src="images/qrcode.png" alt="">
 
 				<p class="footer-info">
 					本系統由 <a class="link">高雄市政府資訊中心</a> 維護<br>
@@ -124,7 +127,9 @@
 				<small class="pdT2x font-sm">當系統處於定期維護時間每日凌晨 01:00 ~ 02:00 時，<br>主機可能會停止所有服務，如有不便還請見諒。<br><br>
 				高雄市政府聯合服務中心電話：</small>
 				<h5 class="font-lg">(07) 336-8333 #2819、#2833、#2834</h5>
-				<a href="tel:073368333" class="btn-style contact-phone visible-sm visible-xs"><i class="glyphicon glyphicon-earphone"></i>&nbsp;&nbsp;撥打電話</a>
+				<div class="text-center">
+					<a href="tel:073368333" class="btn-style contact-phone visible-sm visible-xs"><i class="glyphicon glyphicon-earphone"></i>&nbsp;&nbsp;撥打電話</a>
+				</div>
 
 			</div>
 			<div class="col-md-2">
