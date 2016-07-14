@@ -63,7 +63,7 @@ a
 	flex: 1
 	background: $lg-bg
 
-.heade-news
+.header-news
 	position: absolute
 	top: 62px
 	right: 0
@@ -80,6 +80,9 @@ a
 		border-style: solid
 		border-width: 0 3.5px 5px 3.5px
 		border-color: transparent transparent rgba(255,255,255,.7) transparent
+		@media screen and (max-width: 1200px)
+			right: 62px
+
 
 	a
 		display: inline-block
@@ -179,29 +182,36 @@ a
 			border-radius: 50%
 			border: $white 1px solid
 
+.news
+	position: absolute
+	top: 0px
+	right: 52px
+	.fa
+		padding: 5px 10px
+		border-radius: 50%
+		border: $white 1px solid
+		color: $white
+
 .mob-menu
-	float: right
+	position: absolute
+	top: 5px
+	right: 0px
+	width: $gap
+	height: 2px
 	margin: $gap $gap*1.5 0
 	background-color: $white
-	height: 2px
-	width: $gap
-	position: relative
-	&.index,&.index:after,&.index:before
-		background: $white
-	&:after,&:before
-		content: ""
-		height: 2px
-		width: $gap
-		position: absolute
-		background-color: $white
-		display: inline-block
-		left: 0
-		
+	box-shadow: 0 6px 0 $white,0 12px 0 $white
+	cursor: pointer
 	&:after
-		top: 6px
-	&:before
-		top: 12px
+		content: ""
+		position: absolute
+		top: -20px
+		left: -15px
+		width: 55px
+		height: 55px
+		z-index: 1
 
+	
 
 .article-header
 	position: relative
@@ -268,7 +278,7 @@ footer
 	font-size: $font-sm
 
 .body-content
-	min-height: 750px
+	min-height: 550px
 	@media screen and (max-width: 480px)
 		min-height: inherit
 		padding-bottom: 150px !important
@@ -364,6 +374,8 @@ footer
 	margin-bottom: $gap*2
 .maT2x
 	margin-top: $gap*2
+.maT1x
+	margin-top: $gap
 .lh2x
 	line-height: $font-lg
 .pdL2x
@@ -382,7 +394,7 @@ footer
 	color: $white
 	cursor: pointer
 	+transf(.3s ,"opacity")
-	&:hover,&:active
+	&:hover,&:focus,&:active
 		opacity: .85
 		color: $white
 		text-decoration: none

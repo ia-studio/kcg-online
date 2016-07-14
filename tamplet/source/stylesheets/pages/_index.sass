@@ -165,6 +165,8 @@
 		border-left: $mainC 1px solid
 		padding-left: 12px
 		color: $mainC
+		i
+			transition: transform .5s
 
 	&:hover,&.active
 		background-image: $lg-bg
@@ -181,6 +183,8 @@
 			list-style: none
 			line-height: 2em
 			opacity: 1
+		.case-open i
+			transform: rotateZ(45deg)
 
 .case-list
 	height: 0

@@ -23,7 +23,7 @@
 		<div class="row pdLR1x body-content">
 			<% 3.times do |f|%>
 				<div class="col-md-4">
-					<div class="case-type" ng-click="m.caseActive(case.id,m.case)" ng-class="{'active':case.active}" ng-repeat="case in m.case | filter:'colm<%=f+1%>'">
+					<div class="case-type" ng-click="m.caseActive(case.active,$index+<%=f*7%>,m.case)" ng-class="{'active':case.active}" ng-repeat="case in m.case | filter:'colm<%=f+1%>'">
 						<p class="case-type-name"><span class="case-type-num"> {{ case.id }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> {{case.type}} <span class="case-open pull-right"><i class="fa fa-plus" ng-class="{'fa-rotate-45':m.case[$index].active}"></i></span></p>
 						<div class="clearfix"></div>
 						<ul class="case-list" ng-if="case.item.length !== 0">

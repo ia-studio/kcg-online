@@ -7,10 +7,13 @@
         <small class="navy">Service online</small>
       </p>
       
-      <div class="mob-menu visible-xs-block"></div>
+      <div class="news visible-xs maT1x" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></div>
+      <div class="mob-menu visible-xs"></div>
     </h1>
   <div class="header-right hidden-xs">
+    
     <div class="mob-menu visible-md visible-sm"></div>
+    <div class="news visible-md visible-sm maT1x" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></div>
     <ul class="header-menu visible-lg">
       <li class="menu-item <%= is_page_selected('')%>"><a href="index.html">市長信箱</a></li>
       <li class="menu-item <%= is_page_selected('Case.html') %>"><a href="Case.html">案件查詢</a></li>
@@ -22,7 +25,7 @@
       <li class="menu-item" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></li>
     </ul>
   </div>
-  <div class="heade-news" ng-if="m.newsActive">
+  <div class="header-news" ng-if="m.newsActive">
     <a href="">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a>
     <span class="pull-right" ng-click="m.newsActive = false"><i class="fa fa-times-circle"></i></span>
   </div>
