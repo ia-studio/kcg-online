@@ -3,45 +3,46 @@
 (function(){
 	angular
 		.module('myApp')
-		.controller('myCtrl',myCtrl,'$location', '$anchorScroll');
+		.controller('myCtrl',myCtrl);
 	
-	function myCtrl($http,$location,$anchorScroll){
+	function myCtrl($http){
 		var vm = this; 
+		vm.caseActive = false;
+
+
 		vm.isActive = false;
 		vm.data = {};
-		vm.caseActive = getItemActive;
-		vm.itemActive;
-		vm.activeVal = true;
-		vm.normalVal = false;
-		vm.newsActive = true;
-		vm.getScrollTarget = gotoBottom;
-		vm.prevActive;
-
 		$http.get('javascripts/data.json').success(function(data) {
             vm.data = data;
-			vm.case = data.case;
-			vm.case1 = vm.case.case1;
-			vm.case2 = vm.case.case2;
-			vm.case3 = vm.case.case3;
+            //console.log(vm.data);
+            vm.item = data.proType1.concat(data.proType2).concat(data.proType3).concat(data.proType4);
+			vm.item1 = data.proType1;
+			vm.item2 = data.proType2;
+			vm.item3 = data.proType3;
+			vm.item4 = data.proType4;
+			vm.pType = 0;
+			vm.pData = {
+				"Name" : "",
+				"Pic": "",
+		 		"Discription": {},
+		 		"OtherImg": [],
+		 		"IsVisble": true,
+				"GetContentIndex": 0,
+			 	"GetContentClass": "col-sm-5"
+			};
+			vm.szData = data.szInfo;
+			vm.szImg = vm.szData[0].Pic;
 
+			vm.showSZ = showSZ;
+			vm.menuActive = menuActive;
         }).error(function(data, status, headers, config) {
             console.log('error');
         });
 		function showSZ (idx){
 			vm.szImg = vm.szData[idx].Pic;
 		 }
-		function getItemActive (actStatus,idx,colm){
-			// 有效能的問題目前宣告一個變數裝這個狀態以防止持續的建立物件
-			colm.forEach(function(element,index,array){
-				array[index].active = vm.normalVal;
-			})
-			if(!actStatus){
-				colm[idx].active = vm.activeVal;
-			}
+		function menuActive (){
+			vm.isActive = !vm.isActive;
 		}
-		function gotoBottom (target) {
-	      $location.hash(target);
-	      $anchorScroll();
-	    };
 	}
 })();
