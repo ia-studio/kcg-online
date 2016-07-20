@@ -1,26 +1,33 @@
-(function(){
-	'use strict';
-
-	angular
-		.module('app').
-		config(routeSettings);
-			
-	function routeSettings($routeProvider){
-		$routeProvider.when('/', {
-    	templateUrl: 'view1/view1.html',
-    	controller: 'View1Ctrl'
-  	});
-		
-		$routeProvider.when('/view1', {
-    	templateUrl: 'view1/view1.html',
-    	controller: 'View1Ctrl'
-  	});
-	
-		$routeProvider.when('/view2', {
-    	templateUrl: 'view2/view2.html',
-    	controller: 'View2Ctrl'
-  	});
-	
-		$routeProvider.otherwise({redirectTo: '/'});
-	}
-})();
+"use strict";
+var router_1 = require('@angular/router');
+var dashboard_component_1 = require('./dashboard.component');
+var heroes_component_1 = require('./heroes.component');
+var hero_detail_component_1 = require('./hero-detail.component');
+var routes = [
+    {
+        path: '',
+        redirectTo: '/dashboard',
+        pathMatch: 'full'
+    },
+    {
+        path: 'dashboard',
+        component: dashboard_component_1.DashboardComponent
+    },
+    {
+        path: 'detail/:id',
+        component: hero_detail_component_1.HeroDetailComponent
+    },
+    {
+        path: 'heroes',
+        component: heroes_component_1.HeroesComponent
+    }
+];
+exports.appRouterProviders = [
+    router_1.provideRouter(routes)
+];
+/*
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/ 
+//# sourceMappingURL=app.routes.js.map
