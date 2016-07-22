@@ -10,22 +10,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var case_service_1 = require('../case.service');
 var ReportComponent = (function () {
-    function ReportComponent(titleService) {
+    function ReportComponent(titleService, caseService) {
         this.titleService = titleService;
+        this.caseService = caseService;
     }
     ReportComponent.prototype.setTitle = function (newTitle) {
         this.titleService.setTitle(newTitle);
     };
+    ReportComponent.prototype.getCases = function () {
+        var _this = this;
+        this.caseService
+            .getCases()
+            .then(function (cases) { return _this.cases = cases; })
+            .catch(function (error) { return _this.error = error; });
+    };
     ReportComponent.prototype.ngOnInit = function () {
         this.setTitle('市長信箱 - 高雄市政府線上即時服務平台');
+        this.getCases();
     };
     ReportComponent = __decorate([
         core_1.Component({
             selector: 'app-report',
             templateUrl: 'app/report/report.component.html',
+            providers: [case_service_1.CaseService]
         }), 
-        __metadata('design:paramtypes', [platform_browser_1.Title])
+        __metadata('design:paramtypes', [platform_browser_1.Title, case_service_1.CaseService])
     ], ReportComponent);
     return ReportComponent;
 }());
