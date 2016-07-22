@@ -11,21 +11,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var hero_service_1 = require('./hero.service');
+var platform_browser_1 = require('@angular/platform-browser');
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(titleService) {
+        this.titleService = titleService;
         this.title = 'Tour of Heroes';
     }
+    AppComponent.prototype.setTitle = function (newTitle) {
+        this.titleService.setTitle(newTitle);
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n    <h1>{{title}}</h1>\n    <nav>\n      <a [routerLink]=\"['/dashboard']\" routerLinkActive=\"active\">Dashboard</a>\n      <a [routerLink]=\"['/heroes']\" routerLinkActive=\"active\">Heroes</a>\n    </nav>\n    <router-outlet></router-outlet>\n  ",
-            styleUrls: ['app/app.component.css'],
+            templateUrl: 'app/app.component.html',
             directives: [router_1.ROUTER_DIRECTIVES],
             providers: [
                 hero_service_1.HeroService,
             ]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [platform_browser_1.Title])
     ], AppComponent);
     return AppComponent;
 }());

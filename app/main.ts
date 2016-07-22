@@ -11,6 +11,8 @@ import { HTTP_PROVIDERS } from '@angular/http';
 import { AppComponent }         from './app.component';
 import { appRouterProviders }   from './app.routes';
 
+import { Title } from '@angular/platform-browser';
+
 /*
 bootstrap(AppComponent, [
   appRouterProviders,
@@ -21,7 +23,8 @@ bootstrap(AppComponent, [
     appRouterProviders,
     HTTP_PROVIDERS,
     { provide: XHRBackend, useClass: InMemoryBackendService }, // in-mem server
-    { provide: SEED_DATA, useClass: InMemoryDataService }      // in-mem server data
+    { provide: SEED_DATA, useClass: InMemoryDataService },      // in-mem server data
+    Title
 ]);
 
 
