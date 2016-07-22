@@ -1,14 +1,38 @@
 import { provideRouter, RouterConfig }  from '@angular/router';
-
-import { DashboardComponent } from './dashboard.component';
-import { HeroesComponent } from './heroes.component';
-import { HeroDetailComponent } from './hero-detail.component';
+import { DashboardComponent }           from './dashboard.component';
+import { HeroesComponent }              from './heroes.component';
+import { HeroDetailComponent }          from './hero-detail.component';
+import { ReportComponent }              from './report/report.component';
+import { SearchComponent }              from './search/search.component';
+import { ServiceComponent }             from './service/service.component';
+import { FaqComponent }                 from './faq/faq.component';
+import { FeedbackComponent }            from './feedback/feedback.component';
 
 const routes: RouterConfig = [
   {
     path: '',
-    redirectTo: '/dashboard',
+    redirectTo: '/report',
     pathMatch: 'full'
+  },
+  {
+    path: 'report',
+    component: ReportComponent
+  },
+  {
+    path: 'search',
+    component: SearchComponent
+  },
+  {
+    path: 'service',
+    component: ServiceComponent
+  },
+  {
+    path: 'faq',
+    component: FaqComponent
+  },
+  {
+    path: 'feedback',
+    component: FeedbackComponent
   },
   {
     path: 'dashboard',

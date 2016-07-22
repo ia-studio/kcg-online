@@ -3,10 +3,8 @@ import { ROUTER_DIRECTIVES }  from '@angular/router';
 
 import { HeroService }        from './hero.service';
 
-import { Title }              from '@angular/platform-browser';
-
 @Component({
-    selector: 'my-app',
+    selector: 'kcg-app',
     templateUrl: 'app/app.component.html',
     directives: [ROUTER_DIRECTIVES],
     providers: [
@@ -14,12 +12,9 @@ import { Title }              from '@angular/platform-browser';
     ]
 })
 export class AppComponent {
-    public constructor(private titleService: Title) { }
-
-    public setTitle(newTitle: string) {
-        this.titleService.setTitle(newTitle);
-    }
-    title = 'Tour of Heroes';
+    showNews = true;
+    showSlideMenu = false;
+    public constructor() { }
 }
 
 
