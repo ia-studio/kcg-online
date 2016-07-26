@@ -16,6 +16,10 @@ var CaseService = (function () {
     CaseService.prototype.getCases = function () {
         return Promise.resolve(mock_cases_1.CASES);
     };
+    CaseService.prototype.getCase = function (id) {
+        return this.getCases()
+            .then(function (cases) { return cases.find(function (mycase) { return mycase.id === id; }); });
+    };
     CaseService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])

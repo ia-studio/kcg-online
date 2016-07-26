@@ -5,6 +5,6 @@ export class Case {
 }
 
 export class CaseDetail {
-    name: string;
-    link: string;
+  name: string;
+  link: string;
 }

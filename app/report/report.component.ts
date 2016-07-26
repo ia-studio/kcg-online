@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router }            from '@angular/router';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Title }             from '@angular/platform-browser';
 import { Case }              from '../case';
 import { CaseService }       from '../case.service';
@@ -7,6 +7,7 @@ import { CaseService }       from '../case.service';
 @Component({
   selector: 'app-report',
   templateUrl: 'app/report/report.component.html',
+  directives: [ROUTER_DIRECTIVES],
   providers: [CaseService]
 })
 export class ReportComponent implements OnInit {
@@ -25,7 +26,6 @@ export class ReportComponent implements OnInit {
         .then(cases => this.cases = cases)
         .catch(error => this.error = error);
   }
-
 
   ngOnInit() {
     this.setTitle('市長信箱 - 高雄市政府線上即時服務平台');

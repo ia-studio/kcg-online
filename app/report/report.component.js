@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var platform_browser_1 = require('@angular/platform-browser');
 var case_service_1 = require('../case.service');
 var ReportComponent = (function () {
@@ -34,6 +35,7 @@ var ReportComponent = (function () {
         core_1.Component({
             selector: 'app-report',
             templateUrl: 'app/report/report.component.html',
+            directives: [router_1.ROUTER_DIRECTIVES],
             providers: [case_service_1.CaseService]
         }), 
         __metadata('design:paramtypes', [platform_browser_1.Title, case_service_1.CaseService])

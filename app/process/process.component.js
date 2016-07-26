@@ -10,24 +10,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
-var ServiceComponent = (function () {
-    function ServiceComponent(titleService) {
+var ProcessComponent = (function () {
+    function ProcessComponent(titleService) {
         this.titleService = titleService;
     }
-    ServiceComponent.prototype.setTitle = function (newTitle) {
+    ProcessComponent.prototype.setTitle = function (newTitle) {
         this.titleService.setTitle(newTitle);
     };
-    ServiceComponent.prototype.ngOnInit = function () {
+    ProcessComponent.prototype.ngOnInit = function () {
         this.setTitle('服務流程 - 高雄市政府線上即時服務平台');
     };
-    ServiceComponent = __decorate([
+    ProcessComponent = __decorate([
         core_1.Component({
             selector: 'app-service',
-            templateUrl: 'app/service/service.component.html',
+            templateUrl: 'app/process/process.component.html',
         }), 
         __metadata('design:paramtypes', [platform_browser_1.Title])
-    ], ServiceComponent);
-    return ServiceComponent;
+    ], ProcessComponent);
+    return ProcessComponent;
 }());
-exports.ServiceComponent = ServiceComponent;
-//# sourceMappingURL=service.component.js.map
+exports.ProcessComponent = ProcessComponent;
+//# sourceMappingURL=process.component.js.map

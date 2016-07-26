@@ -3,9 +3,9 @@ import { Title }             from '@angular/platform-browser';
 
 @Component({
   selector: 'app-service',
-  templateUrl: 'app/service/service.component.html',
+  templateUrl: 'app/process/process.component.html',
 })
-export class ServiceComponent implements OnInit {
+export class ProcessComponent implements OnInit {
   public constructor(private titleService: Title) { }
 
   public setTitle(newTitle: string) {

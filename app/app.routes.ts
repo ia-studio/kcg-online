@@ -3,8 +3,9 @@ import { DashboardComponent }           from './dashboard.component';
 import { HeroesComponent }              from './heroes.component';
 import { HeroDetailComponent }          from './hero-detail.component';
 import { ReportComponent }              from './report/report.component';
+import { ReportDetailComponent }        from './report/report-detail.component';
 import { SearchComponent }              from './search/search.component';
-import { ServiceComponent }             from './service/service.component';
+import { ProcessComponent }             from './process/process.component';
 import { FaqComponent }                 from './faq/faq.component';
 import { FeedbackComponent }            from './feedback/feedback.component';
 
@@ -19,12 +20,16 @@ const routes: RouterConfig = [
     component: ReportComponent
   },
   {
+    path: 'report/:id',
+    component: ReportDetailComponent
+  },
+  {
     path: 'search',
     component: SearchComponent
   },
   {
-    path: 'service',
-    component: ServiceComponent
+    path: 'process',
+    component: ProcessComponent
   },
   {
     path: 'faq',
