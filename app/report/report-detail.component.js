@@ -10,34 +10,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+var case_service_1 = require('../case.service');
 var ReportDetailComponent = (function () {
-    function ReportDetailComponent(route) {
+    function ReportDetailComponent(route, caseService) {
         this.route = route;
-        this.close = new core_1.EventEmitter();
+        this.caseService = caseService;
         this.navigated = false; // true if navigated here
     }
     ReportDetailComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.sub = this.route.params.subscribe(function (params) {
-            if (params['id'] !== undefined) {
-                _this.title = params['id'];
+            if (params['id'] !== undefined && params['subId'] !== undefined) {
                 _this.navigated = true;
+                _this.getCase(params['id'], params['subId']);
             }
         });
+    };
+    ReportDetailComponent.prototype.getCase = function (id, subId) {
+        var _this = this;
+        this.caseService
+            .getCase(id)
+            .then(function (mycase) { return _this.case = mycase; })
+            .then(function (mycase) { return _this.subCase = mycase.subItems.find(function (item) { return item.id === subId; }); })
+            .catch(function (error) { return _this.error = error; });
     };
     ReportDetailComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();
     };
-    __decorate([
-        core_1.Output(), 
-        __metadata('design:type', Object)
-    ], ReportDetailComponent.prototype, "close", void 0);
     ReportDetailComponent = __decorate([
         core_1.Component({
             selector: 'my-report-detail',
             templateUrl: 'app/report/report-detail.component.html',
+            providers: [case_service_1.CaseService]
         }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, case_service_1.CaseService])
     ], ReportDetailComponent);
     return ReportDetailComponent;
 }());

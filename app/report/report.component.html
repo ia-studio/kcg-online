@@ -25,11 +25,11 @@
                 <div class="case-type" *ngFor="let case of cases | slice:0:7" (click)="case.active=!case.active" [ngClass]="{active:case.active}">
                     <p class="case-type-name" ><span class="case-type-num">
                         {{ case.id }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 
-                        {{case.type}} <span class="case-open pull-right"><i class="fa fa-plus"></i></span>
+                        {{case.name}} <span class="case-open pull-right"><i class="fa fa-plus"></i></span>
                     </p>
                     <div class="clearfix"></div>
-                    <ul class="case-list" *ngIf="case.item">
-                        <li class="case-item" *ngFor="let item of case.item"><a [routerLink]="['/report/'] + item.name">{{item.name}}</a></li>
+                    <ul class="case-list" *ngIf="case.subItems">
+                        <li class="case-item" *ngFor="let item of case.subItems"><a [routerLink]="['/report/'] + case.id + ['/'] + item.id">{{item.name}}</a></li>
                     </ul>
                 </div>
             </div>
@@ -37,11 +37,11 @@
                 <div class="case-type" *ngFor="let case of cases | slice:7:14" (click)="case.active=!case.active" [ngClass]="{active:case.active}">
                     <p class="case-type-name"><span class="case-type-num"> 
                         {{ case.id }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span> 
-                        {{case.type}} <span class="case-open pull-right"><i class="fa fa-plus"></i></span>
+                        {{case.name}} <span class="case-open pull-right"><i class="fa fa-plus"></i></span>
                     </p>
                     <div class="clearfix"></div>
-                    <ul class="case-list" *ngIf="case.item">
-                        <li class="case-item" *ngFor="let item of case.item"><a [routerLink]="['/report/'] + item.name">{{item.name}}</a></li>
+                    <ul class="case-list" *ngIf="case.subItems">
+                        <li class="case-item" *ngFor="let item of case.subItems"><a [routerLink]="['/report/'] + case.id + ['/'] + item.id">{{item.name}}</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,11 +49,11 @@
                 <div class="case-type" *ngFor="let case of cases | slice:14:21" (click)="case.active=!case.active" [ngClass]="{active:case.active}">
                     <p class="case-type-name"><span class="case-type-num"> 
                     	{{ case.id }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span>
-                        {{case.type}} <span class="case-open pull-right"><i class="fa fa-plus"></i></span>
+                        {{case.name}} <span class="case-open pull-right"><i class="fa fa-plus"></i></span>
                     </p>
                     <div class="clearfix"></div>
-                    <ul class="case-list" *ngIf="case.item">
-                        <li class="case-item" *ngFor="let item of case.item"><a [routerLink]="['/report/'] + item.name">{{item.name}}</a></li>
+                    <ul class="case-list" *ngIf="case.subItems">
+                        <li class="case-item" *ngFor="let item of case.subItems"><a [routerLink]="['/report/'] + case.id + ['/'] + item.id">{{item.name}}</a></li>
                     </ul>
                 </div>
             </div>

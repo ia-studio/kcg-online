@@ -20,7 +20,7 @@ const routes: RouterConfig = [
     component: ReportComponent
   },
   {
-    path: 'report/:id',
+    path: 'report/:id/:subId',
     component: ReportDetailComponent
   },
   {
@@ -50,6 +50,10 @@ const routes: RouterConfig = [
   {
     path: 'heroes',
     component: HeroesComponent
+  },
+  {
+    path: '**',
+    component: ReportComponent
   }
 ];
 

@@ -20,7 +20,7 @@ var routes = [
         component: report_component_1.ReportComponent
     },
     {
-        path: 'report/:id',
+        path: 'report/:id/:subId',
         component: report_detail_component_1.ReportDetailComponent
     },
     {
@@ -50,6 +50,10 @@ var routes = [
     {
         path: 'heroes',
         component: heroes_component_1.HeroesComponent
+    },
+    {
+        path: '**',
+        component: report_component_1.ReportComponent
     }
 ];
 exports.appRouterProviders = [

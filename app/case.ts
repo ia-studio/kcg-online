@@ -1,10 +1,10 @@
 export class Case {
   id: string;
-  type: string;
-  item: CaseDetail[];
+  name: string;
+  subItems: CaseDetail[];
 }
 
 export class CaseDetail {
+  id: string;
   name: string;
-  link: string;
 }
