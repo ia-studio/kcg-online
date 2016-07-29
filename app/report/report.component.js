@@ -20,16 +20,16 @@ var ReportComponent = (function () {
     ReportComponent.prototype.setTitle = function (newTitle) {
         this.titleService.setTitle(newTitle);
     };
-    ReportComponent.prototype.getCases = function () {
+    ReportComponent.prototype.getTypes = function () {
         var _this = this;
         this.caseService
-            .getCases()
-            .then(function (cases) { return _this.cases = cases; })
+            .getTypes()
+            .then(function (types) { return _this.caseTypes = types; })
             .catch(function (error) { return _this.error = error; });
     };
     ReportComponent.prototype.ngOnInit = function () {
         this.setTitle('市長信箱 - 高雄市政府線上即時服務平台');
-        this.getCases();
+        this.getTypes();
     };
     ReportComponent = __decorate([
         core_1.Component({

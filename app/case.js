@@ -1,14 +1,14 @@
 "use strict";
-var Case = (function () {
-    function Case() {
+var CaseType = (function () {
+    function CaseType() {
     }
-    return Case;
+    return CaseType;
 }());
-exports.Case = Case;
-var CaseDetail = (function () {
-    function CaseDetail() {
+exports.CaseType = CaseType;
+var SubCaseType = (function () {
+    function SubCaseType() {
     }
-    return CaseDetail;
+    return SubCaseType;
 }());
-exports.CaseDetail = CaseDetail;
+exports.SubCaseType = SubCaseType;
 //# sourceMappingURL=case.js.map

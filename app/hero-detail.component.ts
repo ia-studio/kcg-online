@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, OnDestroy, Output } from '@angular/core';
-
 import { ActivatedRoute } from '@angular/router';
 
 import { Hero }        from './hero';

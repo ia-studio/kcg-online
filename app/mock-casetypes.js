@@ -1,5 +1,5 @@
 "use strict";
-exports.CASES = [
+exports.CASETYPES = [
     {
         "id": "01",
         "name": "路燈維護",
@@ -543,4 +543,4 @@ exports.CASES = [
         ]
     }
 ];
-//# sourceMappingURL=mock-cases.js.map
+//# sourceMappingURL=mock-casetypes.js.map

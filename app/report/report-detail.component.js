@@ -22,16 +22,16 @@ var ReportDetailComponent = (function () {
         this.sub = this.route.params.subscribe(function (params) {
             if (params['id'] !== undefined && params['subId'] !== undefined) {
                 _this.navigated = true;
-                _this.getCase(params['id'], params['subId']);
+                _this.getType(params['id'], params['subId']);
             }
         });
     };
-    ReportDetailComponent.prototype.getCase = function (id, subId) {
+    ReportDetailComponent.prototype.getType = function (id, subId) {
         var _this = this;
         this.caseService
-            .getCase(id)
-            .then(function (mycase) { return _this.case = mycase; })
-            .then(function (mycase) { return _this.subCase = mycase.subItems.find(function (item) { return item.id === subId; }); })
+            .getType(id)
+            .then(function (type) { return _this.caseType = type; })
+            .then(function (subType) { return _this.subCaseType = subType.subItems.find(function (item) { return item.id === subId; }); })
             .catch(function (error) { return _this.error = error; });
     };
     ReportDetailComponent.prototype.ngOnDestroy = function () {

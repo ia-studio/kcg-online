@@ -1,10 +1,10 @@
-export class Case {
+export class CaseType {
   id: string;
   name: string;
-  subItems: CaseDetail[];
+  subItems: SubCaseType[];
 }
 
-export class CaseDetail {
+export class SubCaseType {
   id: string;
   name: string;
 }

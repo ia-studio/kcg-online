@@ -1,15 +1,15 @@
 import { Injectable }    from '@angular/core';
-import { CASES } from './mock-cases';
+import { CASETYPES }     from './mock-casetypes';
 
 @Injectable()
 export class CaseService {
-  getCases() {
-    return  Promise.resolve(CASES);
+  getTypes() {
+    return  Promise.resolve(CASETYPES);
   }
 
-  getCase(id: string) {
-    return this.getCases()
-               .then(cases => cases.find(mycase => mycase.id === id));
+  getType(id: string) {
+    return this.getTypes()
+               .then(types => types.find(type => type.id === id));
   }
 }
 

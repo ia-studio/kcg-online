@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Title }             from '@angular/platform-browser';
-import { Case }              from '../case';
+import { CaseType }          from '../case';
 import { CaseService }       from '../case.service';
 
 @Component({
@@ -11,7 +11,7 @@ import { CaseService }       from '../case.service';
   providers: [CaseService]
 })
 export class ReportComponent implements OnInit {
-  cases: Case[];
+  caseTypes: CaseType[];
   error: any;
 
   public constructor(private titleService: Title, private caseService: CaseService) { }
@@ -20,15 +20,15 @@ export class ReportComponent implements OnInit {
     this.titleService.setTitle(newTitle);
   }
 
-  getCases() {
+  getTypes() {
     this.caseService
-        .getCases()
-        .then(cases => this.cases = cases)
+        .getTypes()
+        .then(types => this.caseTypes = types)
         .catch(error => this.error = error);
   }
 
   ngOnInit() {
     this.setTitle('市長信箱 - 高雄市政府線上即時服務平台');
-    this.getCases();
+    this.getTypes();
   }
 }

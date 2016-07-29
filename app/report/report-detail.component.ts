@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute }               from '@angular/router';
-import { Case, CaseDetail }             from '../case';
+import { CaseType, SubCaseType }        from '../case';
 import { CaseService }                  from '../case.service';
 
 @Component({
@@ -12,24 +12,24 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   error: any;
   sub: any;
   navigated = false; // true if navigated here
-  case: Case;
-  subCase: CaseDetail;
+  caseType: CaseType;
+  subCaseType: SubCaseType;
   constructor(private route: ActivatedRoute, private caseService: CaseService) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       if (params['id'] !== undefined && params['subId'] !== undefined) {
         this.navigated = true;
-        this.getCase(params['id'], params['subId']);
+        this.getType(params['id'], params['subId']);
       }
     });
   }
 
-  getCase(id: string, subId: string) {
+  getType(id: string, subId: string) {
     this.caseService
-        .getCase(id)
-        .then(mycase => this.case = mycase)
-        .then(mycase => this.subCase = mycase.subItems.find(item => item.id === subId))
+        .getType(id)
+        .then(type => this.caseType = type)
+        .then(subType => this.subCaseType = subType.subItems.find(item => item.id === subId))
         .catch(error => this.error = error);
   }
 

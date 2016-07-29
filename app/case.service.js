@@ -9,16 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var mock_cases_1 = require('./mock-cases');
+var mock_casetypes_1 = require('./mock-casetypes');
 var CaseService = (function () {
     function CaseService() {
     }
-    CaseService.prototype.getCases = function () {
-        return Promise.resolve(mock_cases_1.CASES);
+    CaseService.prototype.getTypes = function () {
+        return Promise.resolve(mock_casetypes_1.CASETYPES);
     };
-    CaseService.prototype.getCase = function (id) {
-        return this.getCases()
-            .then(function (cases) { return cases.find(function (mycase) { return mycase.id === id; }); });
+    CaseService.prototype.getType = function (id) {
+        return this.getTypes()
+            .then(function (types) { return types.find(function (type) { return type.id === id; }); });
     };
     CaseService = __decorate([
         core_1.Injectable(), 

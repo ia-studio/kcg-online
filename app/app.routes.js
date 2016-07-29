@@ -56,7 +56,7 @@ var routes = [
         component: report_component_1.ReportComponent
     }
 ];
-exports.appRouterProviders = [
+exports.APP_ROUTER_PROVIDERS = [
     router_1.provideRouter(routes)
 ];
 /*

@@ -57,7 +57,7 @@ const routes: RouterConfig = [
   }
 ];
 
-export const appRouterProviders = [
+export const APP_ROUTER_PROVIDERS = [
   provideRouter(routes)
 ];
 

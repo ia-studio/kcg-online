@@ -1,6 +1,6 @@
-import { Case } from './case';
+import { CaseType } from './case';
 
-export var CASES: Case[] = [
+export var CASETYPES: CaseType[] = [
     {
         "id": "01",
         "name": "路燈維護",
