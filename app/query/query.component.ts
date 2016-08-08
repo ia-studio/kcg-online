@@ -4,11 +4,11 @@ import { Case }              from '../case';
 import { CaseService }       from '../case.service';
 
 @Component({
-  selector: 'app-search',
-  templateUrl: 'app/search/search.component.html',
+  selector: 'app-query',
+  templateUrl: 'app/query/query.component.html',
   providers: [CaseService]
 })
-export class SearchComponent implements OnInit {
+export class QueryComponent implements OnInit {
   public constructor(private titleService: Title, private caseService: CaseService) { }
   searchCase: Case;
   error: any;

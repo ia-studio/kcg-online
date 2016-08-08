@@ -5,7 +5,7 @@ var heroes_component_1 = require('./heroes.component');
 var hero_detail_component_1 = require('./hero-detail.component');
 var report_component_1 = require('./report/report.component');
 var report_detail_component_1 = require('./report/report-detail.component');
-var search_component_1 = require('./search/search.component');
+var query_component_1 = require('./query/query.component');
 var process_component_1 = require('./process/process.component');
 var faq_component_1 = require('./faq/faq.component');
 var feedback_component_1 = require('./feedback/feedback.component');
@@ -24,8 +24,8 @@ var routes = [
         component: report_detail_component_1.ReportDetailComponent
     },
     {
-        path: 'search',
-        component: search_component_1.SearchComponent
+        path: 'query',
+        component: query_component_1.QueryComponent
     },
     {
         path: 'process',

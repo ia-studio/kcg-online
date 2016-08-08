@@ -11,34 +11,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var case_service_1 = require('../case.service');
-var SearchComponent = (function () {
-    function SearchComponent(titleService, caseService) {
+var QueryComponent = (function () {
+    function QueryComponent(titleService, caseService) {
         this.titleService = titleService;
         this.caseService = caseService;
     }
-    SearchComponent.prototype.setTitle = function (newTitle) {
+    QueryComponent.prototype.setTitle = function (newTitle) {
         this.titleService.setTitle(newTitle);
     };
-    SearchComponent.prototype.getCases = function () {
+    QueryComponent.prototype.getCases = function () {
         var _this = this;
         this.caseService
             .getCases()
             .then(function (mycase) { return _this.searchCase = mycase; })
             .catch(function (error) { return _this.error = error; });
     };
-    SearchComponent.prototype.ngOnInit = function () {
+    QueryComponent.prototype.ngOnInit = function () {
         this.setTitle('案件查詢 - 高雄市政府線上即時服務平台');
         this.getCases();
     };
-    SearchComponent = __decorate([
+    QueryComponent = __decorate([
         core_1.Component({
-            selector: 'app-search',
-            templateUrl: 'app/search/search.component.html',
+            selector: 'app-query',
+            templateUrl: 'app/query/query.component.html',
             providers: [case_service_1.CaseService]
         }), 
         __metadata('design:paramtypes', [platform_browser_1.Title, case_service_1.CaseService])
-    ], SearchComponent);
-    return SearchComponent;
+    ], QueryComponent);
+    return QueryComponent;
 }());
-exports.SearchComponent = SearchComponent;
-//# sourceMappingURL=search.component.js.map
+exports.QueryComponent = QueryComponent;
+//# sourceMappingURL=query.component.js.map

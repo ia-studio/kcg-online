@@ -4,7 +4,7 @@ import { HeroesComponent }              from './heroes.component';
 import { HeroDetailComponent }          from './hero-detail.component';
 import { ReportComponent }              from './report/report.component';
 import { ReportDetailComponent }        from './report/report-detail.component';
-import { SearchComponent }              from './search/search.component';
+import { QueryComponent }              from './query/query.component';
 import { ProcessComponent }             from './process/process.component';
 import { FaqComponent }                 from './faq/faq.component';
 import { FeedbackComponent }            from './feedback/feedback.component';
@@ -24,8 +24,8 @@ const routes: RouterConfig = [
     component: ReportDetailComponent
   },
   {
-    path: 'search',
-    component: SearchComponent
+    path: 'query',
+    component: QueryComponent
   },
   {
     path: 'process',
