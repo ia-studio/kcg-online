@@ -13,8 +13,7 @@ export class InMemoryDataService {
       {id: 20, name: 'Tornado'}
     ];
 
-    let cases = [
-        { 
+    let cases = { 
             "Content": [{
                 "case_no1": "B",
                 "case_no2": "TB",
@@ -67,9 +66,8 @@ export class InMemoryDataService {
                 "sub_itemname": "ㄧ般違建       ",
                 "Atth_FileNames": ""
             }]
-        }
-    ]
-    return {heroes};
+        };
+    return { heroes, cases };
   }
 }
 

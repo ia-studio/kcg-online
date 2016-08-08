@@ -9,10 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
+require('rxjs/add/operator/toPromise');
 var mock_casetypes_1 = require('./mock-casetypes');
 var CaseService = (function () {
-    function CaseService() {
+    function CaseService(http) {
+        this.http = http;
+        this.casesUrl = 'app/cases'; // URL to web api
     }
+    CaseService.prototype.getCases = function () {
+        return this.http.get(this.casesUrl)
+            .toPromise()
+            .then(function (response) { return response.json().data; })
+            .catch(this.handleError);
+    };
     CaseService.prototype.getTypes = function () {
         return Promise.resolve(mock_casetypes_1.CASETYPES);
     };
@@ -20,9 +30,13 @@ var CaseService = (function () {
         return this.getTypes()
             .then(function (types) { return types.find(function (type) { return type.id === id; }); });
     };
+    CaseService.prototype.handleError = function (error) {
+        console.error('An error occurred', error);
+        return Promise.reject(error.message || error);
+    };
     CaseService = __decorate([
         core_1.Injectable(), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_1.Http])
     ], CaseService);
     return CaseService;
 }());
