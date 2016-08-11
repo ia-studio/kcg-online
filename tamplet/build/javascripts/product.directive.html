@@ -1,0 +1,32 @@
+<div ng-if="pType==type">
+	<span ng-repeat="items in array">
+		<div class="col-sm-4 col-xs-6 product-item" ng-click="seeMore($index)">
+			<div class="product-item">
+				<img class="product-img" ng-src="images/product/{{items.Pic}}" width="100%">
+				<div class="product-title">{{ items.Name }} </div>
+			</div>
+		</div>
+		<div class="product-wrap col-sm-12 " ng-if="$index%3 == 2 || $last" 
+		ng-class="{'product-show': CheckVisble(pData.IsVisble,$index)}">
+			<div class="product-info">
+				<div class="product-header">
+					<div class="product-close" ng-click="pData.IsVisble = !pData.IsVisble"></div>
+					<h3>{{pData.Name}}</h3>
+				</div>
+				<div class="row">
+					<div ng-class="pData.GetContentClass()">
+						<div ng-repeat="dct in pData.Discription">
+							<h4 ng-if="dct.title!=''">{{dct.title}}</h4>
+							<p ng-bind-html="dct.content"></p>
+						</div>
+					</div>
+					<div class="col-sm-7" ng-if="pData.OtherImg!=0">
+						<p ng-repeat="imgs in pData.OtherImg">
+							<img ng-src="images/product/{{imgs}}" width="100%" alt="">
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</span>
+</div>

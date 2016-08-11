@@ -28,6 +28,12 @@
         "PageTitle": "案件查詢",
         "PageTitleEn": "Search My Case"
     },
+    "query-detail":{
+        "Title": "案件查詢 - 高雄市政府線上即時服務平台",
+        "PageBanner": "query/banner_pic_query.png",
+        "PageTitle": "案件查詢",
+        "PageTitleEn": "Search My Case"
+    },
     "about": {
         "Title": "企業情報 | 廣西金秀松源林產有限公司",
         "PageBanner": "about_banner.png"

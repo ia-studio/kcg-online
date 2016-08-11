@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="Author" content="Ilandy &nbsp; Austin">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>案件查詢 - 高雄市政府線上即時服務平台</title>
+    <script src="https://use.fontawesome.com/2c72f40202.js"></script>
+    <link href="stylesheets/all.css?v=19" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
+    <script src="javascripts/all.js"></script>
+    <script src="javascripts/ctrl.js"></script>
+    <script src="javascripts/product.directive.js"></script>
+
+  </head>
+  <body ng-app="myApp" ng-controller="myCtrl as m">
+    <div class="wrap " ng-class="{'active':m.isActive}">
+      <div class="container shadow-3d">
+      <nav class="header row ">
+  
+    <h1 class="header-band">
+      <img calss="pull-left" src="images/Kao_logo.png" width="40" alt="">
+      <p>
+        <span class="navy">線上即時服務系統</span><br>
+        <small class="navy">Service online</small>
+      </p>
+      
+      <div class="news visible-xs maT1x" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></div>
+      <div class="mob-menu visible-xs" ng-click="m.isActive=!m.isActive"></div>
+    </h1>
+  <div class="header-right hidden-xs">
+    
+    <div class="mob-menu visible-md visible-sm" ng-click="m.isActive=!m.isActive"></div>
+    <div class="news visible-md visible-sm maT1x" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></div>
+    <ul class="header-menu visible-lg">
+      <li class="menu-item "><a href="index.html">市長信箱</a></li>
+      <li class="menu-item "><a href="query.html">案件查詢</a></li>
+      <li class="menu-item "><a href="Service.html">服務流程</a></li>
+      <li class="menu-item "><a href="Faq.html">常見問題 FAQ</a></li>
+      <li class="menu-item"><a href="http://work1999.kcg.gov.tw/Rptdownload.aspx" target="_blank">案件反應排行榜</a></li>
+      <li class="menu-item "><a href="Satisfaction.html">案件處理滿意度</a></li>
+      <li class="menu-item"><a href="http://disdp.kcg.gov.tw/exchange/feedback.php" target="_blank">廉政案件</a></li>
+      <li class="menu-item" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></li>
+    </ul>
+  </div>
+  <div class="header-news" ng-if="m.newsActive">
+    <a href="">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a>
+    <span class="pull-right" ng-click="m.newsActive = false"><i class="fa fa-times-circle"></i></span>
+  </div>
+</nav>
+        <div class="banner row">
+          <div class="banner-page-name">
+            <h2 class="dk-green">案件查詢</h2>
+            <p class="dk-green">Search My Case</p>  
+          </div>
+          <img src="images/query/banner_pic_query.png" alt="">
+        </div>
+      
+<div class="row">
+	<div class="col-md-4 page-block">
+		<div class="article-header text-center">
+			<h4 id="mayor" class="article-title">建議(檢舉)內容</h4>
+		</div>
+		<div class="article-content">
+			<p class="article-lable require">主旨 </p>
+			<p class="navy maB2x">高雄市岡山區碧紅街2號違建</p>
+			<p class="article-lable require">建議事項 </p>
+			<p class="navy maB2x">
+				高雄市岡山區碧紅街2號 已於2014.12.22檢舉該棟違建，也獲得市府回應已拆除違建部分，為何該違建卻越來越高?由2樓層的違建變成了5層樓的違建?不知市長對此拆除績效有何看法?
+			</p>
+			<div class="row">
+				<div class="col-md-6">
+					<p class="article-lable require">收件編號 </p>
+					<p class="navy maB2x pdLHalfX">368213</p>
+					<p class="article-lable require">來源別 </p>
+					<p class="navy maB2x pdLHalfX">網頁</p>
+				</div>
+				<div class="col-md-6">
+					<p class="article-lable require">收件編號 </p>
+					<p class="navy maB2x pdLHalfX">368213</p>
+					<p class="article-lable require">機密等級 </p>
+					<p class="navy maB2x pdLHalfX">保密</p>
+				</div>
+			</div>
+			<p class="article-lable require">附加檔案 </p>
+			<p class="navy maB2x pdLHalfX">
+				<a href="2014_1222.jpg"><i class="fa fa-paperclip"></i> 2014_1222.jpg</a><br>
+				<a href="2014_1222.jpg"><i class="fa fa-paperclip"></i> 2014_1222.jpg</a>
+			</p>
+			<a class="btn btn-green" href="">繼續查詢陳報案件</a>
+		</div>
+	</div>
+	<div class="col-md-8 page-block">
+		<div class="article-header text-center">
+			<h4 id="mayor" class="article-title">處理情形</h4>
+		</div>
+		<div class="article-content block-separate">
+			<div class="row">
+				<div class="col-md-6">
+					<p class="article-lable require">陳情類別(主項) </p>
+					<p class="navy maB2x pdLHalfX">違章建管業務</p>
+					<p class="article-lable require">承辦機關</p>
+					<p class="navy maB2x pdLHalfX">高雄市政府工務局違章建築處理大隊</p>
+					<p class="article-lable require">序號</p>
+					<p class="navy maB2x pdLHalfX">01</p>
+					<p class="article-lable require">承辦人</p>
+					<p class="navy maB2x pdLHalfX">王祈昌</p>
+				</div>
+				<div class="col-md-6">
+					<p class="article-lable require">陳情類別(子項) </p>
+					<p class="navy maB2x pdLHalfX">ㄧ般違建</p>
+					<p class="article-lable require">科室</p>
+					<p class="navy maB2x pdLHalfX">拆除組</p>
+					<p class="article-lable require">完成日期 </p>
+					<p class="navy maB2x pdLHalfX">20150407</p>
+					<p class="article-lable require">承辦人電話</p>
+					<p class="navy maB2x pdLHalfX">7453439-808</p>
+				</div>
+			</div>
+			<p class="article-lable require">陳情類別(子項) </p>
+			<p class="navy maB2x">親愛的市民您好：您寄給市長的電子郵件收悉，市長非常重視，經交本大隊處理，茲將查處結果敬復如下：有關台端反映本市岡山區碧紅街2號建築物屋前增建違建一案，本局業於103年11月28日以高市工違岡字第1576號處理新違章建築處分書依法處分在案，並已於103年12月2日派工前往拆除部份，其餘部份，將續依相關規定辦理。謝謝您的建議，若尚有疑慮，請隨時電洽本府工務局違建處理大隊承辦人王祈昌電話(07)7453439-808，當再詳細說明，再次感謝您對市政的關心並熱心提供建言。<br> 
+			敬祝您 <br>
+			身體健康萬事如意<br> 
+			高雄市政府工務局違章建築處理大隊大隊長蘇俊傑敬上 <br></p>
+		</div>
+		<hr>
+		<div class="row">
+				<div class="col-md-6">
+					<p class="article-lable require">陳情類別(主項) </p>
+					<p class="navy maB2x pdLHalfX">違章建管業務</p>
+					<p class="article-lable require">承辦機關</p>
+					<p class="navy maB2x pdLHalfX">高雄市政府工務局違章建築處理大隊</p>
+					<p class="article-lable require">序號</p>
+					<p class="navy maB2x pdLHalfX">02</p>
+					<p class="article-lable require">承辦人</p>
+					<p class="navy maB2x pdLHalfX">王祈昌</p>
+				</div>
+				<div class="col-md-6">
+					<p class="article-lable require">陳情類別(子項) </p>
+					<p class="navy maB2x pdLHalfX">ㄧ般違建</p>
+					<p class="article-lable require">科室</p>
+					<p class="navy maB2x pdLHalfX">拆除組</p>
+					<p class="article-lable require">完成日期 </p>
+					<p class="navy maB2x pdLHalfX">20150414</p>
+					<p class="article-lable require">承辦人電話</p>
+					<p class="navy maB2x pdLHalfX">7453439-808</p>
+				</div>
+			</div>
+			<p class="article-lable require">陳情類別(子項) </p>
+			<p class="navy maB2x">親愛的市民您好：您寄給市長的電子郵件收悉，市長非常重視，經交本大隊處理，茲將查處結果敬復如下：有關台端反映本市岡山區碧紅街2號建築物屋前增建違建一案，本局業於103年11月28日以高市工違岡字第1576號處理新違章建築處分書依法處分在案，並已於103年12月2日派工前往拆除部份，其餘部份，後續於104年4月1日派工前往拆除RC樓板，尚未拆除部份，依相關規定辦理。謝謝您的建議，若尚有疑慮，請隨時電洽本府工務局違建處理大隊承辦人王祈昌電話(07)7453439-808，當再詳細說明，再次感謝您對市政的關心並熱心提供建言。 <br> 
+			敬祝您 <br>
+			身體健康萬事如意<br> 
+			高雄市政府工務局違章建築處理大隊大隊長蘇俊傑敬上 <br></p>
+		</div>
+	</div>
+</div>
+      </div>
+      <footer>
+	<div class="container">
+		<div class="row pdLR1x">
+			<div class="footer col-md-10 col-sm-12 col-xs-12">
+				<img class="pull-left pdR1x visible-lg visible-md" src="images/qrcode.png" alt="">
+
+				<p class="footer-info">
+					本系統由 <a class="link">高雄市政府資訊中心</a> 維護<br>
+				</p>
+				<small class="pdT2x font-sm">當系統處於定期維護時間每日凌晨 01:00 ~ 02:00 時，<br>主機可能會停止所有服務，如有不便還請見諒。<br><br>
+				高雄市政府聯合服務中心電話：</small>
+				<h5 class="font-lg">(07) 336-8333 #2819、#2833、#2834</h5>
+
+			</div>
+			<div class="col-md-2">
+				<ul class="link-group font-md hidden-sm hidden-xs">
+					<li><a href="index.html">隱私權保護政策</a></li>
+					<li><a href="about.html">網站安全政策</a></li>
+					<li><a href="product.html">著作權聲明</a></li>
+					<li><a href="contact.html">高雄市政府全球資訊網</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+    </div>
+      <div class="mob-menu-list" ng-class="{'active':m.isActive}">
+	
+    <div class="mob-menu-close" ng-class="{'active':m.isActive}" ng-click="m.isActive = !m.isActive"></div>
+	<ul class="header-menu" ng-class="{'active':m.isActive}"> 
+	  <li class="menu-item "><a href="index.html">市長信箱</a></li>
+	  <li class="menu-item "><a href="">即時服務案件查詢</a></li>
+	  <li class="menu-item "><a href="">服務流程</a></li>
+	  <li class="menu-item "><a href="">常見問題集 FAQ</a></li>
+	  <li class="menu-item"><a href="http://work1999.kcg.gov.tw/Rptdownload.aspx" target="_blank">案件反應排行榜</a></li>
+	  <li class="menu-item "><a href="">案件處理滿意度</a>
+		<ul class="mob-sub-menu">
+			<li class="menu-item"><a href="">各項滿意度調查</a></li>
+			<li class="menu-item"><a href="">各問題次數分配表</a></li>
+			<li class="menu-item"><a href="">各問題有效值與遺漏值</a></li>
+		</ul>
+	  </li>
+	  <li class="menu-item"><a href="http://disdp.kcg.gov.tw/exchange/feedback.php" target="_blank">廉政案件</a></li>
+	</ul>
+</div>
+      <div class="pop" ng-class="{'active':vm.pop}">
+	<div class="pop-content">
+		<div class="mk-spinner-doublecircle"></div>
+		<span class="loading-words">Loading ...</span>
+	</div>
+</div>
+
+  </body>
+</html>
