@@ -1,0 +1,32 @@
+<nav class="header row <% if page_classes=='index' %>index<% end %>">
+  
+    <h1 class="header-band">
+      <img calss="pull-left" src="images/Kao_logo.png" width="40" alt="">
+      <p>
+        <span class="navy">線上即時服務系統</span><br>
+        <small class="navy">Service online</small>
+      </p>
+      
+      <div class="news visible-xs maT1x" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></div>
+      <div class="mob-menu visible-xs" ng-click="m.isActive=!m.isActive"></div>
+    </h1>
+  <div class="header-right hidden-xs">
+    
+    <div class="mob-menu visible-md visible-sm" ng-click="m.isActive=!m.isActive"></div>
+    <div class="news visible-md visible-sm maT1x" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></div>
+    <ul class="header-menu visible-lg">
+      <li class="menu-item <%= is_page_selected('')%>"><a href="index.html">市長信箱</a></li>
+      <li class="menu-item <%= is_page_selected('query.html') %>"><a href="query.html">案件查詢</a></li>
+      <li class="menu-item <%= is_page_selected('Service.html') %>"><a href="Service.html">服務流程</a></li>
+      <li class="menu-item <%= is_page_selected('Faq.html')%>"><a href="Faq.html">常見問題 FAQ</a></li>
+      <li class="menu-item"><a href="http://work1999.kcg.gov.tw/Rptdownload.aspx" target="_blank">案件反應排行榜</a></li>
+      <li class="menu-item <%= is_page_selected('Satisfaction.html') %>"><a href="Satisfaction.html">案件處理滿意度</a></li>
+      <li class="menu-item"><a href="http://disdp.kcg.gov.tw/exchange/feedback.php" target="_blank">廉政案件</a></li>
+      <li class="menu-item" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></li>
+    </ul>
+  </div>
+  <div class="header-news" ng-if="m.newsActive">
+    <a href="">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a>
+    <span class="pull-right" ng-click="m.newsActive = false"><i class="fa fa-times-circle"></i></span>
+  </div>
+</nav>

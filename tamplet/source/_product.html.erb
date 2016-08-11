@@ -1,0 +1,26 @@
+---
+is_page_selected: product
+---
+
+
+<div class="deco-line"></div>
+<div class="row">
+	<h2 class="page-title pull-left col-sm-3 col-xs-12">
+		產品介紹
+	</h2>
+	<ul class="type-list pull-right col-sm-9 col-xs-12">
+		<li class="type-item" ng-class="{'active':m.pType == 0}" ng-click="m.pType=0;m.pData.IsVisble = false">不分類</li>
+		<li class="type-item" ng-class="{'active':m.pType == 1}" ng-click="m.pType=1;m.pData.IsVisble = false">松香类</li>
+		<li class="type-item" ng-class="{'active':m.pType == 2}" ng-click="m.pType=2;m.pData.IsVisble = false">歧化松香类</li>
+		<li class="type-item" ng-class="{'active':m.pType == 3}" ng-click="m.pType=3;m.pData.IsVisble = false">松香树脂类</li>
+		<li class="type-item" ng-class="{'active':m.pType == 4}" ng-click="m.pType=4;m.pData.IsVisble = false">松节油类</li>
+	</ul>
+</div>
+	<div class="row maB2x product-content">
+		<products p-type="m.pType" type="0" array="m.item"></products>
+		<products p-type="m.pType" type="1" array="m.item1"></products>
+		<products p-type="m.pType" type="2" array="m.item2"></products>
+		<products p-type="m.pType" type="3" array="m.item3"></products>
+		<products p-type="m.pType" type="4" array="m.item4"></products>
+	</div>
+</div>

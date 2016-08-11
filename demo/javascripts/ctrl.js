@@ -6,7 +6,6 @@
 		.controller('myCtrl',myCtrl,'$location', '$anchorScroll');
 	
 	function myCtrl($http,$location,$anchorScroll){
-		
 
 		var vm = this; 
 		vm.isActive = false;
@@ -19,9 +18,9 @@
 		vm.getScrollTarget = gotoBottom;
 		vm.prevActive;
 
+
 		//sample js used
 		vm.pop = false;
-
 		$http.get('javascripts/data.json').success(function(data) {
             vm.data = data;
 			vm.case = data.case;

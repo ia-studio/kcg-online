@@ -4,7 +4,6 @@
 	angular
 		.module('myApp')
 		.controller('myCtrl',myCtrl);
-	
 	function myCtrl($http){
 		var vm = this; 
 		vm.caseActive = false;
@@ -12,6 +11,16 @@
 
 		vm.isActive = false;
 		vm.data = {};
+		vm.caseActive = getItemActive;
+		vm.itemActive;
+		vm.activeVal = true;
+		vm.normalVal = false;
+		vm.newsActive = true;
+		vm.getScrollTarget = gotoBottom;
+		vm.prevActive;
+
+		//sample js used
+		vm.pop = false;
 		$http.get('javascripts/data.json').success(function(data) {
             vm.data = data;
             //console.log(vm.data);
