@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="Author" content="Ilandy &nbsp; Austin">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <% page_name = page_classes.split(' ').last %>
+    <% file_name = page_name.to_sym %>
+    <title><%= data.pageInfo[file_name].Title %></title>
+    <script src="https://use.fontawesome.com/2c72f40202.js"></script>
+    <link href="stylesheets/all.css?v=<% v=Time.new v2=Time.now.sec %><%= v2 %>" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
+    <script src="javascripts/all.js"></script>
+    <script src="javascripts/ctrl.js"></script>
+    <script src="javascripts/product.directive.js"></script>
+
+  </head>
+  <body ng-app="myApp" ng-controller="myCtrl as m">
+    <div class="wrap <% if page_classes=='index' %>index<% end %>" ng-class="{'active':m.isActive}">
+      <div class="container shadow-3d">
+      <%= partial "partials/navbar.html.erb" %>
+      <% if page_classes != 'index' %>
+        <div class="banner row">
+          <div class="banner-page-name">
+            <h2 class="dk-green"><%= data.pageInfo[file_name].PageTitle %></h2>
+            <p class="dk-green"><%= data.pageInfo[file_name].PageTitleEn %></p>  
+          </div>
+          <img src="images/<%= data.pageInfo[file_name].PageBanner %>" alt="">
+        </div>
+      <% end %>
+      <%= yield %>
+      </div>
+      <% if page_classes == 'index' %>
+        <%= partial "partials/index.html.erb"%>
+      <% end %>
+      <%= partial "partials/footer.html.erb" %>
+    </div>
+      <%= partial "partials/mob-menu.html.erb" %>
+      <%= partial "partials/loading.html.erb" %>
+
+  </body>
+</html>
