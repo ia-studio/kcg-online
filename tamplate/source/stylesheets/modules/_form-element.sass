@@ -1,0 +1,43 @@
+.require
+	span
+		color: $subC-o
+
+input
+	box-shadow: none
+	border: none
+	padding-bottom: 4px
+	border-bottom: 1px solid $lighter-gray
+	font-size: $font-lg
+	background-color: transparent
+	transition: border-color .5s
+	&:focus
+		outline: transparent
+		border-color: $navy
+
+.input-separate
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		right: -2px
+		top: 50%
+		width: 5px
+		height: 1px
+		background-color: $navy
+.block-separate
+	position: relative
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		width: 1px
+		height: 80%
+		background-color: $lighter-gray
+	&:before
+		left: -40px
+
+.validation-info
+	padding-top: 10px
+	height: 1em
+	line-height: 1.5em
+	color: $subC-o
