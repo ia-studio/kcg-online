@@ -12,6 +12,7 @@ export class QueryComponent implements OnInit {
   public constructor(private titleService: Title, private caseService: CaseService) { }
   searchCase: Case;
   error: any;
+  pop: false;
 
   public setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);

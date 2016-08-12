@@ -15,6 +15,7 @@ var QueryComponent = (function () {
     function QueryComponent(titleService, caseService) {
         this.titleService = titleService;
         this.caseService = caseService;
+        this.pop = false;
     }
     QueryComponent.prototype.setTitle = function (newTitle) {
         this.titleService.setTitle(newTitle);
