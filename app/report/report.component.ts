@@ -13,8 +13,9 @@ import { CaseService }       from '../case.service';
 export class ReportComponent implements OnInit {
   caseTypes: CaseType[];
   error: any;
+  
 
-  public constructor(private titleService: Title, private caseService: CaseService) { }
+  public constructor(private titleService: Title, private caseService: CaseService,private appComponent: AppComponent) { }
 
   public setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);

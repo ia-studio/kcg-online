@@ -13,9 +13,10 @@ var router_1 = require('@angular/router');
 var platform_browser_1 = require('@angular/platform-browser');
 var case_service_1 = require('../case.service');
 var ReportComponent = (function () {
-    function ReportComponent(titleService, caseService) {
+    function ReportComponent(titleService, caseService, appComponent) {
         this.titleService = titleService;
         this.caseService = caseService;
+        this.appComponent = appComponent;
     }
     ReportComponent.prototype.setTitle = function (newTitle) {
         this.titleService.setTitle(newTitle);
@@ -38,7 +39,7 @@ var ReportComponent = (function () {
             directives: [router_1.ROUTER_DIRECTIVES],
             providers: [case_service_1.CaseService]
         }), 
-        __metadata('design:paramtypes', [platform_browser_1.Title, case_service_1.CaseService])
+        __metadata('design:paramtypes', [platform_browser_1.Title, case_service_1.CaseService, Object])
     ], ReportComponent);
     return ReportComponent;
 }());

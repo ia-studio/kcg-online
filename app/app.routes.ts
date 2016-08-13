@@ -4,7 +4,8 @@ import { HeroesComponent }              from './heroes.component';
 import { HeroDetailComponent }          from './hero-detail.component';
 import { ReportComponent }              from './report/report.component';
 import { ReportDetailComponent }        from './report/report-detail.component';
-import { QueryComponent }              from './query/query.component';
+import { QueryComponent }               from './query/query.component';
+import { QueryDetailComponent }         from './query/query-detail.component';
 import { ProcessComponent }             from './process/process.component';
 import { FaqComponent }                 from './faq/faq.component';
 import { FeedbackComponent }            from './feedback/feedback.component';
@@ -26,6 +27,10 @@ const routes: RouterConfig = [
   {
     path: 'query',
     component: QueryComponent
+  },
+  {
+    path: 'query/:id',
+    component: QueryDetailComponent
   },
   {
     path: 'process',

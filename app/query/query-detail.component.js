@@ -11,34 +11,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var case_service_1 = require('../case.service');
-var QueryComponent = (function () {
-    function QueryComponent(titleService, caseService) {
+var QueryDetailComponent = (function () {
+    function QueryDetailComponent(titleService, caseService) {
         this.titleService = titleService;
         this.caseService = caseService;
     }
-    QueryComponent.prototype.setTitle = function (newTitle) {
+    QueryDetailComponent.prototype.setTitle = function (newTitle) {
         this.titleService.setTitle(newTitle);
     };
-    QueryComponent.prototype.getCases = function () {
+    QueryDetailComponent.prototype.getCases = function () {
         var _this = this;
         this.caseService
             .getCases()
             .then(function (mycase) { return _this.searchCase = mycase; })
             .catch(function (error) { return _this.error = error; });
     };
-    QueryComponent.prototype.ngOnInit = function () {
-        this.setTitle('案件查詢 - 高雄市政府線上即時服務平台');
+    QueryDetailComponent.prototype.ngOnInit = function () {
+        this.setTitle('案件明細 - 高雄市政府線上即時服務平台');
         this.getCases();
     };
-    QueryComponent = __decorate([
+    QueryDetailComponent = __decorate([
         core_1.Component({
-            selector: 'app-query',
-            templateUrl: 'app/query/query.component.html',
+            selector: 'app-query-detail',
+            templateUrl: 'app/query/query-detail.component.html',
             providers: [case_service_1.CaseService]
         }), 
         __metadata('design:paramtypes', [platform_browser_1.Title, case_service_1.CaseService])
-    ], QueryComponent);
-    return QueryComponent;
+    ], QueryDetailComponent);
+    return QueryDetailComponent;
 }());
-exports.QueryComponent = QueryComponent;
-//# sourceMappingURL=query.component.js.map
+exports.QueryDetailComponent = QueryDetailComponent;
+//# sourceMappingURL=query-detail.component.js.map

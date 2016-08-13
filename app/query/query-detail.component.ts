@@ -4,11 +4,11 @@ import { Case }              from '../case';
 import { CaseService }       from '../case.service';
 
 @Component({
-  selector: 'app-query',
-  templateUrl: 'app/query/query.component.html',
+  selector: 'app-query-detail',
+  templateUrl: 'app/query/query-detail.component.html',
   providers: [CaseService]
 })
-export class QueryComponent implements OnInit {
+export class QueryDetailComponent implements OnInit {
   public constructor(private titleService: Title, private caseService: CaseService) { }
   searchCase: Case;
   error: any;
@@ -25,7 +25,7 @@ export class QueryComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.setTitle('案件查詢 - 高雄市政府線上即時服務平台');
+    this.setTitle('案件明細 - 高雄市政府線上即時服務平台');
     this.getCases();
   }
 }

@@ -6,6 +6,7 @@ var hero_detail_component_1 = require('./hero-detail.component');
 var report_component_1 = require('./report/report.component');
 var report_detail_component_1 = require('./report/report-detail.component');
 var query_component_1 = require('./query/query.component');
+var query_detail_component_1 = require('./query/query-detail.component');
 var process_component_1 = require('./process/process.component');
 var faq_component_1 = require('./faq/faq.component');
 var feedback_component_1 = require('./feedback/feedback.component');
@@ -26,6 +27,10 @@ var routes = [
     {
         path: 'query',
         component: query_component_1.QueryComponent
+    },
+    {
+        path: 'query/:id',
+        component: query_detail_component_1.QueryDetailComponent
     },
     {
         path: 'process',
