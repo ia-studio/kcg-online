@@ -9,39 +9,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
 var platform_browser_1 = require('@angular/platform-browser');
 var case_service_1 = require('../case.service');
-var ReportComponent = (function () {
-    function ReportComponent(titleService, caseService, appComponent) {
+var QueryDetailComponent = (function () {
+    function QueryDetailComponent(titleService, caseService) {
         this.titleService = titleService;
         this.caseService = caseService;
-        this.appComponent = appComponent;
     }
-    ReportComponent.prototype.setTitle = function (newTitle) {
+    QueryDetailComponent.prototype.setTitle = function (newTitle) {
         this.titleService.setTitle(newTitle);
     };
-    ReportComponent.prototype.getTypes = function () {
+    QueryDetailComponent.prototype.getCases = function () {
         var _this = this;
         this.caseService
-            .getTypes()
-            .then(function (types) { return _this.caseTypes = types; })
+            .getCases()
+            .then(function (mycase) { return _this.searchCase = mycase; })
             .catch(function (error) { return _this.error = error; });
     };
-    ReportComponent.prototype.ngOnInit = function () {
-        this.setTitle('市長信箱 - 高雄市政府線上即時服務平台');
-        this.getTypes();
+    QueryDetailComponent.prototype.ngOnInit = function () {
+        this.setTitle('案件明細 - 高雄市政府線上即時服務平台');
+        this.getCases();
     };
-    ReportComponent = __decorate([
+    QueryDetailComponent = __decorate([
         core_1.Component({
-            selector: 'app-report',
-            templateUrl: 'app/report/report.component.html',
-            directives: [router_1.ROUTER_DIRECTIVES],
+            selector: 'app-query-detail',
+            templateUrl: 'app/query/query-detail.component.html',
             providers: [case_service_1.CaseService]
         }), 
-        __metadata('design:paramtypes', [platform_browser_1.Title, case_service_1.CaseService, Object])
-    ], ReportComponent);
-    return ReportComponent;
+        __metadata('design:paramtypes', [platform_browser_1.Title, case_service_1.CaseService])
+    ], QueryDetailComponent);
+    return QueryDetailComponent;
 }());
-exports.ReportComponent = ReportComponent;
-//# sourceMappingURL=report.component.js.map
+exports.QueryDetailComponent = QueryDetailComponent;
+//# sourceMappingURL=query-detail.component.js.map

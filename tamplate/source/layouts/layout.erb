@@ -26,17 +26,17 @@
   <body ng-app="myApp" ng-controller="myCtrl as m">
     <div class="wrap <% if page_classes=='index' %>index<% end %>" ng-class="{'active':m.isActive}">
       <div class="container shadow-3d">
-      <%= partial "partials/navbar.html.erb" %>
-      <% if page_classes != 'index' %>
-        <div class="banner row">
-          <div class="banner-page-name">
-            <h2 class="dk-green"><%= data.pageInfo[file_name].PageTitle %></h2>
-            <p class="dk-green"><%= data.pageInfo[file_name].PageTitleEn %></p>  
-          </div>
-          <img src="images/<%= data.pageInfo[file_name].PageBanner %>" alt="">
-        </div>
-      <% end %>
-      <%= yield %>
+        <%= partial "partials/navbar.html.erb" %>
+        <% if page_classes != 'index' %>
+            <div class="banner row">
+                <div class="banner-page-name">
+                    <h2 class="dk-green"><%= data.pageInfo[file_name].PageTitle %></h2>
+                    <p class="dk-green"><%= data.pageInfo[file_name].PageTitleEn %></p>  
+                </div>
+                <img src="images/<%= data.pageInfo[file_name].PageBanner %>" alt="">
+            </div>
+        <% end %>
+        <%= yield %>
       </div>
       <% if page_classes == 'index' %>
         <%= partial "partials/index.html.erb"%>

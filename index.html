@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/" />
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="Author" content="Ilandy &nbsp; Austin">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>高雄市政府線上即時服務平台</title>
+    <script src="https://use.fontawesome.com/2c72f40202.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Polyfill(s) for older browsers -->
+    <script src="https://npmcdn.com/core-js/client/shim.min.js"></script>
+
+    <script src="https://npmcdn.com/zone.js@0.6.12?main=browser"></script>
+    <script src="https://npmcdn.com/reflect-metadata@0.1.3"></script>
+    <script src="https://npmcdn.com/systemjs@0.19.27/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+  <body>
+    <kcg-app>
+        <div class="pop" style="display:block">
+            <div class="pop-content">
+                <div class="mk-spinner-doublecircle"></div>
+                <span class="loading-words">Loading ...</span>
+            </div>
+        </div>
+    </kcg-app>
+  </body>
+</html>
+
+
+<!-- 
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
