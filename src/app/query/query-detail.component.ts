@@ -5,7 +5,7 @@ import { CaseService }       from '../case.service';
 
 @Component({
   selector: 'app-query-detail',
-  templateUrl: 'app/query/query-detail.component.html',
+  templateUrl: 'query-detail.component.html',
   providers: [CaseService]
 })
 export class QueryDetailComponent implements OnInit {

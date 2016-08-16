@@ -11,5 +11,6 @@ import { ROUTER_DIRECTIVES }  from '@angular/router';
 export class AppComponent {
     showNews = true;
     showSlideMenu = false;
+    showPhoneButton = true;
     public constructor() { }
 }
