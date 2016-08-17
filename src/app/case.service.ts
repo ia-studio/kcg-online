@@ -1,18 +1,16 @@
 import { Injectable }    from '@angular/core';
-import { Headers, Http } from '@angular/http';
+import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
-
-import { CASETYPES }     from './mock-casetypes';
-import { Case } from './case';
 
 @Injectable()
 export class CaseService {
 
-  private casesUrl = 'app/cases';  // URL to web api
+  private casesUrl = 'api/cases.json';
+  private casetypesUrl = 'api/casetypes.json';
 
   constructor(private http: Http) { }
 
-  getCases(): Promise<Case> {
+  getCases() {
     return this.http.get(this.casesUrl)
                .toPromise()
                .then(response => response.json().data)
@@ -20,12 +18,16 @@ export class CaseService {
   }
 
   getTypes() {
-    return Promise.resolve(CASETYPES);
+    return this.http.get(this.casetypesUrl)
+               .toPromise()
+               .then(response => response.json())
+               .catch(this.handleError);
   }
 
   getType(id: string) {
     return this.getTypes()
-               .then(types => types.find(type => type.id === id));
+               .then(types => types.find(type => type.id === id))
+               .catch(this.handleError);
   }
 
   private handleError(error: any) {

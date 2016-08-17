@@ -3,7 +3,6 @@ import { NgModule, ApplicationRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { HTTP_PROVIDERS } from '@angular/http';
 import { Title } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders } from './app.routes';
@@ -30,12 +29,10 @@ import { ReportComponent } from './report/report.component';
   ],
   providers: [
     appRoutingProviders,
-    Title,
-    HTTP_PROVIDERS
+    Title
   ],
   entryComponents: [AppComponent],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {
-
 }

@@ -3,6 +3,7 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Title }             from '@angular/platform-browser';
 import { CaseType }          from '../case';
 import { CaseService }       from '../case.service';
+import { Http, Headers, RequestOptions } from '@angular/http';
 
 @Component({
   selector: 'app-report',
@@ -14,7 +15,6 @@ export class ReportComponent implements OnInit {
   caseTypes: CaseType[];
   error: any;
 
-
   public constructor(private titleService: Title, private caseService: CaseService) { }
 
   public setTitle(newTitle: string) {
@@ -24,8 +24,7 @@ export class ReportComponent implements OnInit {
   getTypes() {
     this.caseService
         .getTypes()
-        .then(types => this.caseTypes = types)
-        .catch(error => this.error = error);
+        .then(types => this.caseTypes = types);
   }
 
   ngOnInit() {
