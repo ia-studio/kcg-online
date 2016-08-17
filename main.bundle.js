@@ -19,7 +19,7 @@ function __export(m) {
  * @description
  * Entry point from which you should import all public core APIs.
  */
-__export(__webpack_require__(334));
+__export(__webpack_require__(333));
 __export(__webpack_require__(508));
 __export(__webpack_require__(34));
 var application_ref_1 = __webpack_require__(205);
@@ -46,7 +46,7 @@ exports.ApplicationInitStatus = application_init_1.ApplicationInitStatus;
 __export(__webpack_require__(509));
 __export(__webpack_require__(507));
 __export(__webpack_require__(496));
-var debug_node_1 = __webpack_require__(321);
+var debug_node_1 = __webpack_require__(320);
 exports.DebugElement = debug_node_1.DebugElement;
 exports.DebugNode = debug_node_1.DebugNode;
 exports.asNativeElements = debug_node_1.asNativeElements;
@@ -72,10 +72,10 @@ exports.ExceptionHandler = exceptions_1.ExceptionHandler;
 exports.WrappedException = exceptions_1.WrappedException;
 exports.BaseException = exceptions_1.BaseException;
 __export(__webpack_require__(484));
-__export(__webpack_require__(317));
+__export(__webpack_require__(316));
 var animation_player_1 = __webpack_require__(203);
 exports.AnimationPlayer = animation_player_1.AnimationPlayer;
-var security_1 = __webpack_require__(342);
+var security_1 = __webpack_require__(341);
 exports.SanitizationService = security_1.SanitizationService;
 exports.SecurityContext = security_1.SecurityContext;
 //# sourceMappingURL=index.js.map
@@ -1355,8 +1355,8 @@ exports.escapeRegExp = escapeRegExp;
 "use strict";
 "use strict";
 var root_1 = __webpack_require__(65);
-var observable_1 = __webpack_require__(246);
-var toSubscriber_1 = __webpack_require__(597);
+var observable_1 = __webpack_require__(245);
+var toSubscriber_1 = __webpack_require__(596);
 /**
  * A representation of any set of values over any amount of time. This the most basic building block
  * of RxJS.
@@ -1882,9 +1882,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var base_wrapped_exception_1 = __webpack_require__(324);
-var exception_handler_1 = __webpack_require__(325);
-var exception_handler_2 = __webpack_require__(325);
+var base_wrapped_exception_1 = __webpack_require__(323);
+var exception_handler_1 = __webpack_require__(324);
+var exception_handler_2 = __webpack_require__(324);
 exports.ExceptionHandler = exception_handler_2.ExceptionHandler;
 /**
  * @stable
@@ -3393,9 +3393,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var base_wrapped_exception_1 = __webpack_require__(296);
-var exception_handler_1 = __webpack_require__(297);
-var exception_handler_2 = __webpack_require__(297);
+var base_wrapped_exception_1 = __webpack_require__(295);
+var exception_handler_1 = __webpack_require__(296);
+var exception_handler_2 = __webpack_require__(296);
 exports.ExceptionHandler = exception_handler_2.ExceptionHandler;
 /**
  * @stable
@@ -6602,7 +6602,7 @@ exports.DOCUMENT = dom_tokens_1.DOCUMENT;
 var event_manager_1 = __webpack_require__(75);
 exports.EVENT_MANAGER_PLUGINS = event_manager_1.EVENT_MANAGER_PLUGINS;
 exports.EventManager = event_manager_1.EventManager;
-var hammer_gestures_1 = __webpack_require__(234);
+var hammer_gestures_1 = __webpack_require__(233);
 exports.HAMMER_GESTURE_CONFIG = hammer_gestures_1.HAMMER_GESTURE_CONFIG;
 exports.HammerGestureConfig = hammer_gestures_1.HammerGestureConfig;
 var dom_sanitization_service_1 = __webpack_require__(368);
@@ -6685,7 +6685,7 @@ exports.InstantiationError = reflective_exceptions_1.InstantiationError;
 exports.InvalidProviderError = reflective_exceptions_1.InvalidProviderError;
 exports.NoAnnotationError = reflective_exceptions_1.NoAnnotationError;
 exports.OutOfBoundsError = reflective_exceptions_1.OutOfBoundsError;
-var opaque_token_1 = __webpack_require__(322);
+var opaque_token_1 = __webpack_require__(321);
 exports.OpaqueToken = opaque_token_1.OpaqueToken;
 //# sourceMappingURL=di.js.map
 
@@ -7076,9 +7076,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var isFunction_1 = __webpack_require__(165);
-var Subscription_1 = __webpack_require__(241);
-var rxSubscriber_1 = __webpack_require__(247);
-var Observer_1 = __webpack_require__(573);
+var Subscription_1 = __webpack_require__(240);
+var rxSubscriber_1 = __webpack_require__(246);
+var Observer_1 = __webpack_require__(572);
 /**
  * Implements the {@link Observer} interface and extends the
  * {@link Subscription} class. While the {@link Observer} is the public API for
@@ -7341,12 +7341,12 @@ function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
 var core_1 = __webpack_require__(0);
-var common_directives_1 = __webpack_require__(269);
-var pipes_1 = __webpack_require__(282);
-__export(__webpack_require__(282));
-__export(__webpack_require__(270));
-__export(__webpack_require__(448));
+var common_directives_1 = __webpack_require__(268);
+var pipes_1 = __webpack_require__(281);
+__export(__webpack_require__(281));
 __export(__webpack_require__(269));
+__export(__webpack_require__(448));
+__export(__webpack_require__(268));
 __export(__webpack_require__(450));
 var localization_1 = __webpack_require__(187);
 exports.NgLocalization = localization_1.NgLocalization;
@@ -7422,7 +7422,7 @@ exports.NG_VALUE_ACCESSOR = new core_1.OpaqueToken('NgValueAccessor');
  */
 "use strict";
 var core_1 = __webpack_require__(0);
-var toPromise_1 = __webpack_require__(244);
+var toPromise_1 = __webpack_require__(243);
 var collection_1 = __webpack_require__(35);
 var lang_1 = __webpack_require__(23);
 /**
@@ -7578,7 +7578,7 @@ var core_private_1 = __webpack_require__(103);
 var exceptions_1 = __webpack_require__(62);
 var lang_1 = __webpack_require__(10);
 var render_store_1 = __webpack_require__(106);
-var serialized_types_1 = __webpack_require__(236);
+var serialized_types_1 = __webpack_require__(235);
 // PRIMITIVE is any type that does not need to be serialized (string, number, boolean)
 // We set it to String so that it is considered a Type.
 /**
@@ -7705,9 +7705,9 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Observable_1 = __webpack_require__(6);
 var Subscriber_1 = __webpack_require__(36);
-var Subscription_1 = __webpack_require__(241);
-var SubjectSubscription_1 = __webpack_require__(574);
-var rxSubscriber_1 = __webpack_require__(247);
+var Subscription_1 = __webpack_require__(240);
+var SubjectSubscription_1 = __webpack_require__(573);
+var rxSubscriber_1 = __webpack_require__(246);
 var throwError_1 = __webpack_require__(391);
 var ObjectUnsubscribedError_1 = __webpack_require__(387);
 /**
@@ -7919,7 +7919,7 @@ var SubjectObservable = (function (_super) {
  */
 "use strict";
 var core_1 = __webpack_require__(0);
-var toPromise_1 = __webpack_require__(244);
+var toPromise_1 = __webpack_require__(243);
 var collection_1 = __webpack_require__(25);
 var lang_1 = __webpack_require__(4);
 /**
@@ -8557,7 +8557,7 @@ exports.PRIMARY_OUTLET = 'primary';
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var assertions_1 = __webpack_require__(295);
+var assertions_1 = __webpack_require__(294);
 var InterpolationConfig = (function () {
     function InterpolationConfig(start, end) {
         this.start = start;
@@ -9402,9 +9402,9 @@ var UrlParser = (function () {
  */
 "use strict";
 __webpack_require__(380);
-__webpack_require__(578);
+__webpack_require__(577);
 var Observable_1 = __webpack_require__(6);
-var fromPromise_1 = __webpack_require__(243);
+var fromPromise_1 = __webpack_require__(242);
 var of_1 = __webpack_require__(163);
 var shared_1 = __webpack_require__(52);
 function shallowEqualArrays(a, b) {
@@ -9546,7 +9546,7 @@ if (freeGlobal && (freeGlobal.global === freeGlobal || freeGlobal.window === fre
     exports.root = freeGlobal;
 }
 //# sourceMappingURL=root.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(734)(module), __webpack_require__(68)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(733)(module), __webpack_require__(68)))
 
 /***/ },
 /* 66 */,
@@ -9593,9 +9593,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var base_wrapped_exception_1 = __webpack_require__(277);
-var exception_handler_1 = __webpack_require__(278);
-var exception_handler_2 = __webpack_require__(278);
+var base_wrapped_exception_1 = __webpack_require__(276);
+var exception_handler_1 = __webpack_require__(277);
+var exception_handler_2 = __webpack_require__(277);
 exports.ExceptionHandler = exception_handler_2.ExceptionHandler;
 /**
  * @stable
@@ -10158,9 +10158,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var base_wrapped_exception_1 = __webpack_require__(347);
-var exception_handler_1 = __webpack_require__(348);
-var exception_handler_2 = __webpack_require__(348);
+var base_wrapped_exception_1 = __webpack_require__(346);
+var exception_handler_1 = __webpack_require__(347);
+var exception_handler_2 = __webpack_require__(347);
 exports.ExceptionHandler = exception_handler_2.ExceptionHandler;
 /**
  * @stable
@@ -10332,7 +10332,7 @@ var BehaviorSubject_1 = __webpack_require__(379);
 var shared_1 = __webpack_require__(52);
 var url_tree_1 = __webpack_require__(63);
 var collection_1 = __webpack_require__(64);
-var tree_1 = __webpack_require__(239);
+var tree_1 = __webpack_require__(238);
 /**
  * The state of the router.
  *
@@ -12734,7 +12734,7 @@ function _hasInvalidParent(parent) {
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var collection_1 = __webpack_require__(231);
+var collection_1 = __webpack_require__(230);
 var exceptions_1 = __webpack_require__(149);
 var lang_1 = __webpack_require__(28);
 /**
@@ -13382,10 +13382,10 @@ exports.ReceivedMessage = ReceivedMessage;
  */
 "use strict";
 __webpack_require__(381);
-__webpack_require__(580);
 __webpack_require__(579);
-__webpack_require__(581);
-__webpack_require__(576);
+__webpack_require__(578);
+__webpack_require__(580);
+__webpack_require__(575);
 var core_1 = __webpack_require__(0);
 var Subject_1 = __webpack_require__(45);
 var from_1 = __webpack_require__(385);
@@ -16325,7 +16325,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var core_1 = __webpack_require__(0);
-var html_tags_1 = __webpack_require__(301);
+var html_tags_1 = __webpack_require__(300);
 var interpolation_config_1 = __webpack_require__(58);
 var parser_1 = __webpack_require__(126);
 var parser_2 = __webpack_require__(126);
@@ -16762,13 +16762,13 @@ var icu_ast_expander_1 = __webpack_require__(468);
 var interpolation_config_1 = __webpack_require__(58);
 var tags_1 = __webpack_require__(84);
 var parse_util_1 = __webpack_require__(49);
-var provider_analyzer_1 = __webpack_require__(304);
+var provider_analyzer_1 = __webpack_require__(303);
 var element_schema_registry_1 = __webpack_require__(93);
 var selector_1 = __webpack_require__(199);
-var style_url_resolver_1 = __webpack_require__(307);
+var style_url_resolver_1 = __webpack_require__(306);
 var util_1 = __webpack_require__(27);
 var template_ast_1 = __webpack_require__(50);
-var template_preparser_1 = __webpack_require__(308);
+var template_preparser_1 = __webpack_require__(307);
 // Group 1 = "bind-"
 // Group 2 = "var-"
 // Group 3 = "let-"
@@ -17630,13 +17630,13 @@ exports.PipeCollector = PipeCollector;
  */
 "use strict";
 var core_1 = __webpack_require__(0);
-var animation_compiler_1 = __webpack_require__(294);
+var animation_compiler_1 = __webpack_require__(293);
 var config_1 = __webpack_require__(83);
-var compile_element_1 = __webpack_require__(310);
-var compile_view_1 = __webpack_require__(312);
+var compile_element_1 = __webpack_require__(309);
+var compile_view_1 = __webpack_require__(311);
 var view_binder_1 = __webpack_require__(483);
-var view_builder_1 = __webpack_require__(314);
-var view_builder_2 = __webpack_require__(314);
+var view_builder_1 = __webpack_require__(313);
+var view_builder_2 = __webpack_require__(313);
 exports.ComponentFactoryDependency = view_builder_2.ComponentFactoryDependency;
 exports.ViewFactoryDependency = view_builder_2.ViewFactoryDependency;
 var ViewCompileResult = (function () {
@@ -17759,9 +17759,9 @@ exports.PACKAGE_ROOT_URL = new di_1.OpaqueToken('Application Packages Root URL')
  */
 "use strict";
 var default_iterable_differ_1 = __webpack_require__(206);
-var default_keyvalue_differ_1 = __webpack_require__(318);
-var iterable_differs_1 = __webpack_require__(319);
-var keyvalue_differs_1 = __webpack_require__(320);
+var default_keyvalue_differ_1 = __webpack_require__(317);
+var iterable_differs_1 = __webpack_require__(318);
+var keyvalue_differs_1 = __webpack_require__(319);
 var change_detection_util_1 = __webpack_require__(131);
 exports.SimpleChange = change_detection_util_1.SimpleChange;
 exports.UNINITIALIZED = change_detection_util_1.UNINITIALIZED;
@@ -17781,12 +17781,12 @@ exports.CollectionChangeRecord = default_iterable_differ_2.CollectionChangeRecor
 exports.DefaultIterableDifferFactory = default_iterable_differ_2.DefaultIterableDifferFactory;
 var default_iterable_differ_3 = __webpack_require__(206);
 exports.DefaultIterableDiffer = default_iterable_differ_3.DefaultIterableDiffer;
-var default_keyvalue_differ_2 = __webpack_require__(318);
+var default_keyvalue_differ_2 = __webpack_require__(317);
 exports.DefaultKeyValueDifferFactory = default_keyvalue_differ_2.DefaultKeyValueDifferFactory;
 exports.KeyValueChangeRecord = default_keyvalue_differ_2.KeyValueChangeRecord;
-var iterable_differs_2 = __webpack_require__(319);
+var iterable_differs_2 = __webpack_require__(318);
 exports.IterableDiffers = iterable_differs_2.IterableDiffers;
-var keyvalue_differs_2 = __webpack_require__(320);
+var keyvalue_differs_2 = __webpack_require__(319);
 exports.KeyValueDiffers = keyvalue_differs_2.KeyValueDiffers;
 /**
  * Structural diffing for `Object`s and `Map`s.
@@ -18262,7 +18262,7 @@ var collection_1 = __webpack_require__(14);
 var exceptions_1 = __webpack_require__(8);
 var lang_1 = __webpack_require__(2);
 var api_1 = __webpack_require__(217);
-var security_1 = __webpack_require__(342);
+var security_1 = __webpack_require__(341);
 var element_1 = __webpack_require__(213);
 var exceptions_2 = __webpack_require__(214);
 var ViewUtils = (function () {
@@ -19065,7 +19065,7 @@ var validators_1 = __webpack_require__(43);
 var abstract_form_group_directive_1 = __webpack_require__(97);
 var control_container_1 = __webpack_require__(59);
 var ng_form_1 = __webpack_require__(98);
-var template_driven_errors_1 = __webpack_require__(346);
+var template_driven_errors_1 = __webpack_require__(345);
 exports.modelGroupProvider = {
     provide: control_container_1.ControlContainer,
     useExisting: core_1.forwardRef(function () { return NgModelGroup; })
@@ -20582,7 +20582,7 @@ exports.isJsObject = lang_2.isJsObject;
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var collection_1 = __webpack_require__(231);
+var collection_1 = __webpack_require__(230);
 var lang_1 = __webpack_require__(28);
 function paramParser(rawParams) {
     if (rawParams === void 0) { rawParams = ''; }
@@ -21211,9 +21211,9 @@ var ng_probe_1 = __webpack_require__(363);
 var dom_adapter_1 = __webpack_require__(15);
 var dom_renderer_1 = __webpack_require__(156);
 var dom_tokens_1 = __webpack_require__(104);
-var dom_events_1 = __webpack_require__(233);
+var dom_events_1 = __webpack_require__(232);
 var event_manager_1 = __webpack_require__(75);
-var hammer_gestures_1 = __webpack_require__(234);
+var hammer_gestures_1 = __webpack_require__(233);
 var key_events_1 = __webpack_require__(364);
 var shared_styles_host_1 = __webpack_require__(157);
 var dom_sanitization_service_1 = __webpack_require__(368);
@@ -21857,10 +21857,10 @@ exports.ROUTER_CHANNEL = 'ng-Router';
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var common_router_providers_1 = __webpack_require__(237);
+var common_router_providers_1 = __webpack_require__(236);
 exports.provideRouterConfig = common_router_providers_1.provideRouterConfig;
 exports.provideRoutes = common_router_providers_1.provideRoutes;
-var router_link_1 = __webpack_require__(238);
+var router_link_1 = __webpack_require__(237);
 exports.RouterLink = router_link_1.RouterLink;
 exports.RouterLinkWithHref = router_link_1.RouterLinkWithHref;
 var router_link_active_1 = __webpack_require__(372);
@@ -21909,7 +21909,7 @@ exports.UrlTree = url_tree_1.UrlTree;
  */
 "use strict";
 var core_1 = __webpack_require__(0);
-var fromPromise_1 = __webpack_require__(243);
+var fromPromise_1 = __webpack_require__(242);
 var collection_1 = __webpack_require__(64);
 /**
  * @deprecated use Routes
@@ -21948,13 +21948,12 @@ exports.RouterConfigLoader = RouterConfigLoader;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core___default = __WEBPACK_IMPORTED_MODULE_0__angular_core__ && __WEBPACK_IMPORTED_MODULE_0__angular_core__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_0__angular_core___default, 'a', __WEBPACK_IMPORTED_MODULE_0__angular_core___default);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(349);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http___default = __WEBPACK_IMPORTED_MODULE_1__angular_http__ && __WEBPACK_IMPORTED_MODULE_1__angular_http__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_1__angular_http__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_1__angular_http__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_1__angular_http___default, 'a', __WEBPACK_IMPORTED_MODULE_1__angular_http___default);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ = __webpack_require__(382);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default = __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__ && __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default, 'a', __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_toPromise___default);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mock_casetypes__ = __webpack_require__(559);
 
 /* harmony export */ __webpack_require__.d(exports, "a", function() { return CaseService; });var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -21968,11 +21967,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
 var CaseService = (function () {
     function CaseService(http) {
         this.http = http;
-        this.casesUrl = 'app/cases'; // URL to web api
+        this.casesUrl = 'api/cases.json';
+        this.casetypesUrl = 'api/casetypes.json';
     }
     CaseService.prototype.getCases = function () {
         return this.http.get(this.casesUrl)
@@ -21981,11 +21980,15 @@ var CaseService = (function () {
             .catch(this.handleError);
     };
     CaseService.prototype.getTypes = function () {
-        return Promise.resolve(__WEBPACK_IMPORTED_MODULE_3__mock_casetypes__["a" /* CASETYPES */]);
+        return this.http.get(this.casetypesUrl)
+            .toPromise()
+            .then(function (response) { return response.json(); })
+            .catch(this.handleError);
     };
     CaseService.prototype.getType = function (id) {
         return this.getTypes()
-            .then(function (types) { return types.find(function (type) { return type.id === id; }); });
+            .then(function (types) { return types.find(function (type) { return type.id === id; }); })
+            .catch(this.handleError);
     };
     CaseService.prototype.handleError = function (error) {
         console.error('An error occurred', error);
@@ -23929,8 +23932,8 @@ var lang_1 = __webpack_require__(3);
 var html = __webpack_require__(71);
 var html_parser_1 = __webpack_require__(125);
 var interpolation_config_1 = __webpack_require__(58);
-var style_url_resolver_1 = __webpack_require__(307);
-var template_preparser_1 = __webpack_require__(308);
+var style_url_resolver_1 = __webpack_require__(306);
+var template_preparser_1 = __webpack_require__(307);
 var url_resolver_1 = __webpack_require__(85);
 var util_1 = __webpack_require__(27);
 var xhr_1 = __webpack_require__(202);
@@ -24869,7 +24872,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var core_1 = __webpack_require__(0);
 var core_private_1 = __webpack_require__(19);
 var collection_1 = __webpack_require__(7);
-var assertions_1 = __webpack_require__(295);
+var assertions_1 = __webpack_require__(294);
 var cpl = __webpack_require__(22);
 var config_1 = __webpack_require__(83);
 var directive_resolver_1 = __webpack_require__(192);
@@ -25650,9 +25653,9 @@ var compile_metadata_1 = __webpack_require__(22);
 var lang_1 = __webpack_require__(3);
 var identifiers_1 = __webpack_require__(20);
 var o = __webpack_require__(11);
-var value_util_1 = __webpack_require__(303);
+var value_util_1 = __webpack_require__(302);
 var parse_util_1 = __webpack_require__(49);
-var provider_analyzer_1 = __webpack_require__(304);
+var provider_analyzer_1 = __webpack_require__(303);
 var util_1 = __webpack_require__(27);
 var ComponentFactoryDependency = (function () {
     function ComponentFactoryDependency(comp, placeholder) {
@@ -27107,7 +27110,7 @@ var application_tokens_1 = __webpack_require__(129);
 var console_1 = __webpack_require__(133);
 var di_1 = __webpack_require__(34);
 var compiler_1 = __webpack_require__(96);
-var component_factory_1 = __webpack_require__(326);
+var component_factory_1 = __webpack_require__(325);
 var component_factory_resolver_1 = __webpack_require__(136);
 var profile_1 = __webpack_require__(139);
 var testability_1 = __webpack_require__(218);
@@ -29143,7 +29146,7 @@ var reflection_1 = __webpack_require__(215);
 var forward_ref_1 = __webpack_require__(134);
 var metadata_1 = __webpack_require__(72);
 var provider_1 = __webpack_require__(207);
-var provider_util_1 = __webpack_require__(323);
+var provider_util_1 = __webpack_require__(322);
 var reflective_exceptions_1 = __webpack_require__(208);
 var reflective_key_1 = __webpack_require__(209);
 /**
@@ -29547,8 +29550,8 @@ exports.ComponentResolver = ComponentResolver;
 var collection_1 = __webpack_require__(14);
 var exceptions_1 = __webpack_require__(8);
 var lang_1 = __webpack_require__(2);
-var element_ref_1 = __webpack_require__(329);
-var view_container_ref_1 = __webpack_require__(332);
+var element_ref_1 = __webpack_require__(328);
+var view_container_ref_1 = __webpack_require__(331);
 var view_type_1 = __webpack_require__(137);
 /**
  * An AppElement is created for elements that have a ViewContainerRef,
@@ -29776,9 +29779,9 @@ exports.ViewDestroyedException = ViewDestroyedException;
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var reflection_capabilities_1 = __webpack_require__(340);
-var reflector_1 = __webpack_require__(341);
-var reflector_2 = __webpack_require__(341);
+var reflection_capabilities_1 = __webpack_require__(339);
+var reflector_1 = __webpack_require__(340);
+var reflector_2 = __webpack_require__(340);
 exports.ReflectionInfo = reflector_2.ReflectionInfo;
 exports.Reflector = reflector_2.Reflector;
 /**
@@ -30083,8 +30086,8 @@ var _testabilityGetter = new _NoopGetTestability();
 "use strict";
 var async_1 = __webpack_require__(211);
 var exceptions_1 = __webpack_require__(8);
-var ng_zone_impl_1 = __webpack_require__(343);
-var ng_zone_impl_2 = __webpack_require__(343);
+var ng_zone_impl_1 = __webpack_require__(342);
+var ng_zone_impl_2 = __webpack_require__(342);
 exports.NgZoneError = ng_zone_impl_2.NgZoneError;
 /**
  * An injectable service for executing work inside or outside of the Angular zone.
@@ -30551,7 +30554,7 @@ var ng_control_1 = __webpack_require__(73);
 var ng_form_1 = __webpack_require__(98);
 var ng_model_group_1 = __webpack_require__(143);
 var shared_1 = __webpack_require__(60);
-var template_driven_errors_1 = __webpack_require__(346);
+var template_driven_errors_1 = __webpack_require__(345);
 exports.formControlBinding = {
     provide: ng_control_1.NgControl,
     useExisting: core_1.forwardRef(function () { return NgModel; })
@@ -30970,7 +30973,7 @@ exports.FormControlName = FormControlName;
  */
 "use strict";
 var exceptions_1 = __webpack_require__(74);
-var error_examples_1 = __webpack_require__(345);
+var error_examples_1 = __webpack_require__(344);
 var ReactiveErrors = (function () {
     function ReactiveErrors() {
     }
@@ -31130,25 +31133,6 @@ exports.PatternValidator = PatternValidator;
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(__webpack_require__(514));
-//# sourceMappingURL=index.js.map
-
-/***/ },
-/* 229 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-"use strict";
 var core_1 = __webpack_require__(0);
 var BrowserXhr = (function () {
     function BrowserXhr() {
@@ -31166,7 +31150,7 @@ exports.BrowserXhr = BrowserXhr;
 //# sourceMappingURL=browser_xhr.js.map
 
 /***/ },
-/* 230 */
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31290,7 +31274,7 @@ exports.BaseRequestOptions = BaseRequestOptions;
 //# sourceMappingURL=base_request_options.js.map
 
 /***/ },
-/* 231 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31665,7 +31649,7 @@ exports.SetWrapper = SetWrapper;
 //# sourceMappingURL=collection.js.map
 
 /***/ },
-/* 232 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31724,7 +31708,7 @@ exports.Response = Response;
 //# sourceMappingURL=static_response.js.map
 
 /***/ },
-/* 233 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31773,7 +31757,7 @@ exports.DomEventsPlugin = DomEventsPlugin;
 //# sourceMappingURL=dom_events.js.map
 
 /***/ },
-/* 234 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31865,7 +31849,7 @@ exports.HammerGesturesPlugin = HammerGesturesPlugin;
 //# sourceMappingURL=hammer_gestures.js.map
 
 /***/ },
-/* 235 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31928,7 +31912,7 @@ exports.sanitizeSrcset = sanitizeSrcset;
 //# sourceMappingURL=url_sanitizer.js.map
 
 /***/ },
-/* 236 */
+/* 235 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -31960,7 +31944,7 @@ exports.LocationType = LocationType;
 //# sourceMappingURL=serialized_types.js.map
 
 /***/ },
-/* 237 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32103,7 +32087,7 @@ exports.provideRouterConfig = provideRouterConfig;
 //# sourceMappingURL=common_router_providers.js.map
 
 /***/ },
-/* 238 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32262,7 +32246,7 @@ function toBool(s) {
 //# sourceMappingURL=router_link.js.map
 
 /***/ },
-/* 239 */
+/* 238 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -32357,7 +32341,7 @@ exports.TreeNode = TreeNode;
 //# sourceMappingURL=tree.js.map
 
 /***/ },
-/* 240 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32393,7 +32377,7 @@ exports.OuterSubscriber = OuterSubscriber;
 //# sourceMappingURL=OuterSubscriber.js.map
 
 /***/ },
-/* 241 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32402,8 +32386,8 @@ var isArray_1 = __webpack_require__(164);
 var isObject_1 = __webpack_require__(388);
 var isFunction_1 = __webpack_require__(165);
 var tryCatch_1 = __webpack_require__(392);
-var errorObject_1 = __webpack_require__(249);
-var UnsubscriptionError_1 = __webpack_require__(596);
+var errorObject_1 = __webpack_require__(248);
+var UnsubscriptionError_1 = __webpack_require__(595);
 /**
  * Represents a disposable resource, such as the execution of an Observable. A
  * Subscription has one important method, `unsubscribe`, that takes no argument
@@ -32549,7 +32533,7 @@ exports.Subscription = Subscription;
 //# sourceMappingURL=Subscription.js.map
 
 /***/ },
-/* 242 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32630,7 +32614,7 @@ exports.EmptyObservable = EmptyObservable;
 //# sourceMappingURL=EmptyObservable.js.map
 
 /***/ },
-/* 243 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32640,7 +32624,7 @@ exports.fromPromise = PromiseObservable_1.PromiseObservable.create;
 //# sourceMappingURL=fromPromise.js.map
 
 /***/ },
-/* 244 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32674,7 +32658,7 @@ exports.toPromise = toPromise;
 //# sourceMappingURL=toPromise.js.map
 
 /***/ },
-/* 245 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32712,7 +32696,7 @@ else {
 //# sourceMappingURL=iterator.js.map
 
 /***/ },
-/* 246 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32739,7 +32723,7 @@ else {
 //# sourceMappingURL=observable.js.map
 
 /***/ },
-/* 247 */
+/* 246 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32751,7 +32735,7 @@ exports.$$rxSubscriber = (typeof Symbol === 'function' && typeof Symbol.for === 
 //# sourceMappingURL=rxSubscriber.js.map
 
 /***/ },
-/* 248 */
+/* 247 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -32783,7 +32767,7 @@ exports.EmptyError = EmptyError;
 //# sourceMappingURL=EmptyError.js.map
 
 /***/ },
-/* 249 */
+/* 248 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -32793,7 +32777,7 @@ exports.errorObject = { e: {} };
 //# sourceMappingURL=errorObject.js.map
 
 /***/ },
-/* 250 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32802,9 +32786,9 @@ var root_1 = __webpack_require__(65);
 var isArray_1 = __webpack_require__(164);
 var isPromise_1 = __webpack_require__(389);
 var Observable_1 = __webpack_require__(6);
-var iterator_1 = __webpack_require__(245);
-var observable_1 = __webpack_require__(246);
-var InnerSubscriber_1 = __webpack_require__(571);
+var iterator_1 = __webpack_require__(244);
+var observable_1 = __webpack_require__(245);
+var InnerSubscriber_1 = __webpack_require__(570);
 function subscribeToResult(outerSubscriber, result, outerValue, outerIndex) {
     var destination = new InnerSubscriber_1.InnerSubscriber(outerSubscriber, outerValue, outerIndex);
     if (destination.isUnsubscribed) {
@@ -32870,6 +32854,7 @@ exports.subscribeToResult = subscribeToResult;
 //# sourceMappingURL=subscribeToResult.js.map
 
 /***/ },
+/* 250 */,
 /* 251 */,
 /* 252 */,
 /* 253 */,
@@ -32887,8 +32872,7 @@ exports.subscribeToResult = subscribeToResult;
 /* 265 */,
 /* 266 */,
 /* 267 */,
-/* 268 */,
-/* 269 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32900,7 +32884,7 @@ exports.subscribeToResult = subscribeToResult;
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var directives_1 = __webpack_require__(270);
+var directives_1 = __webpack_require__(269);
 /**
  * A collection of Angular core directives that are likely to be used in each and every Angular
  * application. This includes core directives (e.g., NgIf and NgFor), and forms directives (e.g.,
@@ -32950,7 +32934,7 @@ exports.COMMON_DIRECTIVES = [directives_1.CORE_DIRECTIVES];
 //# sourceMappingURL=common_directives.js.map
 
 /***/ },
-/* 270 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32969,27 +32953,27 @@ exports.COMMON_DIRECTIVES = [directives_1.CORE_DIRECTIVES];
  */
 var core_directives_1 = __webpack_require__(447);
 exports.CORE_DIRECTIVES = core_directives_1.CORE_DIRECTIVES;
-var ng_class_1 = __webpack_require__(271);
+var ng_class_1 = __webpack_require__(270);
 exports.NgClass = ng_class_1.NgClass;
-var ng_for_1 = __webpack_require__(272);
+var ng_for_1 = __webpack_require__(271);
 exports.NgFor = ng_for_1.NgFor;
-var ng_if_1 = __webpack_require__(273);
+var ng_if_1 = __webpack_require__(272);
 exports.NgIf = ng_if_1.NgIf;
-var ng_plural_1 = __webpack_require__(274);
+var ng_plural_1 = __webpack_require__(273);
 exports.NgPlural = ng_plural_1.NgPlural;
 exports.NgPluralCase = ng_plural_1.NgPluralCase;
-var ng_style_1 = __webpack_require__(275);
+var ng_style_1 = __webpack_require__(274);
 exports.NgStyle = ng_style_1.NgStyle;
 var ng_switch_1 = __webpack_require__(175);
 exports.NgSwitch = ng_switch_1.NgSwitch;
 exports.NgSwitchCase = ng_switch_1.NgSwitchCase;
 exports.NgSwitchDefault = ng_switch_1.NgSwitchDefault;
-var ng_template_outlet_1 = __webpack_require__(276);
+var ng_template_outlet_1 = __webpack_require__(275);
 exports.NgTemplateOutlet = ng_template_outlet_1.NgTemplateOutlet;
 //# sourceMappingURL=directives.js.map
 
 /***/ },
-/* 271 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33133,7 +33117,7 @@ exports.NgClass = NgClass;
 //# sourceMappingURL=ng_class.js.map
 
 /***/ },
-/* 272 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33279,7 +33263,7 @@ var RecordViewTuple = (function () {
 //# sourceMappingURL=ng_for.js.map
 
 /***/ },
-/* 273 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33332,7 +33316,7 @@ exports.NgIf = NgIf;
 //# sourceMappingURL=ng_if.js.map
 
 /***/ },
-/* 274 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33417,7 +33401,7 @@ exports.NgPluralCase = NgPluralCase;
 //# sourceMappingURL=ng_plural.js.map
 
 /***/ },
-/* 275 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33487,7 +33471,7 @@ exports.NgStyle = NgStyle;
 //# sourceMappingURL=ng_style.js.map
 
 /***/ },
-/* 276 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33541,7 +33525,7 @@ exports.NgTemplateOutlet = NgTemplateOutlet;
 //# sourceMappingURL=ng_template_outlet.js.map
 
 /***/ },
-/* 277 */
+/* 276 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -33604,7 +33588,7 @@ exports.BaseWrappedException = BaseWrappedException;
 //# sourceMappingURL=base_wrapped_exception.js.map
 
 /***/ },
-/* 278 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33616,7 +33600,7 @@ exports.BaseWrappedException = BaseWrappedException;
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var base_wrapped_exception_1 = __webpack_require__(277);
+var base_wrapped_exception_1 = __webpack_require__(276);
 var collection_1 = __webpack_require__(25);
 var lang_1 = __webpack_require__(4);
 var _ArrayLogger = (function () {
@@ -33750,7 +33734,7 @@ exports.ExceptionHandler = ExceptionHandler;
 //# sourceMappingURL=exception_handler.js.map
 
 /***/ },
-/* 279 */
+/* 278 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -33954,7 +33938,7 @@ exports.DateFormatter = DateFormatter;
 //# sourceMappingURL=intl.js.map
 
 /***/ },
-/* 280 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34057,7 +34041,7 @@ exports.FORM_DIRECTIVES = [
 //# sourceMappingURL=directives.js.map
 
 /***/ },
-/* 281 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34144,7 +34128,7 @@ exports.FormBuilder = FormBuilder;
 //# sourceMappingURL=form_builder.js.map
 
 /***/ },
-/* 282 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34161,34 +34145,34 @@ exports.FormBuilder = FormBuilder;
  * @description
  * This module provides a set of common Pipes.
  */
-var async_pipe_1 = __webpack_require__(283);
+var async_pipe_1 = __webpack_require__(282);
 exports.AsyncPipe = async_pipe_1.AsyncPipe;
 var common_pipes_1 = __webpack_require__(453);
 exports.COMMON_PIPES = common_pipes_1.COMMON_PIPES;
-var date_pipe_1 = __webpack_require__(284);
+var date_pipe_1 = __webpack_require__(283);
 exports.DatePipe = date_pipe_1.DatePipe;
-var i18n_plural_pipe_1 = __webpack_require__(285);
+var i18n_plural_pipe_1 = __webpack_require__(284);
 exports.I18nPluralPipe = i18n_plural_pipe_1.I18nPluralPipe;
-var i18n_select_pipe_1 = __webpack_require__(286);
+var i18n_select_pipe_1 = __webpack_require__(285);
 exports.I18nSelectPipe = i18n_select_pipe_1.I18nSelectPipe;
-var json_pipe_1 = __webpack_require__(287);
+var json_pipe_1 = __webpack_require__(286);
 exports.JsonPipe = json_pipe_1.JsonPipe;
-var lowercase_pipe_1 = __webpack_require__(288);
+var lowercase_pipe_1 = __webpack_require__(287);
 exports.LowerCasePipe = lowercase_pipe_1.LowerCasePipe;
-var number_pipe_1 = __webpack_require__(289);
+var number_pipe_1 = __webpack_require__(288);
 exports.CurrencyPipe = number_pipe_1.CurrencyPipe;
 exports.DecimalPipe = number_pipe_1.DecimalPipe;
 exports.PercentPipe = number_pipe_1.PercentPipe;
-var replace_pipe_1 = __webpack_require__(290);
+var replace_pipe_1 = __webpack_require__(289);
 exports.ReplacePipe = replace_pipe_1.ReplacePipe;
-var slice_pipe_1 = __webpack_require__(291);
+var slice_pipe_1 = __webpack_require__(290);
 exports.SlicePipe = slice_pipe_1.SlicePipe;
-var uppercase_pipe_1 = __webpack_require__(292);
+var uppercase_pipe_1 = __webpack_require__(291);
 exports.UpperCasePipe = uppercase_pipe_1.UpperCasePipe;
 //# sourceMappingURL=pipes.js.map
 
 /***/ },
-/* 283 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34312,7 +34296,7 @@ exports.AsyncPipe = AsyncPipe;
 //# sourceMappingURL=async_pipe.js.map
 
 /***/ },
-/* 284 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34326,7 +34310,7 @@ exports.AsyncPipe = AsyncPipe;
 "use strict";
 var core_1 = __webpack_require__(0);
 var collection_1 = __webpack_require__(25);
-var intl_1 = __webpack_require__(279);
+var intl_1 = __webpack_require__(278);
 var lang_1 = __webpack_require__(4);
 var invalid_pipe_argument_exception_1 = __webpack_require__(48);
 // TODO: move to a global configurable location along with other i18n components.
@@ -34382,7 +34366,7 @@ exports.DatePipe = DatePipe;
 //# sourceMappingURL=date_pipe.js.map
 
 /***/ },
-/* 285 */
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34426,7 +34410,7 @@ exports.I18nPluralPipe = I18nPluralPipe;
 //# sourceMappingURL=i18n_plural_pipe.js.map
 
 /***/ },
-/* 286 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34462,7 +34446,7 @@ exports.I18nSelectPipe = I18nSelectPipe;
 //# sourceMappingURL=i18n_select_pipe.js.map
 
 /***/ },
-/* 287 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34490,7 +34474,7 @@ exports.JsonPipe = JsonPipe;
 //# sourceMappingURL=json_pipe.js.map
 
 /***/ },
-/* 288 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34526,7 +34510,7 @@ exports.LowerCasePipe = LowerCasePipe;
 //# sourceMappingURL=lowercase_pipe.js.map
 
 /***/ },
-/* 289 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34539,7 +34523,7 @@ exports.LowerCasePipe = LowerCasePipe;
  */
 "use strict";
 var core_1 = __webpack_require__(0);
-var intl_1 = __webpack_require__(279);
+var intl_1 = __webpack_require__(278);
 var lang_1 = __webpack_require__(4);
 var invalid_pipe_argument_exception_1 = __webpack_require__(48);
 var defaultLocale = 'en-US';
@@ -34633,7 +34617,7 @@ exports.CurrencyPipe = CurrencyPipe;
 //# sourceMappingURL=number_pipe.js.map
 
 /***/ },
-/* 290 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34692,7 +34676,7 @@ exports.ReplacePipe = ReplacePipe;
 //# sourceMappingURL=replace_pipe.js.map
 
 /***/ },
-/* 291 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34734,7 +34718,7 @@ exports.SlicePipe = SlicePipe;
 //# sourceMappingURL=slice_pipe.js.map
 
 /***/ },
-/* 292 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34770,7 +34754,7 @@ exports.UpperCasePipe = UpperCasePipe;
 //# sourceMappingURL=uppercase_pipe.js.map
 
 /***/ },
-/* 293 */
+/* 292 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -34926,7 +34910,7 @@ exports.AnimationSequenceAst = AnimationSequenceAst;
 //# sourceMappingURL=animation_ast.js.map
 
 /***/ },
-/* 294 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34945,7 +34929,7 @@ var lang_1 = __webpack_require__(3);
 var identifiers_1 = __webpack_require__(20);
 var o = __webpack_require__(11);
 var t = __webpack_require__(50);
-var animation_ast_1 = __webpack_require__(293);
+var animation_ast_1 = __webpack_require__(292);
 var animation_parser_1 = __webpack_require__(455);
 var CompiledAnimation = (function () {
     function CompiledAnimation(name, statesMapStatement, statesVariableName, fnStatement, fnVariable) {
@@ -35278,7 +35262,7 @@ var _AnimationTemplatePropertyVisitor = (function () {
 //# sourceMappingURL=animation_compiler.js.map
 
 /***/ },
-/* 295 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35332,7 +35316,7 @@ exports.assertInterpolationSymbols = assertInterpolationSymbols;
 //# sourceMappingURL=assertions.js.map
 
 /***/ },
-/* 296 */
+/* 295 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -35395,7 +35379,7 @@ exports.BaseWrappedException = BaseWrappedException;
 //# sourceMappingURL=base_wrapped_exception.js.map
 
 /***/ },
-/* 297 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35407,7 +35391,7 @@ exports.BaseWrappedException = BaseWrappedException;
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var base_wrapped_exception_1 = __webpack_require__(296);
+var base_wrapped_exception_1 = __webpack_require__(295);
 var collection_1 = __webpack_require__(7);
 var lang_1 = __webpack_require__(3);
 var _ArrayLogger = (function () {
@@ -35541,7 +35525,7 @@ exports.ExceptionHandler = ExceptionHandler;
 //# sourceMappingURL=exception_handler.js.map
 
 /***/ },
-/* 298 */
+/* 297 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -35621,7 +35605,7 @@ exports.serializeNodes = serializeNodes;
 //# sourceMappingURL=digest.js.map
 
 /***/ },
-/* 299 */
+/* 298 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -35711,7 +35695,7 @@ exports.IcuPlaceholder = IcuPlaceholder;
 //# sourceMappingURL=i18n_ast.js.map
 
 /***/ },
-/* 300 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35743,7 +35727,7 @@ exports.I18nError = I18nError;
 //# sourceMappingURL=parse_util.js.map
 
 /***/ },
-/* 301 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35855,7 +35839,7 @@ exports.getHtmlTagDefinition = getHtmlTagDefinition;
 //# sourceMappingURL=html_tags.js.map
 
 /***/ },
-/* 302 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36173,7 +36157,7 @@ var _TsEmitterVisitor = (function (_super) {
 //# sourceMappingURL=ts_emitter.js.map
 
 /***/ },
-/* 303 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36227,7 +36211,7 @@ var _ValueOutputAstTransformer = (function () {
 //# sourceMappingURL=value_util.js.map
 
 /***/ },
-/* 304 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36721,7 +36705,7 @@ function _addQueryToTokenMap(map, query) {
 //# sourceMappingURL=provider_analyzer.js.map
 
 /***/ },
-/* 305 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37171,7 +37155,7 @@ var ModuleBoundCompiler = (function () {
 //# sourceMappingURL=runtime_compiler.js.map
 
 /***/ },
-/* 306 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37497,7 +37481,7 @@ exports.DomElementSchemaRegistry = DomElementSchemaRegistry;
 //# sourceMappingURL=dom_element_schema_registry.js.map
 
 /***/ },
-/* 307 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37550,7 +37534,7 @@ var _urlWithSchemaRe = /^([^:/?#]+):/;
 //# sourceMappingURL=style_url_resolver.js.map
 
 /***/ },
-/* 308 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37645,7 +37629,7 @@ function normalizeNgContentSelect(selectAttr) {
 //# sourceMappingURL=template_preparser.js.map
 
 /***/ },
-/* 309 */
+/* 308 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -37668,7 +37652,7 @@ exports.CompileBinding = CompileBinding;
 //# sourceMappingURL=compile_binding.js.map
 
 /***/ },
-/* 310 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37690,11 +37674,11 @@ var collection_1 = __webpack_require__(7);
 var lang_1 = __webpack_require__(3);
 var identifiers_1 = __webpack_require__(20);
 var o = __webpack_require__(11);
-var value_util_1 = __webpack_require__(303);
+var value_util_1 = __webpack_require__(302);
 var template_ast_1 = __webpack_require__(50);
 var util_1 = __webpack_require__(27);
 var compile_method_1 = __webpack_require__(201);
-var compile_query_1 = __webpack_require__(311);
+var compile_query_1 = __webpack_require__(310);
 var constants_1 = __webpack_require__(86);
 var util_2 = __webpack_require__(94);
 var CompileNode = (function () {
@@ -38048,7 +38032,7 @@ var _QueryWithRead = (function () {
 //# sourceMappingURL=compile_element.js.map
 
 /***/ },
-/* 311 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38175,7 +38159,7 @@ exports.addQueryToTokenMap = addQueryToTokenMap;
 //# sourceMappingURL=compile_query.js.map
 
 /***/ },
-/* 312 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38195,7 +38179,7 @@ var identifiers_1 = __webpack_require__(20);
 var o = __webpack_require__(11);
 var compile_method_1 = __webpack_require__(201);
 var compile_pipe_1 = __webpack_require__(479);
-var compile_query_1 = __webpack_require__(311);
+var compile_query_1 = __webpack_require__(310);
 var constants_1 = __webpack_require__(86);
 var util_1 = __webpack_require__(94);
 var CompileView = (function () {
@@ -38347,7 +38331,7 @@ function getViewType(component, embeddedTemplateIndex) {
 //# sourceMappingURL=compile_view.js.map
 
 /***/ },
-/* 313 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38692,7 +38676,7 @@ function flattenStatements(arg, output) {
 //# sourceMappingURL=expression_converter.js.map
 
 /***/ },
-/* 314 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38706,7 +38690,7 @@ function flattenStatements(arg, output) {
 "use strict";
 var core_1 = __webpack_require__(0);
 var core_private_1 = __webpack_require__(19);
-var animation_compiler_1 = __webpack_require__(294);
+var animation_compiler_1 = __webpack_require__(293);
 var compile_metadata_1 = __webpack_require__(22);
 var collection_1 = __webpack_require__(7);
 var lang_1 = __webpack_require__(3);
@@ -38714,8 +38698,8 @@ var identifiers_1 = __webpack_require__(20);
 var o = __webpack_require__(11);
 var template_ast_1 = __webpack_require__(50);
 var util_1 = __webpack_require__(27);
-var compile_element_1 = __webpack_require__(310);
-var compile_view_1 = __webpack_require__(312);
+var compile_element_1 = __webpack_require__(309);
+var compile_view_1 = __webpack_require__(311);
 var constants_1 = __webpack_require__(86);
 var util_2 = __webpack_require__(94);
 var IMPLICIT_TEMPLATE_VAR = '\$implicit';
@@ -39213,7 +39197,7 @@ function getChangeDetectionMode(view) {
 //# sourceMappingURL=view_builder.js.map
 
 /***/ },
-/* 315 */
+/* 314 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -39232,7 +39216,7 @@ exports.EMPTY_STATE = 'void';
 //# sourceMappingURL=animation_constants.js.map
 
 /***/ },
-/* 316 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39318,7 +39302,7 @@ exports.AnimationGroupPlayer = AnimationGroupPlayer;
 //# sourceMappingURL=animation_group_player.js.map
 
 /***/ },
-/* 317 */
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40002,7 +39986,7 @@ exports.trigger = trigger;
 //# sourceMappingURL=metadata.js.map
 
 /***/ },
-/* 318 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40318,7 +40302,7 @@ exports.KeyValueChangeRecord = KeyValueChangeRecord;
 //# sourceMappingURL=default_keyvalue_differ.js.map
 
 /***/ },
-/* 319 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40401,7 +40385,7 @@ exports.IterableDiffers = IterableDiffers;
 //# sourceMappingURL=iterable_differs.js.map
 
 /***/ },
-/* 320 */
+/* 319 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40484,7 +40468,7 @@ exports.KeyValueDiffers = KeyValueDiffers;
 //# sourceMappingURL=keyvalue_differs.js.map
 
 /***/ },
-/* 321 */
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40705,7 +40689,7 @@ exports.removeDebugNodeFromIndex = removeDebugNodeFromIndex;
 //# sourceMappingURL=debug_node.js.map
 
 /***/ },
-/* 322 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40737,7 +40721,7 @@ exports.OpaqueToken = OpaqueToken;
 //# sourceMappingURL=opaque_token.js.map
 
 /***/ },
-/* 323 */
+/* 322 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40761,7 +40745,7 @@ exports.createProvider = createProvider;
 //# sourceMappingURL=provider_util.js.map
 
 /***/ },
-/* 324 */
+/* 323 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -40824,7 +40808,7 @@ exports.BaseWrappedException = BaseWrappedException;
 //# sourceMappingURL=base_wrapped_exception.js.map
 
 /***/ },
-/* 325 */
+/* 324 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40836,7 +40820,7 @@ exports.BaseWrappedException = BaseWrappedException;
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var base_wrapped_exception_1 = __webpack_require__(324);
+var base_wrapped_exception_1 = __webpack_require__(323);
 var collection_1 = __webpack_require__(14);
 var lang_1 = __webpack_require__(2);
 var _ArrayLogger = (function () {
@@ -40970,7 +40954,7 @@ exports.ExceptionHandler = ExceptionHandler;
 //# sourceMappingURL=exception_handler.js.map
 
 /***/ },
-/* 326 */
+/* 325 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41138,7 +41122,7 @@ exports.ComponentFactory = ComponentFactory;
 //# sourceMappingURL=component_factory.js.map
 
 /***/ },
-/* 327 */
+/* 326 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41267,7 +41251,7 @@ exports.DebugContext = DebugContext;
 //# sourceMappingURL=debug_context.js.map
 
 /***/ },
-/* 328 */
+/* 327 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41338,7 +41322,7 @@ exports.DynamicComponentLoader_ = DynamicComponentLoader_;
 //# sourceMappingURL=dynamic_component_loader.js.map
 
 /***/ },
-/* 329 */
+/* 328 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -41375,7 +41359,7 @@ exports.ElementRef = ElementRef;
 //# sourceMappingURL=element_ref.js.map
 
 /***/ },
-/* 330 */
+/* 329 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41503,7 +41487,7 @@ exports.NgModuleInjector = NgModuleInjector;
 //# sourceMappingURL=ng_module_factory.js.map
 
 /***/ },
-/* 331 */
+/* 330 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -41579,7 +41563,7 @@ exports.TemplateRef_ = TemplateRef_;
 //# sourceMappingURL=template_ref.js.map
 
 /***/ },
-/* 332 */
+/* 331 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41754,7 +41738,7 @@ exports.ViewContainerRef_ = ViewContainerRef_;
 //# sourceMappingURL=view_container_ref.js.map
 
 /***/ },
-/* 333 */
+/* 332 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41902,7 +41886,7 @@ exports.ViewRef_ = ViewRef_;
 //# sourceMappingURL=view_ref.js.map
 
 /***/ },
-/* 334 */
+/* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41914,11 +41898,11 @@ exports.ViewRef_ = ViewRef_;
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var di_1 = __webpack_require__(335);
-var directives_1 = __webpack_require__(336);
-var ng_module_1 = __webpack_require__(338);
+var di_1 = __webpack_require__(334);
+var directives_1 = __webpack_require__(335);
+var ng_module_1 = __webpack_require__(337);
 var decorators_1 = __webpack_require__(140);
-var di_2 = __webpack_require__(335);
+var di_2 = __webpack_require__(334);
 exports.ANALYZE_FOR_ENTRY_COMPONENTS = di_2.ANALYZE_FOR_ENTRY_COMPONENTS;
 exports.AttributeMetadata = di_2.AttributeMetadata;
 exports.ContentChildMetadata = di_2.ContentChildMetadata;
@@ -41927,7 +41911,7 @@ exports.QueryMetadata = di_2.QueryMetadata;
 exports.ViewChildMetadata = di_2.ViewChildMetadata;
 exports.ViewChildrenMetadata = di_2.ViewChildrenMetadata;
 exports.ViewQueryMetadata = di_2.ViewQueryMetadata;
-var directives_2 = __webpack_require__(336);
+var directives_2 = __webpack_require__(335);
 exports.ComponentMetadata = directives_2.ComponentMetadata;
 exports.DirectiveMetadata = directives_2.DirectiveMetadata;
 exports.HostBindingMetadata = directives_2.HostBindingMetadata;
@@ -41935,7 +41919,7 @@ exports.HostListenerMetadata = directives_2.HostListenerMetadata;
 exports.InputMetadata = directives_2.InputMetadata;
 exports.OutputMetadata = directives_2.OutputMetadata;
 exports.PipeMetadata = directives_2.PipeMetadata;
-var lifecycle_hooks_1 = __webpack_require__(337);
+var lifecycle_hooks_1 = __webpack_require__(336);
 exports.AfterContentChecked = lifecycle_hooks_1.AfterContentChecked;
 exports.AfterContentInit = lifecycle_hooks_1.AfterContentInit;
 exports.AfterViewChecked = lifecycle_hooks_1.AfterViewChecked;
@@ -41944,10 +41928,10 @@ exports.DoCheck = lifecycle_hooks_1.DoCheck;
 exports.OnChanges = lifecycle_hooks_1.OnChanges;
 exports.OnDestroy = lifecycle_hooks_1.OnDestroy;
 exports.OnInit = lifecycle_hooks_1.OnInit;
-var ng_module_2 = __webpack_require__(338);
+var ng_module_2 = __webpack_require__(337);
 exports.CUSTOM_ELEMENTS_SCHEMA = ng_module_2.CUSTOM_ELEMENTS_SCHEMA;
 exports.NgModuleMetadata = ng_module_2.NgModuleMetadata;
-var view_1 = __webpack_require__(339);
+var view_1 = __webpack_require__(338);
 exports.ViewEncapsulation = view_1.ViewEncapsulation;
 exports.ViewMetadata = view_1.ViewMetadata;
 // TODO(alexeagle): remove the duplication of this doc. It is copied from ComponentMetadata.
@@ -42933,7 +42917,7 @@ exports.NgModule = decorators_1.makeDecorator(ng_module_1.NgModuleMetadata);
 //# sourceMappingURL=metadata.js.map
 
 /***/ },
-/* 335 */
+/* 334 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42952,7 +42936,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var forward_ref_1 = __webpack_require__(134);
 var metadata_1 = __webpack_require__(72);
-var opaque_token_1 = __webpack_require__(322);
+var opaque_token_1 = __webpack_require__(321);
 var lang_1 = __webpack_require__(2);
 /**
  * This token can be used to create a virtual provider that will populate the
@@ -43470,7 +43454,7 @@ exports.ViewChildMetadata = ViewChildMetadata;
 //# sourceMappingURL=di.js.map
 
 /***/ },
-/* 336 */
+/* 335 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44371,7 +44355,7 @@ exports.HostListenerMetadata = HostListenerMetadata;
 //# sourceMappingURL=directives.js.map
 
 /***/ },
-/* 337 */
+/* 336 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -44896,7 +44880,7 @@ exports.AfterViewChecked = AfterViewChecked;
 //# sourceMappingURL=lifecycle_hooks.js.map
 
 /***/ },
-/* 338 */
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44982,7 +44966,7 @@ exports.NgModuleMetadata = NgModuleMetadata;
 //# sourceMappingURL=ng_module.js.map
 
 /***/ },
-/* 339 */
+/* 338 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -45074,7 +45058,7 @@ exports.ViewMetadata = ViewMetadata;
 //# sourceMappingURL=view.js.map
 
 /***/ },
-/* 340 */
+/* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45318,7 +45302,7 @@ function convertTsickleDecoratorIntoMetadata(decoratorInvocations) {
 //# sourceMappingURL=reflection_capabilities.js.map
 
 /***/ },
-/* 341 */
+/* 340 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45498,7 +45482,7 @@ function _mergeMaps(target, config) {
 //# sourceMappingURL=reflector.js.map
 
 /***/ },
-/* 342 */
+/* 341 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -45542,7 +45526,7 @@ exports.SanitizationService = SanitizationService;
 //# sourceMappingURL=security.js.map
 
 /***/ },
-/* 343 */
+/* 342 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -45641,7 +45625,7 @@ exports.NgZoneImpl = NgZoneImpl;
 //# sourceMappingURL=ng_zone_impl.js.map
 
 /***/ },
-/* 344 */
+/* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45750,7 +45734,7 @@ exports.InternalFormsSharedModule = InternalFormsSharedModule;
 //# sourceMappingURL=directives.js.map
 
 /***/ },
-/* 345 */
+/* 344 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -45772,7 +45756,7 @@ exports.FormErrorExamples = {
 //# sourceMappingURL=error_examples.js.map
 
 /***/ },
-/* 346 */
+/* 345 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45785,7 +45769,7 @@ exports.FormErrorExamples = {
  */
 "use strict";
 var exceptions_1 = __webpack_require__(74);
-var error_examples_1 = __webpack_require__(345);
+var error_examples_1 = __webpack_require__(344);
 var TemplateDrivenErrors = (function () {
     function TemplateDrivenErrors() {
     }
@@ -45807,7 +45791,7 @@ exports.TemplateDrivenErrors = TemplateDrivenErrors;
 //# sourceMappingURL=template_driven_errors.js.map
 
 /***/ },
-/* 347 */
+/* 346 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -45870,7 +45854,7 @@ exports.BaseWrappedException = BaseWrappedException;
 //# sourceMappingURL=base_wrapped_exception.js.map
 
 /***/ },
-/* 348 */
+/* 347 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45882,7 +45866,7 @@ exports.BaseWrappedException = BaseWrappedException;
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var base_wrapped_exception_1 = __webpack_require__(347);
+var base_wrapped_exception_1 = __webpack_require__(346);
 var collection_1 = __webpack_require__(35);
 var lang_1 = __webpack_require__(23);
 var _ArrayLogger = (function () {
@@ -46016,7 +46000,7 @@ exports.ExceptionHandler = ExceptionHandler;
 //# sourceMappingURL=exception_handler.js.map
 
 /***/ },
-/* 349 */
+/* 348 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46103,6 +46087,25 @@ exports.FormBuilder = FormBuilder;
 //# sourceMappingURL=form_builder.js.map
 
 /***/ },
+/* 349 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+"use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+__export(__webpack_require__(514));
+//# sourceMappingURL=index.js.map
+
+/***/ },
 /* 350 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -46187,7 +46190,7 @@ var enums_1 = __webpack_require__(61);
 var exceptions_1 = __webpack_require__(149);
 var lang_1 = __webpack_require__(28);
 var interfaces_1 = __webpack_require__(102);
-var static_response_1 = __webpack_require__(232);
+var static_response_1 = __webpack_require__(231);
 var browser_jsonp_1 = __webpack_require__(350);
 var JSONP_ERR_NO_CALLBACK = 'JSONP injected script did not invoke callback.';
 var JSONP_ERR_WRONG_METHOD = 'JSONP requests must use GET request method.';
@@ -46343,8 +46346,8 @@ var lang_1 = __webpack_require__(28);
 var headers_1 = __webpack_require__(101);
 var http_utils_1 = __webpack_require__(150);
 var interfaces_1 = __webpack_require__(102);
-var static_response_1 = __webpack_require__(232);
-var browser_xhr_1 = __webpack_require__(229);
+var static_response_1 = __webpack_require__(231);
+var browser_xhr_1 = __webpack_require__(228);
 var XSSI_PREFIX = /^\)\]\}',?\n/;
 /**
  * Creates connections using `XMLHttpRequest`. Given a fully-qualified
@@ -46680,7 +46683,7 @@ exports.BaseWrappedException = BaseWrappedException;
  */
 "use strict";
 var base_wrapped_exception_1 = __webpack_require__(354);
-var collection_1 = __webpack_require__(231);
+var collection_1 = __webpack_require__(230);
 var lang_1 = __webpack_require__(28);
 var _ArrayLogger = (function () {
     function _ArrayLogger() {
@@ -46833,7 +46836,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var core_1 = __webpack_require__(0);
 var exceptions_1 = __webpack_require__(149);
 var lang_1 = __webpack_require__(28);
-var base_request_options_1 = __webpack_require__(230);
+var base_request_options_1 = __webpack_require__(229);
 var enums_1 = __webpack_require__(61);
 var interfaces_1 = __webpack_require__(102);
 var static_request_1 = __webpack_require__(357);
@@ -48429,7 +48432,7 @@ var core_1 = __webpack_require__(0);
 exports.SecurityContext = core_1.SecurityContext;
 var html_sanitizer_1 = __webpack_require__(534);
 var style_sanitizer_1 = __webpack_require__(535);
-var url_sanitizer_1 = __webpack_require__(235);
+var url_sanitizer_1 = __webpack_require__(234);
 /**
  * DomSanitizationService helps preventing Cross Site Scripting Security bugs (XSS) by sanitizing
  * values to be safe to use in the different DOM contexts.
@@ -48794,7 +48797,7 @@ exports.deserializeGenericEvent = deserializeGenericEvent;
 "use strict";
 var core_1 = __webpack_require__(0);
 var router_1 = __webpack_require__(108);
-var router_link_1 = __webpack_require__(238);
+var router_link_1 = __webpack_require__(237);
 var RouterLinkActive = (function () {
     function RouterLinkActive(router, element, renderer) {
         var _this = this;
@@ -49006,8 +49009,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'kcg-app',
-            template: __webpack_require__(563),
-            styles: [__webpack_require__(562)],
+            template: __webpack_require__(562),
+            styles: [__webpack_require__(561)],
             directives: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["ROUTER_DIRECTIVES"]],
             providers: []
         }), 
@@ -49053,7 +49056,7 @@ var FaqComponent = (function () {
     FaqComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-faq',
-            template: __webpack_require__(564),
+            template: __webpack_require__(563),
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"]) === 'function' && _a) || Object])
     ], FaqComponent);
@@ -49098,7 +49101,7 @@ var ProcessComponent = (function () {
     ProcessComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-service',
-            template: __webpack_require__(566),
+            template: __webpack_require__(565),
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"]) === 'function' && _a) || Object])
     ], ProcessComponent);
@@ -49154,7 +49157,7 @@ var QueryComponent = (function () {
     QueryComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-query',
-            template: __webpack_require__(568),
+            template: __webpack_require__(567),
             providers: [__WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */]) === 'function' && _b) || Object])
@@ -49205,8 +49208,7 @@ var ReportComponent = (function () {
         var _this = this;
         this.caseService
             .getTypes()
-            .then(function (types) { return _this.caseTypes = types; })
-            .catch(function (error) { return _this.error = error; });
+            .then(function (types) { return _this.caseTypes = types; });
     };
     ReportComponent.prototype.ngOnInit = function () {
         this.setTitle('市長信箱 - 高雄市政府線上即時服務平台');
@@ -49215,7 +49217,7 @@ var ReportComponent = (function () {
     ReportComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-report',
-            template: __webpack_require__(570),
+            template: __webpack_require__(569),
             directives: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["ROUTER_DIRECTIVES"]],
             providers: [__WEBPACK_IMPORTED_MODULE_3__case_service__["a" /* CaseService */]]
         }), 
@@ -49293,7 +49295,7 @@ exports.BehaviorSubject = BehaviorSubject;
 "use strict";
 "use strict";
 var Observable_1 = __webpack_require__(6);
-var concatAll_1 = __webpack_require__(588);
+var concatAll_1 = __webpack_require__(587);
 Observable_1.Observable.prototype.concatAll = concatAll_1.concatAll;
 //# sourceMappingURL=concatAll.js.map
 
@@ -49304,7 +49306,7 @@ Observable_1.Observable.prototype.concatAll = concatAll_1.concatAll;
 "use strict";
 "use strict";
 var Observable_1 = __webpack_require__(6);
-var map_1 = __webpack_require__(592);
+var map_1 = __webpack_require__(591);
 Observable_1.Observable.prototype.map = map_1.map;
 //# sourceMappingURL=map.js.map
 
@@ -49315,7 +49317,7 @@ Observable_1.Observable.prototype.map = map_1.map;
 "use strict";
 "use strict";
 var Observable_1 = __webpack_require__(6);
-var toPromise_1 = __webpack_require__(244);
+var toPromise_1 = __webpack_require__(243);
 Observable_1.Observable.prototype.toPromise = toPromise_1.toPromise;
 //# sourceMappingURL=toPromise.js.map
 
@@ -49332,7 +49334,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Observable_1 = __webpack_require__(6);
 var ScalarObservable_1 = __webpack_require__(384);
-var EmptyObservable_1 = __webpack_require__(242);
+var EmptyObservable_1 = __webpack_require__(241);
 var isScheduler_1 = __webpack_require__(390);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -49514,7 +49516,7 @@ exports.ScalarObservable = ScalarObservable;
 
 "use strict";
 "use strict";
-var FromObservable_1 = __webpack_require__(584);
+var FromObservable_1 = __webpack_require__(583);
 exports.from = FromObservable_1.FromObservable.create;
 //# sourceMappingURL=from.js.map
 
@@ -49529,8 +49531,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var OuterSubscriber_1 = __webpack_require__(240);
-var subscribeToResult_1 = __webpack_require__(250);
+var OuterSubscriber_1 = __webpack_require__(239);
+var subscribeToResult_1 = __webpack_require__(249);
 /**
  * Converts a higher-order Observable into a first-order Observable which
  * concurrently delivers all values that are emitted on the inner Observables.
@@ -49718,7 +49720,7 @@ exports.throwError = throwError;
 
 "use strict";
 "use strict";
-var errorObject_1 = __webpack_require__(249);
+var errorObject_1 = __webpack_require__(248);
 var tryCatchTarget;
 function tryCatcher() {
     try {
@@ -49824,13 +49826,13 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var ng_class_1 = __webpack_require__(271);
-var ng_for_1 = __webpack_require__(272);
-var ng_if_1 = __webpack_require__(273);
-var ng_plural_1 = __webpack_require__(274);
-var ng_style_1 = __webpack_require__(275);
+var ng_class_1 = __webpack_require__(270);
+var ng_for_1 = __webpack_require__(271);
+var ng_if_1 = __webpack_require__(272);
+var ng_plural_1 = __webpack_require__(273);
+var ng_style_1 = __webpack_require__(274);
 var ng_switch_1 = __webpack_require__(175);
-var ng_template_outlet_1 = __webpack_require__(276);
+var ng_template_outlet_1 = __webpack_require__(275);
 /**
  * A collection of Angular core directives that are likely to be used in each and every Angular
  * application.
@@ -49913,10 +49915,10 @@ exports.CORE_DIRECTIVES = [
  * explicitly.
  */
 var core_1 = __webpack_require__(0);
-var directives_1 = __webpack_require__(280);
+var directives_1 = __webpack_require__(279);
 var radio_control_value_accessor_1 = __webpack_require__(118);
-var form_builder_1 = __webpack_require__(281);
-var directives_2 = __webpack_require__(280);
+var form_builder_1 = __webpack_require__(280);
+var directives_2 = __webpack_require__(279);
 exports.FORM_DIRECTIVES = directives_2.FORM_DIRECTIVES;
 exports.RadioButtonState = directives_2.RadioButtonState;
 var abstract_control_directive_1 = __webpack_require__(176);
@@ -49953,7 +49955,7 @@ exports.MaxLengthValidator = validators_1.MaxLengthValidator;
 exports.MinLengthValidator = validators_1.MinLengthValidator;
 exports.PatternValidator = validators_1.PatternValidator;
 exports.RequiredValidator = validators_1.RequiredValidator;
-var form_builder_2 = __webpack_require__(281);
+var form_builder_2 = __webpack_require__(280);
 exports.FormBuilder = form_builder_2.FormBuilder;
 var model_1 = __webpack_require__(120);
 exports.AbstractControl = model_1.AbstractControl;
@@ -50225,16 +50227,16 @@ exports.PathLocationStrategy = PathLocationStrategy;
  * @description
  * This module provides a set of common Pipes.
  */
-var async_pipe_1 = __webpack_require__(283);
-var date_pipe_1 = __webpack_require__(284);
-var i18n_plural_pipe_1 = __webpack_require__(285);
-var i18n_select_pipe_1 = __webpack_require__(286);
-var json_pipe_1 = __webpack_require__(287);
-var lowercase_pipe_1 = __webpack_require__(288);
-var number_pipe_1 = __webpack_require__(289);
-var replace_pipe_1 = __webpack_require__(290);
-var slice_pipe_1 = __webpack_require__(291);
-var uppercase_pipe_1 = __webpack_require__(292);
+var async_pipe_1 = __webpack_require__(282);
+var date_pipe_1 = __webpack_require__(283);
+var i18n_plural_pipe_1 = __webpack_require__(284);
+var i18n_select_pipe_1 = __webpack_require__(285);
+var json_pipe_1 = __webpack_require__(286);
+var lowercase_pipe_1 = __webpack_require__(287);
+var number_pipe_1 = __webpack_require__(288);
+var replace_pipe_1 = __webpack_require__(289);
+var slice_pipe_1 = __webpack_require__(290);
+var uppercase_pipe_1 = __webpack_require__(291);
 /**
  * A collection of Angular core pipes that are likely to be used in each and every
  * application.
@@ -50281,9 +50283,9 @@ var html_parser = __webpack_require__(125);
 var interpolation_config = __webpack_require__(58);
 var ng_module_compiler = __webpack_require__(195);
 var path_util = __webpack_require__(476);
-var ts_emitter = __webpack_require__(302);
+var ts_emitter = __webpack_require__(301);
 var parse_util = __webpack_require__(49);
-var dom_element_schema_registry = __webpack_require__(306);
+var dom_element_schema_registry = __webpack_require__(305);
 var selector = __webpack_require__(199);
 var style_compiler = __webpack_require__(200);
 var template_parser = __webpack_require__(127);
@@ -50338,7 +50340,7 @@ var collection_1 = __webpack_require__(7);
 var lang_1 = __webpack_require__(3);
 var math_1 = __webpack_require__(458);
 var parse_util_1 = __webpack_require__(49);
-var animation_ast_1 = __webpack_require__(293);
+var animation_ast_1 = __webpack_require__(292);
 var styles_collection_1 = __webpack_require__(456);
 var _INITIAL_KEYFRAME = 0;
 var _TERMINAL_KEYFRAME = 1;
@@ -50889,7 +50891,7 @@ exports.CompilerConfig = config_1.CompilerConfig;
 exports.RenderTypes = config_1.RenderTypes;
 __export(__webpack_require__(22));
 __export(__webpack_require__(472));
-var runtime_compiler_1 = __webpack_require__(305);
+var runtime_compiler_1 = __webpack_require__(304);
 exports.RuntimeCompiler = runtime_compiler_1.RuntimeCompiler;
 __export(__webpack_require__(85));
 __export(__webpack_require__(202));
@@ -50909,9 +50911,9 @@ var style_compiler_1 = __webpack_require__(200);
 var view_compiler_1 = __webpack_require__(128);
 var ng_module_compiler_1 = __webpack_require__(195);
 var config_2 = __webpack_require__(83);
-var runtime_compiler_2 = __webpack_require__(305);
+var runtime_compiler_2 = __webpack_require__(304);
 var element_schema_registry_1 = __webpack_require__(93);
-var dom_element_schema_registry_1 = __webpack_require__(306);
+var dom_element_schema_registry_1 = __webpack_require__(305);
 var url_resolver_2 = __webpack_require__(85);
 var parser_1 = __webpack_require__(124);
 var lexer_1 = __webpack_require__(123);
@@ -51132,10 +51134,10 @@ exports.NaN = typeof exports.NaN;
  */
 "use strict";
 var html = __webpack_require__(71);
-var digest_1 = __webpack_require__(298);
-var i18n = __webpack_require__(299);
+var digest_1 = __webpack_require__(297);
+var i18n = __webpack_require__(298);
 var i18n_parser_1 = __webpack_require__(460);
-var parse_util_1 = __webpack_require__(300);
+var parse_util_1 = __webpack_require__(299);
 var _I18N_ATTR = 'i18n';
 var _I18N_ATTR_PREFIX = 'i18n-';
 var _I18N_COMMENT_PREFIX_REGEXP = /^i18n:?/;
@@ -51553,8 +51555,8 @@ function _splitMeaningAndDesc(i18n) {
 var lexer_1 = __webpack_require__(123);
 var parser_1 = __webpack_require__(124);
 var html = __webpack_require__(71);
-var html_tags_1 = __webpack_require__(301);
-var i18n = __webpack_require__(299);
+var html_tags_1 = __webpack_require__(300);
+var i18n = __webpack_require__(298);
 var placeholder_1 = __webpack_require__(463);
 var _expParser = new parser_1.Parser(new lexer_1.Lexer());
 /**
@@ -51695,7 +51697,7 @@ exports.Xtb = xtb_1.Xtb;
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var digest_1 = __webpack_require__(298);
+var digest_1 = __webpack_require__(297);
 var extractor_merger_1 = __webpack_require__(459);
 /**
  * A container for message extracted from the templates.
@@ -52053,7 +52055,7 @@ function _escapeXml(text) {
 "use strict";
 var ml = __webpack_require__(71);
 var xml_parser_1 = __webpack_require__(470);
-var parse_util_1 = __webpack_require__(300);
+var parse_util_1 = __webpack_require__(299);
 var _TRANSLATIONS_TAG = 'translationbundle';
 var _TRANSLATION_TAG = 'translation';
 var _PLACEHOLDER_TAG = 'ph';
@@ -53450,7 +53452,7 @@ var collection_1 = __webpack_require__(7);
 var exceptions_1 = __webpack_require__(13);
 var lang_1 = __webpack_require__(3);
 var o = __webpack_require__(11);
-var ts_emitter_1 = __webpack_require__(302);
+var ts_emitter_1 = __webpack_require__(301);
 function interpretStatements(statements, resultVar) {
     var stmtsWithReturn = statements.concat([new o.ReturnStatement(o.variable(resultVar))]);
     var ctx = new _ExecutionContext(null, null, null, new Map());
@@ -54576,10 +54578,10 @@ var collection_1 = __webpack_require__(7);
 var lang_1 = __webpack_require__(3);
 var identifiers_1 = __webpack_require__(20);
 var o = __webpack_require__(11);
-var compile_binding_1 = __webpack_require__(309);
+var compile_binding_1 = __webpack_require__(308);
 var compile_method_1 = __webpack_require__(201);
 var constants_1 = __webpack_require__(86);
-var expression_converter_1 = __webpack_require__(313);
+var expression_converter_1 = __webpack_require__(312);
 var CompileEventListener = (function () {
     function CompileEventListener(compileElement, eventTarget, eventName, listenerIndex) {
         this.compileElement = compileElement;
@@ -54803,9 +54805,9 @@ var identifiers_1 = __webpack_require__(20);
 var o = __webpack_require__(11);
 var template_ast_1 = __webpack_require__(50);
 var util_1 = __webpack_require__(27);
-var compile_binding_1 = __webpack_require__(309);
+var compile_binding_1 = __webpack_require__(308);
 var constants_1 = __webpack_require__(86);
-var expression_converter_1 = __webpack_require__(313);
+var expression_converter_1 = __webpack_require__(312);
 function createBindFieldExpr(exprIndex) {
     return o.THIS_EXPR.prop("_expr_" + exprIndex);
 }
@@ -55130,8 +55132,8 @@ var ViewBinderVisitor = (function () {
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var animation_constants_1 = __webpack_require__(315);
-var animation_group_player_1 = __webpack_require__(316);
+var animation_constants_1 = __webpack_require__(314);
+var animation_group_player_1 = __webpack_require__(315);
 var animation_keyframe_1 = __webpack_require__(485);
 var animation_player_1 = __webpack_require__(203);
 var animation_sequence_player_1 = __webpack_require__(486);
@@ -55141,21 +55143,21 @@ var change_detection_util = __webpack_require__(131);
 var constants = __webpack_require__(132);
 var console = __webpack_require__(133);
 var debug = __webpack_require__(493);
-var provider_util = __webpack_require__(323);
+var provider_util = __webpack_require__(322);
 var reflective_provider = __webpack_require__(210);
 var component_factory_resolver = __webpack_require__(136);
-var debug_context = __webpack_require__(327);
+var debug_context = __webpack_require__(326);
 var element = __webpack_require__(213);
-var ng_module_factory = __webpack_require__(330);
-var template_ref = __webpack_require__(331);
+var ng_module_factory = __webpack_require__(329);
+var template_ref = __webpack_require__(330);
 var view = __webpack_require__(502);
 var view_type = __webpack_require__(137);
 var view_utils = __webpack_require__(138);
-var lifecycle_hooks = __webpack_require__(337);
-var metadata_view = __webpack_require__(339);
+var lifecycle_hooks = __webpack_require__(336);
+var metadata_view = __webpack_require__(338);
 var wtf_init = __webpack_require__(506);
 var reflection = __webpack_require__(215);
-var reflection_capabilities = __webpack_require__(340);
+var reflection_capabilities = __webpack_require__(339);
 var reflector_reader = __webpack_require__(216);
 var api = __webpack_require__(217);
 var decorators = __webpack_require__(140);
@@ -55356,8 +55358,8 @@ exports.AnimationSequencePlayer = AnimationSequencePlayer;
 "use strict";
 var collection_1 = __webpack_require__(14);
 var lang_1 = __webpack_require__(2);
-var animation_constants_1 = __webpack_require__(315);
-var metadata_1 = __webpack_require__(317);
+var animation_constants_1 = __webpack_require__(314);
+var metadata_1 = __webpack_require__(316);
 function prepareFinalAnimationStyles(previousStyles, newStyles, nullValue) {
     if (nullValue === void 0) { nullValue = null; }
     var finalStyles = {};
@@ -55560,9 +55562,9 @@ var application_tokens_1 = __webpack_require__(129);
 var change_detection_1 = __webpack_require__(130);
 var compiler_1 = __webpack_require__(96);
 var component_resolver_1 = __webpack_require__(212);
-var dynamic_component_loader_1 = __webpack_require__(328);
+var dynamic_component_loader_1 = __webpack_require__(327);
 var view_utils_1 = __webpack_require__(138);
-var metadata_1 = __webpack_require__(334);
+var metadata_1 = __webpack_require__(333);
 function _iterableDiffersFactory() {
     return change_detection_1.defaultIterableDiffers;
 }
@@ -55671,7 +55673,7 @@ exports.ChangeDetectorRef = ChangeDetectorRef;
  */
 "use strict";
 var lang_1 = __webpack_require__(2);
-var debug_node_1 = __webpack_require__(321);
+var debug_node_1 = __webpack_require__(320);
 var DebugDomRootRenderer = (function () {
     function DebugDomRootRenderer(_delegate) {
         this._delegate = _delegate;
@@ -56680,7 +56682,7 @@ exports.Compiler = compiler_1.Compiler;
 exports.CompilerFactory = compiler_1.CompilerFactory;
 exports.ComponentStillLoadingError = compiler_1.ComponentStillLoadingError;
 exports.ModuleWithComponentFactories = compiler_1.ModuleWithComponentFactories;
-var component_factory_1 = __webpack_require__(326);
+var component_factory_1 = __webpack_require__(325);
 exports.ComponentFactory = component_factory_1.ComponentFactory;
 exports.ComponentRef = component_factory_1.ComponentRef;
 var component_factory_resolver_1 = __webpack_require__(136);
@@ -56688,13 +56690,13 @@ exports.ComponentFactoryResolver = component_factory_resolver_1.ComponentFactory
 exports.NoComponentFactoryError = component_factory_resolver_1.NoComponentFactoryError;
 var component_resolver_1 = __webpack_require__(212);
 exports.ComponentResolver = component_resolver_1.ComponentResolver;
-var dynamic_component_loader_1 = __webpack_require__(328);
+var dynamic_component_loader_1 = __webpack_require__(327);
 exports.DynamicComponentLoader = dynamic_component_loader_1.DynamicComponentLoader;
-var element_ref_1 = __webpack_require__(329);
+var element_ref_1 = __webpack_require__(328);
 exports.ElementRef = element_ref_1.ElementRef;
 var exceptions_1 = __webpack_require__(214);
 exports.ExpressionChangedAfterItHasBeenCheckedException = exceptions_1.ExpressionChangedAfterItHasBeenCheckedException;
-var ng_module_factory_1 = __webpack_require__(330);
+var ng_module_factory_1 = __webpack_require__(329);
 exports.NgModuleFactory = ng_module_factory_1.NgModuleFactory;
 exports.NgModuleRef = ng_module_factory_1.NgModuleRef;
 var ng_module_factory_loader_1 = __webpack_require__(498);
@@ -56706,11 +56708,11 @@ exports.SystemJsNgModuleLoader = system_js_ng_module_factory_loader_1.SystemJsNg
 var systemjs_component_resolver_1 = __webpack_require__(501);
 exports.SystemJsCmpFactoryResolver = systemjs_component_resolver_1.SystemJsCmpFactoryResolver;
 exports.SystemJsComponentResolver = systemjs_component_resolver_1.SystemJsComponentResolver;
-var template_ref_1 = __webpack_require__(331);
+var template_ref_1 = __webpack_require__(330);
 exports.TemplateRef = template_ref_1.TemplateRef;
-var view_container_ref_1 = __webpack_require__(332);
+var view_container_ref_1 = __webpack_require__(331);
 exports.ViewContainerRef = view_container_ref_1.ViewContainerRef;
-var view_ref_1 = __webpack_require__(333);
+var view_ref_1 = __webpack_require__(332);
 exports.EmbeddedViewRef = view_ref_1.EmbeddedViewRef;
 exports.ViewRef = view_ref_1.ViewRef;
 //# sourceMappingURL=linker.js.map
@@ -57065,17 +57067,17 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var animation_group_player_1 = __webpack_require__(316);
+var animation_group_player_1 = __webpack_require__(315);
 var view_animation_map_1 = __webpack_require__(489);
 var change_detection_1 = __webpack_require__(130);
 var collection_1 = __webpack_require__(14);
 var lang_1 = __webpack_require__(2);
 var profile_1 = __webpack_require__(139);
-var debug_context_1 = __webpack_require__(327);
+var debug_context_1 = __webpack_require__(326);
 var element_1 = __webpack_require__(213);
 var element_injector_1 = __webpack_require__(497);
 var exceptions_1 = __webpack_require__(214);
-var view_ref_1 = __webpack_require__(333);
+var view_ref_1 = __webpack_require__(332);
 var view_type_1 = __webpack_require__(137);
 var view_utils_1 = __webpack_require__(138);
 var _scope_check = profile_1.wtfCreateScope("AppView#check(ascii id)");
@@ -57768,9 +57770,9 @@ exports.normalizeAsyncValidator = normalizeAsyncValidator;
  */
 "use strict";
 var core_1 = __webpack_require__(0);
-var directives_1 = __webpack_require__(344);
+var directives_1 = __webpack_require__(343);
 var radio_control_value_accessor_1 = __webpack_require__(144);
-var form_builder_1 = __webpack_require__(349);
+var form_builder_1 = __webpack_require__(348);
 /**
  * Shorthand set of providers used for building Angular forms.
  * @experimental
@@ -57856,7 +57858,7 @@ function __export(m) {
  * Forms providers are not included in default providers; you must import these providers
  * explicitly.
  */
-var directives_1 = __webpack_require__(344);
+var directives_1 = __webpack_require__(343);
 exports.FORM_DIRECTIVES = directives_1.FORM_DIRECTIVES;
 exports.REACTIVE_FORM_DIRECTIVES = directives_1.REACTIVE_FORM_DIRECTIVES;
 var abstract_control_directive_1 = __webpack_require__(220);
@@ -57901,7 +57903,7 @@ exports.MaxLengthValidator = validators_1.MaxLengthValidator;
 exports.MinLengthValidator = validators_1.MinLengthValidator;
 exports.PatternValidator = validators_1.PatternValidator;
 exports.RequiredValidator = validators_1.RequiredValidator;
-var form_builder_1 = __webpack_require__(349);
+var form_builder_1 = __webpack_require__(348);
 exports.FormBuilder = form_builder_1.FormBuilder;
 var model_1 = __webpack_require__(147);
 exports.AbstractControl = model_1.AbstractControl;
@@ -57936,14 +57938,14 @@ __export(__webpack_require__(512));
  */
 var core_1 = __webpack_require__(0);
 var browser_jsonp_1 = __webpack_require__(350);
-var browser_xhr_1 = __webpack_require__(229);
+var browser_xhr_1 = __webpack_require__(228);
 var jsonp_backend_1 = __webpack_require__(351);
 var xhr_backend_1 = __webpack_require__(352);
-var base_request_options_1 = __webpack_require__(230);
+var base_request_options_1 = __webpack_require__(229);
 var base_response_options_1 = __webpack_require__(148);
 var http_1 = __webpack_require__(356);
 var interfaces_1 = __webpack_require__(102);
-var browser_xhr_2 = __webpack_require__(229);
+var browser_xhr_2 = __webpack_require__(228);
 exports.BrowserXhr = browser_xhr_2.BrowserXhr;
 var jsonp_backend_2 = __webpack_require__(351);
 exports.JSONPBackend = jsonp_backend_2.JSONPBackend;
@@ -57952,7 +57954,7 @@ var xhr_backend_2 = __webpack_require__(352);
 exports.CookieXSRFStrategy = xhr_backend_2.CookieXSRFStrategy;
 exports.XHRBackend = xhr_backend_2.XHRBackend;
 exports.XHRConnection = xhr_backend_2.XHRConnection;
-var base_request_options_2 = __webpack_require__(230);
+var base_request_options_2 = __webpack_require__(229);
 exports.BaseRequestOptions = base_request_options_2.BaseRequestOptions;
 exports.RequestOptions = base_request_options_2.RequestOptions;
 var base_response_options_2 = __webpack_require__(148);
@@ -57974,7 +57976,7 @@ exports.ConnectionBackend = interfaces_2.ConnectionBackend;
 exports.XSRFStrategy = interfaces_2.XSRFStrategy;
 var static_request_1 = __webpack_require__(357);
 exports.Request = static_request_1.Request;
-var static_response_1 = __webpack_require__(232);
+var static_response_1 = __webpack_require__(231);
 exports.Response = static_response_1.Response;
 var url_search_params_1 = __webpack_require__(151);
 exports.QueryEncoder = url_search_params_1.QueryEncoder;
@@ -59119,7 +59121,7 @@ var browser = __webpack_require__(153);
 var ng_proble = __webpack_require__(363);
 var dom_adapter = __webpack_require__(15);
 var dom_renderer = __webpack_require__(156);
-var dom_events = __webpack_require__(233);
+var dom_events = __webpack_require__(232);
 var shared_styles_host = __webpack_require__(157);
 exports.__platform_browser_private__ = {
     DomAdapter: dom_adapter.DomAdapter,
@@ -59950,7 +59952,7 @@ exports.EventListener = win['EventListener'];
 "use strict";
 var core_1 = __webpack_require__(0);
 var dom_adapter_1 = __webpack_require__(15);
-var url_sanitizer_1 = __webpack_require__(235);
+var url_sanitizer_1 = __webpack_require__(234);
 /** A <body> element that can be safely used to parse untrusted HTML. Lazily initialized below. */
 var inertElement = null;
 /** Lazily initialized to make sure the DOM adapter gets set before use. */
@@ -60223,7 +60225,7 @@ exports.sanitizeHtml = sanitizeHtml;
 "use strict";
 var core_1 = __webpack_require__(0);
 var dom_adapter_1 = __webpack_require__(15);
-var url_sanitizer_1 = __webpack_require__(235);
+var url_sanitizer_1 = __webpack_require__(234);
 /**
  * Regular expression for safe style values.
  *
@@ -60549,7 +60551,7 @@ var browser_platform_location_1 = __webpack_require__(154);
 var lang_1 = __webpack_require__(10);
 var message_bus_1 = __webpack_require__(51);
 var messaging_api_1 = __webpack_require__(158);
-var serialized_types_1 = __webpack_require__(236);
+var serialized_types_1 = __webpack_require__(235);
 var serializer_1 = __webpack_require__(44);
 var service_message_broker_1 = __webpack_require__(107);
 var MessageBasedPlatformLocation = (function () {
@@ -60799,7 +60801,7 @@ var lang_1 = __webpack_require__(10);
 var client_message_broker_1 = __webpack_require__(105);
 var message_bus_1 = __webpack_require__(51);
 var messaging_api_1 = __webpack_require__(158);
-var serialized_types_1 = __webpack_require__(236);
+var serialized_types_1 = __webpack_require__(235);
 var serializer_1 = __webpack_require__(44);
 var event_deserializer_1 = __webpack_require__(371);
 var WebWorkerPlatformLocation = (function (_super) {
@@ -61515,9 +61517,9 @@ var animation_driver_1 = __webpack_require__(155);
 var dom_adapter_1 = __webpack_require__(15);
 var dom_renderer_1 = __webpack_require__(156);
 var dom_tokens_1 = __webpack_require__(104);
-var dom_events_1 = __webpack_require__(233);
+var dom_events_1 = __webpack_require__(232);
 var event_manager_1 = __webpack_require__(75);
-var hammer_gestures_1 = __webpack_require__(234);
+var hammer_gestures_1 = __webpack_require__(233);
 var key_events_1 = __webpack_require__(364);
 var shared_styles_host_1 = __webpack_require__(157);
 var exceptions_1 = __webpack_require__(62);
@@ -61677,13 +61679,13 @@ function _resolveDefaultAnimationDriver() {
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-__webpack_require__(577);
-__webpack_require__(575);
+__webpack_require__(576);
+__webpack_require__(574);
 __webpack_require__(380);
 var Observable_1 = __webpack_require__(6);
 var from_1 = __webpack_require__(385);
 var of_1 = __webpack_require__(163);
-var EmptyError_1 = __webpack_require__(248);
+var EmptyError_1 = __webpack_require__(247);
 var router_config_loader_1 = __webpack_require__(160);
 var shared_1 = __webpack_require__(52);
 var url_tree_1 = __webpack_require__(63);
@@ -62112,7 +62114,7 @@ function validateNode(route) {
 "use strict";
 var BehaviorSubject_1 = __webpack_require__(379);
 var router_state_1 = __webpack_require__(76);
-var tree_1 = __webpack_require__(239);
+var tree_1 = __webpack_require__(238);
 function createRouterState(curr, prevState) {
     var root = createNode(curr._root, prevState ? prevState._root : undefined);
     return new router_state_1.RouterState(root, curr);
@@ -62448,7 +62450,7 @@ var router_state_1 = __webpack_require__(76);
 var shared_1 = __webpack_require__(52);
 var url_tree_1 = __webpack_require__(63);
 var collection_1 = __webpack_require__(64);
-var tree_1 = __webpack_require__(239);
+var tree_1 = __webpack_require__(238);
 var NoMatch = (function () {
     function NoMatch() {
     }
@@ -62740,8 +62742,8 @@ function getResolve(route) {
 "use strict";
 __webpack_require__(381);
 __webpack_require__(382);
-var forkJoin_1 = __webpack_require__(586);
-var fromPromise_1 = __webpack_require__(243);
+var forkJoin_1 = __webpack_require__(585);
+var fromPromise_1 = __webpack_require__(242);
 function resolve(resolver, state) {
     return resolveNode(resolver, state._root).map(function (_) { return state; });
 }
@@ -62786,8 +62788,8 @@ function resolveComponent(resolver, snapshot) {
 "use strict";
 var common_1 = __webpack_require__(40);
 var core_1 = __webpack_require__(0);
-var common_router_providers_1 = __webpack_require__(237);
-var router_link_1 = __webpack_require__(238);
+var common_router_providers_1 = __webpack_require__(236);
+var router_link_1 = __webpack_require__(237);
 var router_link_active_1 = __webpack_require__(372);
 var router_outlet_1 = __webpack_require__(373);
 var router_1 = __webpack_require__(108);
@@ -62872,7 +62874,7 @@ exports.provideLocationStrategy = provideLocationStrategy;
 "use strict";
 var common_1 = __webpack_require__(40);
 var platform_browser_1 = __webpack_require__(32);
-var common_router_providers_1 = __webpack_require__(237);
+var common_router_providers_1 = __webpack_require__(236);
 /**
  * A list of {@link Provider}s. To use the router, you must add this to your application.
  *
@@ -62919,7 +62921,7 @@ exports.provideRouter = provideRouter;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__(510);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms___default = __WEBPACK_IMPORTED_MODULE_3__angular_forms__ && __WEBPACK_IMPORTED_MODULE_3__angular_forms__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_3__angular_forms__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_3__angular_forms__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_3__angular_forms___default, 'a', __WEBPACK_IMPORTED_MODULE_3__angular_forms___default);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(349);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http___default = __WEBPACK_IMPORTED_MODULE_4__angular_http__ && __WEBPACK_IMPORTED_MODULE_4__angular_http__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_4__angular_http__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_4__angular_http__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_4__angular_http___default, 'a', __WEBPACK_IMPORTED_MODULE_4__angular_http___default);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(374);
@@ -62938,7 +62940,6 @@ exports.provideRouter = provideRouter;
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -62972,8 +62973,7 @@ var AppModule = (function () {
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_6__app_routes__["b" /* appRoutingProviders */],
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["Title"],
-                __WEBPACK_IMPORTED_MODULE_4__angular_http__["HTTP_PROVIDERS"]
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["Title"]
             ],
             entryComponents: [__WEBPACK_IMPORTED_MODULE_5__app_component__["AppComponent"]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["AppComponent"]]
@@ -62993,9 +62993,9 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router___default = __WEBPACK_IMPORTED_MODULE_0__angular_router__ && __WEBPACK_IMPORTED_MODULE_0__angular_router__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_0__angular_router__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_0__angular_router__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_0__angular_router___default, 'a', __WEBPACK_IMPORTED_MODULE_0__angular_router___default);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__report_report_component__ = __webpack_require__(378);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__report_report_detail_component__ = __webpack_require__(561);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__report_report_detail_component__ = __webpack_require__(560);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__query_query_component__ = __webpack_require__(377);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__query_query_detail_component__ = __webpack_require__(560);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__query_query_detail_component__ = __webpack_require__(559);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__process_process_component__ = __webpack_require__(376);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__faq_faq_component__ = __webpack_require__(375);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__feedback_feedback_component__ = __webpack_require__(557);
@@ -63088,7 +63088,7 @@ var FeedbackComponent = (function () {
     FeedbackComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-feedback',
-            template: __webpack_require__(565),
+            template: __webpack_require__(564),
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"]) === 'function' && _a) || Object])
     ], FeedbackComponent);
@@ -63102,7 +63102,7 @@ var FeedbackComponent = (function () {
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environments_environment__ = __webpack_require__(735);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environments_environment__ = __webpack_require__(734);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_component__ = __webpack_require__(374);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_module__ = __webpack_require__(555);
 /* harmony namespace reexport */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__environments_environment__["environment"]; });
@@ -63115,558 +63115,6 @@ var FeedbackComponent = (function () {
 
 /***/ },
 /* 559 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-
-/* harmony export */ __webpack_require__.d(exports, "a", function() { return CASETYPES; });var CASETYPES = [
-    {
-        "id": "01",
-        "name": "路燈維護",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "故障不亮"
-            },
-            {
-                "id": "02",
-                "name": "白天未熄"
-            },
-            {
-                "id": "03",
-                "name": "路燈毀損",
-            },
-            {
-                "id": "04",
-                "name": "路燈遷移"
-            },
-            {
-                "id": "05",
-                "name": "其他事項"
-            }
-        ]
-    },
-    {
-        "id": "02",
-        "name": "道路維護",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "道路凹陷坑洞"
-            },
-            {
-                "id": "02",
-                "name": "施工回填不實",
-            },
-            {
-                "id": "03",
-                "name": "路面嚴重老化龜裂",
-            },
-            {
-                "id": "04",
-                "name": "地下道、路面積水(或暴雨路面積水)",
-            },
-            {
-                "id": "05",
-                "name": "路面油漬(或油漆)",
-            },
-            {
-                "id": "06",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "03",
-        "name": "公園、綠地行道樹維護",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "公園、綠地、安全島髒亂"
-            },
-            {
-                "id": "02",
-                "name": "公園、綠地設施損毀",
-            },
-            {
-                "id": "03",
-                "name": "路樹傾倒",
-            },
-            {
-                "id": "04",
-                "name": "路樹修剪",
-            },
-            {
-                "id": "05",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "04",
-        "name": "人行道損毀維護",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "破損凹陷"
-            },
-            {
-                "id": "02",
-                "name": "因管線施工回填不實",
-            },
-            {
-                "id": "03",
-                "name": "人行道髒亂",
-            },
-            {
-                "id": "04",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "05",
-        "name": "下水道工程及排水溝維護",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "排水溝疏通"
-            },
-            {
-                "id": "02",
-                "name": "溝蓋破損",
-            },
-            {
-                "id": "03",
-                "name": "溝蓋遺失",
-            },
-            {
-                "id": "04",
-                "name": "下水道工程維護",
-            },
-            {
-                "id": "05",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "06",
-        "name": "垃圾處理",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "路面垃圾"
-            },
-            {
-                "id": "02",
-                "name": "垃圾清運",
-            },
-            {
-                "id": "03",
-                "name": "違規小廣告、旗幟",
-            },
-            {
-                "id": "04",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "07",
-        "name": "噪音、污染處理",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "噪音"
-            },
-            {
-                "id": "02",
-                "name": "空氣污染",
-            },
-            {
-                "id": "03",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "08",
-        "name": "交通號(標)誌維護",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "號誌故障"
-            },
-            {
-                "id": "02",
-                "name": "號誌毀損",
-            },
-            {
-                "id": "03",
-                "name": "標誌毀損(如反射鏡等)",
-            },
-            {
-                "id": "04",
-                "name": "標線補繪、塗銷(如紅線、黃線、停車格等)",
-            },
-            {
-                "id": "05",
-                "name": "號誌秒差調整()號誌不順暢",
-            },
-            {
-                "id": "06",
-                "name": "增(減)設號誌",
-            },
-            {
-                "id": "07",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "09",
-        "name": "路霸排除",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "佔用道路"
-            },
-            {
-                "id": "02",
-                "name": "違規停車",
-            },
-            {
-                "id": "03",
-                "name": "以行動、言語禁止他人停車",
-            },
-            {
-                "id": "04",
-                "name": "有牌廢棄車",
-            },
-            {
-                "id": "05",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "10",
-        "name": "戶政、區政類",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "空地管理"
-            },
-            {
-                "id": "02",
-                "name": "殯葬業務",
-            },
-            {
-                "id": "03",
-                "name": "集團結婚",
-            },
-            {
-                "id": "04",
-                "name": "戶政管理",
-            },
-            {
-                "id": "05",
-                "name": "宗教禮俗",
-            },
-            {
-                "id": "06",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "11",
-        "name": "市有財產管理",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "市有土地管理"
-            },
-            {
-                "id": "02",
-                "name": "市有非公用土地租.佔.售",
-            },
-            {
-                "id": "03",
-                "name": "市有財產出租、出售",
-            },
-            {
-                "id": "04",
-                "name": "稅務管理",
-            },
-            {
-                "id": "05",
-                "name": "金融管理",
-            },
-            {
-                "id": "06",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "12",
-        "name": "教育類",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "教師介聘、甄選"
-            },
-            {
-                "id": "02",
-                "name": "校園管理",
-            },
-            {
-                "id": "03",
-                "name": "補教問題",
-            },
-            {
-                "id": "04",
-                "name": "體育活動及場務管理",
-            },
-            {
-                "id": "05",
-                "name": "圖書館管理",
-            },
-            {
-                "id": "06",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "13",
-        "name": "社會福利救助類",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "社會救助"
-            },
-            {
-                "id": "02",
-                "name": "社會福利",
-            },
-            {
-                "id": "03",
-                "name": "家暴事件",
-            },
-            {
-                "id": "04",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "14",
-        "name": "衛生醫療行政類",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "防疫業務"
-            },
-            {
-                "id": "02",
-                "name": "醫藥管理",
-            },
-            {
-                "id": "03",
-                "name": "食品衛生",
-            },
-            {
-                "id": "04",
-                "name": "保健服務",
-            },
-            {
-                "id": "05",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "15",
-        "name": "消防安全",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "消防設備問題"
-            },
-            {
-                "id": "02",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "16",
-        "name": "捷運工程類",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "交通維護"
-            },
-            {
-                "id": "02",
-                "name": "工地管理",
-            },
-            {
-                "id": "03",
-                "name": "捷運行政",
-            },
-            {
-                "id": "04",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "17",
-        "name": "勞工行政類",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "求職、徵才"
-            },
-            {
-                "id": "02",
-                "name": "勞資糾紛",
-            },
-            {
-                "id": "03",
-                "name": "勞工福利",
-            },
-            {
-                "id": "04",
-                "name": "工會組織",
-            },
-            {
-                "id": "05",
-                "name": "外勞業務",
-            },
-            {
-                "id": "06",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "18",
-        "name": "網路、資訊服務",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "無線網路問題"
-            },
-            {
-                "id": "02",
-                "name": "市府網頁問題",
-            },
-            {
-                "id": "03",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "19",
-        "name": "違章建管業務",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "ㄧ般違建"
-            },
-            {
-                "id": "02",
-                "name": "基地台設置問題",
-            },
-            {
-                "id": "03",
-                "name": "公寓大廈管理",
-            },
-            {
-                "id": "04",
-                "name": "不明纜線倒掛建築物上",
-            },
-            {
-                "id": "05",
-                "name": "既成巷道認定",
-            },
-            {
-                "id": "06",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "20",
-        "name": "工商、觀光、建設管理類",
-        "subItems": [
-            {
-                "id": "01",
-                "name": "招商業務"
-            },
-            {
-                "id": "02",
-                "name": "工商管理",
-            },
-            {
-                "id": "03",
-                "name": "農林畜牧業",
-            },
-            {
-                "id": "04",
-                "name": "公用事業",
-            },
-            {
-                "id": "05",
-                "name": "觀光業務",
-            },
-            {
-                "id": "06",
-                "name": "風景區管理",
-            },
-            {
-                "id": "07",
-                "name": "市場攤販管理",
-            },
-            {
-                "id": "08",
-                "name": "農林畜牧業",
-            },
-            {
-                "id": "09",
-                "name": "無照違規營業",
-            },
-            {
-                "id": "10",
-                "name": "流浪犬、貓問題",
-            },
-            {
-                "id": "11",
-                "name": "其他事項",
-            }
-        ]
-    },
-    {
-        "id": "90",
-        "name": "非屬前述各類的其他事項",
-        "subItems": [
-            {
-                "id": "99",
-                "name": "其他事項",
-            }
-        ]
-    }
-];
-
-
-/***/ },
-/* 560 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63712,7 +63160,7 @@ var QueryDetailComponent = (function () {
     QueryDetailComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-query-detail',
-            template: __webpack_require__(567),
+            template: __webpack_require__(566),
             providers: [__WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */]) === 'function' && _b) || Object])
@@ -63723,7 +63171,7 @@ var QueryDetailComponent = (function () {
 
 
 /***/ },
-/* 561 */
+/* 560 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63776,7 +63224,7 @@ var ReportDetailComponent = (function () {
     ReportDetailComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'my-report-detail',
-            template: __webpack_require__(569),
+            template: __webpack_require__(568),
             providers: [__WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */]) === 'function' && _b) || Object])
@@ -63784,69 +63232,64 @@ var ReportDetailComponent = (function () {
     return ReportDetailComponent;
     var _a, _b;
 }());
-/*
-Copyright 2016 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
-*/
 
 
 /***/ },
-/* 562 */
+/* 561 */
 /***/ function(module, exports) {
 
 module.exports = ""
 
 /***/ },
-/* 563 */
+/* 562 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"wrap index\" [ngClass]=\"{active: showSlideMenu}\">\r\n    <div class=\"container shadow-3d\">\r\n        <nav class=\"header row index\">\r\n            <h1 class=\"header-band\">\r\n                <img calss=\"pull-left\" src=\"./assets/images/Kao_logo.png\" width=\"40\" alt=\"\">\r\n                <p>\r\n                    <span class=\"navy\">線上即時服務系統</span><br>\r\n                    <small class=\"navy\">Service online</small>\r\n                </p>\r\n                <div class=\"news visible-xs maT1x\" (click)=\"showNews=!showNews\"><a href=\"javascript:void(0)\"><i class=\"fa fa-info\"></i></a></div>\r\n                <div class=\"mob-menu visible-xs\" (click)=\"showSlideMenu=!showSlideMenu\"></div>\r\n            </h1>\r\n            <div class=\"header-right hidden-xs\">\r\n                <div class=\"mob-menu visible-md visible-sm\" (click)=\"showSlideMenu=!showSlideMenu\"></div>\r\n                <div class=\"news visible-md visible-sm maT1x\" (click)=\"showNews=!showNews\"><a href=\"javascript:void(0)\"><i class=\"fa fa-info\"></i></a></div>\r\n                <ul class=\"header-menu visible-lg\">\r\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/report']\">市長信箱</a></li>\r\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/query']\">案件查詢</a></li>\r\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/process']\">服務流程</a></li>\r\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/faq']\">常見問題 FAQ</a></li>\r\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/feedback']\">案件處理滿意度</a></li>\r\n                    <li class=\"menu-item\"><a href=\"http://work1999.kcg.gov.tw/Rptdownload.aspx\" target=\"_blank\">案件反應排行榜</a></li>\r\n                    <li class=\"menu-item\"><a href=\"http://disdp.kcg.gov.tw/exchange/feedback.php\" target=\"_blank\">廉政案件</a></li>\r\n                    <li class=\"menu-item\" (click)=\"showNews=!showNews\"><a><i class=\"fa fa-info\"></i></a></li>\r\n                </ul>\r\n            </div>\r\n            <div class=\"header-news\" *ngIf=\"showNews\">\r\n                <a href=\"\">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a>\r\n                <span class=\"pull-right\" (click)=\"showNews=false\"><i class=\"fa fa-times-circle\"></i></span>\r\n            </div>\r\n        </nav>\r\n    </div>\r\n    <router-outlet></router-outlet>\r\n    <footer>\r\n        <div class=\"container\">\r\n            <div class=\"row pdLR1x\">\r\n                <div class=\"footer col-md-10 col-sm-12 col-xs-12\">\r\n                    <img class=\"pull-left pdR1x visible-lg visible-md\" src=\"./assets/images/qrcode.png\" alt=\"\">\r\n\r\n                    <p class=\"footer-info\">\r\n                        本系統由 <a class=\"link\">高雄市政府資訊中心</a> 維護<br>\r\n                    </p>\r\n                    <small class=\"pdT2x font-sm\">當系統處於定期維護時間每日凌晨 01:00 ~ 02:00 時，<br>主機可能會停止所有服務，如有不便還請見諒。<br><br>\r\n\t\t\t\t高雄市政府聯合服務中心電話：</small>\r\n                    <h5 class=\"font-lg\">(07) 336-8333 #2819、#2833、#2834</h5>\r\n                    <div class=\"text-center\">\r\n                        <a *ngIf=\"showPhoneButton\" href=\"tel:073368333\" class=\"btn btn-orange visible-sm visible-xs\"><i class=\"glyphicon glyphicon-earphone\"></i>&nbsp;&nbsp;撥打電話</a>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-md-2\">\r\n                    <ul class=\"link-group font-md hidden-sm hidden-xs\">\r\n                        <li><a>隱私權保護政策</a></li>\r\n                        <li><a>網站安全政策</a></li>\r\n                        <li><a>著作權聲明</a></li>\r\n                        <li><a>高雄市政府全球資訊網</a></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </footer>\r\n</div>\r\n<div class=\"mob-menu-list\" [ngClass]=\"{active: showSlideMenu}\">\r\n    <div class=\"mob-menu-close\" [ngClass]=\"{active: showSlideMenu}\" (click)=\"showSlideMenu=false\"></div>\r\n    <ul class=\"header-menu active\" (click)=\"showSlideMenu=false\">\r\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/report']\">市長信箱</a></li>\r\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/query']\">案件查詢</a></li>\r\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/process']\">服務流程</a></li>\r\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/faq']\">常見問題 FAQ</a></li>\r\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/feedback']\">案件處理滿意度</a>\r\n            <ul class=\"mob-sub-menu\">\r\n                <li class=\"menu-item\"><a href=\"javascript:void(0)\">各項滿意度調查</a></li>\r\n                <li class=\"menu-item\"><a href=\"javascript:void(0)\">各問題次數分配表</a></li>\r\n                <li class=\"menu-item\"><a href=\"javascript:void(0)\">各問題有效值與遺漏值</a></li>\r\n            </ul>\r\n        </li>\r\n        <li class=\"menu-item\"><a href=\"http://work1999.kcg.gov.tw/Rptdownload.aspx\" target=\"_blank\">案件反應排行榜</a></li>\r\n        <li class=\"menu-item\"><a href=\"http://disdp.kcg.gov.tw/exchange/feedback.php\" target=\"_blank\">廉政案件</a></li>\r\n    </ul>\r\n</div>\r\n"
+module.exports = "<div class=\"wrap index\" [ngClass]=\"{active: showSlideMenu}\">\n    <div class=\"container shadow-3d\">\n        <nav class=\"header row index\">\n            <h1 class=\"header-band\">\n                <img calss=\"pull-left\" src=\"./assets/images/Kao_logo.png\" width=\"40\" alt=\"\">\n                <p>\n                    <span class=\"navy\">線上即時服務系統</span><br>\n                    <small class=\"navy\">Service online</small>\n                </p>\n                <div class=\"news visible-xs maT1x\" (click)=\"showNews=!showNews\"><a href=\"javascript:void(0)\"><i class=\"fa fa-info\"></i></a></div>\n                <div class=\"mob-menu visible-xs\" (click)=\"showSlideMenu=!showSlideMenu\"></div>\n            </h1>\n            <div class=\"header-right hidden-xs\">\n                <div class=\"mob-menu visible-md visible-sm\" (click)=\"showSlideMenu=!showSlideMenu\"></div>\n                <div class=\"news visible-md visible-sm maT1x\" (click)=\"showNews=!showNews\"><a href=\"javascript:void(0)\"><i class=\"fa fa-info\"></i></a></div>\n                <ul class=\"header-menu visible-lg\">\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/report']\">市長信箱</a></li>\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/query']\">案件查詢</a></li>\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/process']\">服務流程</a></li>\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/faq']\">常見問題 FAQ</a></li>\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/feedback']\">案件處理滿意度</a></li>\n                    <li class=\"menu-item\"><a href=\"http://work1999.kcg.gov.tw/Rptdownload.aspx\" target=\"_blank\">案件反應排行榜</a></li>\n                    <li class=\"menu-item\"><a href=\"http://disdp.kcg.gov.tw/exchange/feedback.php\" target=\"_blank\">廉政案件</a></li>\n                    <li class=\"menu-item\" (click)=\"showNews=!showNews\"><a><i class=\"fa fa-info\"></i></a></li>\n                </ul>\n            </div>\n            <div class=\"header-news\" *ngIf=\"showNews\">\n                <a href=\"\">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a>\n                <span class=\"pull-right\" (click)=\"showNews=false\"><i class=\"fa fa-times-circle\"></i></span>\n            </div>\n        </nav>\n    </div>\n    <router-outlet></router-outlet>\n    <footer>\n        <div class=\"container\">\n            <div class=\"row pdLR1x\">\n                <div class=\"footer col-md-10 col-sm-12 col-xs-12\">\n                    <img class=\"pull-left pdR1x visible-lg visible-md\" src=\"./assets/images/qrcode.png\" alt=\"\">\n\n                    <p class=\"footer-info\">\n                        本系統由 <a class=\"link\">高雄市政府資訊中心</a> 維護<br>\n                    </p>\n                    <small class=\"pdT2x font-sm\">當系統處於定期維護時間每日凌晨 01:00 ~ 02:00 時，<br>主機可能會停止所有服務，如有不便還請見諒。<br><br>\n\t\t\t\t高雄市政府聯合服務中心電話：</small>\n                    <h5 class=\"font-lg\">(07) 336-8333 #2819、#2833、#2834</h5>\n                    <div class=\"text-center\">\n                        <a *ngIf=\"showPhoneButton\" href=\"tel:073368333\" class=\"btn btn-orange visible-sm visible-xs\"><i class=\"glyphicon glyphicon-earphone\"></i>&nbsp;&nbsp;撥打電話</a>\n                    </div>\n                </div>\n                <div class=\"col-md-2\">\n                    <ul class=\"link-group font-md hidden-sm hidden-xs\">\n                        <li><a>隱私權保護政策</a></li>\n                        <li><a>網站安全政策</a></li>\n                        <li><a>著作權聲明</a></li>\n                        <li><a>高雄市政府全球資訊網</a></li>\n                    </ul>\n                </div>\n            </div>\n        </div>\n    </footer>\n</div>\n<div class=\"mob-menu-list\" [ngClass]=\"{active: showSlideMenu}\">\n    <div class=\"mob-menu-close\" [ngClass]=\"{active: showSlideMenu}\" (click)=\"showSlideMenu=false\"></div>\n    <ul class=\"header-menu active\" (click)=\"showSlideMenu=false\">\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/report']\">市長信箱</a></li>\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/query']\">案件查詢</a></li>\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/process']\">服務流程</a></li>\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/faq']\">常見問題 FAQ</a></li>\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/feedback']\">案件處理滿意度</a>\n            <ul class=\"mob-sub-menu\">\n                <li class=\"menu-item\"><a href=\"javascript:void(0)\">各項滿意度調查</a></li>\n                <li class=\"menu-item\"><a href=\"javascript:void(0)\">各問題次數分配表</a></li>\n                <li class=\"menu-item\"><a href=\"javascript:void(0)\">各問題有效值與遺漏值</a></li>\n            </ul>\n        </li>\n        <li class=\"menu-item\"><a href=\"http://work1999.kcg.gov.tw/Rptdownload.aspx\" target=\"_blank\">案件反應排行榜</a></li>\n        <li class=\"menu-item\"><a href=\"http://disdp.kcg.gov.tw/exchange/feedback.php\" target=\"_blank\">廉政案件</a></li>\n    </ul>\n</div>\n"
 
 /***/ },
-/* 564 */
+/* 563 */
 /***/ function(module, exports) {
 
 module.exports = "<h1>FAQ</h1>\r\n"
 
 /***/ },
-/* 565 */
+/* 564 */
 /***/ function(module, exports) {
 
 module.exports = "<h1>FEEDBACK</h1>\r\n"
 
 /***/ },
-/* 566 */
+/* 565 */
 /***/ function(module, exports) {
 
 module.exports = "<div class=\"container\">\r\n    <div class=\"banner row\">\r\n        <div class=\"banner-page-name\">\r\n            <h2 class=\"dk-green\">服務流程</h2>\r\n            <p class=\"dk-green\">Service Process</p>\r\n        </div>\r\n        <img src=\"./assets/images/banner/banner_pic_process.png\" alt=\"\">\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-md-4 page-block\">\r\n\r\n            <img src=\"./assets/images/process/process.png\" alt=\"\">\r\n        </div>\r\n        <div class=\"col-md-8 page-block\">\r\n\r\n            <div class=\"article-content block-separate\">\r\n                <p class=\"article-lable\">線上即時服務系統作業方式</p>\r\n\r\n                <ol class=\"navy maB2x maL-1x\">\r\n                    <li>請您於投書時提供正確之E-MAIL帳號、電話、姓名，俾系統自動回覆您信件收件編號及回覆內容亦將以E-MAIL的方式傳送給您。</li>\r\n                    <li>查詢回覆內容時，請您透過系統自動提供之收件編號及姓名（或e-mail），於「即時服務案件查詢」選擇鍵中進行查閱。</li>\r\n                    <li>案件之處理依「行政院暨所屬各機關處理人民陳情案件要點」辦理，當您收到相關單位的處理結果後，還可經由滿意度問卷調查填寫對該項回函處理的滿意程度，歡迎您多加利用。</li>\r\n                </ol>\r\n                <p class=\"article-lable\">為確認函之處理</p>\r\n                <p class=\"navy maB2x\">\r\n                    本府為避免所處理的信件無法傳送當事人，甚或信箱遭冒用之情形，將會在受理分案後回傳收件編號後分派至相關機關處理，若您一直無法收到收件編號函，可能是您填寫的電子信箱有誤，建議您重新檢視並再次傳送。\r\n                </p>\r\n                <p class=\"article-lable\">流程圖說明</p>\r\n                <p class=\"navy maB2x\">\r\n                    步驟一、陳情民眾於市長信箱系統填入正確資料後等待確認郵件。<br>\r\n                    步驟二、點選確認郵件後，會依照項目別分別採取自動分案或人工線上分案，分案給承辦單位。<br>\r\n                    步驟三、承辦單位於處理後，系統將寄出處理情形通知陳情民眾，若因時效內無法完成，亦會寄出展期信件通知陳情民眾。<br>\r\n                </p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
-/* 567 */
+/* 566 */
 /***/ function(module, exports) {
 
 module.exports = "<div class=\"container\">\r\n    <div class=\"banner row\">\r\n        <div class=\"banner-page-name\">\r\n            <h2 class=\"dk-green\">案件查詢</h2>\r\n            <p class=\"dk-green\">Search Case</p>\r\n        </div>\r\n        <img src=\"./assets/images/banner/banner_pic_query.png\" alt=\"\">\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-md-4 page-block maB2x\">\r\n\r\n            <div class=\"article-content\">\r\n                <p class=\"article-lable require\">主旨 </p>\r\n                <p class=\"navy maB2x\">高雄市岡山區碧紅街2號違建</p>\r\n                <p class=\"article-lable require\">建議事項 </p>\r\n                <p class=\"navy maB2x\">\r\n                    高雄市岡山區碧紅街2號 已於2014.12.22檢舉該棟違建，也獲得市府回應已拆除違建部分，為何該違建卻越來越高?由2樓層的違建變成了5層樓的違建?不知市長對此拆除績效有何看法?\r\n                </p>\r\n                <div class=\"row\">\r\n                    <div class=\"col-md-6\">\r\n                        <p class=\"article-lable require\">收件編號 </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">368213</p>\r\n                        <p class=\"article-lable require\">來源別 </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">網頁</p>\r\n                    </div>\r\n                    <div class=\"col-md-6\">\r\n                        <p class=\"article-lable require\">收件編號 </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">368213</p>\r\n                        <p class=\"article-lable require\">機密等級 </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">保密</p>\r\n                    </div>\r\n                </div>\r\n                <p class=\"article-lable require\">附加檔案 </p>\r\n                <p class=\"navy maB2x pdLHalfX\">\r\n                    <a href=\"javascript:void(0)\"><i class=\"fa fa-paperclip\"></i> 2014_1222.jpg</a><br>\r\n                    <a href=\"javascript:void(0)\"><i class=\"fa fa-paperclip\"></i> 2014_1222.jpg</a>\r\n                </p>\r\n                <a class=\"btn btn-green hidden-xs hidden-sm\" href=\"\">繼續查詢陳報案件</a>\r\n            </div>\r\n        </div>\r\n        <div class=\"col-md-8 page-block\">\r\n\r\n            <div class=\"article-content block-separate\">\r\n                <div class=\"row\">\r\n                    <div class=\"col-md-6\">\r\n                        <p class=\"article-lable require\">陳情類別(主項) </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">違章建管業務</p>\r\n                        <p class=\"article-lable require\">承辦機關</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">高雄市政府工務局違章建築處理大隊</p>\r\n                        <p class=\"article-lable require\">序號</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">01</p>\r\n                        <p class=\"article-lable require\">承辦人</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">王祈昌</p>\r\n                    </div>\r\n                    <div class=\"col-md-6\">\r\n                        <p class=\"article-lable require\">陳情類別(子項) </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">ㄧ般違建</p>\r\n                        <p class=\"article-lable require\">科室</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">拆除組</p>\r\n                        <p class=\"article-lable require\">完成日期 </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">20150407</p>\r\n                        <p class=\"article-lable require\">承辦人電話</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">7453439-808</p>\r\n                    </div>\r\n                </div>\r\n                <p class=\"article-lable require\">處理情形(答覆內容)</p>\r\n                <p class=\"navy maB2x\">親愛的市民您好：您寄給市長的電子郵件收悉，市長非常重視，經交本大隊處理，茲將查處結果敬復如下：有關台端反映本市岡山區碧紅街2號建築物屋前增建違建一案，本局業於103年11月28日以高市工違岡字第1576號處理新違章建築處分書依法處分在案，並已於103年12月2日派工前往拆除部份，其餘部份，將續依相關規定辦理。謝謝您的建議，若尚有疑慮，請隨時電洽本府工務局違建處理大隊承辦人王祈昌電話(07)7453439-808，當再詳細說明，再次感謝您對市政的關心並熱心提供建言。<br>                敬祝您 <br> 身體健康萬事如意\r\n                    <br> 高雄市政府工務局違章建築處理大隊大隊長蘇俊傑敬上 <br></p>\r\n\r\n                <hr>\r\n                <div class=\"row\">\r\n                    <div class=\"col-md-6\">\r\n                        <p class=\"article-lable require\">陳情類別(主項) </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">違章建管業務</p>\r\n                        <p class=\"article-lable require\">承辦機關</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">高雄市政府工務局違章建築處理大隊</p>\r\n                        <p class=\"article-lable require\">序號</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">02</p>\r\n                        <p class=\"article-lable require\">承辦人</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">王祈昌</p>\r\n                    </div>\r\n                    <div class=\"col-md-6\">\r\n                        <p class=\"article-lable require\">陳情類別(子項) </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">ㄧ般違建</p>\r\n                        <p class=\"article-lable require\">科室</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">拆除組</p>\r\n                        <p class=\"article-lable require\">完成日期 </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">20150414</p>\r\n                        <p class=\"article-lable require\">承辦人電話</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">7453439-808</p>\r\n                    </div>\r\n                </div>\r\n                <p class=\"article-lable require\">處理情形(答覆內容) </p>\r\n                <p class=\"navy maB2x\">親愛的市民您好：您寄給市長的電子郵件收悉，市長非常重視，經交本大隊處理，茲將查處結果敬復如下：有關台端反映本市岡山區碧紅街2號建築物屋前增建違建一案，本局業於103年11月28日以高市工違岡字第1576號處理新違章建築處分書依法處分在案，並已於103年12月2日派工前往拆除部份，其餘部份，後續於104年4月1日派工前往拆除RC樓板，尚未拆除部份，依相關規定辦理。謝謝您的建議，若尚有疑慮，請隨時電洽本府工務局違建處理大隊承辦人王祈昌電話(07)7453439-808，當再詳細說明，再次感謝您對市政的關心並熱心提供建言。\r\n                    <br> 敬祝您 <br> 身體健康萬事如意\r\n                    <br> 高雄市政府工務局違章建築處理大隊大隊長蘇俊傑敬上 <br></p>\r\n            </div>\r\n            <a class=\"btn btn-green hidden-md hidden-lg\" href=\"\">繼續查詢陳報案件</a>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
-/* 568 */
+/* 567 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"banner row\">\r\n        <div class=\"banner-page-name\">\r\n            <h2 class=\"dk-green\">案件查詢</h2>\r\n            <p class=\"dk-green\">Search Case</p>\r\n        </div>\r\n        <img src=\"./assets/images/banner/banner_pic_query.png\" alt=\"\">\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-md-4 page-block\">\r\n            <div class=\"article-header text-center\">\r\n                <h4 id=\"mayor\" class=\"article-title\">操作說明</h4>\r\n            </div>\r\n            <div class=\"article-content\">\r\n                <p class=\"article-lable require\">查詢方式 </p>\r\n                <p class=\"navy maB1x\">\r\n                    請先點選您要查詢的方式，再輸入相關查詢條件。\r\n                </p>\r\n                <p class=\"article-lable require\">注意事項 </p>\r\n                <p class=\"navy\">\r\n                    請注意您輸入的內容(Email、姓名)須與當時反映時所提供之資料一致，俾利系統正確判讀。<br> 限查詢現有資料庫期限內案件。\r\n                    <br> 當系統處於定期維護時間每日凌晨01:00~02:00時，主機可能會停止所有服務，如有不便還請見諒。\r\n                    <br> 為加強民眾投訴案件資料之安全，即日起不提供市長信箱查詢案件(案件編號+姓名)與人民陳情案件(姓名+電話)兩種查詢方式，如有不便還請見諒。\r\n                    <br>\r\n                </p>\r\n            </div>\r\n        </div>\r\n        <div class=\"col-md-4 page-block\">\r\n            <div class=\"article-header text-center\">\r\n                <h4 id=\"mayor\" class=\"article-title\">市長信箱</h4>\r\n            </div>\r\n            <div class=\"article-content block-separate\">\r\n                <p class=\"navy\">透過線上即時服系統及市長信箱等網路途徑</p>\r\n                <form action=\"\">\r\n                    <p class=\"article-lable require\">案件編號 </p>\r\n                    <div class=\"row maB1x\">\r\n                        <div class=\"col-xs-2 input-separate\"><input class=\"col-xs-12 text-center\" type=\"text\" value=\"B\" readonly></div>\r\n                        <div class=\"col-xs-10\"><input class=\"col-xs-12\" type=\"text\"></div>\r\n                    </div>\r\n                    <p class=\"article-lable require\">E-Mail </p>\r\n                    <div class=\"row\">\r\n                        <div class=\"col-xs-12\"><input class=\"col-xs-12\" type=\"text\" placeholder=\"example@kcg.gov.tw\"></div>\r\n                    </div>\r\n                    <p class=\"validation-info\">您輸入的編號錯誤</p>\r\n                    <div class=\"row text-center maT2x\">\r\n                        <a [routerLink]=\"['/query/456']\" class=\"btn btn-orange\">查詢</a>\r\n                    </div>\r\n                </form>\r\n            </div>\r\n        </div>\r\n        <div class=\"col-md-4 page-block\">\r\n            <div class=\"article-header text-center\">\r\n                <h4 id=\"mayor\" class=\"article-title\">人民陳情案件</h4>\r\n            </div>\r\n            <div class=\"article-content block-separate\">\r\n                <p class=\"navy\">透案件來源：透過電話、信件、傳真等非網路途徑</p>\r\n                <form action=\"\">\r\n                    <p class=\"article-lable require\">案件編號 </p>\r\n                    <div class=\"row maB1x\">\r\n                        <div class=\"col-xs-2 input-separate\"><input class=\"col-xs-12 text-center\" type=\"text\" value=\"A\" readonly></div>\r\n                        <div class=\"col-xs-2 input-separate\"><input class=\"col-xs-12 text-center\" type=\"text\" value=\"TB\" readonly></div>\r\n                        <div class=\"col-xs-3 input-separate\"><input class=\"col-xs-12 text-center\" type=\"text\" value=\"2016\" readonly></div>\r\n                        <div class=\"col-xs-5\"><input class=\"col-xs-12\" type=\"text\"></div>\r\n                    </div>\r\n                    <p class=\"article-lable require\">來電時的姓名 </p>\r\n                    <div class=\"row\">\r\n                        <div class=\"col-xs-12\"><input class=\"col-xs-12\" type=\"text\" placeholder=\"您的姓名\"></div>\r\n                    </div>\r\n                    <p class=\"validation-info\"> </p>\r\n                    <div class=\"row text-center maT2x\">\r\n                        <a [routerLink]=\"['/query/456']\" class=\"btn btn-orange\">查詢</a>\r\n                    </div>\r\n                </form>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <!--<pre>{{ searchCase | json }}</pre>-->\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\n    <div class=\"banner row\">\n        <div class=\"banner-page-name\">\n            <h2 class=\"dk-green\">案件查詢</h2>\n            <p class=\"dk-green\">Search Case</p>\n        </div>\n        <img src=\"./assets/images/banner/banner_pic_query.png\" alt=\"\">\n    </div>\n    <div class=\"row\">\n        <div class=\"col-md-4 page-block\">\n            <div class=\"article-header text-center\">\n                <h4 id=\"mayor\" class=\"article-title\">操作說明</h4>\n            </div>\n            <div class=\"article-content\">\n                <p class=\"article-lable require\">查詢方式 </p>\n                <p class=\"navy maB1x\">\n                    請先點選您要查詢的方式，再輸入相關查詢條件。\n                </p>\n                <p class=\"article-lable require\">注意事項 </p>\n                <p class=\"navy\">\n                    請注意您輸入的內容(Email、姓名)須與當時反映時所提供之資料一致，俾利系統正確判讀。<br> 限查詢現有資料庫期限內案件。\n                    <br> 當系統處於定期維護時間每日凌晨01:00~02:00時，主機可能會停止所有服務，如有不便還請見諒。\n                    <br> 為加強民眾投訴案件資料之安全，即日起不提供市長信箱查詢案件(案件編號+姓名)與人民陳情案件(姓名+電話)兩種查詢方式，如有不便還請見諒。\n                    <br>\n                </p>\n            </div>\n        </div>\n        <div class=\"col-md-4 page-block\">\n            <div class=\"article-header text-center\">\n                <h4 id=\"mayor\" class=\"article-title\">市長信箱</h4>\n            </div>\n            <div class=\"article-content block-separate\">\n                <p class=\"navy\">透過線上即時服系統及市長信箱等網路途徑</p>\n                <form action=\"\">\n                    <p class=\"article-lable require\">案件編號 </p>\n                    <div class=\"row maB1x\">\n                        <div class=\"col-xs-2 input-separate\"><input class=\"col-xs-12 text-center\" type=\"text\" value=\"B\" readonly></div>\n                        <div class=\"col-xs-10\"><input class=\"col-xs-12\" type=\"text\"></div>\n                    </div>\n                    <p class=\"article-lable require\">E-Mail </p>\n                    <div class=\"row\">\n                        <div class=\"col-xs-12\"><input class=\"col-xs-12\" type=\"text\" placeholder=\"example@kcg.gov.tw\"></div>\n                    </div>\n                    <p class=\"validation-info\">您輸入的編號錯誤</p>\n                    <div class=\"row text-center maT2x\">\n                        <a [routerLink]=\"['/query/456']\" class=\"btn btn-orange\">查詢</a>\n                    </div>\n                </form>\n            </div>\n        </div>\n        <div class=\"col-md-4 page-block\">\n            <div class=\"article-header text-center\">\n                <h4 id=\"mayor\" class=\"article-title\">人民陳情案件</h4>\n            </div>\n            <div class=\"article-content block-separate\">\n                <p class=\"navy\">透案件來源：透過電話、信件、傳真等非網路途徑</p>\n                <form action=\"\">\n                    <p class=\"article-lable require\">案件編號 </p>\n                    <div class=\"row maB1x\">\n                        <div class=\"col-xs-2 input-separate\"><input class=\"col-xs-12 text-center\" type=\"text\" value=\"A\" readonly></div>\n                        <div class=\"col-xs-2 input-separate\"><input class=\"col-xs-12 text-center\" type=\"text\" value=\"TB\" readonly></div>\n                        <div class=\"col-xs-3 input-separate\"><input class=\"col-xs-12 text-center\" type=\"text\" value=\"2016\" readonly></div>\n                        <div class=\"col-xs-5\"><input class=\"col-xs-12\" type=\"text\"></div>\n                    </div>\n                    <p class=\"article-lable require\">來電時的姓名 </p>\n                    <div class=\"row\">\n                        <div class=\"col-xs-12\"><input class=\"col-xs-12\" type=\"text\" placeholder=\"您的姓名\"></div>\n                    </div>\n                    <p class=\"validation-info\"> </p>\n                    <div class=\"row text-center maT2x\">\n                        <a [routerLink]=\"['/query/456']\" class=\"btn btn-orange\">查詢</a>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n    <!--<pre>{{ searchCase | json }}</pre>-->\n</div>\n"
 
 /***/ },
-/* 569 */
+/* 568 */
 /***/ function(module, exports) {
 
 module.exports = "{{ caseType | json }}\r\n<br>\r\n{{ subCaseType | json }}\r\n"
 
 /***/ },
-/* 570 */
+/* 569 */
 /***/ function(module, exports) {
 
 module.exports = "<div class=\"index-header\">\r\n    <div class=\"big-header big-header--back\"></div>\r\n    <div class=\"big-header-slash hidden-xs\"></div>\r\n    <div class=\"big-header container hidden-xs\">\r\n    </div>\r\n    <div class=\"header-content animated \">\r\n        <div class=\"header-content-bg\"></div>\r\n        <div class=\"header-content-info\">\r\n            <p class=\"text-center font-2xl\">歡迎進入<br>線上即時服務平台</p>\r\n            <p>平台提供陳情、檢舉、投訴與市<br>民生命財產安全相關事項請速撥</p>\r\n            <p class=\"text-center\">撥打&nbsp;&nbsp;<a class=\"font-2xl phone-call\" href=\"tel:1999\">1999</a>&nbsp;&nbsp;專線</p>\r\n            <a href=\"javascript:void(0)\" ng-click=\"m.getScrollTarget('mayor')\" class=\"btn btn-orange page-scroll\"><i class=\"fa fa-envelope\"></i>&nbsp;&nbsp;寫信給市長</a>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div class=\"body\">\r\n    <div class=\"container\">\r\n        <div class=\"out-conatainer row\">\r\n            <div class=\"article-header text-center\">\r\n                <h1 id=\"mayor\" class=\"article-title\">市長信箱</h1>\r\n            </div>\r\n        </div>\r\n        <div class=\"row pdLR1x body-content\" *ngIf=\"caseTypes\">\r\n            <div class=\"col-md-4\">\r\n                <div class=\"case-type\" *ngFor=\"let type of caseTypes | slice:0:7\" (click)=\"type.active=!type.active\" [ngClass]=\"{active:type.active}\">\r\n                    <p class=\"case-type-name\" ><span class=\"case-type-num\">\r\n                        {{ type.id }} <i class=\"fa Example of angle-double-right fa-angle-double-right\"></i></span>\r\n                        {{type.name}} <span class=\"case-open pull-right\"><i class=\"fa fa-plus\"></i></span>\r\n                    </p>\r\n                    <div class=\"clearfix\"></div>\r\n                    <ul class=\"case-list\" *ngIf=\"type.subItems\">\r\n                        <li class=\"case-item\" *ngFor=\"let item of type.subItems\"><a [routerLink]=\"['/report/'] + type.id + ['/'] + item.id\">{{item.name}}</a></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md-4\">\r\n                <div class=\"case-type\" *ngFor=\"let type of caseTypes | slice:7:14\" (click)=\"type.active=!type.active\" [ngClass]=\"{active:type.active}\">\r\n                    <p class=\"case-type-name\"><span class=\"case-type-num\">\r\n                        {{ type.id }} <i class=\"fa Example of angle-double-right fa-angle-double-right\"></i></span>\r\n                        {{type.name}} <span class=\"case-open pull-right\"><i class=\"fa fa-plus\"></i></span>\r\n                    </p>\r\n                    <div class=\"clearfix\"></div>\r\n                    <ul class=\"case-list\" *ngIf=\"type.subItems\">\r\n                        <li class=\"case-item\" *ngFor=\"let item of type.subItems\"><a [routerLink]=\"['/report/'] + type.id + ['/'] + item.id\">{{item.name}}</a></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md-4\">\r\n                <div class=\"case-type\" *ngFor=\"let type of caseTypes | slice:14:21\" (click)=\"type.active=!type.active\" [ngClass]=\"{active:type.active}\">\r\n                    <p class=\"case-type-name\"><span class=\"case-type-num\">\r\n                    \t{{ type.id }} <i class=\"fa Example of angle-double-right fa-angle-double-right\"></i></span>\r\n                        {{type.name}} <span class=\"case-open pull-right\"><i class=\"fa fa-plus\"></i></span>\r\n                    </p>\r\n                    <div class=\"clearfix\"></div>\r\n                    <ul class=\"case-list\" *ngIf=\"type.subItems\">\r\n                        <li class=\"case-item\" *ngFor=\"let item of type.subItems\"><a [routerLink]=\"['/report/'] + type.id + ['/'] + item.id\">{{item.name}}</a></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ },
-/* 571 */
+/* 570 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63888,7 +63331,7 @@ exports.InnerSubscriber = InnerSubscriber;
 //# sourceMappingURL=InnerSubscriber.js.map
 
 /***/ },
-/* 572 */
+/* 571 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64020,7 +63463,7 @@ exports.Notification = Notification;
 //# sourceMappingURL=Notification.js.map
 
 /***/ },
-/* 573 */
+/* 572 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -64034,7 +63477,7 @@ exports.empty = {
 //# sourceMappingURL=Observer.js.map
 
 /***/ },
-/* 574 */
+/* 573 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64044,7 +63487,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscription_1 = __webpack_require__(241);
+var Subscription_1 = __webpack_require__(240);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore
@@ -64080,15 +63523,26 @@ exports.SubjectSubscription = SubjectSubscription;
 //# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ },
+/* 574 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var Observable_1 = __webpack_require__(6);
+var catch_1 = __webpack_require__(586);
+Observable_1.Observable.prototype.catch = catch_1._catch;
+//# sourceMappingURL=catch.js.map
+
+/***/ },
 /* 575 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 "use strict";
 var Observable_1 = __webpack_require__(6);
-var catch_1 = __webpack_require__(587);
-Observable_1.Observable.prototype.catch = catch_1._catch;
-//# sourceMappingURL=catch.js.map
+var every_1 = __webpack_require__(588);
+Observable_1.Observable.prototype.every = every_1.every;
+//# sourceMappingURL=every.js.map
 
 /***/ },
 /* 576 */
@@ -64097,9 +63551,9 @@ Observable_1.Observable.prototype.catch = catch_1._catch;
 "use strict";
 "use strict";
 var Observable_1 = __webpack_require__(6);
-var every_1 = __webpack_require__(589);
-Observable_1.Observable.prototype.every = every_1.every;
-//# sourceMappingURL=every.js.map
+var first_1 = __webpack_require__(589);
+Observable_1.Observable.prototype.first = first_1.first;
+//# sourceMappingURL=first.js.map
 
 /***/ },
 /* 577 */
@@ -64108,23 +63562,12 @@ Observable_1.Observable.prototype.every = every_1.every;
 "use strict";
 "use strict";
 var Observable_1 = __webpack_require__(6);
-var first_1 = __webpack_require__(590);
-Observable_1.Observable.prototype.first = first_1.first;
-//# sourceMappingURL=first.js.map
-
-/***/ },
-/* 578 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-"use strict";
-var Observable_1 = __webpack_require__(6);
-var last_1 = __webpack_require__(591);
+var last_1 = __webpack_require__(590);
 Observable_1.Observable.prototype.last = last_1.last;
 //# sourceMappingURL=last.js.map
 
 /***/ },
-/* 579 */
+/* 578 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64135,30 +63578,30 @@ Observable_1.Observable.prototype.mergeAll = mergeAll_1.mergeAll;
 //# sourceMappingURL=mergeAll.js.map
 
 /***/ },
+/* 579 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var Observable_1 = __webpack_require__(6);
+var mergeMap_1 = __webpack_require__(592);
+Observable_1.Observable.prototype.mergeMap = mergeMap_1.mergeMap;
+Observable_1.Observable.prototype.flatMap = mergeMap_1.mergeMap;
+//# sourceMappingURL=mergeMap.js.map
+
+/***/ },
 /* 580 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 "use strict";
 var Observable_1 = __webpack_require__(6);
-var mergeMap_1 = __webpack_require__(593);
-Observable_1.Observable.prototype.mergeMap = mergeMap_1.mergeMap;
-Observable_1.Observable.prototype.flatMap = mergeMap_1.mergeMap;
-//# sourceMappingURL=mergeMap.js.map
-
-/***/ },
-/* 581 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-"use strict";
-var Observable_1 = __webpack_require__(6);
-var reduce_1 = __webpack_require__(595);
+var reduce_1 = __webpack_require__(594);
 Observable_1.Observable.prototype.reduce = reduce_1.reduce;
 //# sourceMappingURL=reduce.js.map
 
 /***/ },
-/* 582 */
+/* 581 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64170,7 +63613,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Observable_1 = __webpack_require__(6);
 var ScalarObservable_1 = __webpack_require__(384);
-var EmptyObservable_1 = __webpack_require__(242);
+var EmptyObservable_1 = __webpack_require__(241);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -64239,7 +63682,7 @@ exports.ArrayLikeObservable = ArrayLikeObservable;
 //# sourceMappingURL=ArrayLikeObservable.js.map
 
 /***/ },
-/* 583 */
+/* 582 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64250,10 +63693,10 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(6);
-var EmptyObservable_1 = __webpack_require__(242);
+var EmptyObservable_1 = __webpack_require__(241);
 var isArray_1 = __webpack_require__(164);
-var subscribeToResult_1 = __webpack_require__(250);
-var OuterSubscriber_1 = __webpack_require__(240);
+var subscribeToResult_1 = __webpack_require__(249);
+var OuterSubscriber_1 = __webpack_require__(239);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -64356,7 +63799,7 @@ var ForkJoinSubscriber = (function (_super) {
 //# sourceMappingURL=ForkJoinObservable.js.map
 
 /***/ },
-/* 584 */
+/* 583 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64371,13 +63814,13 @@ var isFunction_1 = __webpack_require__(165);
 var isPromise_1 = __webpack_require__(389);
 var isScheduler_1 = __webpack_require__(390);
 var PromiseObservable_1 = __webpack_require__(162);
-var IteratorObservable_1 = __webpack_require__(585);
+var IteratorObservable_1 = __webpack_require__(584);
 var ArrayObservable_1 = __webpack_require__(383);
-var ArrayLikeObservable_1 = __webpack_require__(582);
-var observable_1 = __webpack_require__(246);
-var iterator_1 = __webpack_require__(245);
+var ArrayLikeObservable_1 = __webpack_require__(581);
+var observable_1 = __webpack_require__(245);
+var iterator_1 = __webpack_require__(244);
 var Observable_1 = __webpack_require__(6);
-var observeOn_1 = __webpack_require__(594);
+var observeOn_1 = __webpack_require__(593);
 var isArrayLike = (function (x) { return x && typeof x.length === 'number'; });
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -64439,7 +63882,7 @@ exports.FromObservable = FromObservable;
 //# sourceMappingURL=FromObservable.js.map
 
 /***/ },
-/* 585 */
+/* 584 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64454,8 +63897,8 @@ var isObject_1 = __webpack_require__(388);
 var tryCatch_1 = __webpack_require__(392);
 var Observable_1 = __webpack_require__(6);
 var isFunction_1 = __webpack_require__(165);
-var iterator_1 = __webpack_require__(245);
-var errorObject_1 = __webpack_require__(249);
+var iterator_1 = __webpack_require__(244);
+var errorObject_1 = __webpack_require__(248);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -64638,17 +64081,17 @@ function sign(value) {
 //# sourceMappingURL=IteratorObservable.js.map
 
 /***/ },
-/* 586 */
+/* 585 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 "use strict";
-var ForkJoinObservable_1 = __webpack_require__(583);
+var ForkJoinObservable_1 = __webpack_require__(582);
 exports.forkJoin = ForkJoinObservable_1.ForkJoinObservable.create;
 //# sourceMappingURL=forkJoin.js.map
 
 /***/ },
-/* 587 */
+/* 586 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64721,7 +64164,7 @@ var CatchSubscriber = (function (_super) {
 //# sourceMappingURL=catch.js.map
 
 /***/ },
-/* 588 */
+/* 587 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64776,7 +64219,7 @@ exports.concatAll = concatAll;
 //# sourceMappingURL=concatAll.js.map
 
 /***/ },
-/* 589 */
+/* 588 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64851,7 +64294,7 @@ var EverySubscriber = (function (_super) {
 //# sourceMappingURL=every.js.map
 
 /***/ },
-/* 590 */
+/* 589 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64862,7 +64305,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(36);
-var EmptyError_1 = __webpack_require__(248);
+var EmptyError_1 = __webpack_require__(247);
 /**
  * Emits only the first value (or the first value that meets some condition)
  * emitted by the source Observable.
@@ -65005,7 +64448,7 @@ var FirstSubscriber = (function (_super) {
 //# sourceMappingURL=first.js.map
 
 /***/ },
-/* 591 */
+/* 590 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65016,7 +64459,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(36);
-var EmptyError_1 = __webpack_require__(248);
+var EmptyError_1 = __webpack_require__(247);
 /**
  * Returns an Observable that emits only the last item emitted by the source Observable.
  * It optionally takes a predicate function as a parameter, in which case, rather than emitting
@@ -65129,7 +64572,7 @@ var LastSubscriber = (function (_super) {
 //# sourceMappingURL=last.js.map
 
 /***/ },
-/* 592 */
+/* 591 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65221,7 +64664,7 @@ var MapSubscriber = (function (_super) {
 //# sourceMappingURL=map.js.map
 
 /***/ },
-/* 593 */
+/* 592 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65231,8 +64674,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var subscribeToResult_1 = __webpack_require__(250);
-var OuterSubscriber_1 = __webpack_require__(240);
+var subscribeToResult_1 = __webpack_require__(249);
+var OuterSubscriber_1 = __webpack_require__(239);
 /**
  * Projects each source value to an Observable which is merged in the output
  * Observable.
@@ -65388,7 +64831,7 @@ exports.MergeMapSubscriber = MergeMapSubscriber;
 //# sourceMappingURL=mergeMap.js.map
 
 /***/ },
-/* 594 */
+/* 593 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65399,7 +64842,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(36);
-var Notification_1 = __webpack_require__(572);
+var Notification_1 = __webpack_require__(571);
 /**
  * @see {@link Notification}
  *
@@ -65469,7 +64912,7 @@ exports.ObserveOnMessage = ObserveOnMessage;
 //# sourceMappingURL=observeOn.js.map
 
 /***/ },
-/* 595 */
+/* 594 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65559,7 +65002,7 @@ exports.ReduceSubscriber = ReduceSubscriber;
 //# sourceMappingURL=reduce.js.map
 
 /***/ },
-/* 596 */
+/* 595 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -65587,13 +65030,13 @@ exports.UnsubscriptionError = UnsubscriptionError;
 //# sourceMappingURL=UnsubscriptionError.js.map
 
 /***/ },
-/* 597 */
+/* 596 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 "use strict";
 var Subscriber_1 = __webpack_require__(36);
-var rxSubscriber_1 = __webpack_require__(247);
+var rxSubscriber_1 = __webpack_require__(246);
 function toSubscriber(nextOrObserver, error, complete) {
     if (nextOrObserver && typeof nextOrObserver === 'object') {
         if (nextOrObserver instanceof Subscriber_1.Subscriber) {
@@ -65609,6 +65052,7 @@ exports.toSubscriber = toSubscriber;
 //# sourceMappingURL=toSubscriber.js.map
 
 /***/ },
+/* 597 */,
 /* 598 */,
 /* 599 */,
 /* 600 */,
@@ -65744,8 +65188,7 @@ exports.toSubscriber = toSubscriber;
 /* 730 */,
 /* 731 */,
 /* 732 */,
-/* 733 */,
-/* 734 */
+/* 733 */
 /***/ function(module, exports) {
 
 module.exports = function(module) {
@@ -65771,7 +65214,7 @@ module.exports = function(module) {
 
 
 /***/ },
-/* 735 */
+/* 734 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65782,13 +65225,13 @@ module.exports = function(module) {
 
 
 /***/ },
-/* 736 */,
-/* 737 */
+/* 735 */,
+/* 736 */
 /***/ function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(430);
 
 
 /***/ }
-],[737]);
+],[736]);
 //# sourceMappingURL=main.map
