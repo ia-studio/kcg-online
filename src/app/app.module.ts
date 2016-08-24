@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ApplicationRef } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Title } from '@angular/platform-browser';
@@ -29,7 +29,8 @@ import { ReportComponent } from './report/report.component';
   ],
   providers: [
     appRoutingProviders,
-    Title
+    Title,
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   entryComponents: [AppComponent],
   bootstrap: [ AppComponent ]
