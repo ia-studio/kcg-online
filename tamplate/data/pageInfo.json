@@ -42,6 +42,12 @@
         "Title": "客戶服務 | 廣西金秀松源林產有限公司",
         "PageBanner": "contact_banner.png"
     },
+    "faq": {
+        "Title": "常見問題 - 高雄市政府線上即時服務平台",
+        "PageBanner": "query/banner_pic_query.png",
+        "PageTitle": "常見問題",
+        "PageTitleEn": "Search My Case"
+    },
     "product": {
         "Title": "產品介紹 | 廣西金秀松源林產有限公司",
         "PageBanner": "product_banner.png"
