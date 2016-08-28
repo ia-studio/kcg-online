@@ -45,10 +45,10 @@
           </div>
 
           <div class="faq-item col-md-12" [ngClass]="{active:item.active}" *ngFor="let item of faq; #i = index">
-            <div class="col-md-7 navy"><a href="##">{{item.CaseContent}}</a> <span class="faq-open pull-right hidden-md hidden-lg" (click)="item.active=!item.active"><i class="fa fa-plus" [ngClass]="{active:item.active}"></i></span></div>
+            <div class="col-md-7 navy"><a [routerLink]="['/faq/123']">{{item.CaseContent}}</a> <span class="faq-open pull-right hidden-md hidden-lg" (click)="item.active=!item.active"><i class="fa fa-plus" [ngClass]="{active:item.active}"></i></span></div>
             <div class="col-md-2 text-black">{{item.OrganName}}</div>
             <div class="col-md-1 text-black">{{item.ViewCount}}</div>
-            <div class="col-md-2 text-right"><a class="text-orange" href="">詳細陳情內容 <i class="fa fa-angle-double-right"></i></a></div>
+            <div class="col-md-2 text-right"><a class="text-orange" [routerLink]="['/faq/123']">詳細陳情內容 <i class="fa fa-angle-double-right"></i></a></div>
           </div>
         </div>
       </div>

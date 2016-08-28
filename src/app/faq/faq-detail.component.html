@@ -1,57 +1,79 @@
 <div class="container">
-  <div class="banner row">
-    <div class="banner-page-name">
-      <h2 class="dk-green">常見問與答</h2>
-      <p class="dk-green">Frequently Asked Questions
-</p>
-    </div>
-    <img src="./assets/images/banner/banner_pic_faq.png" alt="">
-  </div>
-  <div class="row">
-    <div class="col-md-3 pdLR1x maT1x">
-      <a class="btn btn-green" href="javascript:void(0);" (click)="openSearch=!openSearch"><i class="fa fa-search"></i> 全文檢索</a>
-    </div>
-    <div class="col-md-12 maT1x">
-      <div class="search" [ngClass]="{active:openSearch}">
-        <form action="" class="">
-          <div class="search-lable combine-icon combine-before maT1x">
-            <div class="border-bottom">
-              <i class="fa fa-search"></i>
-              <input type="text" placeholder="搜尋關鍵字">
-            </div>
-          </div>
-          <div class="search-lable combine-icon combine-after">
-            <div class="border-bottom">
-              <input type="text" [value]="selectType">
-              <select name="" id="" #t (change)="callType(t.value)">
-                  <option value="">請選擇處理單位</option>
-                  <option [value]="type.kind_name" *ngFor="let type of faqTypes">{{type.kind_name}}</option>
-              </select>
-              <i class="fa fa-chevron-down"></i>
-            </div>
-          </div>
-          <div class="search-lable text-right">
-            <button class="search-btn">查詢</button>
-          </div>
-        </form>
-      </div>
-      <div class="article-content">
-        <div class="faq row">
-          <div class="faq-head col-md-12 hidden-xs hidden-sm">
-            <div class="col-md-7">陳情內容</div>
-            <div class="col-md-2">單位</div>
-            <div class="col-md-1">人氣</div>
-            <div class="col-md-2"></div>
-          </div>
-
-          <div class="faq-item col-md-12" [ngClass]="{active:item.active}" *ngFor="let item of faq; #i = index">
-            <div class="col-md-7 navy"><a href="##">{{item.CaseContent}}</a> <span class="faq-open pull-right hidden-md hidden-lg" (click)="item.active=!item.active"><i class="fa fa-plus" [ngClass]="{active:item.active}"></i></span></div>
-            <div class="col-md-2 text-black">{{item.OrganName}}</div>
-            <div class="col-md-1 text-black">{{item.ViewCount}}</div>
-            <div class="col-md-2 text-right"><a class="text-orange" href="">詳細陳情內容 <i class="fa fa-angle-double-right"></i></a></div>
-          </div>
+    <div class="banner row">
+        <div class="banner-page-name">
+            <h2 class="dk-green">常見問與答</h2>
+      <p class="dk-green">Frequently Asked Questions</p>
         </div>
-      </div>
+        <img src="./assets/images/banner/banner_pic_faq.png" alt="">
     </div>
-  </div>
+    <div class="row">
+        <div class="col-md-4 page-block maB2x">
+
+            <div class="article-content">
+                <p class="article-lable require">陳情內容</p>
+                <p class="navy maB2x">0~2歲保母托育費用補助(2歲以下幼童)</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="article-lable require">回覆單位 </p>
+                        <p class="navy maB2x pdLHalfX">高雄市政府社會局</p>
+                        <p class="article-lable require">張貼日期</p>
+                        <p class="navy maB2x pdLHalfX">20110110</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="article-lable require">問題類別</p>
+                        <p class="navy maB2x pdLHalfX">社會</p>
+                        <p class="article-lable require">修改日期</p>
+                        <p class="navy maB2x pdLHalfX">20151216</p>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="article-lable require">人氣指數</p>
+                        <p class="navy maB2x pdLHalfX">9999999999</p>
+                    </div>
+                </div>
+                <a class="btn btn-green hidden-xs hidden-sm" [routerLink]="['/faq']">回到常見問題集</a>
+            </div>
+        </div>
+        <div class="col-md-8 page-block">
+
+            <div class="article-content block-separate">
+                <p class="article-lable require">處理情形(答覆內容)</p>
+                <p class="navy maB2x">一、補助對象：符合下列條件之一
+(一)父母(或監護人)雙方或單親一方皆就業，或父母一方就業、另一方因中重度身心障礙、或服義務役、或處1年以上之徒刑或受拘束人身自由之保安處分1年以上且執行中，致無法自行照顧家中未滿2歲幼兒，而需送請社區保母系統居家托育人員或托嬰中心照顧者。
+(二)戶籍登記為同一母親或父親，有三位以上子女之家庭，其未滿2歲幼兒需送請社區保母系統居家托育人員或托嬰中心照顧者。
+二、補助標準：
+(一)一般家庭：父母(或監護人)雙方或單親一方經稅捐稽徵機關核定之最近1年綜合所得總額合計皆未達申報標準或綜合所得稅稅率未達20％者。惟育有3位子女以上家庭，不受所得稅稅率未達20%之限制。
+1.送托有保母證照之托育人員，每月最高補助3,000元。
+2.送托相關科系畢業或修畢保母專業訓練課程托育人員(含親屬托育人員)，每月最高補助2,000元。
+(二)弱勢家庭：中低收入戶、低收入戶、家有未滿2歲之發展遲緩或身心障礙幼兒之家庭、特殊境遇家庭、高風險家庭。
+1.送托有保母證照之托育人員，中低收入戶每月最高補助4,000元；低收入戶、家有未滿2歲之發展遲緩或身心障礙幼兒之家庭、特殊境遇家庭、高風險家庭每月最高補助5,000元。
+2.送托相關科系畢業或修畢保母專業訓練課程托育人員(含親屬托育人員)，中低收入戶每月最高補助3,000元，低收入戶、家有未滿2歲之發展遲緩或身心障礙幼兒之家庭、特殊境遇家庭、高風險家庭每月最高補助4,000元。
+三、應備申請文件：（下列文件如為影本請加註『與正本相符』，並蓋申請人私章）
+(一)一般家庭：
+1.申請表。
+2.三個月內之幼兒全戶戶籍謄本或戶口名簿影本，如父、母或監護人未與幼兒同戶籍，則需補附身分證影本。
+3.與托育人員簽訂之托育契約書(親屬托育人員免附)。
+4.申請人(父、母或監護人)之郵局帳戶封面影本。
+5.家庭總所得文件：申請人免附證明文件，由中央統一查調，但列冊低收入戶、中低收入戶、特殊境遇家庭、高風險家庭(由高雄市政府社會局認定）、領有身心障礙手冊(證明)或發展遲緩證明之幼兒，需檢附相關證明文件。
+6.就業證明文件：申請人(父、母或監護人)需檢附3個月內之就業證明(如任職單位所開立之在職證明或薪資單，並加蓋公司大小印，或勞工（農、漁民）保險證明)；惟育有3位子女以上家庭免附。
+7.申請人一方就業，另一方因故未能就業之家庭，須檢未能就業者之中重度身心障礙手冊、服義務役證明、在監服刑或受保安處分證明。
+8.戶政單位登載之第3胎(含)以上兒童相關證明(無則免附)。
+四、補助日期計算方式：
+(一)申請人於托育事實發生日起15日內，備齊申請文件送至托育地點所屬之社區保母系統或托嬰中心審核，則補助日期得自托育事實發生日起算。
+(二)申請人如逾時申請或未於限期內備齊申請文件，則補助日期自申請人備齊文件送至社區保母系統或托嬰中心之收件日(以郵戳日或簽收日為憑)起算。
+(三)申請本項補助托育期間超過半個月、不滿1個月者以1個月計，未達半個月者以半個月計。實際支付之托育費用低於補助金額者，核實補助。
+五、受理單位：
+各社區保母系統、立案托嬰中心
+※高雄市社區保母系統
+◎第一區：社團法人高雄市第一褓姆協會承辦，轄區：鳳山區，電話：07-7657367、07-7657368。
+◎第二區：輔英科技大學承辦，轄區：三民西區、鼓山、旗津、前金、鹽埕、大寮、大樹、大社、仁武、林園、鳥松等區，電話：07-7811151分機6433(校本部）、第二據點：07-2817590。
+◎第三區：財團法人伊甸社會福利基金會承辦，轄區：美濃、旗山、內門、六龜、甲仙、杉林、茂林、桃源、那瑪夏等區，電話：07-6614370。
+◎第四區：樹德科技大學承辦，第一轄區：三民東區、苓雅區，電話：07-7137686、07-7137612，電話：07-3850257。第二轄區：茄萣、路竹、燕巢、永安、彌陀、湖內、阿蓮、田寮、岡山等區，電話：07-6158185。
+◎第五區：樹德科技大學承辦，轄區：楠梓、左營、橋頭、梓官等區，電話： 07-5882855。
+◎第六區：輔英科技大學承辦，轄區：新興、小港、前鎮等區，電話：07-2373487。
+※合法立案托嬰中心
+社會局網站：http://socbu.kcg.gov.tw首頁／托育福利／托育機構輔導及管理／托嬰中心名冊。<br></p>
+
+            </div>
+        </div>
+    </div>
 </div>

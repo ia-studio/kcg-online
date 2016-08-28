@@ -5,6 +5,7 @@ import { QueryComponent }               from './query/query.component';
 import { QueryDetailComponent }         from './query/query-detail.component';
 import { ProcessComponent }             from './process/process.component';
 import { FaqComponent }                 from './faq/faq.component';
+import { FaqDetailComponent }                 from './faq/faq-detail.component';
 import { FeedbackComponent }            from './feedback/feedback.component';
 
 const appRoutes: Routes = [
@@ -36,6 +37,10 @@ const appRoutes: Routes = [
   {
     path: 'faq',
     component: FaqComponent
+  },
+  {
+    path: 'faq/:id',
+    component: FaqDetailComponent
   },
   {
     path: 'feedback',
