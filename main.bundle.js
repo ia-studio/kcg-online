@@ -1356,7 +1356,7 @@ exports.escapeRegExp = escapeRegExp;
 "use strict";
 var root_1 = __webpack_require__(65);
 var observable_1 = __webpack_require__(245);
-var toSubscriber_1 = __webpack_require__(596);
+var toSubscriber_1 = __webpack_require__(598);
 /**
  * A representation of any set of values over any amount of time. This the most basic building block
  * of RxJS.
@@ -6561,10 +6561,7 @@ exports.escapeRegExp = escapeRegExp;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(68)))
 
 /***/ },
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6630,6 +6627,9 @@ __export(__webpack_require__(522));
 //# sourceMappingURL=index.js.map
 
 /***/ },
+/* 30 */,
+/* 31 */,
+/* 32 */,
 /* 33 */,
 /* 34 */
 /***/ function(module, exports, __webpack_require__) {
@@ -7078,7 +7078,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var isFunction_1 = __webpack_require__(165);
 var Subscription_1 = __webpack_require__(240);
 var rxSubscriber_1 = __webpack_require__(246);
-var Observer_1 = __webpack_require__(572);
+var Observer_1 = __webpack_require__(574);
 /**
  * Implements the {@link Observer} interface and extends the
  * {@link Subscription} class. While the {@link Observer} is the public API for
@@ -7706,7 +7706,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Observable_1 = __webpack_require__(6);
 var Subscriber_1 = __webpack_require__(36);
 var Subscription_1 = __webpack_require__(240);
-var SubjectSubscription_1 = __webpack_require__(573);
+var SubjectSubscription_1 = __webpack_require__(575);
 var rxSubscriber_1 = __webpack_require__(246);
 var throwError_1 = __webpack_require__(391);
 var ObjectUnsubscribedError_1 = __webpack_require__(387);
@@ -9402,7 +9402,7 @@ var UrlParser = (function () {
  */
 "use strict";
 __webpack_require__(380);
-__webpack_require__(577);
+__webpack_require__(579);
 var Observable_1 = __webpack_require__(6);
 var fromPromise_1 = __webpack_require__(242);
 var of_1 = __webpack_require__(163);
@@ -9546,7 +9546,7 @@ if (freeGlobal && (freeGlobal.global === freeGlobal || freeGlobal.window === fre
     exports.root = freeGlobal;
 }
 //# sourceMappingURL=root.js.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(733)(module), __webpack_require__(68)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(735)(module), __webpack_require__(68)))
 
 /***/ },
 /* 66 */,
@@ -13382,10 +13382,10 @@ exports.ReceivedMessage = ReceivedMessage;
  */
 "use strict";
 __webpack_require__(381);
-__webpack_require__(579);
-__webpack_require__(578);
+__webpack_require__(581);
 __webpack_require__(580);
-__webpack_require__(575);
+__webpack_require__(582);
+__webpack_require__(577);
 var core_1 = __webpack_require__(0);
 var Subject_1 = __webpack_require__(45);
 var from_1 = __webpack_require__(385);
@@ -32387,7 +32387,7 @@ var isObject_1 = __webpack_require__(388);
 var isFunction_1 = __webpack_require__(165);
 var tryCatch_1 = __webpack_require__(392);
 var errorObject_1 = __webpack_require__(248);
-var UnsubscriptionError_1 = __webpack_require__(595);
+var UnsubscriptionError_1 = __webpack_require__(597);
 /**
  * Represents a disposable resource, such as the execution of an Observable. A
  * Subscription has one important method, `unsubscribe`, that takes no argument
@@ -32788,7 +32788,7 @@ var isPromise_1 = __webpack_require__(389);
 var Observable_1 = __webpack_require__(6);
 var iterator_1 = __webpack_require__(244);
 var observable_1 = __webpack_require__(245);
-var InnerSubscriber_1 = __webpack_require__(570);
+var InnerSubscriber_1 = __webpack_require__(572);
 function subscribeToResult(outerSubscriber, result, outerValue, outerIndex) {
     var destination = new InnerSubscriber_1.InnerSubscriber(outerSubscriber, outerValue, outerIndex);
     if (destination.isUnsubscribed) {
@@ -46338,7 +46338,7 @@ exports.JSONPBackend_ = JSONPBackend_;
  */
 "use strict";
 var core_1 = __webpack_require__(0);
-var platform_browser_1 = __webpack_require__(32);
+var platform_browser_1 = __webpack_require__(29);
 var Observable_1 = __webpack_require__(6);
 var base_response_options_1 = __webpack_require__(148);
 var enums_1 = __webpack_require__(61);
@@ -49009,8 +49009,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'kcg-app',
-            template: __webpack_require__(562),
-            styles: [__webpack_require__(561)],
+            template: __webpack_require__(563),
+            styles: [__webpack_require__(562)],
             directives: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["ROUTER_DIRECTIVES"]],
             providers: []
         }), 
@@ -49028,7 +49028,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core___default = __WEBPACK_IMPORTED_MODULE_0__angular_core__ && __WEBPACK_IMPORTED_MODULE_0__angular_core__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_0__angular_core___default, 'a', __WEBPACK_IMPORTED_MODULE_0__angular_core___default);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default = __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default, 'a', __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default);
 
@@ -49046,7 +49046,316 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var FaqComponent = (function () {
     function FaqComponent(titleService) {
         this.titleService = titleService;
+        this.openSearch = false;
+        this.selectType = '請選擇處理單位';
+        this.faq = [
+            {
+                "SerialNo": 1,
+                "CaseContent": "請問水溝不通積水，應如何處理？",
+                "OrganName": "水利局",
+                "ViewCount": "1624",
+                "OrganNo": "397250000G",
+                "SeqNo": 6
+            },
+            {
+                "SerialNo": 2,
+                "CaseContent": "進行屋後污水用戶接管施工時有無任何規定？側、後巷的障礙物是否須由住戶自行排除？",
+                "OrganName": "水利局",
+                "ViewCount": "1495",
+                "OrganNo": "397250000G",
+                "SeqNo": 2
+            },
+            {
+                "SerialNo": 3,
+                "CaseContent": "一、如何查詢污水下水道實施地區? 二、申請污水下水道用戶排水設備設置設計審查申審應附那些書表文件？",
+                "OrganName": "水利局",
+                "ViewCount": "1453",
+                "OrganNo": "397250000G",
+                "SeqNo": 1
+            },
+            {
+                "SerialNo": 4,
+                "CaseContent": "請問風車公園之風車為何不會轉及機車與攤販會進入園區 ？",
+                "OrganName": "水利局",
+                "ViewCount": "1393",
+                "OrganNo": "397250000G",
+                "SeqNo": 9
+            },
+            {
+                "SerialNo": 5,
+                "CaseContent": "請問我家廚房及廁所馬桶污水排水堵塞不通，能否派員立即疏通？",
+                "OrganName": "水利局",
+                "ViewCount": "1359",
+                "OrganNo": "397250000G",
+                "SeqNo": 12
+            },
+            {
+                "SerialNo": 6,
+                "CaseContent": "如何申辦下水道用戶排水設備承裝商?相關申請應附哪些書表文件?",
+                "OrganName": "水利局",
+                "ViewCount": "1340",
+                "OrganNo": "397250000G",
+                "SeqNo": 4
+            },
+            {
+                "SerialNo": 7,
+                "CaseContent": "請問中區污水處理廠處理後的水排放到何處？",
+                "OrganName": "水利局",
+                "ViewCount": "1321",
+                "OrganNo": "397250000G",
+                "SeqNo": 8
+            },
+            {
+                "SerialNo": 8,
+                "CaseContent": "請問工作井施工問題？",
+                "OrganName": "水利局",
+                "ViewCount": "1299",
+                "OrganNo": "397250000G",
+                "SeqNo": 7
+            },
+            {
+                "SerialNo": 9,
+                "CaseContent": "(凡那比颱風)水閘門是否有補助？",
+                "OrganName": "水利局",
+                "ViewCount": "1297",
+                "OrganNo": "397250000G",
+                "SeqNo": 5
+            },
+            {
+                "SerialNo": 10,
+                "CaseContent": "住家前污水管埋設完成後為何無法立即將路面重新封層，回復路面美觀？",
+                "OrganName": "水利局",
+                "ViewCount": "1291",
+                "OrganNo": "397250000G",
+                "SeqNo": 3
+            },
+            {
+                "SerialNo": 11,
+                "CaseContent": "請問我家門前馬路上人孔蓋受車輾過，就產生噪音，影響住家安寧，能否派員立即改善？",
+                "OrganName": "水利局",
+                "ViewCount": "1276",
+                "OrganNo": "397250000G",
+                "SeqNo": 11
+            },
+            {
+                "SerialNo": 12,
+                "CaseContent": "請問我家門前道路有水溝蓋遺失（或水溝壁損壞），相當危險，請派員修復？",
+                "OrganName": "水利局",
+                "ViewCount": "1228",
+                "OrganNo": "397250000G",
+                "SeqNo": 14
+            },
+            {
+                "SerialNo": 13,
+                "CaseContent": "請問我們家前面水溝損壞阻塞，請你們派員疏通。",
+                "OrganName": "水利局",
+                "ViewCount": "1181",
+                "OrganNo": "397250000G",
+                "SeqNo": 15
+            },
+            {
+                "SerialNo": 14,
+                "CaseContent": "何謂超限利用",
+                "OrganName": "水利局",
+                "ViewCount": "1161",
+                "OrganNo": "397250000G",
+                "SeqNo": 21
+            },
+            {
+                "SerialNo": 15,
+                "CaseContent": "免申請水土保持計畫或簡易水保申請書之種類",
+                "OrganName": "水利局",
+                "ViewCount": "1154",
+                "OrganNo": "397250000G",
+                "SeqNo": 17
+            },
+            {
+                "SerialNo": 16,
+                "CaseContent": "何謂山坡地範圍？何謂水土保持義務人？",
+                "OrganName": "水利局",
+                "ViewCount": "1135",
+                "OrganNo": "397250000G",
+                "SeqNo": 19
+            },
+            {
+                "SerialNo": 17,
+                "CaseContent": "需繳納水土保持保證金及其計算方式",
+                "OrganName": "水利局",
+                "ViewCount": "1128",
+                "OrganNo": "397250000G",
+                "SeqNo": 20
+            },
+            {
+                "SerialNo": 18,
+                "CaseContent": "請問我們家前面水溝內附掛纜線脫落會影響排水可否派員處理。",
+                "OrganName": "水利局",
+                "ViewCount": "1116",
+                "OrganNo": "397250000G",
+                "SeqNo": 13
+            },
+            {
+                "SerialNo": 19,
+                "CaseContent": "請問下水道博物館(展示館)如何申請參觀？",
+                "OrganName": "水利局",
+                "ViewCount": "1109",
+                "OrganNo": "397250000G",
+                "SeqNo": 10
+            },
+            {
+                "SerialNo": 20,
+                "CaseContent": "申請簡易水土保持申報書種類及規模(可代替水土保持計畫)",
+                "OrganName": "水利局",
+                "ViewCount": "1095",
+                "OrganNo": "397250000G",
+                "SeqNo": 16
+            },
+            {
+                "SerialNo": 21,
+                "CaseContent": "水土保持計畫或簡易水土保持申報書之申辦程序",
+                "OrganName": "水利局",
+                "ViewCount": "1094",
+                "OrganNo": "397250000G",
+                "SeqNo": 18
+            }
+        ];
+        this.faqTypes = [
+            {
+                "kind": "01",
+                "kind_name": "工務"
+            },
+            {
+                "kind": "02",
+                "kind_name": "環保"
+            },
+            {
+                "kind": "03",
+                "kind_name": "交通"
+            },
+            {
+                "kind": "04",
+                "kind_name": "警政"
+            },
+            {
+                "kind": "05",
+                "kind_name": "民政區政"
+            },
+            {
+                "kind": "06",
+                "kind_name": "財政"
+            },
+            {
+                "kind": "07",
+                "kind_name": "教育"
+            },
+            {
+                "kind": "08",
+                "kind_name": "社會"
+            },
+            {
+                "kind": "09",
+                "kind_name": "衛生"
+            },
+            {
+                "kind": "10",
+                "kind_name": "消防"
+            },
+            {
+                "kind": "11",
+                "kind_name": "捷運"
+            },
+            {
+                "kind": "12",
+                "kind_name": "勞工"
+            },
+            {
+                "kind": "13",
+                "kind_name": "主計"
+            },
+            {
+                "kind": "14",
+                "kind_name": "經發"
+            },
+            {
+                "kind": "15",
+                "kind_name": "文化"
+            },
+            {
+                "kind": "16",
+                "kind_name": "消保"
+            },
+            {
+                "kind": "17",
+                "kind_name": "秘書處"
+            },
+            {
+                "kind": "18",
+                "kind_name": "海洋"
+            },
+            {
+                "kind": "19",
+                "kind_name": "都發"
+            },
+            {
+                "kind": "21",
+                "kind_name": "法制"
+            },
+            {
+                "kind": "22",
+                "kind_name": "兵役"
+            },
+            {
+                "kind": "23",
+                "kind_name": "地政"
+            },
+            {
+                "kind": "24",
+                "kind_name": "新聞"
+            },
+            {
+                "kind": "25",
+                "kind_name": "人事"
+            },
+            {
+                "kind": "26",
+                "kind_name": "政風"
+            },
+            {
+                "kind": "27",
+                "kind_name": "空大"
+            },
+            {
+                "kind": "28",
+                "kind_name": "研考"
+            },
+            {
+                "kind": "29",
+                "kind_name": "原委"
+            },
+            {
+                "kind": "31",
+                "kind_name": "客委"
+            },
+            {
+                "kind": "32",
+                "kind_name": "農業"
+            },
+            {
+                "kind": "33",
+                "kind_name": "水利"
+            },
+            {
+                "kind": "34",
+                "kind_name": "觀光"
+            },
+            {
+                "kind": "99",
+                "kind_name": "其他"
+            }
+        ];
     }
+    FaqComponent.prototype.callType = function (value) {
+        this.selectType = value;
+    };
     FaqComponent.prototype.setTitle = function (newTitle) {
         this.titleService.setTitle(newTitle);
     };
@@ -49056,7 +49365,7 @@ var FaqComponent = (function () {
     FaqComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-faq',
-            template: __webpack_require__(563),
+            template: __webpack_require__(565)
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"]) === 'function' && _a) || Object])
     ], FaqComponent);
@@ -49073,7 +49382,7 @@ var FaqComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core___default = __WEBPACK_IMPORTED_MODULE_0__angular_core__ && __WEBPACK_IMPORTED_MODULE_0__angular_core__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_0__angular_core___default, 'a', __WEBPACK_IMPORTED_MODULE_0__angular_core___default);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default = __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default, 'a', __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default);
 
@@ -49101,7 +49410,7 @@ var ProcessComponent = (function () {
     ProcessComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-service',
-            template: __webpack_require__(565),
+            template: __webpack_require__(567),
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"]) === 'function' && _a) || Object])
     ], ProcessComponent);
@@ -49118,7 +49427,7 @@ var ProcessComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core___default = __WEBPACK_IMPORTED_MODULE_0__angular_core__ && __WEBPACK_IMPORTED_MODULE_0__angular_core__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_0__angular_core___default, 'a', __WEBPACK_IMPORTED_MODULE_0__angular_core___default);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default = __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default, 'a', __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__case_service__ = __webpack_require__(161);
@@ -49157,7 +49466,7 @@ var QueryComponent = (function () {
     QueryComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-query',
-            template: __webpack_require__(567),
+            template: __webpack_require__(569),
             providers: [__WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */]) === 'function' && _b) || Object])
@@ -49178,7 +49487,7 @@ var QueryComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router___default = __WEBPACK_IMPORTED_MODULE_1__angular_router__ && __WEBPACK_IMPORTED_MODULE_1__angular_router__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_1__angular_router__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_1__angular_router__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_1__angular_router___default, 'a', __WEBPACK_IMPORTED_MODULE_1__angular_router___default);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser___default = __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ && __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_2__angular_platform_browser___default, 'a', __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser___default);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__case_service__ = __webpack_require__(161);
@@ -49217,7 +49526,7 @@ var ReportComponent = (function () {
     ReportComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-report',
-            template: __webpack_require__(569),
+            template: __webpack_require__(571),
             directives: [__WEBPACK_IMPORTED_MODULE_1__angular_router__["ROUTER_DIRECTIVES"]],
             providers: [__WEBPACK_IMPORTED_MODULE_3__case_service__["a" /* CaseService */]]
         }), 
@@ -49295,7 +49604,7 @@ exports.BehaviorSubject = BehaviorSubject;
 "use strict";
 "use strict";
 var Observable_1 = __webpack_require__(6);
-var concatAll_1 = __webpack_require__(587);
+var concatAll_1 = __webpack_require__(589);
 Observable_1.Observable.prototype.concatAll = concatAll_1.concatAll;
 //# sourceMappingURL=concatAll.js.map
 
@@ -49306,7 +49615,7 @@ Observable_1.Observable.prototype.concatAll = concatAll_1.concatAll;
 "use strict";
 "use strict";
 var Observable_1 = __webpack_require__(6);
-var map_1 = __webpack_require__(591);
+var map_1 = __webpack_require__(593);
 Observable_1.Observable.prototype.map = map_1.map;
 //# sourceMappingURL=map.js.map
 
@@ -49516,7 +49825,7 @@ exports.ScalarObservable = ScalarObservable;
 
 "use strict";
 "use strict";
-var FromObservable_1 = __webpack_require__(583);
+var FromObservable_1 = __webpack_require__(585);
 exports.from = FromObservable_1.FromObservable.create;
 //# sourceMappingURL=from.js.map
 
@@ -49787,7 +50096,7 @@ exports.tryCatch = tryCatch;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core___default = __WEBPACK_IMPORTED_MODULE_1__angular_core__ && __WEBPACK_IMPORTED_MODULE_1__angular_core__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_1__angular_core__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_1__angular_core__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_1__angular_core___default, 'a', __WEBPACK_IMPORTED_MODULE_1__angular_core___default);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app___ = __webpack_require__(558);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app___ = __webpack_require__(559);
 
 
 
@@ -58339,7 +58648,7 @@ exports.Console = core_1.__core_private__.Console;
 "use strict";
 var compiler_1 = __webpack_require__(122);
 var core_1 = __webpack_require__(0);
-var platform_browser_1 = __webpack_require__(32);
+var platform_browser_1 = __webpack_require__(29);
 var core_private_1 = __webpack_require__(515);
 var platform_providers_1 = __webpack_require__(520);
 var xhr_cache_1 = __webpack_require__(521);
@@ -58552,7 +58861,7 @@ function normalizeArray(arr) {
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
-var platform_browser_1 = __webpack_require__(32);
+var platform_browser_1 = __webpack_require__(29);
 exports.INTERNAL_BROWSER_PLATFORM_PROVIDERS = platform_browser_1.__platform_browser_private__.INTERNAL_BROWSER_PLATFORM_PROVIDERS;
 exports.getDOM = platform_browser_1.__platform_browser_private__.getDOM;
 //# sourceMappingURL=platform_browser_private.js.map
@@ -61679,8 +61988,8 @@ function _resolveDefaultAnimationDriver() {
  * found in the LICENSE file at https://angular.io/license
  */
 "use strict";
+__webpack_require__(578);
 __webpack_require__(576);
-__webpack_require__(574);
 __webpack_require__(380);
 var Observable_1 = __webpack_require__(6);
 var from_1 = __webpack_require__(385);
@@ -62742,7 +63051,7 @@ function getResolve(route) {
 "use strict";
 __webpack_require__(381);
 __webpack_require__(382);
-var forkJoin_1 = __webpack_require__(585);
+var forkJoin_1 = __webpack_require__(587);
 var fromPromise_1 = __webpack_require__(242);
 function resolve(resolver, state) {
     return resolveNode(resolver, state._root).map(function (_) { return state; });
@@ -62873,7 +63182,7 @@ exports.provideLocationStrategy = provideLocationStrategy;
  */
 "use strict";
 var common_1 = __webpack_require__(40);
-var platform_browser_1 = __webpack_require__(32);
+var platform_browser_1 = __webpack_require__(29);
 var common_router_providers_1 = __webpack_require__(236);
 /**
  * A list of {@link Provider}s. To use the router, you must add this to your application.
@@ -62909,7 +63218,7 @@ exports.provideRouter = provideRouter;
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser___default = __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ && __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser___default, 'a', __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser___default);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
@@ -62994,15 +63303,17 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_router___default = __WEBPACK_IMPORTED_MODULE_0__angular_router__ && __WEBPACK_IMPORTED_MODULE_0__angular_router__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_0__angular_router__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_0__angular_router__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_0__angular_router___default, 'a', __WEBPACK_IMPORTED_MODULE_0__angular_router___default);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__report_report_component__ = __webpack_require__(378);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__report_report_detail_component__ = __webpack_require__(560);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__report_report_detail_component__ = __webpack_require__(561);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__query_query_component__ = __webpack_require__(377);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__query_query_detail_component__ = __webpack_require__(559);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__query_query_detail_component__ = __webpack_require__(560);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__process_process_component__ = __webpack_require__(376);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__faq_faq_component__ = __webpack_require__(375);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__feedback_feedback_component__ = __webpack_require__(557);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__faq_faq_detail_component__ = __webpack_require__(557);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__feedback_feedback_component__ = __webpack_require__(558);
 
 /* harmony export */ __webpack_require__.d(exports, "b", function() { return appRoutingProviders; });
 /* harmony export */ __webpack_require__.d(exports, "a", function() { return routing; });
+
 
 
 
@@ -63041,8 +63352,12 @@ var appRoutes = [
         component: __WEBPACK_IMPORTED_MODULE_6__faq_faq_component__["a" /* FaqComponent */]
     },
     {
+        path: 'faq/:id',
+        component: __WEBPACK_IMPORTED_MODULE_7__faq_faq_detail_component__["a" /* FaqDetailComponent */]
+    },
+    {
         path: 'feedback',
-        component: __WEBPACK_IMPORTED_MODULE_7__feedback_feedback_component__["a" /* FeedbackComponent */]
+        component: __WEBPACK_IMPORTED_MODULE_8__feedback_feedback_component__["a" /* FeedbackComponent */]
     },
     {
         path: '**',
@@ -63061,7 +63376,52 @@ var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["RouterModule"].forR
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core___default = __WEBPACK_IMPORTED_MODULE_0__angular_core__ && __WEBPACK_IMPORTED_MODULE_0__angular_core__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_0__angular_core___default, 'a', __WEBPACK_IMPORTED_MODULE_0__angular_core___default);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default = __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__; };
+/* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default, 'a', __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default);
+
+/* harmony export */ __webpack_require__.d(exports, "a", function() { return FaqDetailComponent; });var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var FaqDetailComponent = (function () {
+    function FaqDetailComponent(titleService) {
+        this.titleService = titleService;
+    }
+    FaqDetailComponent.prototype.setTitle = function (newTitle) {
+        this.titleService.setTitle(newTitle);
+    };
+    FaqDetailComponent.prototype.ngOnInit = function () {
+        this.setTitle('常見問題 FAQ - 高雄市政府線上即時服務平台');
+    };
+    FaqDetailComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-faq-detail',
+            template: __webpack_require__(564),
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"]) === 'function' && _a) || Object])
+    ], FaqDetailComponent);
+    return FaqDetailComponent;
+    var _a;
+}());
+
+
+/***/ },
+/* 558 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core___default = __WEBPACK_IMPORTED_MODULE_0__angular_core__ && __WEBPACK_IMPORTED_MODULE_0__angular_core__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__; };
+/* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_0__angular_core___default, 'a', __WEBPACK_IMPORTED_MODULE_0__angular_core___default);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default = __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default, 'a', __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default);
 
@@ -63089,7 +63449,7 @@ var FeedbackComponent = (function () {
     FeedbackComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-feedback',
-            template: __webpack_require__(564),
+            template: __webpack_require__(566),
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"]) === 'function' && _a) || Object])
     ], FeedbackComponent);
@@ -63099,11 +63459,11 @@ var FeedbackComponent = (function () {
 
 
 /***/ },
-/* 558 */
+/* 559 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environments_environment__ = __webpack_require__(734);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environments_environment__ = __webpack_require__(736);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_component__ = __webpack_require__(374);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_module__ = __webpack_require__(555);
 /* harmony namespace reexport */ __webpack_require__.d(exports, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__environments_environment__["environment"]; });
@@ -63115,14 +63475,14 @@ var FeedbackComponent = (function () {
 
 
 /***/ },
-/* 559 */
+/* 560 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core___default = __WEBPACK_IMPORTED_MODULE_0__angular_core__ && __WEBPACK_IMPORTED_MODULE_0__angular_core__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_0__angular_core__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_0__angular_core___default, 'a', __WEBPACK_IMPORTED_MODULE_0__angular_core___default);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default = __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__.__esModule ? function() { return __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__['default'] } : function() { return __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__; };
 /* harmony import */ __webpack_require__.d(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default, 'a', __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser___default);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__case_service__ = __webpack_require__(161);
@@ -63161,7 +63521,7 @@ var QueryDetailComponent = (function () {
     QueryDetailComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-query-detail',
-            template: __webpack_require__(566),
+            template: __webpack_require__(568),
             providers: [__WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["Title"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */]) === 'function' && _b) || Object])
@@ -63172,7 +63532,7 @@ var QueryDetailComponent = (function () {
 
 
 /***/ },
-/* 560 */
+/* 561 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63225,7 +63585,7 @@ var ReportDetailComponent = (function () {
     ReportDetailComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'my-report-detail',
-            template: __webpack_require__(568),
+            template: __webpack_require__(570),
             providers: [__WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */]]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_router__["ActivatedRoute"]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__case_service__["a" /* CaseService */]) === 'function' && _b) || Object])
@@ -63236,61 +63596,67 @@ var ReportDetailComponent = (function () {
 
 
 /***/ },
-/* 561 */
+/* 562 */
 /***/ function(module, exports) {
 
 module.exports = ""
 
 /***/ },
-/* 562 */
-/***/ function(module, exports) {
-
-module.exports = "<div class=\"wrap index\" [ngClass]=\"{active: showSlideMenu}\">\r\n    <div class=\"container shadow-3d\">\r\n        <nav class=\"header row index\">\r\n            <h1 class=\"header-band\">\r\n                <img calss=\"pull-left\" src=\"./assets/images/Kao_logo.png\" width=\"40\" alt=\"\">\r\n                <p>\r\n                    <span class=\"navy\">線上即時服務系統</span><br>\r\n                    <small class=\"navy\">Service online</small>\r\n                </p>\r\n                <div class=\"news visible-xs maT1x\" (click)=\"showNews=!showNews\"><a href=\"javascript:void(0)\"><i class=\"fa fa-info\"></i></a></div>\r\n                <div class=\"mob-menu visible-xs\" (click)=\"showSlideMenu=!showSlideMenu\"></div>\r\n            </h1>\r\n            <div class=\"header-right hidden-xs\">\r\n                <div class=\"mob-menu visible-md visible-sm\" (click)=\"showSlideMenu=!showSlideMenu\"></div>\r\n                <div class=\"news visible-md visible-sm maT1x\" (click)=\"showNews=!showNews\"><a href=\"javascript:void(0)\"><i class=\"fa fa-info\"></i></a></div>\r\n                <ul class=\"header-menu visible-lg\">\r\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/report']\">市長信箱</a></li>\r\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/query']\">案件查詢</a></li>\r\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/process']\">服務流程</a></li>\r\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/faq']\">常見問題 FAQ</a></li>\r\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/feedback']\">案件處理滿意度</a></li>\r\n                    <li class=\"menu-item\"><a href=\"http://work1999.kcg.gov.tw/Rptdownload.aspx\" target=\"_blank\">案件反應排行榜</a></li>\r\n                    <li class=\"menu-item\"><a href=\"http://disdp.kcg.gov.tw/exchange/feedback.php\" target=\"_blank\">廉政案件</a></li>\r\n                    <li class=\"menu-item\" (click)=\"showNews=!showNews\"><a><i class=\"fa fa-info\"></i></a></li>\r\n                </ul>\r\n            </div>\r\n            <div class=\"header-news\" *ngIf=\"showNews\">\r\n                <a href=\"\">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a>\r\n                <span class=\"pull-right\" (click)=\"showNews=false\"><i class=\"fa fa-times-circle\"></i></span>\r\n            </div>\r\n        </nav>\r\n    </div>\r\n    <router-outlet></router-outlet>\r\n    <footer>\r\n        <div class=\"container\">\r\n            <div class=\"row pdLR1x\">\r\n                <div class=\"footer col-md-10 col-sm-12 col-xs-12\">\r\n                    <img class=\"pull-left pdR1x visible-lg visible-md\" src=\"./assets/images/qrcode.png\" alt=\"\">\r\n\r\n                    <p class=\"footer-info\">\r\n                        本系統由 <a class=\"link\">高雄市政府資訊中心</a> 維護<br>\r\n                    </p>\r\n                    <small class=\"pdT2x font-sm\">當系統處於定期維護時間每日凌晨 01:00 ~ 02:00 時，<br>主機可能會停止所有服務，如有不便還請見諒。<br><br>\r\n\t\t\t\t高雄市政府聯合服務中心電話：</small>\r\n                    <h5 class=\"font-lg\">(07) 336-8333 #2819、#2833、#2834</h5>\r\n                    <div class=\"text-center\">\r\n                        <a *ngIf=\"showPhoneButton\" href=\"tel:073368333\" class=\"btn btn-orange visible-sm visible-xs\"><i class=\"glyphicon glyphicon-earphone\"></i>&nbsp;&nbsp;撥打電話</a>\r\n                    </div>\r\n                </div>\r\n                <div class=\"col-md-2\">\r\n                    <ul class=\"link-group font-md hidden-sm hidden-xs\">\r\n                        <li><a>隱私權保護政策</a></li>\r\n                        <li><a>網站安全政策</a></li>\r\n                        <li><a>著作權聲明</a></li>\r\n                        <li><a>高雄市政府全球資訊網</a></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </footer>\r\n</div>\r\n<div class=\"mob-menu-list\" [ngClass]=\"{active: showSlideMenu}\">\r\n    <div class=\"mob-menu-close\" [ngClass]=\"{active: showSlideMenu}\" (click)=\"showSlideMenu=false\"></div>\r\n    <ul class=\"header-menu active\" (click)=\"showSlideMenu=false\">\r\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/report']\">市長信箱</a></li>\r\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/query']\">案件查詢</a></li>\r\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/process']\">服務流程</a></li>\r\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/faq']\">常見問題 FAQ</a></li>\r\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/feedback']\">案件處理滿意度</a>\r\n            <ul class=\"mob-sub-menu\">\r\n                <li class=\"menu-item\"><a href=\"javascript:void(0)\">各項滿意度調查</a></li>\r\n                <li class=\"menu-item\"><a href=\"javascript:void(0)\">各問題次數分配表</a></li>\r\n                <li class=\"menu-item\"><a href=\"javascript:void(0)\">各問題有效值與遺漏值</a></li>\r\n            </ul>\r\n        </li>\r\n        <li class=\"menu-item\"><a href=\"http://work1999.kcg.gov.tw/Rptdownload.aspx\" target=\"_blank\">案件反應排行榜</a></li>\r\n        <li class=\"menu-item\"><a href=\"http://disdp.kcg.gov.tw/exchange/feedback.php\" target=\"_blank\">廉政案件</a></li>\r\n    </ul>\r\n</div>\r\n"
-
-/***/ },
 /* 563 */
 /***/ function(module, exports) {
 
-module.exports = "<h1>FAQ</h1>\r\n"
+module.exports = "<div class=\"wrap index\" [ngClass]=\"{active: showSlideMenu}\">\n    <div class=\"container shadow-3d\">\n        <nav class=\"header row index\">\n            <h1 class=\"header-band\">\n                <img calss=\"pull-left\" src=\"./assets/images/Kao_logo.png\" width=\"40\" alt=\"\">\n                <p>\n                    <span class=\"navy\">線上即時服務系統</span><br>\n                    <small class=\"navy\">Service online</small>\n                </p>\n                <div class=\"news visible-xs maT1x\" (click)=\"showNews=!showNews\"><a href=\"javascript:void(0)\"><i class=\"fa fa-info\"></i></a></div>\n                <div class=\"mob-menu visible-xs\" (click)=\"showSlideMenu=!showSlideMenu\"></div>\n            </h1>\n            <div class=\"header-right hidden-xs\">\n                <div class=\"mob-menu visible-md visible-sm\" (click)=\"showSlideMenu=!showSlideMenu\"></div>\n                <div class=\"news visible-md visible-sm maT1x\" (click)=\"showNews=!showNews\"><a href=\"javascript:void(0)\"><i class=\"fa fa-info\"></i></a></div>\n                <ul class=\"header-menu visible-lg\">\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/report']\">市長信箱</a></li>\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/query']\">案件查詢</a></li>\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/process']\">服務流程</a></li>\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/faq']\">常見問題 FAQ</a></li>\n                    <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/feedback']\">案件處理滿意度</a></li>\n                    <li class=\"menu-item\"><a href=\"http://work1999.kcg.gov.tw/Rptdownload.aspx\" target=\"_blank\">案件反應排行榜</a></li>\n                    <li class=\"menu-item\"><a href=\"http://disdp.kcg.gov.tw/exchange/feedback.php\" target=\"_blank\">廉政案件</a></li>\n                    <li class=\"menu-item\" (click)=\"showNews=!showNews\"><a><i class=\"fa fa-info\"></i></a></li>\n                </ul>\n            </div>\n            <div class=\"header-news\" *ngIf=\"showNews\">\n                <a href=\"\">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a>\n                <span class=\"pull-right\" (click)=\"showNews=false\"><i class=\"fa fa-times-circle\"></i></span>\n            </div>\n        </nav>\n    </div>\n    <router-outlet></router-outlet>\n    <footer>\n        <div class=\"container\">\n            <div class=\"row pdLR1x\">\n                <div class=\"footer col-md-10 col-sm-12 col-xs-12\">\n                    <img class=\"pull-left pdR1x visible-lg visible-md\" src=\"./assets/images/qrcode.png\" alt=\"\">\n\n                    <p class=\"footer-info\">\n                        本系統由 <a class=\"link\">高雄市政府資訊中心</a> 維護<br>\n                    </p>\n                    <small class=\"pdT2x font-sm\">當系統處於定期維護時間每日凌晨 01:00 ~ 02:00 時，<br>主機可能會停止所有服務，如有不便還請見諒。<br><br>\n\t\t\t\t高雄市政府聯合服務中心電話：</small>\n                    <h5 class=\"font-lg\">(07) 336-8333 #2819、#2833、#2834</h5>\n                    <div class=\"text-center\">\n                        <a *ngIf=\"showPhoneButton\" href=\"tel:073368333\" class=\"btn btn-orange visible-sm visible-xs\"><i class=\"glyphicon glyphicon-earphone\"></i>&nbsp;&nbsp;撥打電話</a>\n                    </div>\n                </div>\n                <div class=\"col-md-2\">\n                    <ul class=\"link-group font-md hidden-sm hidden-xs\">\n                        <li><a>隱私權保護政策</a></li>\n                        <li><a>網站安全政策</a></li>\n                        <li><a>著作權聲明</a></li>\n                        <li><a>高雄市政府全球資訊網</a></li>\n                    </ul>\n                </div>\n            </div>\n        </div>\n    </footer>\n</div>\n<div class=\"mob-menu-list\" [ngClass]=\"{active: showSlideMenu}\">\n    <div class=\"mob-menu-close\" [ngClass]=\"{active: showSlideMenu}\" (click)=\"showSlideMenu=false\"></div>\n    <ul class=\"header-menu active\" (click)=\"showSlideMenu=false\">\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/report']\">市長信箱</a></li>\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/query']\">案件查詢</a></li>\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/process']\">服務流程</a></li>\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/faq']\">常見問題 FAQ</a></li>\n        <li class=\"menu-item \" routerLinkActive=\"active\"><a [routerLink]=\"['/feedback']\">案件處理滿意度</a>\n            <ul class=\"mob-sub-menu\">\n                <li class=\"menu-item\"><a href=\"javascript:void(0)\">各項滿意度調查</a></li>\n                <li class=\"menu-item\"><a href=\"javascript:void(0)\">各問題次數分配表</a></li>\n                <li class=\"menu-item\"><a href=\"javascript:void(0)\">各問題有效值與遺漏值</a></li>\n            </ul>\n        </li>\n        <li class=\"menu-item\"><a href=\"http://work1999.kcg.gov.tw/Rptdownload.aspx\" target=\"_blank\">案件反應排行榜</a></li>\n        <li class=\"menu-item\"><a href=\"http://disdp.kcg.gov.tw/exchange/feedback.php\" target=\"_blank\">廉政案件</a></li>\n    </ul>\n</div>\n"
 
 /***/ },
 /* 564 */
 /***/ function(module, exports) {
 
-module.exports = "<h1>FEEDBACK</h1>\r\n"
+module.exports = "<div class=\"container\">\n    <div class=\"banner row\">\n        <div class=\"banner-page-name\">\n            <h2 class=\"dk-green\">常見問與答</h2>\n      <p class=\"dk-green\">Frequently Asked Questions</p>\n        </div>\n        <img src=\"./assets/images/banner/banner_pic_faq.png\" alt=\"\">\n    </div>\n    <div class=\"row\">\n        <div class=\"col-md-4 page-block maB2x\">\n\n            <div class=\"article-content\">\n                <p class=\"article-lable require\">陳情內容</p>\n                <p class=\"navy maB2x\">0~2歲保母托育費用補助(2歲以下幼童)</p>\n                <div class=\"row\">\n                    <div class=\"col-md-6\">\n                        <p class=\"article-lable require\">回覆單位 </p>\n                        <p class=\"navy maB2x pdLHalfX\">高雄市政府社會局</p>\n                        <p class=\"article-lable require\">張貼日期</p>\n                        <p class=\"navy maB2x pdLHalfX\">20110110</p>\n                    </div>\n                    <div class=\"col-md-6\">\n                        <p class=\"article-lable require\">問題類別</p>\n                        <p class=\"navy maB2x pdLHalfX\">社會</p>\n                        <p class=\"article-lable require\">修改日期</p>\n                        <p class=\"navy maB2x pdLHalfX\">20151216</p>\n                    </div>\n                    <div class=\"col-md-12\">\n                        <p class=\"article-lable require\">人氣指數</p>\n                        <p class=\"navy maB2x pdLHalfX\">9999999999</p>\n                    </div>\n                </div>\n                <a class=\"btn btn-green hidden-xs hidden-sm\" [routerLink]=\"['/faq']\">回到常見問題集</a>\n            </div>\n        </div>\n        <div class=\"col-md-8 page-block\">\n\n            <div class=\"article-content block-separate\">\n                <p class=\"article-lable require\">處理情形(答覆內容)</p>\n                <p class=\"navy maB2x\">一、補助對象：符合下列條件之一\n(一)父母(或監護人)雙方或單親一方皆就業，或父母一方就業、另一方因中重度身心障礙、或服義務役、或處1年以上之徒刑或受拘束人身自由之保安處分1年以上且執行中，致無法自行照顧家中未滿2歲幼兒，而需送請社區保母系統居家托育人員或托嬰中心照顧者。\n(二)戶籍登記為同一母親或父親，有三位以上子女之家庭，其未滿2歲幼兒需送請社區保母系統居家托育人員或托嬰中心照顧者。\n二、補助標準：\n(一)一般家庭：父母(或監護人)雙方或單親一方經稅捐稽徵機關核定之最近1年綜合所得總額合計皆未達申報標準或綜合所得稅稅率未達20％者。惟育有3位子女以上家庭，不受所得稅稅率未達20%之限制。\n1.送托有保母證照之托育人員，每月最高補助3,000元。\n2.送托相關科系畢業或修畢保母專業訓練課程托育人員(含親屬托育人員)，每月最高補助2,000元。\n(二)弱勢家庭：中低收入戶、低收入戶、家有未滿2歲之發展遲緩或身心障礙幼兒之家庭、特殊境遇家庭、高風險家庭。\n1.送托有保母證照之托育人員，中低收入戶每月最高補助4,000元；低收入戶、家有未滿2歲之發展遲緩或身心障礙幼兒之家庭、特殊境遇家庭、高風險家庭每月最高補助5,000元。\n2.送托相關科系畢業或修畢保母專業訓練課程托育人員(含親屬托育人員)，中低收入戶每月最高補助3,000元，低收入戶、家有未滿2歲之發展遲緩或身心障礙幼兒之家庭、特殊境遇家庭、高風險家庭每月最高補助4,000元。\n三、應備申請文件：（下列文件如為影本請加註『與正本相符』，並蓋申請人私章）\n(一)一般家庭：\n1.申請表。\n2.三個月內之幼兒全戶戶籍謄本或戶口名簿影本，如父、母或監護人未與幼兒同戶籍，則需補附身分證影本。\n3.與托育人員簽訂之托育契約書(親屬托育人員免附)。\n4.申請人(父、母或監護人)之郵局帳戶封面影本。\n5.家庭總所得文件：申請人免附證明文件，由中央統一查調，但列冊低收入戶、中低收入戶、特殊境遇家庭、高風險家庭(由高雄市政府社會局認定）、領有身心障礙手冊(證明)或發展遲緩證明之幼兒，需檢附相關證明文件。\n6.就業證明文件：申請人(父、母或監護人)需檢附3個月內之就業證明(如任職單位所開立之在職證明或薪資單，並加蓋公司大小印，或勞工（農、漁民）保險證明)；惟育有3位子女以上家庭免附。\n7.申請人一方就業，另一方因故未能就業之家庭，須檢未能就業者之中重度身心障礙手冊、服義務役證明、在監服刑或受保安處分證明。\n8.戶政單位登載之第3胎(含)以上兒童相關證明(無則免附)。\n四、補助日期計算方式：\n(一)申請人於托育事實發生日起15日內，備齊申請文件送至托育地點所屬之社區保母系統或托嬰中心審核，則補助日期得自托育事實發生日起算。\n(二)申請人如逾時申請或未於限期內備齊申請文件，則補助日期自申請人備齊文件送至社區保母系統或托嬰中心之收件日(以郵戳日或簽收日為憑)起算。\n(三)申請本項補助托育期間超過半個月、不滿1個月者以1個月計，未達半個月者以半個月計。實際支付之托育費用低於補助金額者，核實補助。\n五、受理單位：\n各社區保母系統、立案托嬰中心\n※高雄市社區保母系統\n◎第一區：社團法人高雄市第一褓姆協會承辦，轄區：鳳山區，電話：07-7657367、07-7657368。\n◎第二區：輔英科技大學承辦，轄區：三民西區、鼓山、旗津、前金、鹽埕、大寮、大樹、大社、仁武、林園、鳥松等區，電話：07-7811151分機6433(校本部）、第二據點：07-2817590。\n◎第三區：財團法人伊甸社會福利基金會承辦，轄區：美濃、旗山、內門、六龜、甲仙、杉林、茂林、桃源、那瑪夏等區，電話：07-6614370。\n◎第四區：樹德科技大學承辦，第一轄區：三民東區、苓雅區，電話：07-7137686、07-7137612，電話：07-3850257。第二轄區：茄萣、路竹、燕巢、永安、彌陀、湖內、阿蓮、田寮、岡山等區，電話：07-6158185。\n◎第五區：樹德科技大學承辦，轄區：楠梓、左營、橋頭、梓官等區，電話： 07-5882855。\n◎第六區：輔英科技大學承辦，轄區：新興、小港、前鎮等區，電話：07-2373487。\n※合法立案托嬰中心\n社會局網站：http://socbu.kcg.gov.tw首頁／托育福利／托育機構輔導及管理／托嬰中心名冊。<br></p>\n\n            </div>\n        </div>\n    </div>\n</div>\n"
 
 /***/ },
 /* 565 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"banner row\">\r\n        <div class=\"banner-page-name\">\r\n            <h2 class=\"dk-green\">服務流程</h2>\r\n            <p class=\"dk-green\">Service Process</p>\r\n        </div>\r\n        <img src=\"./assets/images/banner/banner_pic_process.png\" alt=\"\">\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-md-4 page-block\">\r\n\r\n            <img src=\"./assets/images/process/process.png\" alt=\"\">\r\n        </div>\r\n        <div class=\"col-md-8 page-block\">\r\n\r\n            <div class=\"article-content block-separate\">\r\n                <p class=\"article-lable\">線上即時服務系統作業方式</p>\r\n\r\n                <ol class=\"navy maB2x maL-1x\">\r\n                    <li>請您於投書時提供正確之E-MAIL帳號、電話、姓名，俾系統自動回覆您信件收件編號及回覆內容亦將以E-MAIL的方式傳送給您。</li>\r\n                    <li>查詢回覆內容時，請您透過系統自動提供之收件編號及姓名（或e-mail），於「即時服務案件查詢」選擇鍵中進行查閱。</li>\r\n                    <li>案件之處理依「行政院暨所屬各機關處理人民陳情案件要點」辦理，當您收到相關單位的處理結果後，還可經由滿意度問卷調查填寫對該項回函處理的滿意程度，歡迎您多加利用。</li>\r\n                </ol>\r\n                <p class=\"article-lable\">為確認函之處理</p>\r\n                <p class=\"navy maB2x\">\r\n                    本府為避免所處理的信件無法傳送當事人，甚或信箱遭冒用之情形，將會在受理分案後回傳收件編號後分派至相關機關處理，若您一直無法收到收件編號函，可能是您填寫的電子信箱有誤，建議您重新檢視並再次傳送。\r\n                </p>\r\n                <p class=\"article-lable\">流程圖說明</p>\r\n                <p class=\"navy maB2x\">\r\n                    步驟一、陳情民眾於市長信箱系統填入正確資料後等待確認郵件。<br>\r\n                    步驟二、點選確認郵件後，會依照項目別分別採取自動分案或人工線上分案，分案給承辦單位。<br>\r\n                    步驟三、承辦單位於處理後，系統將寄出處理情形通知陳情民眾，若因時效內無法完成，亦會寄出展期信件通知陳情民眾。<br>\r\n                </p>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\n  <div class=\"banner row\">\n    <div class=\"banner-page-name\">\n      <h2 class=\"dk-green\">常見問與答</h2>\n      <p class=\"dk-green\">Frequently Asked Questions\n</p>\n    </div>\n    <img src=\"./assets/images/banner/banner_pic_faq.png\" alt=\"\">\n  </div>\n  <div class=\"row\">\n    <div class=\"col-md-3 pdLR1x maT1x\">\n      <a class=\"btn btn-green\" href=\"javascript:void(0);\" (click)=\"openSearch=!openSearch\"><i class=\"fa fa-search\"></i> 全文檢索</a>\n    </div>\n    <div class=\"col-md-12 maT1x\">\n      <div class=\"search\" [ngClass]=\"{active:openSearch}\">\n        <form action=\"\" class=\"\">\n          <div class=\"search-lable combine-icon combine-before maT1x\">\n            <div class=\"border-bottom\">\n              <i class=\"fa fa-search\"></i>\n              <input type=\"text\" placeholder=\"搜尋關鍵字\">\n            </div>\n          </div>\n          <div class=\"search-lable combine-icon combine-after\">\n            <div class=\"border-bottom\">\n              <input type=\"text\" [value]=\"selectType\">\n              <select name=\"\" id=\"\" #t (change)=\"callType(t.value)\">\n                  <option value=\"\">請選擇處理單位</option>\n                  <option [value]=\"type.kind_name\" *ngFor=\"let type of faqTypes\">{{type.kind_name}}</option>\n              </select>\n              <i class=\"fa fa-chevron-down\"></i>\n            </div>\n          </div>\n          <div class=\"search-lable text-right\">\n            <button class=\"search-btn\">查詢</button>\n          </div>\n        </form>\n      </div>\n      <div class=\"article-content\">\n        <div class=\"faq row\">\n          <div class=\"faq-head col-md-12 hidden-xs hidden-sm\">\n            <div class=\"col-md-7\">陳情內容</div>\n            <div class=\"col-md-2\">單位</div>\n            <div class=\"col-md-1\">人氣</div>\n            <div class=\"col-md-2\"></div>\n          </div>\n\n          <div class=\"faq-item col-md-12\" [ngClass]=\"{active:item.active}\" *ngFor=\"let item of faq; #i = index\">\n            <div class=\"col-md-7 navy\"><a [routerLink]=\"['/faq/123']\">{{item.CaseContent}}</a> <span class=\"faq-open pull-right hidden-md hidden-lg\" (click)=\"item.active=!item.active\"><i class=\"fa fa-plus\" [ngClass]=\"{active:item.active}\"></i></span></div>\n            <div class=\"col-md-2 text-black\">{{item.OrganName}}</div>\n            <div class=\"col-md-1 text-black\">{{item.ViewCount}}</div>\n            <div class=\"col-md-2 text-right\"><a class=\"text-orange\" [routerLink]=\"['/faq/123']\">詳細陳情內容 <i class=\"fa fa-angle-double-right\"></i></a></div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ },
 /* 566 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"banner row\">\r\n        <div class=\"banner-page-name\">\r\n            <h2 class=\"dk-green\">案件查詢</h2>\r\n            <p class=\"dk-green\">Search Case</p>\r\n        </div>\r\n        <img src=\"./assets/images/banner/banner_pic_query.png\" alt=\"\">\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-md-4 page-block maB2x\">\r\n\r\n            <div class=\"article-content\">\r\n                <p class=\"article-lable require\">主旨 </p>\r\n                <p class=\"navy maB2x\">高雄市岡山區碧紅街2號違建</p>\r\n                <p class=\"article-lable require\">建議事項 </p>\r\n                <p class=\"navy maB2x\">\r\n                    高雄市岡山區碧紅街2號 已於2014.12.22檢舉該棟違建，也獲得市府回應已拆除違建部分，為何該違建卻越來越高?由2樓層的違建變成了5層樓的違建?不知市長對此拆除績效有何看法?\r\n                </p>\r\n                <div class=\"row\">\r\n                    <div class=\"col-md-6\">\r\n                        <p class=\"article-lable require\">收件編號 </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">368213</p>\r\n                        <p class=\"article-lable require\">來源別 </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">網頁</p>\r\n                    </div>\r\n                    <div class=\"col-md-6\">\r\n                        <p class=\"article-lable require\">收件編號 </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">368213</p>\r\n                        <p class=\"article-lable require\">機密等級 </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">保密</p>\r\n                    </div>\r\n                </div>\r\n                <p class=\"article-lable require\">附加檔案 </p>\r\n                <p class=\"navy maB2x pdLHalfX\">\r\n                    <a href=\"javascript:void(0)\"><i class=\"fa fa-paperclip\"></i> 2014_1222.jpg</a><br>\r\n                    <a href=\"javascript:void(0)\"><i class=\"fa fa-paperclip\"></i> 2014_1222.jpg</a>\r\n                </p>\r\n                <a class=\"btn btn-green hidden-xs hidden-sm\" href=\"\">繼續查詢陳報案件</a>\r\n            </div>\r\n        </div>\r\n        <div class=\"col-md-8 page-block\">\r\n\r\n            <div class=\"article-content block-separate\">\r\n                <div class=\"row\">\r\n                    <div class=\"col-md-6\">\r\n                        <p class=\"article-lable require\">陳情類別(主項) </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">違章建管業務</p>\r\n                        <p class=\"article-lable require\">承辦機關</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">高雄市政府工務局違章建築處理大隊</p>\r\n                        <p class=\"article-lable require\">序號</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">01</p>\r\n                        <p class=\"article-lable require\">承辦人</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">王祈昌</p>\r\n                    </div>\r\n                    <div class=\"col-md-6\">\r\n                        <p class=\"article-lable require\">陳情類別(子項) </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">ㄧ般違建</p>\r\n                        <p class=\"article-lable require\">科室</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">拆除組</p>\r\n                        <p class=\"article-lable require\">完成日期 </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">20150407</p>\r\n                        <p class=\"article-lable require\">承辦人電話</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">7453439-808</p>\r\n                    </div>\r\n                </div>\r\n                <p class=\"article-lable require\">處理情形(答覆內容)</p>\r\n                <p class=\"navy maB2x\">親愛的市民您好：您寄給市長的電子郵件收悉，市長非常重視，經交本大隊處理，茲將查處結果敬復如下：有關台端反映本市岡山區碧紅街2號建築物屋前增建違建一案，本局業於103年11月28日以高市工違岡字第1576號處理新違章建築處分書依法處分在案，並已於103年12月2日派工前往拆除部份，其餘部份，將續依相關規定辦理。謝謝您的建議，若尚有疑慮，請隨時電洽本府工務局違建處理大隊承辦人王祈昌電話(07)7453439-808，當再詳細說明，再次感謝您對市政的關心並熱心提供建言。<br>                敬祝您 <br> 身體健康萬事如意\r\n                    <br> 高雄市政府工務局違章建築處理大隊大隊長蘇俊傑敬上 <br></p>\r\n\r\n                <hr>\r\n                <div class=\"row\">\r\n                    <div class=\"col-md-6\">\r\n                        <p class=\"article-lable require\">陳情類別(主項) </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">違章建管業務</p>\r\n                        <p class=\"article-lable require\">承辦機關</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">高雄市政府工務局違章建築處理大隊</p>\r\n                        <p class=\"article-lable require\">序號</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">02</p>\r\n                        <p class=\"article-lable require\">承辦人</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">王祈昌</p>\r\n                    </div>\r\n                    <div class=\"col-md-6\">\r\n                        <p class=\"article-lable require\">陳情類別(子項) </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">ㄧ般違建</p>\r\n                        <p class=\"article-lable require\">科室</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">拆除組</p>\r\n                        <p class=\"article-lable require\">完成日期 </p>\r\n                        <p class=\"navy maB2x pdLHalfX\">20150414</p>\r\n                        <p class=\"article-lable require\">承辦人電話</p>\r\n                        <p class=\"navy maB2x pdLHalfX\">7453439-808</p>\r\n                    </div>\r\n                </div>\r\n                <p class=\"article-lable require\">處理情形(答覆內容) </p>\r\n                <p class=\"navy maB2x\">親愛的市民您好：您寄給市長的電子郵件收悉，市長非常重視，經交本大隊處理，茲將查處結果敬復如下：有關台端反映本市岡山區碧紅街2號建築物屋前增建違建一案，本局業於103年11月28日以高市工違岡字第1576號處理新違章建築處分書依法處分在案，並已於103年12月2日派工前往拆除部份，其餘部份，後續於104年4月1日派工前往拆除RC樓板，尚未拆除部份，依相關規定辦理。謝謝您的建議，若尚有疑慮，請隨時電洽本府工務局違建處理大隊承辦人王祈昌電話(07)7453439-808，當再詳細說明，再次感謝您對市政的關心並熱心提供建言。\r\n                    <br> 敬祝您 <br> 身體健康萬事如意\r\n                    <br> 高雄市政府工務局違章建築處理大隊大隊長蘇俊傑敬上 <br></p>\r\n            </div>\r\n            <a class=\"btn btn-green hidden-md hidden-lg\" href=\"\">繼續查詢陳報案件</a>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<h1>FEEDBACK</h1>\n"
 
 /***/ },
 /* 567 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n    <div class=\"banner row\">\r\n        <div class=\"banner-page-name\">\r\n            <h2 class=\"dk-green\">案件查詢</h2>\r\n            <p class=\"dk-green\">Search Case</p>\r\n        </div>\r\n        <img src=\"./assets/images/banner/banner_pic_query.png\" alt=\"\">\r\n    </div>\r\n    <div class=\"row\">\r\n        <div class=\"col-md-4 page-block\">\r\n            <div class=\"article-header text-center\">\r\n                <h4 id=\"mayor\" class=\"article-title\">操作說明</h4>\r\n            </div>\r\n            <div class=\"article-content\">\r\n                <p class=\"article-lable require\">查詢方式 </p>\r\n                <p class=\"navy maB1x\">\r\n                    請先點選您要查詢的方式，再輸入相關查詢條件。\r\n                </p>\r\n                <p class=\"article-lable require\">注意事項 </p>\r\n                <p class=\"navy\">\r\n                    請注意您輸入的內容(Email、姓名)須與當時反映時所提供之資料一致，俾利系統正確判讀。<br> 限查詢現有資料庫期限內案件。\r\n                    <br> 當系統處於定期維護時間每日凌晨01:00~02:00時，主機可能會停止所有服務，如有不便還請見諒。\r\n                    <br> 為加強民眾投訴案件資料之安全，即日起不提供市長信箱查詢案件(案件編號+姓名)與人民陳情案件(姓名+電話)兩種查詢方式，如有不便還請見諒。\r\n                    <br>\r\n                </p>\r\n            </div>\r\n        </div>\r\n        <div class=\"col-md-4 page-block\">\r\n            <div class=\"article-header text-center\">\r\n                <h4 id=\"mayor\" class=\"article-title\">市長信箱</h4>\r\n            </div>\r\n            <div class=\"article-content block-separate\">\r\n                <p class=\"navy\">透過線上即時服系統及市長信箱等網路途徑</p>\r\n                <form action=\"\">\r\n                    <p class=\"article-lable require\">案件編號 </p>\r\n                    <div class=\"row maB1x\">\r\n                        <div class=\"col-xs-2 input-separate\"><input class=\"col-xs-12 text-center\" type=\"text\" value=\"B\" readonly></div>\r\n                        <div class=\"col-xs-10\"><input class=\"col-xs-12\" type=\"text\"></div>\r\n                    </div>\r\n                    <p class=\"article-lable require\">E-Mail </p>\r\n                    <div class=\"row\">\r\n                        <div class=\"col-xs-12\"><input class=\"col-xs-12\" type=\"text\" placeholder=\"example@kcg.gov.tw\"></div>\r\n                    </div>\r\n                    <p class=\"validation-info\">您輸入的編號錯誤</p>\r\n                    <div class=\"row text-center maT2x\">\r\n                        <a [routerLink]=\"['/query/456']\" class=\"btn btn-orange\">查詢</a>\r\n                    </div>\r\n                </form>\r\n            </div>\r\n        </div>\r\n        <div class=\"col-md-4 page-block\">\r\n            <div class=\"article-header text-center\">\r\n                <h4 id=\"mayor\" class=\"article-title\">人民陳情案件</h4>\r\n            </div>\r\n            <div class=\"article-content block-separate\">\r\n                <p class=\"navy\">透案件來源：透過電話、信件、傳真等非網路途徑</p>\r\n                <form action=\"\">\r\n                    <p class=\"article-lable require\">案件編號 </p>\r\n                    <div class=\"row maB1x\">\r\n                        <div class=\"col-xs-2 input-separate\"><input class=\"col-xs-12 text-center\" type=\"text\" value=\"A\" readonly></div>\r\n                        <div class=\"col-xs-2 input-separate\"><input class=\"col-xs-12 text-center\" type=\"text\" value=\"TB\" readonly></div>\r\n                        <div class=\"col-xs-3 input-separate\"><input class=\"col-xs-12 text-center\" type=\"text\" value=\"2016\" readonly></div>\r\n                        <div class=\"col-xs-5\"><input class=\"col-xs-12\" type=\"text\"></div>\r\n                    </div>\r\n                    <p class=\"article-lable require\">來電時的姓名 </p>\r\n                    <div class=\"row\">\r\n                        <div class=\"col-xs-12\"><input class=\"col-xs-12\" type=\"text\" placeholder=\"您的姓名\"></div>\r\n                    </div>\r\n                    <p class=\"validation-info\"> </p>\r\n                    <div class=\"row text-center maT2x\">\r\n                        <a [routerLink]=\"['/query/456']\" class=\"btn btn-orange\">查詢</a>\r\n                    </div>\r\n                </form>\r\n            </div>\r\n        </div>\r\n    </div>\r\n    <!--<pre>{{ searchCase | json }}</pre>-->\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\n    <div class=\"banner row\">\n        <div class=\"banner-page-name\">\n            <h2 class=\"dk-green\">服務流程</h2>\n            <p class=\"dk-green\">Service Process</p>\n        </div>\n        <img src=\"./assets/images/banner/banner_pic_process.png\" alt=\"\">\n    </div>\n    <div class=\"row\">\n        <div class=\"col-md-4 page-block\">\n\n            <img src=\"./assets/images/process/process.png\" width=\"100%\" alt=\"\">\n        </div>\n        <div class=\"col-md-8 page-block\">\n\n            <div class=\"article-content block-separate\">\n                <p class=\"article-lable\">線上即時服務系統作業方式</p>\n\n                <ol class=\"navy maB2x maL-1x\">\n                    <li>請您於投書時提供正確之E-MAIL帳號、電話、姓名，俾系統自動回覆您信件收件編號及回覆內容亦將以E-MAIL的方式傳送給您。</li>\n                    <li>查詢回覆內容時，請您透過系統自動提供之收件編號及姓名（或e-mail），於「即時服務案件查詢」選擇鍵中進行查閱。</li>\n                    <li>案件之處理依「行政院暨所屬各機關處理人民陳情案件要點」辦理，當您收到相關單位的處理結果後，還可經由滿意度問卷調查填寫對該項回函處理的滿意程度，歡迎您多加利用。</li>\n                </ol>\n                <p class=\"article-lable\">為確認函之處理</p>\n                <p class=\"navy maB2x\">\n                    本府為避免所處理的信件無法傳送當事人，甚或信箱遭冒用之情形，將會在受理分案後回傳收件編號後分派至相關機關處理，若您一直無法收到收件編號函，可能是您填寫的電子信箱有誤，建議您重新檢視並再次傳送。\n                </p>\n                <p class=\"article-lable\">流程圖說明</p>\n                <p class=\"navy maB2x\">\n                    步驟一、陳情民眾於市長信箱系統填入正確資料後等待確認郵件。<br>\n                    步驟二、點選確認郵件後，會依照項目別分別採取自動分案或人工線上分案，分案給承辦單位。<br>\n                    步驟三、承辦單位於處理後，系統將寄出處理情形通知陳情民眾，若因時效內無法完成，亦會寄出展期信件通知陳情民眾。<br>\n                </p>\n            </div>\n        </div>\n    </div>\n</div>\n"
 
 /***/ },
 /* 568 */
 /***/ function(module, exports) {
 
-module.exports = "{{ caseType | json }}\r\n<br>\r\n{{ subCaseType | json }}\r\n"
+module.exports = "<div class=\"container\">\n    <div class=\"banner row\">\n        <div class=\"banner-page-name\">\n            <h2 class=\"dk-green\">案件查詢</h2>\n            <p class=\"dk-green\">Search Case</p>\n        </div>\n        <img src=\"./assets/images/banner/banner_pic_query.png\" alt=\"\">\n    </div>\n    <div class=\"row\">\n        <div class=\"col-md-4 page-block maB2x\">\n\n            <div class=\"article-content\">\n                <p class=\"article-lable require\">主旨 </p>\n                <p class=\"navy maB2x\">高雄市岡山區碧紅街2號違建</p>\n                <p class=\"article-lable require\">建議事項 </p>\n                <p class=\"navy maB2x\">\n                    高雄市岡山區碧紅街2號 已於2014.12.22檢舉該棟違建，也獲得市府回應已拆除違建部分，為何該違建卻越來越高?由2樓層的違建變成了5層樓的違建?不知市長對此拆除績效有何看法?\n                </p>\n                <div class=\"row\">\n                    <div class=\"col-md-6\">\n                        <p class=\"article-lable require\">收件編號 </p>\n                        <p class=\"navy maB2x pdLHalfX\">368213</p>\n                        <p class=\"article-lable require\">來源別 </p>\n                        <p class=\"navy maB2x pdLHalfX\">網頁</p>\n                    </div>\n                    <div class=\"col-md-6\">\n                        <p class=\"article-lable require\">收件編號 </p>\n                        <p class=\"navy maB2x pdLHalfX\">368213</p>\n                        <p class=\"article-lable require\">機密等級 </p>\n                        <p class=\"navy maB2x pdLHalfX\">保密</p>\n                    </div>\n                </div>\n                <p class=\"article-lable require\">附加檔案 </p>\n                <p class=\"navy maB2x pdLHalfX\">\n                    <a href=\"javascript:void(0)\"><i class=\"fa fa-paperclip\"></i> 2014_1222.jpg</a><br>\n                    <a href=\"javascript:void(0)\"><i class=\"fa fa-paperclip\"></i> 2014_1222.jpg</a>\n                </p>\n                <a class=\"btn btn-green hidden-xs hidden-sm\" href=\"\">繼續查詢陳報案件</a>\n            </div>\n        </div>\n        <div class=\"col-md-8 page-block\">\n\n            <div class=\"article-content block-separate\">\n                <div class=\"row\">\n                    <div class=\"col-md-6\">\n                        <p class=\"article-lable require\">陳情類別(主項) </p>\n                        <p class=\"navy maB2x pdLHalfX\">違章建管業務</p>\n                        <p class=\"article-lable require\">承辦機關</p>\n                        <p class=\"navy maB2x pdLHalfX\">高雄市政府工務局違章建築處理大隊</p>\n                        <p class=\"article-lable require\">序號</p>\n                        <p class=\"navy maB2x pdLHalfX\">01</p>\n                        <p class=\"article-lable require\">承辦人</p>\n                        <p class=\"navy maB2x pdLHalfX\">王祈昌</p>\n                    </div>\n                    <div class=\"col-md-6\">\n                        <p class=\"article-lable require\">陳情類別(子項) </p>\n                        <p class=\"navy maB2x pdLHalfX\">ㄧ般違建</p>\n                        <p class=\"article-lable require\">科室</p>\n                        <p class=\"navy maB2x pdLHalfX\">拆除組</p>\n                        <p class=\"article-lable require\">完成日期 </p>\n                        <p class=\"navy maB2x pdLHalfX\">20150407</p>\n                        <p class=\"article-lable require\">承辦人電話</p>\n                        <p class=\"navy maB2x pdLHalfX\">7453439-808</p>\n                    </div>\n                </div>\n                <p class=\"article-lable require\">處理情形(答覆內容)</p>\n                <p class=\"navy maB2x\">親愛的市民您好：您寄給市長的電子郵件收悉，市長非常重視，經交本大隊處理，茲將查處結果敬復如下：有關台端反映本市岡山區碧紅街2號建築物屋前增建違建一案，本局業於103年11月28日以高市工違岡字第1576號處理新違章建築處分書依法處分在案，並已於103年12月2日派工前往拆除部份，其餘部份，將續依相關規定辦理。謝謝您的建議，若尚有疑慮，請隨時電洽本府工務局違建處理大隊承辦人王祈昌電話(07)7453439-808，當再詳細說明，再次感謝您對市政的關心並熱心提供建言。<br>                敬祝您 <br> 身體健康萬事如意\n                    <br> 高雄市政府工務局違章建築處理大隊大隊長蘇俊傑敬上 <br></p>\n\n                <hr>\n                <div class=\"row\">\n                    <div class=\"col-md-6\">\n                        <p class=\"article-lable require\">陳情類別(主項) </p>\n                        <p class=\"navy maB2x pdLHalfX\">違章建管業務</p>\n                        <p class=\"article-lable require\">承辦機關</p>\n                        <p class=\"navy maB2x pdLHalfX\">高雄市政府工務局違章建築處理大隊</p>\n                        <p class=\"article-lable require\">序號</p>\n                        <p class=\"navy maB2x pdLHalfX\">02</p>\n                        <p class=\"article-lable require\">承辦人</p>\n                        <p class=\"navy maB2x pdLHalfX\">王祈昌</p>\n                    </div>\n                    <div class=\"col-md-6\">\n                        <p class=\"article-lable require\">陳情類別(子項) </p>\n                        <p class=\"navy maB2x pdLHalfX\">ㄧ般違建</p>\n                        <p class=\"article-lable require\">科室</p>\n                        <p class=\"navy maB2x pdLHalfX\">拆除組</p>\n                        <p class=\"article-lable require\">完成日期 </p>\n                        <p class=\"navy maB2x pdLHalfX\">20150414</p>\n                        <p class=\"article-lable require\">承辦人電話</p>\n                        <p class=\"navy maB2x pdLHalfX\">7453439-808</p>\n                    </div>\n                </div>\n                <p class=\"article-lable require\">處理情形(答覆內容) </p>\n                <p class=\"navy maB2x\">親愛的市民您好：您寄給市長的電子郵件收悉，市長非常重視，經交本大隊處理，茲將查處結果敬復如下：有關台端反映本市岡山區碧紅街2號建築物屋前增建違建一案，本局業於103年11月28日以高市工違岡字第1576號處理新違章建築處分書依法處分在案，並已於103年12月2日派工前往拆除部份，其餘部份，後續於104年4月1日派工前往拆除RC樓板，尚未拆除部份，依相關規定辦理。謝謝您的建議，若尚有疑慮，請隨時電洽本府工務局違建處理大隊承辦人王祈昌電話(07)7453439-808，當再詳細說明，再次感謝您對市政的關心並熱心提供建言。\n                    <br> 敬祝您 <br> 身體健康萬事如意\n                    <br> 高雄市政府工務局違章建築處理大隊大隊長蘇俊傑敬上 <br></p>\n            </div>\n            <a class=\"btn btn-green hidden-md hidden-lg\" href=\"\">繼續查詢陳報案件</a>\n        </div>\n    </div>\n</div>\n"
 
 /***/ },
 /* 569 */
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"index-header\">\r\n    <div class=\"big-header big-header--back\"></div>\r\n    <div class=\"big-header-slash hidden-xs\"></div>\r\n    <div class=\"big-header container hidden-xs\">\r\n    </div>\r\n    <div class=\"header-content animated \">\r\n        <div class=\"header-content-bg\"></div>\r\n        <div class=\"header-content-info\">\r\n            <p class=\"text-center font-2xl\">歡迎進入<br>線上即時服務平台</p>\r\n            <p>平台提供陳情、檢舉、投訴與市<br>民生命財產安全相關事項請速撥</p>\r\n            <p class=\"text-center\">撥打&nbsp;&nbsp;<a class=\"font-2xl phone-call\" href=\"tel:1999\">1999</a>&nbsp;&nbsp;專線</p>\r\n            <a href=\"javascript:void(0)\" ng-click=\"m.getScrollTarget('mayor')\" class=\"btn btn-orange page-scroll\"><i class=\"fa fa-envelope\"></i>&nbsp;&nbsp;寫信給市長</a>\r\n        </div>\r\n    </div>\r\n</div>\r\n<div class=\"body\">\r\n    <div class=\"container\">\r\n        <div class=\"out-conatainer row\">\r\n            <div class=\"article-header text-center\">\r\n                <h1 id=\"mayor\" class=\"article-title\">市長信箱</h1>\r\n            </div>\r\n        </div>\r\n        <div class=\"row pdLR1x body-content\" *ngIf=\"caseTypes\">\r\n            <div class=\"col-md-4\">\r\n                <div class=\"case-type\" *ngFor=\"let type of caseTypes | slice:0:7\" (click)=\"type.active=!type.active\" [ngClass]=\"{active:type.active}\">\r\n                    <p class=\"case-type-name\" ><span class=\"case-type-num\">\r\n                        {{ type.id }} <i class=\"fa Example of angle-double-right fa-angle-double-right\"></i></span>\r\n                        {{type.name}} <span class=\"case-open pull-right\"><i class=\"fa fa-plus\"></i></span>\r\n                    </p>\r\n                    <div class=\"clearfix\"></div>\r\n                    <ul class=\"case-list\" *ngIf=\"type.subItems\">\r\n                        <li class=\"case-item\" *ngFor=\"let item of type.subItems\"><a [routerLink]=\"['/report/'] + type.id + ['/'] + item.id\">{{item.name}}</a></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md-4\">\r\n                <div class=\"case-type\" *ngFor=\"let type of caseTypes | slice:7:14\" (click)=\"type.active=!type.active\" [ngClass]=\"{active:type.active}\">\r\n                    <p class=\"case-type-name\"><span class=\"case-type-num\">\r\n                        {{ type.id }} <i class=\"fa Example of angle-double-right fa-angle-double-right\"></i></span>\r\n                        {{type.name}} <span class=\"case-open pull-right\"><i class=\"fa fa-plus\"></i></span>\r\n                    </p>\r\n                    <div class=\"clearfix\"></div>\r\n                    <ul class=\"case-list\" *ngIf=\"type.subItems\">\r\n                        <li class=\"case-item\" *ngFor=\"let item of type.subItems\"><a [routerLink]=\"['/report/'] + type.id + ['/'] + item.id\">{{item.name}}</a></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n            <div class=\"col-md-4\">\r\n                <div class=\"case-type\" *ngFor=\"let type of caseTypes | slice:14:21\" (click)=\"type.active=!type.active\" [ngClass]=\"{active:type.active}\">\r\n                    <p class=\"case-type-name\"><span class=\"case-type-num\">\r\n                    \t{{ type.id }} <i class=\"fa Example of angle-double-right fa-angle-double-right\"></i></span>\r\n                        {{type.name}} <span class=\"case-open pull-right\"><i class=\"fa fa-plus\"></i></span>\r\n                    </p>\r\n                    <div class=\"clearfix\"></div>\r\n                    <ul class=\"case-list\" *ngIf=\"type.subItems\">\r\n                        <li class=\"case-item\" *ngFor=\"let item of type.subItems\"><a [routerLink]=\"['/report/'] + type.id + ['/'] + item.id\">{{item.name}}</a></li>\r\n                    </ul>\r\n                </div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\n    <div class=\"banner row\">\n        <div class=\"banner-page-name\">\n            <h2 class=\"dk-green\">案件查詢</h2>\n            <p class=\"dk-green\">Search Case</p>\n        </div>\n        <img src=\"./assets/images/banner/banner_pic_query.png\" alt=\"\">\n    </div>\n    <div class=\"row\">\n        <div class=\"col-md-4 page-block\">\n            <div class=\"article-header text-center\">\n                <h4 id=\"mayor\" class=\"article-title\">操作說明</h4>\n            </div>\n            <div class=\"article-content\">\n                <p class=\"article-lable require\">查詢方式 </p>\n                <p class=\"navy maB1x\">\n                    請先點選您要查詢的方式，再輸入相關查詢條件。\n                </p>\n                <p class=\"article-lable require\">注意事項 </p>\n                <p class=\"navy\">\n                    請注意您輸入的內容(Email、姓名)須與當時反映時所提供之資料一致，俾利系統正確判讀。<br> 限查詢現有資料庫期限內案件。\n                    <br> 當系統處於定期維護時間每日凌晨01:00~02:00時，主機可能會停止所有服務，如有不便還請見諒。\n                    <br> 為加強民眾投訴案件資料之安全，即日起不提供市長信箱查詢案件(案件編號+姓名)與人民陳情案件(姓名+電話)兩種查詢方式，如有不便還請見諒。\n                    <br>\n                </p>\n            </div>\n        </div>\n        <div class=\"col-md-4 page-block\">\n            <div class=\"article-header text-center\">\n                <h4 id=\"mayor\" class=\"article-title\">市長信箱</h4>\n            </div>\n            <div class=\"article-content block-separate\">\n                <p class=\"navy\">透過線上即時服系統及市長信箱等網路途徑</p>\n                <form action=\"\">\n                    <p class=\"article-lable require\">案件編號 </p>\n                    <div class=\"row maB1x\">\n                        <div class=\"col-xs-2 input-separate\"><input class=\"col-xs-12 text-center\" type=\"text\" value=\"B\" readonly></div>\n                        <div class=\"col-xs-10\"><input class=\"col-xs-12\" type=\"text\"></div>\n                    </div>\n                    <p class=\"article-lable require\">E-Mail </p>\n                    <div class=\"row\">\n                        <div class=\"col-xs-12\"><input class=\"col-xs-12\" type=\"text\" placeholder=\"example@kcg.gov.tw\"></div>\n                    </div>\n                    <p class=\"validation-info\">您輸入的編號錯誤</p>\n                    <div class=\"row text-center maT2x\">\n                        <a [routerLink]=\"['/query/456']\" class=\"btn btn-orange\">查詢</a>\n                    </div>\n                </form>\n            </div>\n        </div>\n        <div class=\"col-md-4 page-block\">\n            <div class=\"article-header text-center\">\n                <h4 id=\"mayor\" class=\"article-title\">人民陳情案件</h4>\n            </div>\n            <div class=\"article-content block-separate\">\n                <p class=\"navy\">透案件來源：透過電話、信件、傳真等非網路途徑</p>\n                <form action=\"\">\n                    <p class=\"article-lable require\">案件編號 </p>\n                    <div class=\"row maB1x\">\n                        <div class=\"col-xs-2 input-separate\"><input class=\"col-xs-12 text-center\" type=\"text\" value=\"A\" readonly></div>\n                        <div class=\"col-xs-2 input-separate\"><input class=\"col-xs-12 text-center\" type=\"text\" value=\"TB\" readonly></div>\n                        <div class=\"col-xs-3 input-separate\"><input class=\"col-xs-12 text-center\" type=\"text\" value=\"2016\" readonly></div>\n                        <div class=\"col-xs-5\"><input class=\"col-xs-12\" type=\"text\"></div>\n                    </div>\n                    <p class=\"article-lable require\">來電時的姓名 </p>\n                    <div class=\"row\">\n                        <div class=\"col-xs-12\"><input class=\"col-xs-12\" type=\"text\" placeholder=\"您的姓名\"></div>\n                    </div>\n                    <p class=\"validation-info\"> </p>\n                    <div class=\"row text-center maT2x\">\n                        <a [routerLink]=\"['/query/456']\" class=\"btn btn-orange\">查詢</a>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n    <!--<pre>{{ searchCase | json }}</pre>-->\n</div>\n"
 
 /***/ },
 /* 570 */
+/***/ function(module, exports) {
+
+module.exports = "{{ caseType | json }}\n<br>\n{{ subCaseType | json }}\n"
+
+/***/ },
+/* 571 */
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"index-header\">\n    <div class=\"big-header big-header--back\"></div>\n    <div class=\"big-header-slash hidden-xs\"></div>\n    <div class=\"big-header container hidden-xs\">\n    </div>\n    <div class=\"header-content animated \">\n        <div class=\"header-content-bg\"></div>\n        <div class=\"header-content-info\">\n            <p class=\"text-center font-2xl\">歡迎進入<br>線上即時服務平台</p>\n            <p>平台提供陳情、檢舉、投訴與市<br>民生命財產安全相關事項請速撥</p>\n            <p class=\"text-center\">撥打&nbsp;&nbsp;<a class=\"font-2xl phone-call\" href=\"tel:1999\">1999</a>&nbsp;&nbsp;專線</p>\n            <a href=\"javascript:void(0)\" ng-click=\"m.getScrollTarget('mayor')\" class=\"btn btn-orange page-scroll\"><i class=\"fa fa-envelope\"></i>&nbsp;&nbsp;寫信給市長</a>\n        </div>\n    </div>\n</div>\n<div class=\"body\">\n    <div class=\"container\">\n        <div class=\"out-conatainer row\">\n            <div class=\"article-header text-center\">\n                <h1 id=\"mayor\" class=\"article-title\">市長信箱</h1>\n            </div>\n        </div>\n        <div class=\"row pdLR1x body-content\" *ngIf=\"caseTypes\">\n            <div class=\"col-md-4\">\n                <div class=\"case-type\" *ngFor=\"let type of caseTypes | slice:0:7\" (click)=\"type.active=!type.active\" [ngClass]=\"{active:type.active}\">\n                    <p class=\"case-type-name\" ><span class=\"case-type-num\">\n                        {{ type.id }} <i class=\"fa Example of angle-double-right fa-angle-double-right\"></i></span>\n                        {{type.name}} <span class=\"case-open pull-right\"><i class=\"fa fa-plus\"></i></span>\n                    </p>\n                    <div class=\"clearfix\"></div>\n                    <ul class=\"case-list\" *ngIf=\"type.subItems\">\n                        <li class=\"case-item\" *ngFor=\"let item of type.subItems\"><a [routerLink]=\"['/report/'] + type.id + ['/'] + item.id\">{{item.name}}</a></li>\n                    </ul>\n                </div>\n            </div>\n            <div class=\"col-md-4\">\n                <div class=\"case-type\" *ngFor=\"let type of caseTypes | slice:7:14\" (click)=\"type.active=!type.active\" [ngClass]=\"{active:type.active}\">\n                    <p class=\"case-type-name\"><span class=\"case-type-num\">\n                        {{ type.id }} <i class=\"fa Example of angle-double-right fa-angle-double-right\"></i></span>\n                        {{type.name}} <span class=\"case-open pull-right\"><i class=\"fa fa-plus\"></i></span>\n                    </p>\n                    <div class=\"clearfix\"></div>\n                    <ul class=\"case-list\" *ngIf=\"type.subItems\">\n                        <li class=\"case-item\" *ngFor=\"let item of type.subItems\"><a [routerLink]=\"['/report/'] + type.id + ['/'] + item.id\">{{item.name}}</a></li>\n                    </ul>\n                </div>\n            </div>\n            <div class=\"col-md-4\">\n                <div class=\"case-type\" *ngFor=\"let type of caseTypes | slice:14:21\" (click)=\"type.active=!type.active\" [ngClass]=\"{active:type.active}\">\n                    <p class=\"case-type-name\"><span class=\"case-type-num\">\n                    \t{{ type.id }} <i class=\"fa Example of angle-double-right fa-angle-double-right\"></i></span>\n                        {{type.name}} <span class=\"case-open pull-right\"><i class=\"fa fa-plus\"></i></span>\n                    </p>\n                    <div class=\"clearfix\"></div>\n                    <ul class=\"case-list\" *ngIf=\"type.subItems\">\n                        <li class=\"case-item\" *ngFor=\"let item of type.subItems\"><a [routerLink]=\"['/report/'] + type.id + ['/'] + item.id\">{{item.name}}</a></li>\n                    </ul>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n"
+
+/***/ },
+/* 572 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63332,7 +63698,7 @@ exports.InnerSubscriber = InnerSubscriber;
 //# sourceMappingURL=InnerSubscriber.js.map
 
 /***/ },
-/* 571 */
+/* 573 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63464,7 +63830,7 @@ exports.Notification = Notification;
 //# sourceMappingURL=Notification.js.map
 
 /***/ },
-/* 572 */
+/* 574 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -63478,7 +63844,7 @@ exports.empty = {
 //# sourceMappingURL=Observer.js.map
 
 /***/ },
-/* 573 */
+/* 575 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63524,37 +63890,15 @@ exports.SubjectSubscription = SubjectSubscription;
 //# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ },
-/* 574 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-"use strict";
-var Observable_1 = __webpack_require__(6);
-var catch_1 = __webpack_require__(586);
-Observable_1.Observable.prototype.catch = catch_1._catch;
-//# sourceMappingURL=catch.js.map
-
-/***/ },
-/* 575 */
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
-"use strict";
-var Observable_1 = __webpack_require__(6);
-var every_1 = __webpack_require__(588);
-Observable_1.Observable.prototype.every = every_1.every;
-//# sourceMappingURL=every.js.map
-
-/***/ },
 /* 576 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 "use strict";
 var Observable_1 = __webpack_require__(6);
-var first_1 = __webpack_require__(589);
-Observable_1.Observable.prototype.first = first_1.first;
-//# sourceMappingURL=first.js.map
+var catch_1 = __webpack_require__(588);
+Observable_1.Observable.prototype.catch = catch_1._catch;
+//# sourceMappingURL=catch.js.map
 
 /***/ },
 /* 577 */
@@ -63563,12 +63907,34 @@ Observable_1.Observable.prototype.first = first_1.first;
 "use strict";
 "use strict";
 var Observable_1 = __webpack_require__(6);
-var last_1 = __webpack_require__(590);
+var every_1 = __webpack_require__(590);
+Observable_1.Observable.prototype.every = every_1.every;
+//# sourceMappingURL=every.js.map
+
+/***/ },
+/* 578 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var Observable_1 = __webpack_require__(6);
+var first_1 = __webpack_require__(591);
+Observable_1.Observable.prototype.first = first_1.first;
+//# sourceMappingURL=first.js.map
+
+/***/ },
+/* 579 */
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+"use strict";
+var Observable_1 = __webpack_require__(6);
+var last_1 = __webpack_require__(592);
 Observable_1.Observable.prototype.last = last_1.last;
 //# sourceMappingURL=last.js.map
 
 /***/ },
-/* 578 */
+/* 580 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63579,30 +63945,30 @@ Observable_1.Observable.prototype.mergeAll = mergeAll_1.mergeAll;
 //# sourceMappingURL=mergeAll.js.map
 
 /***/ },
-/* 579 */
+/* 581 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 "use strict";
 var Observable_1 = __webpack_require__(6);
-var mergeMap_1 = __webpack_require__(592);
+var mergeMap_1 = __webpack_require__(594);
 Observable_1.Observable.prototype.mergeMap = mergeMap_1.mergeMap;
 Observable_1.Observable.prototype.flatMap = mergeMap_1.mergeMap;
 //# sourceMappingURL=mergeMap.js.map
 
 /***/ },
-/* 580 */
+/* 582 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 "use strict";
 var Observable_1 = __webpack_require__(6);
-var reduce_1 = __webpack_require__(594);
+var reduce_1 = __webpack_require__(596);
 Observable_1.Observable.prototype.reduce = reduce_1.reduce;
 //# sourceMappingURL=reduce.js.map
 
 /***/ },
-/* 581 */
+/* 583 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63683,7 +64049,7 @@ exports.ArrayLikeObservable = ArrayLikeObservable;
 //# sourceMappingURL=ArrayLikeObservable.js.map
 
 /***/ },
-/* 582 */
+/* 584 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63800,7 +64166,7 @@ var ForkJoinSubscriber = (function (_super) {
 //# sourceMappingURL=ForkJoinObservable.js.map
 
 /***/ },
-/* 583 */
+/* 585 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -63815,13 +64181,13 @@ var isFunction_1 = __webpack_require__(165);
 var isPromise_1 = __webpack_require__(389);
 var isScheduler_1 = __webpack_require__(390);
 var PromiseObservable_1 = __webpack_require__(162);
-var IteratorObservable_1 = __webpack_require__(584);
+var IteratorObservable_1 = __webpack_require__(586);
 var ArrayObservable_1 = __webpack_require__(383);
-var ArrayLikeObservable_1 = __webpack_require__(581);
+var ArrayLikeObservable_1 = __webpack_require__(583);
 var observable_1 = __webpack_require__(245);
 var iterator_1 = __webpack_require__(244);
 var Observable_1 = __webpack_require__(6);
-var observeOn_1 = __webpack_require__(593);
+var observeOn_1 = __webpack_require__(595);
 var isArrayLike = (function (x) { return x && typeof x.length === 'number'; });
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -63883,7 +64249,7 @@ exports.FromObservable = FromObservable;
 //# sourceMappingURL=FromObservable.js.map
 
 /***/ },
-/* 584 */
+/* 586 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64082,17 +64448,17 @@ function sign(value) {
 //# sourceMappingURL=IteratorObservable.js.map
 
 /***/ },
-/* 585 */
+/* 587 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 "use strict";
-var ForkJoinObservable_1 = __webpack_require__(582);
+var ForkJoinObservable_1 = __webpack_require__(584);
 exports.forkJoin = ForkJoinObservable_1.ForkJoinObservable.create;
 //# sourceMappingURL=forkJoin.js.map
 
 /***/ },
-/* 586 */
+/* 588 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64165,7 +64531,7 @@ var CatchSubscriber = (function (_super) {
 //# sourceMappingURL=catch.js.map
 
 /***/ },
-/* 587 */
+/* 589 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64220,7 +64586,7 @@ exports.concatAll = concatAll;
 //# sourceMappingURL=concatAll.js.map
 
 /***/ },
-/* 588 */
+/* 590 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64295,7 +64661,7 @@ var EverySubscriber = (function (_super) {
 //# sourceMappingURL=every.js.map
 
 /***/ },
-/* 589 */
+/* 591 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64449,7 +64815,7 @@ var FirstSubscriber = (function (_super) {
 //# sourceMappingURL=first.js.map
 
 /***/ },
-/* 590 */
+/* 592 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64573,7 +64939,7 @@ var LastSubscriber = (function (_super) {
 //# sourceMappingURL=last.js.map
 
 /***/ },
-/* 591 */
+/* 593 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64665,7 +65031,7 @@ var MapSubscriber = (function (_super) {
 //# sourceMappingURL=map.js.map
 
 /***/ },
-/* 592 */
+/* 594 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64832,7 +65198,7 @@ exports.MergeMapSubscriber = MergeMapSubscriber;
 //# sourceMappingURL=mergeMap.js.map
 
 /***/ },
-/* 593 */
+/* 595 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -64843,7 +65209,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(36);
-var Notification_1 = __webpack_require__(571);
+var Notification_1 = __webpack_require__(573);
 /**
  * @see {@link Notification}
  *
@@ -64913,7 +65279,7 @@ exports.ObserveOnMessage = ObserveOnMessage;
 //# sourceMappingURL=observeOn.js.map
 
 /***/ },
-/* 594 */
+/* 596 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65003,7 +65369,7 @@ exports.ReduceSubscriber = ReduceSubscriber;
 //# sourceMappingURL=reduce.js.map
 
 /***/ },
-/* 595 */
+/* 597 */
 /***/ function(module, exports) {
 
 "use strict";
@@ -65031,7 +65397,7 @@ exports.UnsubscriptionError = UnsubscriptionError;
 //# sourceMappingURL=UnsubscriptionError.js.map
 
 /***/ },
-/* 596 */
+/* 598 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65053,8 +65419,6 @@ exports.toSubscriber = toSubscriber;
 //# sourceMappingURL=toSubscriber.js.map
 
 /***/ },
-/* 597 */,
-/* 598 */,
 /* 599 */,
 /* 600 */,
 /* 601 */,
@@ -65189,7 +65553,9 @@ exports.toSubscriber = toSubscriber;
 /* 730 */,
 /* 731 */,
 /* 732 */,
-/* 733 */
+/* 733 */,
+/* 734 */,
+/* 735 */
 /***/ function(module, exports) {
 
 module.exports = function(module) {
@@ -65215,7 +65581,7 @@ module.exports = function(module) {
 
 
 /***/ },
-/* 734 */
+/* 736 */
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -65226,13 +65592,13 @@ module.exports = function(module) {
 
 
 /***/ },
-/* 735 */,
-/* 736 */
+/* 737 */,
+/* 738 */
 /***/ function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(430);
 
 
 /***/ }
-],[736]);
+],[738]);
 //# sourceMappingURL=main.map
