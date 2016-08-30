@@ -24,36 +24,36 @@
             <div class="col-md-4">
                 <div class="case-type" *ngFor="let type of caseTypes | slice:0:7" (click)="type.active=!type.active" [ngClass]="{active:type.active}">
                     <p class="case-type-name" ><span class="case-type-num">
-                        {{ type.id }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span>
-                        {{type.name}} <span class="case-open pull-right"><i class="fa fa-plus"></i></span>
+                        {{ type.Item }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span>
+                        {{type.ItemName}} <span class="case-open pull-right"><i class="fa fa-plus"></i></span>
                     </p>
                     <div class="clearfix"></div>
-                    <ul class="case-list" *ngIf="type.subItems">
-                        <li class="case-item" *ngFor="let item of type.subItems"><a [routerLink]="['/report/'] + type.id + ['/'] + item.id">{{item.name}}</a></li>
+                    <ul class="case-list" *ngIf="type.Subitems">
+                        <li class="case-item" *ngFor="let item of type.Subitems"><a [routerLink]="['/report/'] + type.Item + ['/'] + item.Subitem">{{item.SubitemName}}</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="case-type" *ngFor="let type of caseTypes | slice:7:14" (click)="type.active=!type.active" [ngClass]="{active:type.active}">
-                    <p class="case-type-name"><span class="case-type-num">
-                        {{ type.id }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span>
-                        {{type.name}} <span class="case-open pull-right"><i class="fa fa-plus"></i></span>
+                    <p class="case-type-name" ><span class="case-type-num">
+                        {{ type.Item }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span>
+                        {{type.ItemName}} <span class="case-open pull-right"><i class="fa fa-plus"></i></span>
                     </p>
                     <div class="clearfix"></div>
-                    <ul class="case-list" *ngIf="type.subItems">
-                        <li class="case-item" *ngFor="let item of type.subItems"><a [routerLink]="['/report/'] + type.id + ['/'] + item.id">{{item.name}}</a></li>
+                    <ul class="case-list" *ngIf="type.Subitems">
+                        <li class="case-item" *ngFor="let item of type.Subitems"><a [routerLink]="['/report/'] + type.Item + ['/'] + item.Subitem">{{item.SubitemName}}</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="case-type" *ngFor="let type of caseTypes | slice:14:21" (click)="type.active=!type.active" [ngClass]="{active:type.active}">
-                    <p class="case-type-name"><span class="case-type-num">
-                    	{{ type.id }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span>
-                        {{type.name}} <span class="case-open pull-right"><i class="fa fa-plus"></i></span>
+                    <p class="case-type-name" ><span class="case-type-num">
+                        {{ type.Item }} <i class="fa Example of angle-double-right fa-angle-double-right"></i></span>
+                        {{type.ItemName}} <span class="case-open pull-right"><i class="fa fa-plus"></i></span>
                     </p>
                     <div class="clearfix"></div>
-                    <ul class="case-list" *ngIf="type.subItems">
-                        <li class="case-item" *ngFor="let item of type.subItems"><a [routerLink]="['/report/'] + type.id + ['/'] + item.id">{{item.name}}</a></li>
+                    <ul class="case-list" *ngIf="type.Subitems">
+                        <li class="case-item" *ngFor="let item of type.Subitems"><a [routerLink]="['/report/'] + type.Item + ['/'] + item.Subitem">{{item.SubitemName}}</a></li>
                     </ul>
                 </div>
             </div>

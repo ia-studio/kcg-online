@@ -22,7 +22,7 @@
           </div>
           <div class="search-lable combine-icon combine-after">
             <div class="border-bottom">
-              <input type="text" [value]="selectType">
+              <input type="text" [value]="selectType" readonly>
               <select name="" id="" #t (change)="callType(t.value)">
                   <option value="">請選擇處理單位</option>
                   <option [value]="type.kind_name" *ngFor="let type of faqTypes">{{type.kind_name}}</option>

@@ -29,7 +29,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     this.caseService
         .getType(id)
         .then(type => this.caseType = type)
-        .then(subType => this.subCaseType = subType.subItems.find(item => item.id === subId))
+        .then(subType => this.subCaseType = subType.Subitems.find(item => item.Subitem === subId))
         .catch(error => this.error = error);
   }
 
