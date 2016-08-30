@@ -6,7 +6,7 @@ import 'rxjs/add/operator/toPromise';
 export class CaseService {
 
   private casesUrl = 'api/cases.json';
-  private casetypesUrl = 'api/casetypes.json';
+  private caseTypesUrl = 'http://soweb.kcg.gov.tw/webapi/api/items';
 
   constructor(private http: Http) { }
 
@@ -18,7 +18,7 @@ export class CaseService {
   }
 
   getTypes() {
-    return this.http.get(this.casetypesUrl)
+    return this.http.get(this.caseTypesUrl)
                .toPromise()
                .then(response => response.json())
                .catch(this.handleError);
@@ -26,7 +26,7 @@ export class CaseService {
 
   getType(id: string) {
     return this.getTypes()
-               .then(types => types.find(type => type.id === id))
+               .then(types => types.find(type => type.Item === id))
                .catch(this.handleError);
   }
 
