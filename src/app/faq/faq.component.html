@@ -2,17 +2,16 @@
   <div class="banner row">
     <div class="banner-page-name">
       <h2 class="dk-green">常見問與答</h2>
-      <p class="dk-green">Frequently Asked Questions
-</p>
+      <p class="dk-green">Frequently Asked Questions</p>
     </div>
     <img src="./assets/images/banner/banner_pic_faq.png" alt="">
   </div>
   <div class="row">
     <div class="col-md-3 pdLR1x maT1x">
-      <a class="btn btn-green" href="javascript:void(0);" (click)="openSearch=!openSearch"><i class="fa fa-search"></i> 全文檢索</a>
+      <a class="btn btn-green" href="javascript:void(0);" (click)="isSearch=!isSearch"><i class="fa fa-search"></i> 全文檢索</a>
     </div>
     <div class="col-md-12 maT1x">
-      <div class="search" [ngClass]="{active:openSearch}">
+      <div class="search" [ngClass]="{active:isSearch}">
         <form action="" class="">
           <div class="search-lable combine-icon combine-before maT1x">
             <div class="border-bottom">
@@ -22,10 +21,10 @@
           </div>
           <div class="search-lable combine-icon combine-after">
             <div class="border-bottom">
-              <input type="text" [value]="selectType" readonly>
-              <select name="" id="" #t (change)="callType(t.value)">
+              <input type="text" [value]="selectedCategory" readonly>
+              <select [(ngModel)]="selectedCategory" [ngModelOptions]="{standalone: true}">
                   <option value="">請選擇處理單位</option>
-                  <option [value]="type.kind_name" *ngFor="let type of faqTypes">{{type.kind_name}}</option>
+                  <option *ngFor="let category of categories" [value]="category.kind_name" >{{category.kind_name}}</option>
               </select>
               <i class="fa fa-chevron-down"></i>
             </div>
@@ -43,8 +42,7 @@
             <div class="col-md-1">人氣</div>
             <div class="col-md-2"></div>
           </div>
-
-          <div class="faq-item col-md-12" [ngClass]="{active:item.active}" *ngFor="let item of faq; #i = index">
+          <div class="faq-item col-md-12" [ngClass]="{active:item.active}" *ngFor="let item of faqs;let i = index">
             <div class="col-md-7 navy"><a [routerLink]="['/faq/123']">{{item.CaseContent}}</a> <span class="faq-open pull-right hidden-md hidden-lg" (click)="item.active=!item.active"><i class="fa fa-plus" [ngClass]="{active:item.active}"></i></span></div>
             <div class="col-md-2 text-black">{{item.OrganName}}</div>
             <div class="col-md-1 text-black">{{item.ViewCount}}</div>
