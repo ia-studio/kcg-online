@@ -22,10 +22,10 @@
           </div>
           <div class="search-lable combine-icon combine-after">
             <div class="border-bottom">
-              <input type="text" [value]="selectType">
-              <select name="" id="" #t (change)="callType(t.value)">
+              <input type="text" [value]="selectType.name">
+              <select name="type" id="" #t (change)="callType(t)">
                   <option value="">請選擇處理單位</option>
-                  <option [value]="type.kind_name" *ngFor="let type of faqTypes">{{type.kind_name}}</option>
+                  <option [value]="type.kind" *ngFor="let type of faqTypes">{{type.kind_name}}</option>
               </select>
               <i class="fa fa-chevron-down"></i>
             </div>

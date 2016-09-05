@@ -7,10 +7,17 @@ import { Title }             from '@angular/platform-browser';
 })
 export class FaqComponent implements OnInit {
   openSearch = false;
-  selectType = '請選擇處理單位';
+  selectType = {
+      key: "0",
+      name: '請選擇處理單位'
+  };
 
-  callType(value:string){
-    this.selectType = value;
+  callType(s:HTMLSelectElement){
+    this.selectType = {
+        key: s.value,
+        name: s.options[s.selectedIndex].innerHTML
+    }
+
   }
 
   faq = [

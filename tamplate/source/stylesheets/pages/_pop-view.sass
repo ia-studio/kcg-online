@@ -6,11 +6,63 @@
 	left: 0
 	width: 100vw
 	height: 100%
-	background-color: rgba(255,255,255,.8)
+	background-color: rgba(255,255,255,.95)
 	.pop-content
 		position: relative
 		top: 50%
 		left: 50%
+		max-width: 320px
 		transform: translate(-50%)
 	&.active
 		display: block
+
+.check
+	width: 290px
+	background-color: $white
+	box-shadow: 0 2px 3px #ccc
+	border-radius: 6px
+	margin-left: 15px
+	margin-top: -175px
+	.check-mark
+		position: absolute
+		border-radius: 50%
+		width: 74px
+		height: 74px
+		left: 110px
+		top: -37px
+		box-shadow: 0 2px 5px #ccc
+		font-size: 3em
+		color: $mainC
+		text-align: center
+		line-height: 78px
+		background-color: $white
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			margin-top: 5px
+			margin-left: 5px
+			height: 64px
+			width: 64px
+			border-radius: 50%
+			border: 1px solid $mainC
+
+	.check-title
+	.check-panel
+		position: relative
+		padding: 47px 15px 47px 15px
+
+	.check-info
+		text-align: justify
+	.check-footer
+		font-size: $font-md
+	.btn-green
+		position: absolute
+		left: 10%
+		bottom: -25px
+		display: block
+		width: 80%
+		background: linear-gradient(-45deg, rgb(128,203,196) 0%, rgb(84,162,178) 100%)
+
+
