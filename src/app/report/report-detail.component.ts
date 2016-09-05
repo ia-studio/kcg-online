@@ -14,6 +14,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   navigated = false; // true if navigated here
   caseType: CaseType;
   subCaseType: SubCaseType;
+  getReportDone = false;
   constructor(private route: ActivatedRoute, private caseService: CaseService) { }
 
   ngOnInit() {

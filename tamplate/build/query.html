@@ -12,7 +12,7 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>案件查詢 - 高雄市政府線上即時服務平台</title>
     <script src="https://use.fontawesome.com/2c72f40202.js"></script>
-    <link href="stylesheets/all.css?v=2" rel="stylesheet" type="text/css">
+    <link href="stylesheets/all.css?v=40" rel="stylesheet" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
@@ -178,7 +178,24 @@
 	  <li class="menu-item"><a href="http://disdp.kcg.gov.tw/exchange/feedback.php" target="_blank">廉政案件</a></li>
 	</ul>
 </div>
-      <div class="pop" ng-class="{'active':vm.pop}">
+      <!-- <div class="pop" style="display:block;">
+	<div class="pop-content">
+		<div class="check">
+	      <div class="check-panel">
+	        <div class="check-mark"><i class="fa fa-check"></i></div>
+	        <h4 class="check-title navy text-center">親愛的 ilandy，您好！</h4>
+	        <br>
+	        <p class="check-info navy">
+	          我們已收到您對本府的反映案件，為確認您的信箱未遭冒用，我們即將寄出確認信至您所填寫的：w9874123@gmail.com 信箱， 請您於收到該確認信後，點選「確認信件」連結，以便完成您的案件反映流程，我們在收到您的確認後，將由系統自動寄出案件編號至您的信箱並立即進行分案處理。
+	          謝謝您！
+	        </p>
+	        <h4 class="check-footer navy text-center">高雄市政府市長信箱處理小組 敬上</h4>
+	        <a href="javascript:void(0);" class="btn btn-green">回到首頁</a>
+	      </div>
+	    </div>
+	</div>
+</div> -->
+      <div class="pop" style="display:block;">
 	<div class="pop-content">
 		<div class="mk-spinner-doublecircle"></div>
 		<span class="loading-words">Loading ...</span>

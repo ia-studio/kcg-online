@@ -13,6 +13,21 @@ input
 	&:focus
 		outline: transparent
 		border-color: $navy
+.fall-width
+	padding-top: 15px
+	width: 100%
+
+
+textarea
+	border: 1px solid $lighter-gray
+
+.input-alpha
+	position: absolute
+	left: 0
+	top: 0
+	width: 100%
+	height: 55px
+	opacity: 0
 
 .input-separate
 	position: relative
@@ -42,3 +57,19 @@ input
 	height: 1em
 	line-height: 1.5em
 	color: $subC-o
+
+
+.combine-icon
+	position: relative
+	.fa
+		position: absolute
+		z-index: 1
+		bottom: 10px
+	&.combine-before .fa
+		left: 20px
+		color: $mainC
+	&.combine-after .fa
+		right: 20px
+	
+.combine-before input
+	padding-left: 40px
