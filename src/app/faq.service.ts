@@ -27,7 +27,7 @@ export class FaqService {
     var flag = update ? 'N' : 'R';
     return this.http.get(this.faqUrl + organNo + '?seqNo=' + seqNo + '&updFlag=' + flag)
                .toPromise()
-               .then(response => response.json().data)
+               .then(response => response.json())
                .catch(this.handleError);
   }
 

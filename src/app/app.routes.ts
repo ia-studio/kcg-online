@@ -39,7 +39,7 @@ const appRoutes: Routes = [
     component: FaqComponent
   },
   {
-    path: 'faq/:id',
+    path: 'faq/:organNo/:seqNo',
     component: FaqDetailComponent
   },
   {
