@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title }             from '@angular/platform-browser';
-import { FaqService }       from '../faq.service';
+import { FaqService }        from '../faq.service';
 
 @Component({
   selector: 'app-faq',
