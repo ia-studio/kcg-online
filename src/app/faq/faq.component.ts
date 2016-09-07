@@ -15,6 +15,7 @@ export class FaqComponent implements OnInit {
     value: '',
     text: '請選擇處理單位'
   };
+  inputSearch = "";
 
   public constructor(private titleService: Title, private faqService: FaqService) { }
 
@@ -24,19 +25,27 @@ export class FaqComponent implements OnInit {
 
   getFaqs() {
     this.faqService
-        .getFaqs()
-        .then(faq => this.faqs = faq);
+      .getFaqs()
+      .then(faq => this.faqs = faq);
   }
 
   getCategories() {
     this.faqService
-        .getCategories()
-        .then(category => this.categories = category);
+      .getCategories()
+      .then(category => this.categories = category);
   }
 
-  changeCategory(s: HTMLSelectElement){
+  changeCategory(s: HTMLSelectElement) {
     this.selectedCategory.value = s.value;
     this.selectedCategory.text = s.options[s.selectedIndex].innerHTML;
+  }
+  inputKeyWord(event: any) {
+    this.inputSearch = event.target.value;
+  }
+  search() {
+    this.faqService
+        .getFaqs(this.inputSearch,this.selectedCategory.value)
+        .then(faq=>this.faqs=faq);        
   }
 
   ngOnInit() {

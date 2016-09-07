@@ -16,7 +16,7 @@
           <div class="search-lable combine-icon combine-before maT1x">
             <div class="border-bottom">
               <i class="fa fa-search"></i>
-              <input type="text" placeholder="搜尋關鍵字">
+              <input type="text" placeholder="搜尋關鍵字" (keyup)="inputKeyWord($event)">
             </div>
           </div>
           <div class="search-lable combine-icon combine-after">
@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="search-lable text-right">
-            <button class="search-btn">查詢</button>
+            <button class="search-btn" (click)="search()">查詢</button>
           </div>
         </form>
       </div>

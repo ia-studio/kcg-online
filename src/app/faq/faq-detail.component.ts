@@ -12,22 +12,22 @@ export class FaqDetailComponent implements OnInit {
   error: any;
   sub: any;
   navigated = false;
-  faqReply: any;
-
+  faqReply:any;
   public constructor(private route: ActivatedRoute, private titleService: Title, private faqService: FaqService) { }
 
   public setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);
   }
 
-  getReply(organNo: string, seqNo: number) {
+  getReply(organNo: string, seqNo: number) {    
     this.faqService
         .getReply(organNo, seqNo)
         .then(reply => this.faqReply = reply)
         .catch(error => this.error = error);
+        console.log(this.faqReply);      
   }
 
-  ngOnInit() {
+  ngOnInit() {    
     this.sub = this.route.params.subscribe(params => {
       if (params['organNo'] !== undefined && params['seqNo'] !== undefined) {
         this.navigated = true;

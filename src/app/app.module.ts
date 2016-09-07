@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { Title } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders } from './app.routes';
-import { FaqComponent } from './faq/faq.component';
+import { FaqComponent,FaqDetailComponent } from './faq';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ProcessComponent } from './process/process.component';
-import { QueryComponent } from './query/query.component';
-import { ReportComponent } from './report/report.component';
+import { QueryComponent,QueryDetailComponent } from './query';
+import { ReportComponent,ReportDetailComponent } from './report';
+
+
 
 @NgModule({
   imports: [
@@ -25,7 +27,11 @@ import { ReportComponent } from './report/report.component';
     FaqComponent,
     ProcessComponent,
     QueryComponent,
-    ReportComponent
+    ReportComponent,
+    FeedbackComponent,
+    FaqDetailComponent,
+    QueryDetailComponent,
+    ReportDetailComponent
   ],
   providers: [
     appRoutingProviders,
