@@ -57,6 +57,7 @@
 	top: 62px
 	right: 0
 	width: 475px
+	height: 44px
 	padding: 12px 20px
 	background-color: rgba(255,255,255,.7)
 	&:after
@@ -72,7 +73,18 @@
 		border-color: transparent transparent rgba(255,255,255,.7) transparent
 		@media screen and (max-width: 1200px)
 			right: 62px
-
+	.news-visble
+		position: relative
+		height: 100%
+		width: 100%
+		overflow: hidden
+	ul
+		position: absolute
+		top: 0
+		left: 0
+		padding: 0
+		margin-bottom: 0
+		list-style: none
 
 	a
 		display: inline-block
@@ -87,9 +99,8 @@
 		position: absolute
 		display: inline-block
 		top: 0
-		right: 0
+		right: -10px
 		width: 45px
-		padding: 15px 0
 		text-align: center
 		cursor: pointer
 	@media screen and (max-width: 480px)
