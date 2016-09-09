@@ -12,7 +12,7 @@ import { ReplaceNewLinePipe } from '../filters/Replace.pipe';
   providers: [CaseService]
 })
 export class QueryDetailComponent implements OnInit {
-  public constructor(private titleService: Title, private caseService: CaseService) { }
+  public constructor(private titleService: Title) { }
 
   @Input()
   searchCase: Case;
@@ -22,16 +22,8 @@ export class QueryDetailComponent implements OnInit {
     this.titleService.setTitle(newTitle);
   }
 
-  getCases() {
-    this.caseService
-        .getCases()
-        //.then(mycase => this.searchCase = mycase);
-        //.catch(error => this.error = error);
-  }
-
   ngOnInit() {
     this.setTitle('案件明細 - 高雄市政府線上即時服務平台');
-    this.getCases();
-    //console.log(this.searchCase);
+    console.log(this.searchCase);
   }
 }

@@ -7,7 +7,7 @@
         <img src="./assets/images/banner/banner_pic_query.png" alt="">
     </div>
     <div class="row">
-        <div class="col-md-4 page-block maB2x">
+        <div class="col-md-4 page-block maB2x" *ngIf="searchCase.Content[0] != null">
 
             <div class="article-content">
                 <p class="article-lable require">主旨</p>
@@ -32,11 +32,14 @@
                         <p class="navy maB2x pdLHalfX">{{searchCase.Content[0].Security}}</p>
                     </div>
                 </div>
-                <p class="article-lable require">附加檔案 </p>
-                <p class="navy maB2x pdLHalfX">
-                    <a href="javascript:void(0)"><i class="fa fa-paperclip"></i>2014_1222.jpg</a><br>
-                    <a href="javascript:void(0)"><i class="fa fa-paperclip"></i>2014_1222.jpg</a>
-                </p>
+                <div *ngIf="searchCase.Content[0].Atth_FileNames && searchCase.Content[0].Atth_FileNames.length > 0">
+                  <p class="article-lable require">附加檔案 </p>
+                  <p class="navy maB2x pdLHalfX">
+                    <list *ngFor="let item of searchCase.Content[0].Atth_FileNames">
+                      <a href="javascript:void(0)"><i class="fa fa-paperclip"></i>&nbsp;{{item.FileName}}</a><br/>
+                    </list>
+                  </p>
+                </div>
                 <a class="btn btn-green hidden-xs hidden-sm" href="javascript:;" [routerLink]="['/']">繼續查詢陳報案件</a>
             </div>
         </div>
@@ -70,7 +73,7 @@
                   <hr/>
                 </div>
             </div>
-            <a class="btn btn-green hidden-md hidden-lg" href="">繼續查詢陳報案件</a>
+          <a class="btn btn-green hidden-xs hidden-sm" href="javascript:;" [routerLink]="['/']">繼續查詢陳報案件</a>
         </div>
     </div>
 </div>

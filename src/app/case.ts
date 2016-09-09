@@ -32,7 +32,8 @@ export class CaseContent {
     source_id: any;
     secu_id: any;
     Security: string;
-    Atth_FileNames: string;
+    Source: string;
+    Atth_FileNames: Attachment[];
 }
 
 export class CaseProcessStatus {
@@ -54,4 +55,10 @@ export class CaseProcessStatus {
     undertaker: string;
     FinishDate: string;
     Reply: string;
+}
+
+export class Attachment{
+  FileName: string;
+  FileType: string;
+  SerialNo: string;
 }
