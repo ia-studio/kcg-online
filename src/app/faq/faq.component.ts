@@ -47,7 +47,10 @@ export class FaqComponent implements OnInit {
     this.faqService
         .getFaqs(this.term, this.selectedCategory.value)
         .then(faq => this.faqs = faq)
-        .catch(error => this.error = error);
+        .catch(error => this.error = error)        
+        if(this.faqs.length=0){
+          this.faqs=[];
+        }                          
   }
 
   ngOnInit() {
