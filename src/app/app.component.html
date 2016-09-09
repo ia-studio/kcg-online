@@ -2,11 +2,13 @@
     <div class="container shadow-3d">
         <nav class="header row index">
             <h1 class="header-band">
-                <img calss="pull-left" src="./assets/images/Kao_logo.png" width="40" alt="">
-                <p>
-                    <span class="navy">線上即時服務系統</span><br>
-                    <small class="navy">Service online</small>
-                </p>
+                <a [routerLink]="['/report']">
+                  <img calss="pull-left" src="./assets/images/Kao_logo.png" width="40" alt="">
+                  <p>
+                      <span class="navy">線上即時服務系統</span><br>
+                      <small class="navy">Service online</small>
+                  </p>
+                </a>
                 <div class="news visible-xs maT1x" (click)="showNews=!showNews"><a href="javascript:void(0)"><i class="fa fa-info"></i></a></div>
                 <div class="mob-menu visible-xs" (click)="showSlideMenu=!showSlideMenu"></div>
             </h1>
