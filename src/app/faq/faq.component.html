@@ -16,7 +16,7 @@
           <div class="search-lable combine-icon combine-before maT1x">
             <div class="border-bottom">
               <i class="fa fa-search"></i>
-              <input type="text" placeholder="搜尋關鍵字" (keyup)="inputKeyWord($event)">
+              <input type="text" [(ngModel)]="term" [ngModelOptions]="{standalone: true}" placeholder="搜尋關鍵字">
             </div>
           </div>
           <div class="search-lable combine-icon combine-after">
@@ -34,6 +34,7 @@
           </div>
         </form>
       </div>
+
       <div class="article-content">
         <div class="faq row">
           <div class="faq-head col-md-12 hidden-xs hidden-sm">
@@ -51,5 +52,12 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
+
+<div *ngIf="faqs.length===0&&!isSearch" class="pop" style="display:block;">
+  <div class="pop-content">
+    <div class="mk-spinner-doublecircle"></div>
+    <span class="loading-words">Loading ...</span>
   </div>
 </div>
