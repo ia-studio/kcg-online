@@ -31,6 +31,7 @@ export class CaseContent {
     subject: string;
     source_id: any;
     secu_id: any;
+    Security: string;
     Atth_FileNames: string;
 }
 
@@ -50,4 +51,7 @@ export class CaseProcessStatus {
     sub_item: string;
     sub_itemname: string;
     Atth_FileNames: string;
+    undertaker: string;
+    FinishDate: string;
+    Reply: string;
 }
