@@ -12,6 +12,8 @@ export class SubCaseType {
 export class Case {
     Content: CaseContent[];
     ProcessStatus: CaseProcessStatus[];
+    isMayorMail?: boolean;
+    isCivilianSuggest?: boolean;
 }
 
 export class CaseContent {
@@ -51,6 +53,7 @@ export class CaseProcessStatus {
     item_name: string;
     sub_item: string;
     sub_itemname: string;
+    //Atth_FileNames: Attachment[];
     Atth_FileNames: string;
     undertaker: string;
     FinishDate: string;

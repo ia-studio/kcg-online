@@ -16,7 +16,11 @@ export class QueryDetailComponent implements OnInit {
 
   @Input()
   searchCase: Case;
+
   error: any;
+
+  @Input()
+  isMayorMail?: boolean; //true = MayorMail, fasle = CivilianSuggest
 
   public setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);

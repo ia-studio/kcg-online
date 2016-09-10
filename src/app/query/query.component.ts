@@ -30,10 +30,10 @@ export class QueryComponent implements OnInit {
   caseNo: string = '';
   email: string = ''; // 市長信箱 Email
 
-  vyear: number = new Date().getFullYear(); //as p3
+  vp1: string = 'TB';
+  vyear: number = new Date().getFullYear(); //as p2
+  vp3: string;
   callerName: string = ''; // 人民陳情 來電時的姓名
-
-
 
   public setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);
@@ -66,6 +66,7 @@ export class QueryComponent implements OnInit {
       //console.log(data);
       this.displayDetail = true;
       this.isMayorMail = true;
+      this.searchCase.isMayorMail = true;
     }, (err: any) => {
       //console.log(err);
       if (err.status !== 200){
@@ -85,11 +86,25 @@ export class QueryComponent implements OnInit {
 
   queryV(){ //人民陳情查詢
     //
-    this.qService.getVResult('AK', this.vyear, '3', this.callerName).subscribe(data => {
+    if (this.vyear == null || this.vyear.toString().length < 4){
+      alert('案件編號-年份有誤。請重新輸入。');
+      return;
+    }
+    if (this.vp3 == null || this.vp3.length == 0){
+      alert('案件編號有誤。請重新輸入。');
+      return;
+    }
+    if (this.callerName == null || this.callerName.length == 0){
+      alert('來電時的姓名有誤。請重新輸入。');
+      return;
+    }
+    //this.vp1 = 'AK';
+    this.qService.getVResult(this.vp1, this.vyear, this.vp3, this.callerName).subscribe(data => {
       this.searchCase = data;
       //console.log(data);
       this.displayDetail = true;
       this.isCivilianSuggest = true;
+      this.searchCase.isCivilianSuggest = true;
     }, (err: any) => {
       if (err.status !== 200){
         alert(this.errMessage);
