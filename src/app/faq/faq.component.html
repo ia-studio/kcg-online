@@ -11,27 +11,25 @@
       <a class="btn btn-green" href="javascript:void(0);" (click)="isSearch=!isSearch"><i class="fa fa-search"></i> 全文檢索</a>
     </div>
     <div class="col-md-12 maT1x">
-      <div class="search" [ngClass]="{active:isSearch}">
+      <div class="search " [ngClass]="{active:isSearch}">
         <form action="" class="">
-          <div class="search-lable combine-icon combine-before maT1x">
-            <div class="border-bottom">
+          <div class="col-md-5 combine-icon combine-before ">
               <i class="fa fa-search"></i>
-              <input type="text" [(ngModel)]="term" [ngModelOptions]="{standalone: true}" placeholder="搜尋關鍵字">
-            </div>
+              <input class="fall-width" type="text" [(ngModel)]="term" [ngModelOptions]="{standalone: true}" placeholder="搜尋關鍵字">
           </div>
-          <div class="search-lable combine-icon combine-after">
-            <div class="border-bottom">
-              <input type="text" [value]="selectedCategory.text" readonly>
-              <select (change)="changeCategory($event.target)" >
-                  <option value="">請選擇處理單位</option>
-                  <option *ngFor="let category of categories" [value]="category.kind" >{{category.kind_name}}</option>
-              </select>
-              <i class="fa fa-chevron-down"></i>
-            </div>
+          <div class="col-md-5 combine-icon combine-after maB1x">
+                <input class="fall-width" type="text" [value]="selectedCategory.text" readonly>
+                <select name="" id="" class="input-alpha">
+                      <option value="">請選擇處理單位</option>
+                      <option *ngFor="let category of categories" [value]="category.kind" >{{category.kind_name}}</option>
+                  </select>
+                <i class="fa fa-chevron-down"></i>
           </div>
-          <div class="search-lable text-right">
-            <button class="search-btn" (click)="search()">查詢</button>
+
+          <div class="col-md-2 maT1x">
+              <button class="search-btn">查詢</button>
           </div>
+          <br>
         </form>
       </div>
 
@@ -43,7 +41,7 @@
             <div class="col-md-1">人氣</div>
             <div class="col-md-2"></div>
           </div>
-          <div class="faq-item col-md-12" [ngClass]="{active:item.active}" *ngFor="let item of faqs;let i = index">
+          <div class="faq-item col-md-12" [ngClass]="{active:item.active}" *ngFor="let item of faqs">
             <div class="col-md-7 navy"><a [routerLink]="['/faq/'] + item.OrganNo + ['/'] + item.SeqNo">{{item.CaseContent}}</a> <span class="faq-open pull-right hidden-md hidden-lg" (click)="item.active=!item.active"><i class="fa fa-plus" [ngClass]="{active:item.active}"></i></span></div>
             <div class="col-md-2 text-black">{{item.OrganName}}</div>
             <div class="col-md-1 text-black">{{item.ViewCount}}</div>
