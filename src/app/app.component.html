@@ -29,7 +29,7 @@
             <div class="header-news" *ngIf="showNews">
                 <div class="news-visble">
                   <ul class="news-list">
-                    <li [ngClass]="{'active':showNowNews(i)}" *ngFor="let news of newsList; let i = index" ><a href="#">{{news.title}}</a></li>
+                    <li [ngClass]="{'active':showNowNews(i)}" *ngFor="let news of newsList; let i = index" ><a [routerLink]="['/news/'] + news.id">{{news.id}}{{news.title}}</a></li>
                   </ul>
                   <span class="pull-right" (click)="showNews=false"><i class="fa fa-times-circle"></i></span>
                 </div>

@@ -1,0 +1,24 @@
+.news-all
+	padding: 0
+	list-style: none
+	@media screen and (max-width: 480px)
+
+	li
+		position: relative
+		width: 100%
+		padding: $gap 0
+		overflow: hidden
+		white-space: nowrap
+		text-overflow: ellipsis
+		vertical-align: middle
+
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 1px
+			background: $lighter-gray
+		.active
+			color: $subC-o

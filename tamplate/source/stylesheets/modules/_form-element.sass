@@ -39,19 +39,23 @@ textarea
 		width: 5px
 		height: 1px
 		background-color: $navy
+.info-separate
+	@media screen and (max-width: 768px)
+		padding-top: 50px !important
 .block-separate
 	position: relative
 	&:before
 		content: ""
 		position: absolute
 		top: 0
+		left: -40px
 		width: 1px
 		height: 200px
 		max-height: 80%
 		background-color: $lighter-gray
-	&:before
-		left: -40px
-
+	@media screen and (max-width: 768px)
+		&:before
+			content: initial
 .validation-info
 	padding-top: 10px
 	height: 1em
