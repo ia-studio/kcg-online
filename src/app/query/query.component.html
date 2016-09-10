@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="!displayDetail">
     <div class="banner row">
         <div class="banner-page-name">
             <h2 class="dk-green">案件查詢</h2>
@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-4 page-block">
             <div class="article-header text-center">
-                <h4 id="mayor" class="article-title">操作說明</h4>
+                <h4 id="mayor_describe" class="article-title">操作說明</h4>
             </div>
             <div class="article-content">
                 <p class="article-lable require">查詢方式 </p>
@@ -27,25 +27,24 @@
         </div>
         <div class="col-md-4 page-block">
             <div class="article-header text-center">
-                <h4 id="mayor" class="article-title">市長信箱</h4>
+                <h4 id="mayor_mailbox" class="article-title">市長信箱</h4>
             </div>
             <div class="article-content block-separate">
                 <p class="navy">透過線上即時服系統及市長信箱等網路途徑</p>
-                <form action="">
+                <div>
                     <p class="article-lable require">案件編號 </p>
                     <div class="row maB1x">
                         <div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" type="text" value="B" readonly></div>
-                        <div class="col-xs-10"><input class="col-xs-12" type="text"></div>
+                        <div class="col-xs-10"><input class="col-xs-12" type="text" [(ngModel)]="caseNo"></div>
                     </div>
                     <p class="article-lable require">E-Mail </p>
                     <div class="row">
-                        <div class="col-xs-12"><input class="col-xs-12" type="text" placeholder="example@kcg.gov.tw"></div>
+                        <div class="col-xs-12"><input class="col-xs-12" type="text" placeholder="example@kcg.gov.tw" [(ngModel)]="email"></div>
                     </div>
-                    <p class="validation-info">您輸入的編號錯誤</p>
                     <div class="row text-center maT2x">
-                        <a [routerLink]="['/query/456']" class="btn btn-orange">查詢</a>
+                      <a href="javascript:;" class="btn btn-orange" (click)="queryB()">查詢</a>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
         <div class="col-md-4 page-block">
@@ -54,25 +53,25 @@
             </div>
             <div class="article-content block-separate">
                 <p class="navy">透案件來源：透過電話、信件、傳真等非網路途徑</p>
-                <form action="">
-                    <p class="article-lable require">案件編號 </p>
-                    <div class="row maB1x">
-                        <div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" type="text" value="A" readonly></div>
-                        <div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" type="text" value="TB" readonly></div>
-                        <div class="col-xs-3 input-separate"><input class="col-xs-12 text-center" type="text" value="2016" readonly></div>
-                        <div class="col-xs-5"><input class="col-xs-12" type="text"></div>
-                    </div>
-                    <p class="article-lable require">來電時的姓名 </p>
-                    <div class="row">
-                        <div class="col-xs-12"><input class="col-xs-12" type="text" placeholder="您的姓名"></div>
-                    </div>
-                    <p class="validation-info"> </p>
-                    <div class="row text-center maT2x">
-                        <a [routerLink]="['/query/456']" class="btn btn-orange">查詢</a>
-                    </div>
-                </form>
+                <p class="article-lable require">案件編號 </p>
+                <div class="row maB1x">
+                  <div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" type="text" value="A"></div>
+                  <div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" type="text" value="TB" [(ngModel)]="vp1"></div>
+                  <div class="col-xs-3 input-separate"><input class="col-xs-12 text-center" type="text" [(ngModel)]="vyear"></div>
+                  <div class="col-xs-5"><input class="col-xs-12" type="text" [(ngModel)]="vp3"></div>
+                </div>
+                <p class="article-lable require">來電時的姓名 </p>
+                <div class="row">
+                  <div class="col-xs-12"><input class="col-xs-12" type="text" placeholder="您的姓名" [(ngModel)]="callerName"></div>
+                </div>
+                <p class="validation-info"> </p>
+                <div class="row text-center maT2x">
+                  <a class="btn btn-orange" (click)="queryV()">查詢</a>
+                </div>
             </div>
         </div>
     </div>
-    <!--<pre>{{ searchCase | json }}</pre>-->
+</div>
+<div *ngIf="displayDetail && searchCase != null">
+  <app-query-detail [searchCase]="searchCase"></app-query-detail>
 </div>
