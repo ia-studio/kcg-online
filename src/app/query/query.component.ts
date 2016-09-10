@@ -3,18 +3,16 @@ import { Title }             from '@angular/platform-browser';
 import 'rxjs/Rx';
 
 import { Case }         from '../case';
-import { CaseService }  from '../case.service';
 import { QueryService } from '../services/query.service';
 
 @Component({
   selector: 'app-query',
   templateUrl: 'query.component.html',
-  providers: [CaseService, QueryService]
+  providers: [QueryService]
 })
 export class QueryComponent implements OnInit {
   public constructor(
     private titleService: Title,
-    private caseService: CaseService,
     private qService: QueryService
   ){
     //
@@ -39,16 +37,8 @@ export class QueryComponent implements OnInit {
     this.titleService.setTitle(newTitle);
   }
 
-  getCases() {
-    this.caseService
-        .getCases()
-        //.then(mycase => this.searchCase = mycase)
-        //.catch(error => this.error = error);
-  }
-
   ngOnInit() {
     this.setTitle('案件查詢 - 高雄市政府線上即時服務平台');
-    this.getCases();
   }
 
   queryB(){ //市長信箱查詢

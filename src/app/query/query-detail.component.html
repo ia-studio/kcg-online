@@ -11,12 +11,8 @@
 
             <div class="article-content">
                 <p class="article-lable require">主旨</p>
-                <!--<p class="navy maB2x">高雄市岡山區碧紅街2號違建</p> API 缺-->
                 <p class="navy maB2x">{{searchCase.Content[0].subject}}</p>
                 <p class="article-lable require">建議事項</p>
-                <!--<p class="navy maB2x">
-                    高雄市岡山區碧紅街2號 已於2014.12.22檢舉該棟違建，也獲得市府回應已拆除違建部分，為何該違建卻越來越高?由2樓層的違建變成了5層樓的違建?不知市長對此拆除績效有何看法?
-                </p> API 缺-->
                 <p class="navy maB2x">{{searchCase.Content[0].subject}}</p>
                 <div class="row">
                     <div class="col-md-6">
@@ -36,7 +32,7 @@
                   <p class="article-lable require">附加檔案 </p>
                   <p class="navy maB2x pdLHalfX">
                     <list *ngFor="let item of searchCase.Content[0].Atth_FileNames">
-                      <a arget="_blank" href="http://soweb.kcg.gov.tw/webapi/api/attachfile/1?fileName={{item.FileName}}&caseNo={{searchCase.Content[0].case_no1}}-{{searchCase.Content[0].case_no2}}-{{searchCase.Content[0].case_no3}}-{{searchCase.Content[0].case_no4}}&suggName={{searchCase.Content[0].sugg_name}}">
+                      <a target="_blank" href="http://soweb.kcg.gov.tw/webapi/api/attachfile/1?fileName={{item.FileName}}&caseNo={{searchCase.Content[0].case_no1}}-{{searchCase.Content[0].case_no2}}-{{searchCase.Content[0].case_no3}}-{{searchCase.Content[0].case_no4}}&suggName={{searchCase.Content[0].sugg_name}}">
                         <i class="fa fa-paperclip"></i>&nbsp;{{item.FileName}}
                       </a><br/>
                     </list>
@@ -75,7 +71,7 @@
                   <div *ngIf="item.Atth_FileNames && item.Atth_FileNames.length > 0">
                     <p class="article-lable require">附加檔案 </p>
                     <p class="navy maB2x pdLHalfX">
-                      <a arget="_blank" href="http://soweb.kcg.gov.tw/webapi/api/attachfile/1?fileName={{item.Atth_FileNames}}&caseNo={{searchCase.Content[0].case_no1}}-{{searchCase.Content[0].case_no2}}-{{searchCase.Content[0].case_no3}}-{{searchCase.Content[0].case_no4}}&suggName={{searchCase.Content[0].sugg_name}}&organNo={{item.org_no}}&seqNo={{item.seq_no}}&sNo={{item.s_no}}">
+                      <a target="_blank" href="http://soweb.kcg.gov.tw/webapi/api/attachfile/1?fileName={{item.Atth_FileNames}}&caseNo={{searchCase.Content[0].case_no1}}-{{searchCase.Content[0].case_no2}}-{{searchCase.Content[0].case_no3}}-{{searchCase.Content[0].case_no4}}&suggName={{searchCase.Content[0].sugg_name}}&organNo={{item.org_no}}&seqNo={{item.seq_no}}&sNo={{item.s_no}}">
                         <i class="fa fa-paperclip"></i>&nbsp;{{item.Atth_FileNames}}
                       </a>
                     </p>
