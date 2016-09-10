@@ -12,7 +12,7 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title>案件查詢 - 高雄市政府線上即時服務平台</title>
     <script src="https://use.fontawesome.com/2c72f40202.js"></script>
-    <link href="stylesheets/all.css?v=40" rel="stylesheet" type="text/css">
+    <link href="stylesheets/all.css?v=45" rel="stylesheet" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
@@ -52,8 +52,14 @@
     </ul>
   </div>
   <div class="header-news" ng-if="m.newsActive">
-    <a href="">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a>
-    <span class="pull-right" ng-click="m.newsActive = false"><i class="fa fa-times-circle"></i></span>
+      <div class="news-visble">
+        <ul class="news-list">
+          <li class="active"><a href="">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a></li>
+          <li><a href="">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a></li>
+          <li><a href="">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a></li>
+        </ul>
+        <span class="pull-right" ng-click="m.newsActive = false"><i class="fa fa-times-circle"></i></span>
+      </div>
   </div>
 </nav>
             <div class="banner row">
@@ -152,12 +158,12 @@
 	    </div>
 	</div>
 </div> -->
-      <div class="pop" style="display:block;">
+      <!-- <div class="pop active pop-inner" style="display:block;_footer.html.erb">
 	<div class="pop-content">
 		<div class="mk-spinner-doublecircle"></div>
 		<span class="loading-words">Loading ...</span>
 	</div>
-</div>
+</div> -->
 
   </body>
 </html>

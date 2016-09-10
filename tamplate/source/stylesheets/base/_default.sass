@@ -69,6 +69,8 @@ a
 
 .page-block
 	padding: 0 40px
+	@media screen and (max-width: 480px)
+		padding: 0 15px
 
 footer
 	padding: $gap 0
@@ -175,7 +177,7 @@ footer
 	.body-content
 		padding-bottom: 40px
 	.banner
-		top: 58px
+		top: 0
 	.wrap
 		position: relative
 		left: 0vw
@@ -184,6 +186,10 @@ footer
 		&.active
 			left: -100vw
 			overflow: hidden
+
+@media screen and (max-width: 480px)
+	.banner
+		top: 58px
 
 
 
