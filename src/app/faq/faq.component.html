@@ -19,7 +19,7 @@
           </div>
           <div class="col-md-5 combine-icon combine-after">
                 <input class="fall-width" type="text" [value]="selectedCategory.text" readonly>
-                <select name="" id="" class="input-alpha">
+                <select name="" id="" class="input-alpha" (change)="changeCategory($event.target)">
                       <option value="">請選擇處理單位</option>
                       <option *ngFor="let category of categories" [value]="category.kind" >{{category.kind_name}}</option>
                   </select>
@@ -27,7 +27,7 @@
           </div>
 
           <div class="col-md-2 maT1x">
-              <button class="search-btn">查詢</button>
+              <button class="search-btn" (click)="search()">查詢</button>
           </div>
           <div class="clearfix"></div>
           <br>
