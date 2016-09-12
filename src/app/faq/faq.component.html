@@ -17,7 +17,7 @@
               <i class="fa fa-search"></i>
               <input class="fall-width" type="text" [(ngModel)]="term" [ngModelOptions]="{standalone: true}" placeholder="搜尋關鍵字">
           </div>
-          <div class="col-md-5 combine-icon combine-after maB1x">
+          <div class="col-md-5 combine-icon combine-after">
                 <input class="fall-width" type="text" [value]="selectedCategory.text" readonly>
                 <select name="" id="" class="input-alpha">
                       <option value="">請選擇處理單位</option>
@@ -29,6 +29,7 @@
           <div class="col-md-2 maT1x">
               <button class="search-btn">查詢</button>
           </div>
+          <div class="clearfix"></div>
           <br>
         </form>
       </div>
