@@ -29,7 +29,7 @@
             <div class="header-news" *ngIf="showNews">
                 <div class="news-visble">
                   <ul class="news-list">
-                    <li [ngClass]="{'active':showNowNews(i)}" *ngFor="let news of newsList; let i = index"><a [routerLink]="['/news/'] + news.id">{{news.id}}{{news.title}}</a></li>
+                    <li [ngClass]="{'active':showNowNews(i)}" *ngFor="let news of newsList; let i = index"><a href="">{{news.id}}{{news.title}}</a></li>
                   </ul>
                   <span class="pull-right" (click)="showNews=false"><i class="fa fa-times-circle"></i></span>
                 </div>
@@ -56,8 +56,8 @@
                 <div class="col-md-2">
                     <ul class="link-group font-md hidden-sm hidden-xs">
                         <li><a [routerLink]="['/privacy']">隱私權保護政策</a></li>
-                        <li><a [routerLink]="['/security']">網站安全政策</a></li>
-                        <li><a [routerLink]="['/copyright']">著作權聲明</a></li>
+                        <li><a [routerLink]="['/privacy']">網站安全政策</a></li>
+                        <li><a href="['/privacy']">著作權聲明</a></li>
                         <li><a href="http://www.kcg.gov.tw/" target="blank">高雄市政府全球資訊網</a></li>
                     </ul>
                 </div>
@@ -72,7 +72,7 @@
         <li class="menu-item " routerLinkActive="active"><a [routerLink]="['/query']">案件查詢</a></li>
         <li class="menu-item " routerLinkActive="active"><a [routerLink]="['/process']">服務流程</a></li>
         <li class="menu-item " routerLinkActive="active"><a [routerLink]="['/faq']">常見問題 FAQ</a></li>
-        <li class="menu-item " routerLinkActive="active"><a [routerLink]="['/feedback']">案件處理滿意度</a>
+        <li class="menu-item " routerLinkActive="active"><a href="">案件處理滿意度</a>
             <ul class="mob-sub-menu">
                 <li class="menu-item"><a href="javascript:void(0)">各項滿意度調查</a></li>
                 <li class="menu-item"><a href="javascript:void(0)">各問題次數分配表</a></li>

@@ -8,8 +8,6 @@ import { ProcessComponent }             from './process/process.component';
 import { FaqComponent }                 from './faq/faq.component';
 import { FaqDetailComponent }           from './faq/faq-detail.component';
 import { FeedbackComponent }            from './feedback/feedback.component';
-import { CopyrightComponent }           from './copyright/copyright.component';
-import { SecurityComponent }            from './security/security.component';
 import { PrivacyComponent }             from './privacy/privacy.component';
 
 const appRoutes: Routes = [
@@ -53,14 +51,6 @@ const appRoutes: Routes = [
   {
     path: 'feedback',
     component: FeedbackComponent
-  },
-  {
-    path: 'copyright',
-    component: CopyrightComponent
-  },
-  {
-    path: 'security',
-    component: SecurityComponent
   },
   {
     path: 'privacy',
