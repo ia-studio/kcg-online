@@ -9,23 +9,24 @@
   <div class="row">
     <div class="col-md-3 page-block maT2x">
       <p class="article-lable">網站使用相關規範</p>
-      <ul class="news-all">
-          <li><a class="active" href="#privacy">隱私權暨資訊安全保護政策</a></li>
-          <li><a href="">網站安全政策</a></li>
-          <li><a href="#copyright">著作權說明</a></li>
+      <ul class="news-all" id="anchorList">
+          <li><a [ngClass]="{'orange':window.scrollY>=0}" href="javascript:void(0);" (click)="scrollTo('privacy')">隱私權暨資訊安全保護政策</a></li>
+          <li><a [ngClass]="{'orange':window.scrollY>=1280}" href="javascript:void(0);" (click)="scrollTo('security')">網站安全政策</a></li>
+          <li><a [ngClass]="{'orange':window.scrollY>=1530}" href="javascript:void(0);" (click)="scrollTo('copyright')">著作權說明</a></li>
         </ul>
     </div>
     <div class="col-md-9 page-block">
-      <div class="article-header text-center">
-        <h4 id="privacy" class="article-title">隱私權暨資訊安全保護政策</h4>
+      <div id="privacy" class="article-header text-center">
+        <h4 class="article-title">隱私權暨資訊安全保護政策</h4>
       </div>
       <div class="article-content block-separate">
         <p clas="navy maB2x">
           由於網際網路資料的傳輸不能保證百分之百的安全，本網站 努力保護網友的個人資料安全。由於資料傳輸過程牽涉您上網環境保全之良窳，並無法確信或保證網友傳送或接收本網站資料的安全，網友須注意並承擔網路資料傳 輸之風險。 <br>          網友基於個人意願在網站透露的各種個人資料，例如在熱門話題討論區公佈個人資料如電子郵件、姓名等，可能會被他人收集和使用，如果您擔心這些困擾，您可以 不用輸入這些資料。如果您在網路上公佈可被他人讀取的個人資料時，可能會收到其他團體主動提供的廣告或垃圾郵件。請您諒解此部份所造成的後果均非本網站所
           能控制範圍，也無法負擔任何責任。
+          <br>
+          <br>
         </p>
         <p class="article-lable">適用範圍</p>
-
         <p class="navy maB2x">
           以下的隱私權保護政策，適用於您在高雄市政府市長信箱（線上即時服務系 統）網站以及其延伸服務網站（以 <a href="http://soweb.kcg.gov.tw/">soweb.kcg.gov.tw</a> 網域為原則，以下均簡稱本網站）活動時，所涉及有關個人資料收集、運用與保護。但不適用
           於經由本網站搜尋連結之其他網站，當您在這些網站進行活動時，關於個人資料的保護，則適用各該網站的隱私權保護政策。
@@ -62,6 +63,9 @@
           <br> （4）保護其他網友之合法使用權益。
           <br>
         </p>
+        <div id="security" class="article-header text-center">
+          <h4 class="article-title">網站安全政策</h4>
+        </div>
         <p class="article-lable">隱私權暨資訊安全保護政策修訂</p>
         <p class="navy maB2x">
           本網站會不定時修訂本項政策，以符合最新之隱私權保護規範。當在使用個 人資料的規定做較大幅度修改時，會在網頁上張貼告示，通知您相關事項。<br>
@@ -71,8 +75,8 @@
           如果您對於本網站的隱私權保護政策或是有個人資料收集、運用、更新等問題， 歡迎來信至意見信箱：
           <a href="mailto:kcgrdec@kcg.gov.tw">kcgrdec@kcg.gov.tw</a>。
         </p>
-        <div class="article-header text-center">
-          <h4 id="copyright" class="article-title">著作權聲明條款</h4>
+        <div id="copyright" class="article-header text-center">
+          <h4 class="article-title">著作權聲明條款</h4>
         </div>
         <p class="article-lable">著作權聲明</p>
         <p class="navy maB2x">
