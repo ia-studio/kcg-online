@@ -20,11 +20,18 @@ export class QueryComponent implements OnInit {
   searchCase: Case;
   error: any;
 
-  private errMessage: string = '您查詢的內容不存在，請重新輸入。';
+
   private isMayorMail?: boolean; //市長信箱 Result
   private isCivilianSuggest?: boolean; //人民陳情 Result
   private queryBErr: string;
   private queryVErr: string;
+  private errType = {
+    notFound: '您查詢的內容不存在，請重新輸入。',
+    numErr: '查詢案件編號不足6碼。請重新輸入。',
+    mailErr: '查詢email有誤。請重新輸入。',
+    yearErr: '案件編號-年份有誤。請重新輸入。',
+    keyErr: '案件編號有誤。請重新輸入。',
+    nameErr: '來電時的姓名有誤。請重新輸入。'};
 
   displayDetail: boolean = false;
   caseNo: string = '';
@@ -46,11 +53,11 @@ export class QueryComponent implements OnInit {
   queryB(){ //市長信箱查詢
     if (!this.validateCaseNo(this.caseNo)){
 
-      return this.queryBErr = '查詢案件編號不足6碼。請重新輸入。';
+      return this.queryBErr = this.errType.numErr;
     }
     if (!this.validateEmail(this.email)){
 
-      return this.queryBErr = '查詢email有誤。請重新輸入。';
+      return this.queryBErr = this.errType.mailErr;
     }
 
     this.qService.getBResult(this.caseNo, this.email).subscribe(data => {
@@ -62,7 +69,7 @@ export class QueryComponent implements OnInit {
     }, (err: any) => {
       //console.log(err);
       if (err.status !== 200){
-        return this.queryBErr = this.errMessage;
+        return this.queryBErr = this.errType.notFound;
       }
     });
   }
@@ -79,14 +86,15 @@ export class QueryComponent implements OnInit {
   queryV(){ //人民陳情查詢
     //
     if (this.vyear == null || this.vyear.toString().length < 4){
-      return this.queryVErr = '案件編號-年份有誤。請重新輸入。';
+      return this.queryVErr = this.errType.yearErr;
     }
     if (this.vp3 == null || this.vp3.length == 0){
-      return this.queryVErr = '案件編號有誤。請重新輸入。';
+      return this.queryVErr = this.errType.keyErr;
     }
     if (this.callerName == null || this.callerName.length == 0){
-      return this.queryVErr ='來電時的姓名有誤。請重新輸入。';
+      return this.queryVErr = this.errType.nameErr;
     }
+
     //this.vp1 = 'AK';
     this.qService.getVResult(this.vp1, this.vyear, this.vp3, this.callerName).subscribe(data => {
       this.searchCase = data;
@@ -96,7 +104,7 @@ export class QueryComponent implements OnInit {
       this.searchCase.isCivilianSuggest = true;
     }, (err: any) => {
       if (err.status !== 200){
-        return this.queryVErr = this.errMessage;
+        return this.queryVErr = this.errType.notFound;
       }
     });
   }
