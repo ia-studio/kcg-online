@@ -1,12 +1,17 @@
 export class CaseType {
-    id: string;
-    name: string;
-    subItems: SubCaseType[];
+    Item: string;
+    ItemName: string;
+    Subitems: SubCaseType[];
 }
 
 export class SubCaseType {
-    id: string;
-    name: string;
+    DeptNo: string;
+    Item: string;
+    OrganNo: string;
+    ProcDays: string;
+    SecurityID: string;
+    Subitem: string;
+    SubitemName: string;
 }
 
 export class Case {

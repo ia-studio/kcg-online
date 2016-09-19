@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute }    from '@angular/router';
 import { Title }             from '@angular/platform-browser';
-import { FaqService }        from '../faq.service';
+import { FaqService }        from '../services/faq.service';
 
 @Component({
   selector: 'app-faq-detail',
@@ -23,8 +23,9 @@ export class FaqDetailComponent implements OnInit {
   getReply(organNo: string, seqNo: number) {
     this.faqService
         .getReply(organNo, seqNo)
-        .then(reply => this.faqReply = reply)
-        .catch(error => this.error = error);
+        .subscribe(
+          reply => this.faqReply = reply,
+          error => this.error = <any>error);
   }
 
   ngOnInit() {
