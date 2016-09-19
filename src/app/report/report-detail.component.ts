@@ -1,12 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute }               from '@angular/router';
 import { CaseType, SubCaseType }        from '../case';
-import { CaseService }                  from '../case.service';
+import { ReportService }                from '../services/report.service';
 
 @Component({
   selector: 'my-report-detail',
   templateUrl: 'report-detail.component.html',
-  providers: [CaseService]
+  providers: [ReportService]
 })
 export class ReportDetailComponent implements OnInit, OnDestroy {
   error: any;
@@ -15,7 +15,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   caseType: CaseType;
   subCaseType: SubCaseType;
   getReportDone = false;
-  constructor(private route: ActivatedRoute, private caseService: CaseService) { }
+  constructor(private route: ActivatedRoute, private reportService: ReportService) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
@@ -27,11 +27,12 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   }
 
   getType(id: string, subId: string) {
-    this.caseService
+    this.reportService
         .getType(id)
-        .then(type => this.caseType = type)
-        .then(subType => this.subCaseType = subType.Subitems.find(item => item.Subitem === subId))
-        .catch(error => this.error = error);
+        .subscribe(type => {
+          this.caseType = type;
+          this.subCaseType = type.Subitems.filter(item => item.Subitem == subId)[0];
+        });
   }
 
   ngOnDestroy() {

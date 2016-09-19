@@ -1,6 +1,3 @@
-<!--{{ caseType | json }}
-<hr>
-{{ subCaseType | json }}-->
 <div class="container">
   <div class="banner row">
     <div class="banner-page-name">
@@ -18,13 +15,13 @@
         <div class="col-md-6 maB1x">
           <p class="article-lable require">主項目</p>
           <div class="row maB1x">
-            <div class="col-xs-12"><input class="fall-width" type="text" value="01. 路燈不亮" readonly></div>
+            <div class="col-xs-12"><input class="fall-width" type="text" *ngIf="caseType" value="{{caseType.Item}} {{caseType.ItemName}}" readonly></div>
           </div>
         </div>
         <div class="col-md-6 maB1x">
           <p class="article-lable require">子項目 </p>
           <div class="row">
-            <div class="col-xs-12"><input class="fall-width" type="text" value="01. 路燈不亮" readonly></div>
+            <div class="col-xs-12"><input class="fall-width" type="text" *ngIf="subCaseType" value="{{subCaseType.Subitem}} {{subCaseType.SubitemName}}" readonly></div>
           </div>
         </div>
         <div class="col-md-12 maB1x">
@@ -114,9 +111,7 @@
         <a href="javascript:void(0);" class="btn btn-orange" (click)="getReportDone=!getReportDone" >填寫完成</a>
       </div>
     </div>
-
   </div>
-  <!--<pre>{{ searchCase | json }}</pre>-->
 </div>
 <div class="pop" style="display:block;" *ngIf="getReportDone" >
   <div class="pop-content">

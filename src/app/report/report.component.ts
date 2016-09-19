@@ -2,29 +2,29 @@ import { Component, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Title }             from '@angular/platform-browser';
 import { CaseType }          from '../case';
-import { CaseService }       from '../case.service';
+import { ReportService }     from '../services/report.service';
 import { Http, Headers, RequestOptions } from '@angular/http';
 
 @Component({
   selector: 'app-report',
   templateUrl: 'report.component.html',
   directives: [ROUTER_DIRECTIVES],
-  providers: [CaseService]
+  providers: [ReportService]
 })
 export class ReportComponent implements OnInit {
   caseTypes: CaseType[];
   error: any;
 
-  public constructor(private titleService: Title, private caseService: CaseService) { }
+  public constructor(private titleService: Title, private reportService: ReportService) { }
 
   public setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);
   }
 
   getTypes() {
-    this.caseService
+    this.reportService
         .getTypes()
-        .then(types => this.caseTypes = types);
+        .subscribe(types => this.caseTypes = types);
   }
 
   ngOnInit() {
