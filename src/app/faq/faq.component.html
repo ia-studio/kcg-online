@@ -42,7 +42,7 @@
             <div class="col-md-1">人氣</div>
             <div class="col-md-2"></div>
           </div>
-          <div class="faq-item col-md-12" [ngClass]="{active:item.active}" *ngFor="let item of faqs">
+          <div class="faq-item col-md-12" [ngClass]="{active:item.active}" *ngFor="let item of faqs | slice:0:100">
             <div class="col-md-7 navy"><a [routerLink]="['/faq/'] + item.OrganNo + ['/'] + item.SeqNo">{{item.CaseContent}}</a> <span class="faq-open pull-right hidden-md hidden-lg" (click)="item.active=!item.active"><i class="fa fa-plus" [ngClass]="{active:item.active}"></i></span></div>
             <div class="col-md-2 text-black">{{item.OrganName}}</div>
             <div class="col-md-1 text-black">{{item.ViewCount}}</div>
