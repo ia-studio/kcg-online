@@ -48,6 +48,7 @@
             <div class="col-md-1 text-black">{{item.ViewCount}}</div>
             <div class="col-md-2 text-right"><a class="text-orange" [routerLink]="['/faq/'] + item.OrganNo + ['/'] + item.SeqNo">詳細陳情內容 <i class="fa fa-angle-double-right"></i></a></div>
           </div>
+          <div class="faq-item col-md-12 navy" style="margin-bottom:300px" *ngIf="faqs.length==0" >沒有符合的陳情內容</div>
         </div>
       </div>
     </div>
