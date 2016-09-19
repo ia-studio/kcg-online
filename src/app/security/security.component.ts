@@ -3,9 +3,9 @@ import { Title }             from '@angular/platform-browser';
 
 @Component({
   selector: 'app-service',
-  templateUrl: 'process.component.html',
+  templateUrl: 'security.component.html',
 })
-export class ProcessComponent implements OnInit {
+export class SecurityComponent implements OnInit {
   public constructor(private titleService: Title) { }
 
   public setTitle(newTitle: string) {
@@ -13,6 +13,6 @@ export class ProcessComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.setTitle('服務流程 - 高雄市政府線上即時服務平台');
+    this.setTitle('網站安全政策 - 高雄市政府線上即時服務平台');
   }
 }

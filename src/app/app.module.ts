@@ -11,6 +11,9 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { ProcessComponent } from './process/process.component';
 import { QueryComponent,QueryDetailComponent } from './query';
 import { ReportComponent,ReportDetailComponent } from './report';
+import { CopyrightComponent } from './copyright/copyright.component';
+import { SecurityComponent } from './security/security.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 
 
@@ -31,7 +34,10 @@ import { ReportComponent,ReportDetailComponent } from './report';
     FeedbackComponent,
     FaqDetailComponent,
     QueryDetailComponent,
-    ReportDetailComponent
+    ReportDetailComponent,
+    CopyrightComponent,
+    SecurityComponent,
+    PrivacyComponent
   ],
   providers: [
     appRoutingProviders,

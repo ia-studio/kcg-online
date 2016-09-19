@@ -23,6 +23,8 @@ export class QueryComponent implements OnInit {
   private errMessage: string = '您查詢的內容不存在，請重新輸入。';
   private isMayorMail?: boolean; //市長信箱 Result
   private isCivilianSuggest?: boolean; //人民陳情 Result
+  private queryBErr: string;
+  private queryVErr: string;
 
   displayDetail: boolean = false;
   caseNo: string = '';
@@ -43,12 +45,12 @@ export class QueryComponent implements OnInit {
 
   queryB(){ //市長信箱查詢
     if (!this.validateCaseNo(this.caseNo)){
-      alert('查詢案件編號不足6碼。請重新輸入。');
-      return;
+
+      return this.queryBErr = '查詢案件編號不足6碼。請重新輸入。';
     }
     if (!this.validateEmail(this.email)){
-      alert('查詢email有誤。請重新輸入。');
-      return;
+
+      return this.queryBErr = '查詢email有誤。請重新輸入。';
     }
 
     this.qService.getBResult(this.caseNo, this.email).subscribe(data => {
@@ -60,7 +62,7 @@ export class QueryComponent implements OnInit {
     }, (err: any) => {
       //console.log(err);
       if (err.status !== 200){
-        alert(this.errMessage);
+        return this.queryBErr = this.errMessage;
       }
     });
   }
@@ -77,16 +79,13 @@ export class QueryComponent implements OnInit {
   queryV(){ //人民陳情查詢
     //
     if (this.vyear == null || this.vyear.toString().length < 4){
-      alert('案件編號-年份有誤。請重新輸入。');
-      return;
+      return this.queryVErr = '案件編號-年份有誤。請重新輸入。';
     }
     if (this.vp3 == null || this.vp3.length == 0){
-      alert('案件編號有誤。請重新輸入。');
-      return;
+      return this.queryVErr = '案件編號有誤。請重新輸入。';
     }
     if (this.callerName == null || this.callerName.length == 0){
-      alert('來電時的姓名有誤。請重新輸入。');
-      return;
+      return this.queryVErr ='來電時的姓名有誤。請重新輸入。';
     }
     //this.vp1 = 'AK';
     this.qService.getVResult(this.vp1, this.vyear, this.vp3, this.callerName).subscribe(data => {
@@ -97,7 +96,7 @@ export class QueryComponent implements OnInit {
       this.searchCase.isCivilianSuggest = true;
     }, (err: any) => {
       if (err.status !== 200){
-        alert(this.errMessage);
+        return this.queryVErr = this.errMessage;
       }
     });
   }

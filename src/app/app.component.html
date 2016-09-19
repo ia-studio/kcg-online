@@ -29,7 +29,7 @@
             <div class="header-news" *ngIf="showNews">
                 <div class="news-visble">
                   <ul class="news-list">
-                    <li [ngClass]="{'active':showNowNews(i)}" *ngFor="let news of newsList; let i = index" ><a [routerLink]="['/news/'] + news.id">{{news.id}}{{news.title}}</a></li>
+                    <li [ngClass]="{'active':showNowNews(i)}" *ngFor="let news of newsList; let i = index"><a [routerLink]="['/news/'] + news.id">{{news.id}}{{news.title}}</a></li>
                   </ul>
                   <span class="pull-right" (click)="showNews=false"><i class="fa fa-times-circle"></i></span>
                 </div>
@@ -55,10 +55,10 @@
                 </div>
                 <div class="col-md-2">
                     <ul class="link-group font-md hidden-sm hidden-xs">
-                        <li><a>隱私權保護政策</a></li>
-                        <li><a>網站安全政策</a></li>
-                        <li><a>著作權聲明</a></li>
-                        <li><a>高雄市政府全球資訊網</a></li>
+                        <li><a [routerLink]="['/privacy']">隱私權保護政策</a></li>
+                        <li><a [routerLink]="['/security']">網站安全政策</a></li>
+                        <li><a [routerLink]="['/copyright']">著作權聲明</a></li>
+                        <li><a href="http://www.kcg.gov.tw/" target="blank">高雄市政府全球資訊網</a></li>
                     </ul>
                 </div>
             </div>

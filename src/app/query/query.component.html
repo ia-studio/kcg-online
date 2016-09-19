@@ -41,6 +41,7 @@
                     <div class="row">
                         <div class="col-xs-12"><input class="col-xs-12" type="text" placeholder="example@kcg.gov.tw" [(ngModel)]="email"></div>
                     </div>
+                    <p class="validation-info"> {{queryBErr}}</p>
                     <div class="row text-center maT2x">
                       <a href="javascript:;" class="btn btn-orange" (click)="queryB()">查詢</a>
                     </div>
@@ -64,7 +65,7 @@
                 <div class="row">
                   <div class="col-xs-12"><input class="col-xs-12" type="text" placeholder="您的姓名" [(ngModel)]="callerName"></div>
                 </div>
-                <p class="validation-info"> </p>
+                <p class="validation-info"> {{queryVErr}}</p>
                 <div class="row text-center maT2x">
                   <a class="btn btn-orange" (click)="queryV()">查詢</a>
                 </div>
