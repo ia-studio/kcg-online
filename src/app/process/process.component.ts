@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title }             from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-service',
+  selector: 'app-process',
   templateUrl: 'process.component.html',
 })
 export class ProcessComponent implements OnInit {

@@ -1,3 +1,4 @@
+import { ModuleWithProviders }          from '@angular/core';
 import { Routes, RouterModule }         from '@angular/router';
 import { NewsComponent }                from './news/news.component';
 import { ReportComponent }              from './report/report.component';
@@ -66,4 +67,4 @@ export const appRoutingProviders: any[] = [
 
 ];
 
-export const routing = RouterModule.forRoot(appRoutes);
+export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
