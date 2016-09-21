@@ -22,8 +22,10 @@ export class FaqService {
                .catch(this.handleError);
   }
 
-  getReply(organNo: string, seqNo: number, update = false) : Observable<any> {
-    var flag = update ? 'N' : 'R';
+  getReply(organNo: string, seqNo: number) : Observable<any> {
+    var key = organNo + '-' + seqNo;
+    var flag = sessionStorage.getItem(key) ? 'R' : 'N';
+    sessionStorage.setItem(key, new Date().toString());
     return this.http.get(this.faqUrl + organNo + '?seqNo=' + seqNo + '&updFlag=' + flag)
                .map(this.extractData)
                .catch(this.handleError);
