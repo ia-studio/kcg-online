@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title }             from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-service',
+  selector: 'app-privacy',
   templateUrl: 'privacy.component.html',
   styles: [`
   @media screen and (min-width:768px){
@@ -20,8 +20,7 @@ export class PrivacyComponent implements OnInit {
 
   fixedList:boolean;
 
-
-  public constructor(private titleService: Title ) {
+  public constructor(private titleService: Title) {
 
    }
 

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
 import { Title }             from '@angular/platform-browser';
 import { CaseType }          from '../case';
 import { ReportService }     from '../services/report.service';
@@ -8,7 +7,6 @@ import { Http, Headers, RequestOptions } from '@angular/http';
 @Component({
   selector: 'app-report',
   templateUrl: 'report.component.html',
-  directives: [ROUTER_DIRECTIVES],
   providers: [ReportService]
 })
 export class ReportComponent implements OnInit {

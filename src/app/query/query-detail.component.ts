@@ -7,7 +7,7 @@ import { ReplaceNewLinePipe } from '../filters/Replace.pipe';
 @Component({
   selector: 'app-query-detail',
   templateUrl: 'query-detail.component.html',
-  pipes: [ReplaceNewLinePipe]
+  // pipes: [ReplaceNewLinePipe]
 })
 export class QueryDetailComponent implements OnInit {
   public constructor(private titleService: Title) { }
