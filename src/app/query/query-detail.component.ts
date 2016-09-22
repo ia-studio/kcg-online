@@ -2,12 +2,10 @@ import {Component, OnInit, Input} from '@angular/core';
 import { Title }       from '@angular/platform-browser';
 
 import { Case }        from '../case';
-import { ReplaceNewLinePipe } from '../filters/Replace.pipe';
 
 @Component({
   selector: 'app-query-detail',
-  templateUrl: 'query-detail.component.html',
-  // pipes: [ReplaceNewLinePipe]
+  templateUrl: 'query-detail.component.html'
 })
 export class QueryDetailComponent implements OnInit {
   public constructor(private titleService: Title) { }

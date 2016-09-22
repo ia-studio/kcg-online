@@ -1,5 +1,5 @@
 import { BrowserModule }                                        from '@angular/platform-browser';
-import { NgModule, ApplicationRef }                             from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA }                             from '@angular/core';
 import { CommonModule, LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { FormsModule }                                          from '@angular/forms';
 import { HttpModule }                                           from '@angular/http';
@@ -13,6 +13,7 @@ import { QueryComponent,QueryDetailComponent }                  from './query';
 import { ReportComponent,ReportDetailComponent }                from './report';
 import { PrivacyComponent }                                     from './privacy/privacy.component';
 import { NewsComponent }                                        from './news/news.component';
+import  { ReplaceNewLinePipe } from './filters/Replace.pipe';
 
 @NgModule({
   imports: [
@@ -33,13 +34,15 @@ import { NewsComponent }                                        from './news/new
     QueryDetailComponent,
     ReportDetailComponent,
     PrivacyComponent,
-    NewsComponent
+    NewsComponent,
+    ReplaceNewLinePipe
   ],
   providers: [
     appRoutingProviders,
     Title,
     { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
+  schemas: [NO_ERRORS_SCHEMA],
   entryComponents: [AppComponent],
   bootstrap: [ AppComponent ]
 })
