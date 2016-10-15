@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Title }             from '@angular/platform-browser';
-import { CaseType }          from '../case';
-import { ReportService }     from '../services/report.service';
-import { Http, Headers, RequestOptions } from '@angular/http';
+import { Component, OnInit }  from '@angular/core';
+import { Title }              from '@angular/platform-browser';
+import { CaseType }           from '../case';
+import { ReportService }      from '../services/report.service';
 
 @Component({
   selector: 'app-report',
@@ -13,7 +12,12 @@ export class ReportComponent implements OnInit {
   caseTypes: CaseType[];
   error: any;
 
-  public constructor(private titleService: Title, private reportService: ReportService) { }
+  public constructor(
+    private titleService: Title,
+    private reportService: ReportService
+  ) {
+    //
+  }
 
   public setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);

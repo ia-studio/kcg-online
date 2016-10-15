@@ -7,6 +7,7 @@
     <img src="./assets/images/banner/banner_pic_mail.png" alt="">
   </div>
   <div class="row">
+    <form enctype="multipart/form-data" #f="ngForm" (submit)="onSubmit(f.value)">
     <div class="col-md-7 page-block">
       <div class="article-header text-center">
         <h4 id="mayor" class="article-title">檢舉項目</h4>
@@ -15,33 +16,51 @@
         <div class="col-md-6 maB1x">
           <p class="article-lable require">主項目</p>
           <div class="row maB1x">
-            <div class="col-xs-12"><input class="fall-width" type="text" *ngIf="caseType" value="{{caseType.Item}} {{caseType.ItemName}}" readonly></div>
+            <div class="col-xs-12">
+              <input class="fall-width" type="text" *ngIf="caseType" value="{{caseType.Item}} {{caseType.ItemName}}" readonly />
+              <input type="hidden" name="Subj_Item" *ngIf="caseType" value="{{caseType.Item}}" [ngModel]="Subj_Item" #subj_item />
+            </div>
           </div>
         </div>
         <div class="col-md-6 maB1x">
           <p class="article-lable require">子項目 </p>
           <div class="row">
-            <div class="col-xs-12"><input class="fall-width" type="text" *ngIf="subCaseType" value="{{subCaseType.Subitem}} {{subCaseType.SubitemName}}" readonly></div>
+            <div class="col-xs-12">
+              <input class="fall-width" type="text" *ngIf="subCaseType" value="{{subCaseType.Subitem}} {{subCaseType.SubitemName}}" readonly />
+              <input type="hidden" name="Subj_Subitem" *ngIf="subCaseType" value="{{subCaseType.Subitem}}" [ngModel]="Subj_Subitem" #subj_subitem />
+            </div>
           </div>
         </div>
         <div class="col-md-12 maB1x">
           <p class="article-lable require">檢舉地址 <small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
           <div class="row">
             <div class="col-md-3 combine-icon combine-after">
-              <input class="fall-width" type="text" value="所在地區">
-              <i class="fa fa-chevron-down"></i>
+              <!--<input class="fall-width" type="text" value="所在地區">
+              <i class="fa fa-chevron-down"></i>-->
+              <select name="Subj_District" [ngModel]="Subj_District">
+                <option>請選擇地區</option>
+                <option *ngFor="let item of areaCodes" value="{{item.DistrictCode}}" [selected]="item.DistrictName === gpsDistrict" #subj_district >{{item.DistrictName}}</option>
+              </select>
             </div>
             <div class="col-md-9">
-              <input class="fall-width" type="text" value="所在地址 or 使用 GPS 定位">
+              <input class="fall-width" type="text" *ngIf="address && address[0]" [value]="address[0].formatted_address" [placeholder]="placeholder" />
+              <input class="fall-width" type="text" *ngIf="!address || !address[0]" [value]="placeholder" [placeholder]="placeholder" />
             </div>
             <p class="col-md-12 text-gray"><br>請選擇建議事項內容所屬高雄行政區，若內容無法分區或其他縣市事項請選擇「無法分區」</p>
+          </div>
+          <div class="col-md-12 maB1x">
+            <p class="article-lable require">是否保密？<small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
+            <div class="col-md-9">
+              <input type="radio" name="Subj_Security" value="1" checked="true" [ngModel]="Subj_Security" (click)="Subj_Security = '1'" />一般 &nbsp;
+              <input type="radio" name="Subj_Security" value="2" [ngModel]="Subj_Security" (click)="Subj_Security = '2'" />保密
+            </div>
           </div>
         </div>
         <div class="col-md-12 maB1x">
           <p class="article-lable require">建議事項 <small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
           <div class="row">
             <div class="col-xs-12">
-              <textarea class="fall-width" rows="8">123</textarea>
+              <textarea name="Subj_Content" class="fall-width" rows="8" placeholder="請填寫建議事項" [(ngModel)]="Subj_Content"></textarea>
             </div>
             <p class="col-md-12 text-gray"><br>為避免送出失敗造成「建議內容」遺失，請先備份「建議內容」!!!</p>
           </div>
@@ -57,60 +76,78 @@
                               <a href="javascript:void(0)"><i class="fa fa-paperclip"></i> 2014_1222.jpg</a>-->
             </div>
             <div class="col-md-4">
-              <a class="btn btn-green" href="">選擇檔案<input class="input-alpha" type="file" name="" value=""></a>
+              <a class="btn btn-green" href="">
+                選擇檔案<input class="input-alpha" type="file" multiple="true" name="" value="" (change)="addFile()" #fileInput>
+              </a>
+              <div *ngIf="uploadFileResult">{{uploadFileResult}}</div>
             </div>
           </div>
+          <input type="hidden" value="{{Case_Token}}" name="Case_Token" [ngModel]="Case_Token" #case_token />
+          <input type="hidden" value="0" name="Subj_FileCount" [ngModel]="Subj_FileCount" />
+          <input type="hidden" value="" name="Atth_FileNames" [ngModel]="Atth_FileNames" />
         </div>
       </div>
     </div>
     <div class="col-md-5 page-block">
       <div class="article-header text-center">
-        <h4 id="mayor" class="article-title">基本資料</h4>
+        <h4 class="article-title">基本資料</h4>
       </div>
       <div class="article-content block-separate">
         <p class="article-lable require">姓名 <small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
         <div class="row">
-          <div class="col-xs-12"><input class="fall-width" type="text" placeholder="請填寫您的姓名"></div>
+          <div class="col-xs-12"><input name="Sugg_Name" class="fall-width" type="text" placeholder="請填寫您的姓名" [(ngModel)]="Sugg_Name"></div>
         </div>
         <p class="article-lable require maT2x">電話 <small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
         <div class="row">
-          <div class="col-xs-12"><input class="fall-width" type="text" placeholder="請填寫您的聯絡電話"></div>
+          <div class="col-xs-12"><input name="Sugg_Telno" class="fall-width" type="text" placeholder="請填寫您的聯絡電話" [(ngModel)]="Sugg_Telno"></div>
         </div>
         <p class="article-lable require maT2x">Email <small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
         <div class="row">
-          <div class="col-xs-12"><input class="fall-width" type="text" placeholder="請填寫您的電子信箱"></div>
+          <div class="col-xs-12"><input name="Sugg_Email" class="fall-width" type="text" placeholder="請填寫您的電子信箱" [(ngModel)]="Sugg_Email"></div>
           <p class="col-xs-12 text-gray maT1x">本系統寄發「確認信」及「處理情形通知信」使用</p>
         </div>
         <p class="article-lable require maT2x">地址 <small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
         <div class="row">
           <div class="col-md-4 combine-icon combine-after">
-            <input class="fall-width" type="text" value="縣市">
+            <input class="fall-width" type="text" value="高雄市">
+            <input name="Sugg_Addr1" type="hidden" value="6400000000" [ngModel]="Sugg_Addr1" />
             <i class="fa fa-chevron-down"></i>
           </div>
           <div class="col-md-4 combine-icon combine-after">
-            <input class="fall-width" type="text" value="地區">
+            <!--<input class="fall-width" type="text" value="地區">-->
+            <select name="Sugg_Addr2" [ngModel]="Sugg_Addr2" (change)="onDistrictChanged($event.target.value)">
+              <option value="" selected="selected">請選擇地區</option>
+              <option *ngFor="let item of areaCodes" value="{{item.DistrictCode}}" #sugg_district>{{item.DistrictName}}</option>
+            </select>
             <i class="fa fa-chevron-down"></i>
           </div>
           <div class="col-md-4 combine-icon combine-after">
-            <input class="fall-width" type="text" value="鄉里">
-            <i class="fa fa-chevron-down"></i>
+            <select name="Sugg_Addr3" [ngModel]="Sugg_Addr3">
+              <option value="" selected="selected">請選擇里別</option>
+              <option *ngFor="let item of sugg_region_data" value="{{item.RegionCode}}" #sugg_region (change)="Sugg_Addr3=item.RegionCode">{{item.RegionName}}</option>
+            </select>
           </div>
           <div class="col-md-12 maT1x">
-            <input class="fall-width" type="text" value="居住地址">
+            <input name="Sugg_Addr4" class="fall-width" type="text" value="居住地址" [(ngModel)]="Sugg_Addr4">
           </div>
         </div>
-        <p class="article-lable require maT2x">地址 <small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
+        <p class="article-lable require maT2x">性別 <small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
         <div class="row">
-          <div class="col-xs-12 combine-icon combine-after">
+          <!--<div class="col-xs-12 combine-icon combine-after">
             <input class="fall-width" type="text" value="性別">
             <i class="fa fa-chevron-down"></i>
+          </div>-->
+          <div class="col-xs-12 combine-icon combine-after">
+            <input type="radio" name="Sugg_Sex" value="1" (click)="Sugg_Sex = '1'" [ngModel]="Sugg_Sex" />女 &nbsp;
+            <input type="radio" name="Sugg_Sex" value="2" (click)="Sugg_Sex = '2'" [ngModel]="Sugg_Sex" checked="true" />男
           </div>
         </div>
       </div>
       <div class="col-md-4 col-md-offset-4 maT2x">
-        <a href="javascript:void(0);" class="btn btn-orange" (click)="getReportDone=!getReportDone" >填寫完成</a>
+        <input type="submit" class="btn btn-orange" value=" 填寫完成 " (click)="onSubmitClick()" />
       </div>
     </div>
+    </form>
   </div>
 </div>
 <div class="pop" style="display:block;" *ngIf="getReportDone" >
@@ -118,10 +155,10 @@
 		<div class="check">
 	      <div class="check-panel">
 	        <div class="check-mark"><i class="fa fa-check"></i></div>
-	        <h4 class="check-title navy text-center">親愛的 ilandy，您好！</h4>
+	        <h4 class="check-title navy text-center">親愛的 {{Sugg_Name}}，您好！</h4>
 	        <br>
 	        <p class="check-info navy">
-	          我們已收到您對本府的反映案件，為確認您的信箱未遭冒用，我們即將寄出確認信至您所填寫的：w9874123@gmail.com 信箱， 請您於收到該確認信後，點選「確認信件」連結，以便完成您的案件反映流程，我們在收到您的確認後，將由系統自動寄出案件編號至您的信箱並立即進行分案處理。
+	          我們已收到您對本府的反映案件，為確認您的信箱未遭冒用，我們即將寄出確認信至您所填寫的：{{Sugg_Email}} 信箱， 請您於收到該確認信後，點選「確認信件」連結，以便完成您的案件反映流程，我們在收到您的確認後，將由系統自動寄出案件編號至您的信箱並立即進行分案處理。
 	          謝謝您！
 	        </p>
 	        <h4 class="check-footer navy text-center">高雄市政府市長信箱處理小組 敬上</h4>

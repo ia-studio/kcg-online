@@ -6,7 +6,8 @@ import { CaseType }       from '../case';
 
 @Injectable()
 export class ReportService {
-  private reportTypesUrl = 'http://soweb.kcg.gov.tw/webapi/api/items/';
+  private readonly baseApiUrl = 'http://soweb.kcg.gov.tw/webapi/api/';
+  private reportTypesUrl = this.baseApiUrl + 'items/';
 
   constructor(private http: Http) { }
 
@@ -28,4 +29,5 @@ export class ReportService {
     console.error(errMsg);
     return Observable.throw(errMsg);
   }
+
 }

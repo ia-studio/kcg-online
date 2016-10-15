@@ -1,9 +1,10 @@
 import { BrowserModule }                                        from '@angular/platform-browser';
-import { NgModule, NO_ERRORS_SCHEMA }                             from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA }                           from '@angular/core';
 import { CommonModule, LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { FormsModule }                                          from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }                     from '@angular/forms';
 import { HttpModule }                                           from '@angular/http';
 import { Title }                                                from '@angular/platform-browser';
+
 import { AppComponent }                                         from './app.component';
 import { routing, appRoutingProviders }                         from './app.routes';
 import { FaqComponent,FaqDetailComponent }                      from './faq';
@@ -13,12 +14,14 @@ import { QueryComponent,QueryDetailComponent }                  from './query';
 import { ReportComponent,ReportDetailComponent }                from './report';
 import { PrivacyComponent }                                     from './privacy/privacy.component';
 import { NewsComponent }                                        from './news/news.component';
-import  { ReplaceNewLinePipe } from './filters/Replace.pipe';
+
+import { ReplaceNewLinePipe } from './filters/Replace.pipe';
 
 @NgModule({
   imports: [
     BrowserModule,
     CommonModule,
+    ReactiveFormsModule,
     FormsModule,
     HttpModule,
     routing
