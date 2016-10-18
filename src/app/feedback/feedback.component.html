@@ -1,1 +1,75 @@
-<h1>FEEDBACK</h1>
+<div class="container">
+	<div class="banner row">
+		<div class="banner-page-name">
+			<h2 class="dk-green">案件處理滿意度</h2>
+			<p class="dk-green">User Feedback</p>
+		</div>
+		<img src="./assets/images/banner/banner_pic_feedback.png" alt="">
+	</div>
+	<div class="row">
+		<div class="col-md-3 page-block maT2x hidden-sm hidden-xs">
+			<p class="article-lable">案件處理滿意指標</p>
+			<ul class="news-all" id="anchorList">
+				<li><a href="javascript:void(0);">各項滿意度指標</a></li>
+				<li><a href="javascript:void(0);">各問題次數分配表</a></li>
+				<li><a href="javascript:void(0);">各問題有效值與遺漏值</a></li>
+			</ul>
+		</div>
+		<div class="col-md-9 page-block">
+			<div class="maB2x" *ngFor="let sheet of feedbacks.Topic; let i = index ">
+				<p class="article-lable">問卷版本:{{sheet.VersionNo}}　共 {{sheet.ReplyCount}} 筆</p>
+                <br>
+                <br>
+				<div class="article-content block-separate">
+					<div class="maB2x" *ngFor="let item of feedbacks.Question">
+						<div *ngIf="item.VersionNo === sheet.VersionNo">
+							<p class="navy font-lg">
+								{{item.Question}}
+							</p>
+							<div class="chart">
+								<div class="chart-set">
+									<div class="chart-title">{{item.SatLvl1Reply}}</div>
+									<div class="chart-line">
+										<div class="chart-range bg-green-darken" [ngStyle]="{'width':getNum(item.SatLevel1)}"></div>
+										<div class="chart-num">{{getNum(item.SatLevel1)}}</div>
+									</div>
+								</div>
+								<div class="chart-set">
+									<div class="chart-title ">{{item.SatLvl2Reply}}</div>
+									<div class="chart-line">
+										<div class="chart-range bg-green-lighten" [ngStyle]="{'width':getNum(item.SatLevel2)}"></div>
+										<div class="chart-num">{{getNum(item.SatLevel2)}}</div>
+									</div>
+								</div>
+								<div class="chart-set">
+									<div class="chart-title">{{item.SatLvl3Reply}}</div>
+									<div class="chart-line">
+										<div class="chart-range bg-green" [ngStyle]="{'width':getNum(item.SatLevel3)}"></div>
+										<div class="chart-num">{{getNum(item.SatLevel3)}}</div>
+									</div>
+								</div>
+								<div class="chart-set">
+									<div class="chart-title">{{item.SatLvl4Reply}}</div>
+									<div class="chart-line">
+										<div class="chart-range bg-orange-lighten" [ngStyle]="{'width':getNum(item.SatLevel4)}"></div>
+										<div class="chart-num">{{getNum(item.SatLevel4)}}</div>
+									</div>
+								</div>
+								<div class="chart-set">
+									<div class="chart-title">{{item.SatLvl5Reply}}</div>
+									<div class="chart-line">
+										<div class="chart-range bg-orange-darken" [ngStyle]="{'width':getNum(item.SatLevel5)}"></div>
+										<div class="chart-num">{{getNum(item.SatLevel5)}}</div>
+									</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+                            <br>
+                            <br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

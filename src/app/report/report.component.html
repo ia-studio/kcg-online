@@ -58,8 +58,12 @@
                 </div>
             </div>
         </div>
-        <div *ngIf="!caseTypes">
-          loading...
+        
+        <div class="pop" *ngIf="!caseTypes">
+            <div class="pop-content">
+                <div class="mk-spinner-doublecircle"></div>
+                <span class="loading-words">Loading ...</span>
+            </div>
         </div>
     </div>
 </div>
