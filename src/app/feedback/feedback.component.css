@@ -7,6 +7,9 @@
     position: relative;
     float: left;
     width: 32%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     padding: 5px 3% 5px 0;
     text-align: right;
 }
@@ -39,6 +42,20 @@
     line-height: 1.55em;
     padding-right: 5px;
 }
+.chart-info {
+    list-style: none;
+}
+.chart-info li {
+    display: inline-block;
+    padding: .3em; 
+}
+.chart-info span {
+    display: inline-block;
+    width: .75em;
+    height: .75em;
+    margin-right: .3em;
+
+}
 .bg-green-darken {
     background: #3C8F87;
 }
@@ -53,6 +70,9 @@
 }
 .bg-orange-darken {
     background: #EA7C13;
+}
+.bg-orange-darken-2 {
+    background: #C66B01;
 }
 @media screen and (min-width: 480px){
     .chart-title {

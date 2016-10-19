@@ -4,32 +4,25 @@ import { Observable }     from 'rxjs/Observable';
 import '../shared/rxjs-operators';
 
 @Injectable()
-export class FeedbackService {
-  private pointFeedbackUrl = 'assets/pointFeedback.json';
-  private countFeedbackUrl = 'assets/countFeedback.json';
-  private effectiveFeedbackUrl = 'assets/effectiveFeedback.json';
+export class NewsService {
+  private newsListUrl = 'http://soweb.kcg.gov.tw/webapi/api/bulletin';
 
   constructor(private http: Http) { }
 
-  getPointFeedback() { 
-    return this.http.get(this.pointFeedbackUrl)
+  getNews() { 
+    return this.http.get(this.newsListUrl)
                .map(this.extractData)
                .catch(this.handleError);
   }
-  getCountFeedback() { 
-    return this.http.get(this.countFeedbackUrl)
-               .map(this.extractData)
-               .catch(this.handleError);
-  }
-  getEffectiveFeedback() { 
-    return this.http.get(this.effectiveFeedbackUrl)
-               .map(this.extractData)
+  getNewsById (id:string){
+      return this.http.get(this.newsListUrl+"/"+id)
+               .map((res: Response) => res.json()[0])
                .catch(this.handleError);
   }
 
   private extractData(res: Response) {
     let body = res.json();
-    return body || { };
+    return body || [];
   }
 
   private handleError (error: any) {

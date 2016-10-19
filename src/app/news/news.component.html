@@ -13,12 +13,10 @@
       <div class="article-content">
         <p class="article-lable">主題</p>
         <p class="navy maB2x">
-          如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。
+          {{newsDetail.MsgTitle}}
         </p>
         <p class="article-lable">內容</p>
-        <p class="navy maB2x">
-          如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。<br> 確認時，請先將郵件改為非垃圾信，始能點選確認信。若發現信箱填寫錯誤時，請重新反應事項再送一次.
-        </p>
+        <p class="navy maB2x" style="white-space: pre;">{{newsDetail.MsgContent}}</p>
       </div>
 
     </div>
@@ -27,9 +25,7 @@
         <div class="article-content block-separate">
         <p class="article-lable">其他訊息</p>
         <ul class="news-all">
-          <li><a class="active" href="">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a></li>
-          <li><a href="">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a></li>
-          <li><a href="">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a></li>
+          <li *ngFor="let newsItem of news"><a routerLinkActive="active" [routerLink]="['/news', newsItem.MsgID]">{{newsItem.MsgTitle}}</a></li>
         </ul>
         </div>
     </div>
