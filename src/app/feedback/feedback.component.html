@@ -10,9 +10,9 @@
 		<div class="col-md-3 page-block maT2x hidden-sm hidden-xs">
 			<p class="article-lable">案件處理滿意指標 </p>
 			<ul class="news-all" id="anchorList">
-				<li><a [ngClass]="{'orange': feedbackType === 'point'}" href="javascript:void(0);" (click)="getPointFeedbacks('point')">各項滿意度指標</a></li>
-				<li><a [ngClass]="{'orange': feedbackType === 'count'}" href="javascript:void(0);" (click)="getCountFeedbacks('count')">各問題次數分配表</a></li>
-				<li><a [ngClass]="{'orange': feedbackType === 'effective'}" href="javascript:void(0);" (click)="getEffectiveFeedbacks('effective')">各問題有效值與遺漏值</a></li>
+				<li><a routerLinkActive="active" [routerLink]="['/feedback', 'point']">各項滿意度指標</a></li>
+				<li><a routerLinkActive="active" [routerLink]="['/feedback', 'count']">各問題次數分配表</a></li>
+				<li><a routerLinkActive="active" [routerLink]="['/feedback', 'effective']">各問題有效值與遺漏值</a></li>
 			</ul>
 		</div>
 		<div class="col-md-9 page-block">

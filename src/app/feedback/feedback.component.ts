@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute }    from '@angular/router';
 import { Title }             from '@angular/platform-browser';
-import { FeedbackService }        from '../services/feedback.service';
+import { FeedbackService }   from '../services/feedback.service';
 
 @Component({
   selector: 'app-feedback',
@@ -12,7 +13,8 @@ export class FeedbackComponent implements OnInit {
 
   feedbacks = {};
   feedbackType = 'point';
-  public constructor(private titleService: Title, private feedbackService: FeedbackService) { }
+  sub: any;
+  public constructor(private route: ActivatedRoute, private titleService: Title, private feedbackService: FeedbackService) { }
 
   public setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);
@@ -74,7 +76,23 @@ export class FeedbackComponent implements OnInit {
     return bg;
     
   }
+  
   ngOnInit() {
+    this.sub = this.route.params.subscribe(params => {
+      if (params['type'] !== undefined ) {
+        switch (params['type']){
+          case 'point':
+            this.getPointFeedbacks(params['type']);
+          break;
+          case 'effective':
+            this.getEffectiveFeedbacks(params['type']);
+          break;
+          case 'count':
+            this.getCountFeedbacks(params['type']);
+          break;
+        }
+      }
+    });
     this.getPointFeedbacks(this.feedbackType);
     this.setTitle('案件處理滿意度 - 高雄市政府線上即時服務平台');
   }

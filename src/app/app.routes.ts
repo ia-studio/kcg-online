@@ -50,7 +50,7 @@ const appRoutes: Routes = [
     component: FaqDetailComponent
   },
   {
-    path: 'feedback',
+    path: 'feedback/:type',
     component: FeedbackComponent
   },
   {
