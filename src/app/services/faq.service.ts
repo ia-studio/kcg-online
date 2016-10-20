@@ -16,7 +16,7 @@ export class FaqService {
                .catch(this.handleError);
   }
 
-  getFaqs(q = "", kind = "") : Observable<any> {
+  getFaqs(q = "", kind = "") : Observable<any[]> {
     return this.http.get(this.faqUrl + q + '?kind=' + kind)
                .map(this.extractData)
                .catch(this.handleError);
