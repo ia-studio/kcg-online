@@ -14,13 +14,14 @@ export class AppComponent {
     newsCount = 0;
     news = [];
 
-    showNowNews (idx:number){
-      return (this.newsCount % this.news.length) === idx ;
-    }
     public constructor(private newsService: NewsService) {
       setInterval(() => { this.newsCount++ }, 3000)
     }
-    
+
+    showNowNews (idx:number){
+      return (this.newsCount % this.news.length) === idx ;
+    }
+
     getNews() {
     this.newsService
         .getNews()
