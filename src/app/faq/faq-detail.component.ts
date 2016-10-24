@@ -28,6 +28,10 @@ export class FaqDetailComponent implements OnInit {
           error => this.error = <any>error);
   }
 
+  goBack() {
+     window.history.go(-1);
+  }
+
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       if (params['organNo'] !== undefined && params['seqNo'] !== undefined) {
