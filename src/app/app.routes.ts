@@ -46,6 +46,10 @@ const appRoutes: Routes = [
     component: FaqComponent
   },
   {
+    path: 'faq/:page',
+    component: FaqComponent
+  },
+  {
     path: 'faq/:organNo/:seqNo',
     component: FaqDetailComponent
   },

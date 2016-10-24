@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title }             from '@angular/platform-browser';
 import { FaqService }        from '../services/faq.service';
+import { ActivatedRoute }    from '@angular/router';
 
 @Component({
   selector: 'app-faq',
@@ -17,8 +18,12 @@ export class FaqComponent implements OnInit {
     text: '請選擇處理單位'
   };
   term = '';
+  page: number;
+  pageSize = 20;
+  totalPage = 0;
+  sub: any;
 
-  public constructor(private titleService: Title, private faqService: FaqService) { }
+  public constructor(private titleService: Title, private faqService: FaqService, private route: ActivatedRoute) { }
 
   public setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);
@@ -28,7 +33,10 @@ export class FaqComponent implements OnInit {
     this.faqService
         .getFaqs(q, kind)
         .subscribe(
-          faq => this.faqs = faq,
+          faq => {
+            this.faqs = faq,
+            this.totalPage = Math.floor(faq.length / this.pageSize) + ((faq.length % this.pageSize === 0) ? 0 : 1)
+          },
           error => this.faqs = []);
   }
 
@@ -47,11 +55,22 @@ export class FaqComponent implements OnInit {
 
   search() {
     this.getFaqs(this.term, this.selectedCategory.value);
+    this.page = 1;
   }
 
   ngOnInit() {
     this.setTitle('常見問題 FAQ - 高雄市政府線上即時服務平台');
     this.getFaqs();
     this.getCategories();
+
+    this.sub = this.route.params.subscribe(params => {
+      if (params['page'] !== undefined) {
+        this.page = parseInt(params['page']);
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 }
