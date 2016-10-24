@@ -58,7 +58,7 @@ const appRoutes: Routes = [
     component: FeedbackComponent
   },
   {
-    path: 'privacy',
+    path: 'privacy/:lable',
     component: PrivacyComponent
   },
   {
