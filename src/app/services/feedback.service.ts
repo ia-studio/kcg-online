@@ -5,24 +5,25 @@ import '../shared/rxjs-operators';
 
 @Injectable()
 export class FeedbackService {
-  private pointFeedbackUrl = 'assets/pointFeedback.json';
-  private countFeedbackUrl = 'assets/countFeedback.json';
-  private effectiveFeedbackUrl = 'assets/effectiveFeedback.json';
+  public mock = false;
+  private pointFeedbackUrl = this.mock ? 'assets/pointFeedback.json' : 'http://soweb.kcg.gov.tw/webapi/api/satPool/1';
+  private countFeedbackUrl = this.mock ? 'assets/countFeedback.json' : 'http://soweb.kcg.gov.tw/webapi/api/satPool/2';
+  private effectiveFeedbackUrl = this.mock ? 'assets/effectiveFeedback.json' : 'http://soweb.kcg.gov.tw/webapi/api/satPool/3';
 
   constructor(private http: Http) { }
 
-  getPointFeedback() { 
-    return this.http.get(this.pointFeedbackUrl)
+  getPointFeedback(startDate: string, endDate: string) {
+    return this.http.get(this.pointFeedbackUrl + '?qBegDate=' + startDate + '&qEndDate=' + endDate)
                .map(this.extractData)
                .catch(this.handleError);
   }
-  getCountFeedback() { 
-    return this.http.get(this.countFeedbackUrl)
+  getCountFeedback(startDate: string, endDate: string) {
+    return this.http.get(this.countFeedbackUrl+ '?qBegDate=' + startDate + '&qEndDate=' + endDate)
                .map(this.extractData)
                .catch(this.handleError);
   }
-  getEffectiveFeedback() { 
-    return this.http.get(this.effectiveFeedbackUrl)
+  getEffectiveFeedback(startDate: string, endDate: string) {
+    return this.http.get(this.effectiveFeedbackUrl+ '?qBegDate=' + startDate + '&qEndDate=' + endDate)
                .map(this.extractData)
                .catch(this.handleError);
   }
@@ -33,9 +34,7 @@ export class FeedbackService {
   }
 
   private handleError (error: any) {
-    let errMsg = (error.message) ? error.message :
-      error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-    console.error(errMsg);
+    let errMsg = error.status == 500 ? error.json().Message : error.json();
     return Observable.throw(errMsg);
   }
 }
