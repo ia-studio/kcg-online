@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" (window:scroll)="onScroll($event.target)">
   <div class="banner row">
     <div class="banner-page-name">
       <h2 class="dk-green">網站使用相關規範</h2>
@@ -8,12 +8,14 @@
   </div>
   <div class="row">
     <div class="col-md-3 page-block maT2x">
-      <p class="article-lable">網站使用相關規範</p>
-      <ul class="news-all" id="anchorList">
-          <li><a [ngClass]="{'orange':window.scrollY>=0}" href="javascript:void(0);" (click)="scrollTo('privacy')">隱私權暨資訊安全保護政策</a></li>
-          <li><a [ngClass]="{'orange':window.scrollY>=1280}" href="javascript:void(0);" (click)="scrollTo('security')">網站安全政策</a></li>
-          <li><a [ngClass]="{'orange':window.scrollY>=1530}" href="javascript:void(0);" (click)="scrollTo('copyright')">著作權說明</a></li>
+      <div [ngClass]="{'fixed-list': scrollHeight > 300 }">
+        <p class="article-lable">網站使用相關規範</p>
+        <ul class="news-all" >
+          <li><a [ngClass]="{'active': 'privacy' === getLableActive(scrollHeight)}" href="javascript:void(0);" (click)="scrollTo('privacy')">隱私權暨資訊安全保護政策</a></li>
+          <li><a [ngClass]="{'active': 'security' === getLableActive()}" href="javascript:void(0);" (click)="scrollTo('security')">網站安全政策</a></li>
+          <li><a [ngClass]="{'active': 'copyright' === getLableActive()}" href="javascript:void(0);" (click)="scrollTo('copyright')">著作權說明</a></li>
         </ul>
+      </div>
     </div>
     <div class="col-md-9 page-block">
       <div id="privacy" class="article-header text-center">

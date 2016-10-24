@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Title }             from '@angular/platform-browser';
 import { FaqService }        from '../services/faq.service';
 import { ActivatedRoute }    from '@angular/router';
-
+ 
 @Component({
   selector: 'app-faq',
   templateUrl: 'faq.component.html',
-  providers: [FaqService]
+  providers: [FaqService],
+  styleUrls: ['faq.component.scss']
 })
 export class FaqComponent implements OnInit {
   error: any;
