@@ -66,6 +66,7 @@ export class FaqComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       if (params['page'] !== undefined) {
         this.page = parseInt(params['page']);
+        window.scrollTo(0, 0)
       }
     });
   }

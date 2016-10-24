@@ -12,12 +12,7 @@ export class ReportComponent implements OnInit {
   caseTypes: CaseType[];
   error: any;
 
-  public constructor(
-    private titleService: Title,
-    private reportService: ReportService
-  ) {
-    //
-  }
+  public constructor(private titleService: Title, private reportService: ReportService) { }
 
   public setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);
