@@ -20,7 +20,7 @@ export class FaqComponent implements OnInit {
   };
   term = '';
   page: number;
-  pageSize = 20;
+  pageSize = 50;
   totalPage = 0;
   sub: any;
 

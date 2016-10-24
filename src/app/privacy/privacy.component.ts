@@ -44,7 +44,7 @@ export class PrivacyComponent implements OnInit {
     var offset1 = document.getElementById('privacy').offsetTop+280,
         offset2 = document.getElementById('security').offsetTop+280,
         offset3 = document.getElementById('copyright').offsetTop+280;
-    console.log(offset1+","+offset2+","+offset3)
+
     if (this.scrollHeight >= 0 && this.scrollHeight < offset2){
           this.whichLable = 'privacy';
       } else if(this.scrollHeight >= offset2 && this.scrollHeight < offset3) {
@@ -52,7 +52,8 @@ export class PrivacyComponent implements OnInit {
       } else if(this.scrollHeight >= offset3) {
           this.whichLable = 'copyright';
       }
-      return lableName === this.whichLable;
+      
+    return lableName === this.whichLable;
     
   }
 
