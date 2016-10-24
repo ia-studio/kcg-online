@@ -50,7 +50,7 @@
 				高雄市政府聯合服務中心電話：</small>
                     <h5 class="font-lg">(07) 336-8333 #2819、#2833、#2834</h5>
                     <div class="text-center">
-                        <a *ngIf="showPhoneButton" href="tel:073368333" class="btn btn-orange visible-sm visible-xs"><i class="glyphicon glyphicon-earphone"></i>&nbsp;&nbsp;撥打電話</a>
+                        <a *ngIf="showPhoneButton" href="tel:073368333" onclick="return confirm('即將撥打高雄市政府聯合服務中心電話，是否繼續?')" class="btn btn-orange visible-sm visible-xs"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;撥打電話</a>
                     </div>
                 </div>
                 <div class="col-md-2">

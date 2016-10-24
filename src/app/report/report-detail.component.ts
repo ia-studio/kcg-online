@@ -77,6 +77,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       if (params['id'] !== undefined && params['subId'] !== undefined) {
         this.navigated = true;
         this.getType(params['id'], params['subId']);
+        window.scrollTo(0, 0);
       }
     });
 
