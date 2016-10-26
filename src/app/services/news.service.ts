@@ -9,20 +9,16 @@ export class NewsService {
 
   constructor(private http: Http) { }
 
-  getNews() { 
+  getNews(): Observable<News[]> {
     return this.http.get(this.newsListUrl)
-               .map(this.extractData)
-               .catch(this.handleError);
-  }
-  getNewsById (id:string){
-      return this.http.get(this.newsListUrl+"/"+id)
-               .map((res: Response) => res.json()[0])
+               .map(res => res.json() || [])
                .catch(this.handleError);
   }
 
-  private extractData(res: Response) {
-    let body = res.json();
-    return body || [];
+  getNewsById(id:string): Observable<News>{
+      return this.http.get(this.newsListUrl+"/"+id)
+               .map(res => res.json()[0] || {})
+               .catch(this.handleError);
   }
 
   private handleError (error: any) {
@@ -31,4 +27,10 @@ export class NewsService {
     console.error(errMsg);
     return Observable.throw(errMsg);
   }
+}
+
+export class News{
+  MsgContent: string;
+  MsgID: string;
+  MsgTitle: string;
 }
