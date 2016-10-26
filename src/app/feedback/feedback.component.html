@@ -7,7 +7,7 @@
 		<img src="./assets/images/banner/banner_pic_feedback.png" alt="">
 	</div>
 	<div class="row">
-		<div class="col-md-3 page-block maT2x hidden-sm hidden-xs">
+		<div class="col-md-3 page-block hidden-sm hidden-xs">
 			<p class="article-lable">案件處理滿意指標 </p>
 			<ul class="news-all" id="anchorList">
 				<li><a routerLinkActive="active" [routerLink]="['/feedback', 'point']">各項滿意度指標</a></li>
@@ -16,15 +16,20 @@
 			</ul>
 		</div>
 		<div class="col-md-9 page-block">
-      <input type="date" [(ngModel)]="startDate">
-      <input type="date" [(ngModel)]="endDate">
-      <button type="button" (click)="getFeedback(feedbackType)">查詢</button>
-      <p class="validation-info">{{ errorMsg }}</p>
+			<p class="article-lable">建議統計日期起迄不要超過一個月，以免執行時間過長影響其它作業</p>
+			<p>
+				<span>統計日期(來信日期)：</span>
+				<input type="date" [(ngModel)]="startDate">
+				<span>迄日：</span>
+				<input type="date" [(ngModel)]="endDate">
+				<button class="btn btn-reset btn-orange" type="button" (click)="getFeedback(feedbackType)">查詢</button>
+			</p>
+			<p class="validation-info"><br><br>{{ errorMsg }}</p>
 			<div class="maB2x" *ngFor="let sheet of feedbacks.Topic; let i = index ">
 				<div class="article-content block-separate">
 					<p class="article-lable">問卷版本:{{sheet.VersionNo}}　共 {{sheet.ReplyCount}} 筆</p>
 					<div class="maB2x" *ngFor="let item of feedbacks.Question">
-            <!-- point -->
+						<!-- point -->
 						<div *ngIf="item.VersionNo === sheet.VersionNo && feedbackType === 'point'">
 							<p class="navy font-lg">
 								{{item.Question}}

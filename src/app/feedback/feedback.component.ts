@@ -66,11 +66,12 @@ export class FeedbackComponent implements OnInit {
       break;
     }
   }
-
+  
   getNum (val){
     return Math.round(val*100)/100+"%";
   }
 
+  
   getChartColor (idx){
     let bg : string;
     switch (idx){
