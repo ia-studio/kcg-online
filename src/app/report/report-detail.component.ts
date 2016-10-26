@@ -30,7 +30,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   areaCodes: any[];
   hasher: string; //caseType, subCaseType 的密鑰，避免篡改
 
-  readonly placeholder: string = `所在地址 or 使用 GPS 定位`;
+  readonly placeholder: string = '輸入所在地址';
   coords: any;
   address: any;
   gpsDistrict: string;
@@ -40,6 +40,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   Subj_Item: string;
   Subj_Subitem: string;
   Subj_District: string;
+  Subj_District_name: string = '請選擇地區';
   Subj_Security: string;
   Subj_Content: string;
   Subj_FileCount: number;
@@ -50,9 +51,13 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   Sugg_Email: string;
   Sugg_Addr1: string;
   Sugg_Addr2: string;
+  Sugg_Addr2_name: string = '請選擇地區';
   Sugg_Addr3: string;
+  Sugg_Addr3_name: string = '請選擇里別';
   Sugg_Addr4: string;
   Sugg_Sex: string;
+
+  uploadFiles: string[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -161,6 +166,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
 
       for(var i=0; i < fi.files.length; i++){
         this.Atth_FileNames += fi.files[i].name + ';';
+        this.uploadFiles.push(fi.files[i].name);
       }
       //console.log(`this.Atth_FileNames-1: ${this.Atth_FileNames}`);
       if (this.Atth_FileNames.substring(this.Atth_FileNames.length - 1) === ';'){
@@ -404,10 +410,20 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     return regx.test(email);
   }
 
-  onDistrictChanged(districtCode: string): void{
-    this.Sugg_Addr2 = districtCode;
-    this.sugg_region_data = RegionCodes(districtCode);
+  onDistrictChanged(s: HTMLSelectElement): void{
+    this.Sugg_Addr2 = s.value;
+    this.Sugg_Addr2_name = s.options[s.selectedIndex].innerHTML;
+    this.sugg_region_data = RegionCodes(s.value);
     //console.log(`onDistrictChanged: ${districtCode}\n${this.sugg_region_data}`);
+  }
+
+  onRegionChanged(s: HTMLSelectElement): void{
+    this.Sugg_Addr3 = s.value;
+    this.Sugg_Addr3_name = s.options[s.selectedIndex].innerHTML;
+  }
+
+  changeAreaCodes(s: HTMLSelectElement): void{
+    this.Subj_District_name = s.options[s.selectedIndex].innerHTML;
   }
 
   onSubmit(value: any): void {
