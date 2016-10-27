@@ -15,7 +15,8 @@ import { ReportComponent,ReportDetailComponent }                from './report';
 import { PrivacyComponent }                                     from './privacy/privacy.component';
 import { NewsComponent }                                        from './news/news.component';
 
-import { ReplaceNewLinePipe } from './filters/Replace.pipe';
+import { ReplaceNewLinePipe }                                   from './filters/Replace.pipe';
+import { GlobalService }                                        from './services/global.service';
 
 @NgModule({
   imports: [
@@ -43,7 +44,8 @@ import { ReplaceNewLinePipe } from './filters/Replace.pipe';
   providers: [
     appRoutingProviders,
     Title,
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    GlobalService
   ],
   schemas: [NO_ERRORS_SCHEMA],
   entryComponents: [AppComponent],
