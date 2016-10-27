@@ -40,7 +40,7 @@
 								<input class="fall-width" type="text" [value]="Subj_District_name">
 								<select class="input-alpha" name="Subj_District" [ngModel]="Subj_District" (change)="changeAreaCodes($event.target)">
                   <option>請選擇地區</option>
-                  <option *ngFor="let item of areaCodes" value="{{item.DistrictCode}}" [selected]="item.DistrictName === gpsDistrict" #subj_district >{{item.DistrictName}}</option>
+                  <option *ngFor="let item of areaCodes" value="{{item.DistrictCode}}" [selected]="item.DistrictName === Subj_District_name" #subj_district >{{item.DistrictName}}</option>
                 </select>
 								<i class="fa fa-chevron-down"></i>
 							</div>
