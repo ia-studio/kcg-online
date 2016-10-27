@@ -6092,22 +6092,13 @@ footer {
 }
 .menu-item:hover:before,
 .menu-item.active:before {
-    width: 100%;
     left: 0;
     top: -3px;
+    width: 100%;
     background-color: #fff
 }
 @media screen and (max-width: 736px) {
-    .menu-item.active:after {
-        content: "";
-        position: absolute;
-        display: inline-block;
-        background-color: #E87F07;
-        height: 100%;
-        top: 0;
-        width: 4px;
-        left: 0
-    }
+    
     .menu-item:first-child:after {
         display: none
     }
@@ -6179,25 +6170,25 @@ footer {
     height: 100vh
 }
 .mob-menu-list .menu-item {
-    position: relative;
     width: 100%;
     margin: 0;
     padding: 15px 0 15px 30px;
     height: auto;
     text-align: left;
-    font-size: 2rem
+    font-size: 2rem;
 }
-.mob-menu-list > .menu-item {
-    border-bottom: 1px solid rgba(255,255,255,.3)
+.mob-menu-list .header-menu > .menu-item {
+    border-bottom: 1px solid rgba(255,255,255,.3);
 }
 .mob-menu-list .menu-item.active:before {
-    left: 0;
+    top: 25%;
     width: 3px;
-    height: 100%
+    height: 50%;
 }
 .mob-menu-list .menu-item:hover:before {
     content: initial
 }
+
 .mob-sub-menu {
     margin-left: -40px
 }

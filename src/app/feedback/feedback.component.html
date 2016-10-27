@@ -17,13 +17,21 @@
 		</div>
 		<div class="col-md-9 page-block">
 			<p class="article-lable">建議統計日期起迄不要超過一個月，以免執行時間過長影響其它作業</p>
-			<p>
-				<span>統計日期(來信日期)：</span>
-				<input type="date" [(ngModel)]="startDate">
-				<span>迄日：</span>
-				<input type="date" [(ngModel)]="endDate">
-				<button class="btn btn-reset btn-orange" type="button" (click)="getFeedback(feedbackType)">查詢</button>
-			</p>
+			<div class="row">
+				<div class="col-md-4 maT1x">
+					<span>統計日期(來信日期)：</span>
+					<input class="fall-width" type="date" [(ngModel)]="startDate">
+				</div>
+				<div class="col-md-4 maT1x">
+					<span>迄日：</span>
+					<input class="fall-width" type="date" [(ngModel)]="endDate">
+				</div>
+				<div class="col-md-4">
+					<span>&nbsp;&nbsp;&nbsp;</span>
+					<button class="btn btn-reset btn-orange maT2x" type="button" (click)="getFeedback(feedbackType)">查詢</button>
+				</div>
+				<div class="clearfix"></div>
+			</div>
 			<p class="validation-info"><br><br>{{ errorMsg }}</p>
 			<div class="maB2x" *ngFor="let sheet of feedbacks.Topic; let i = index ">
 				<div class="article-content block-separate">
