@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
-import { ActivatedRoute }    from '@angular/router';
-import { NewsService, News } from './services/news.service';
+import { Component, Input }   from '@angular/core';
+import { ActivatedRoute }     from '@angular/router';
+import { NewsService, News }  from './services/news.service';
+import { GlobalService }      from './services/global.service';
 
 @Component({
   selector: 'kcg-app',
@@ -15,7 +16,8 @@ export class AppComponent {
   news: News[] = [];
   sub: any;
 
-  public constructor(private route: ActivatedRoute, private newsService: NewsService) { }
+  public constructor(private route: ActivatedRoute, private newsService: NewsService, private globalService: GlobalService) {
+  }
 
   showNowNews(idx: number) {
     return (this.newsCount % this.news.length) === idx;
@@ -29,12 +31,8 @@ export class AppComponent {
           error => this.news = []);
   }
 
-  @Input() 
-  showPhone:boolean;
-  
   ngOnInit() {
     this.getNews();
-    
     setInterval(() => { if(this.showNews) { this.newsCount++ } }, 3000);
   }
 }

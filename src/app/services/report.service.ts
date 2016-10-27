@@ -29,5 +29,4 @@ export class ReportService {
     console.error(errMsg);
     return Observable.throw(errMsg);
   }
-
 }
