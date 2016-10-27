@@ -2,9 +2,44 @@
  * Created by mattyyzac on 2016/10/14.
  */
 
-// 高雄市行政區
-export let DistrictCodes = () => {
+// 縣市定義
+export interface County {
+  CountyCode: string;
+  CountyName: string;
+}
+
+// 行政區定義
+export interface District {
+  DistrictCode: string;
+  DistrictName: string;
+}
+
+// 里定義
+export interface Region {
+  RegionCode: string;
+  RegionName: string;
+}
+
+//全台縣市
+export let CountyCodes = () => {
   return [
+    {"CountyCode":"6400000000","CountyName":"高雄市"},{"CountyCode":"6500000000","CountyName":"新北市"},
+    {"CountyCode":"6600000000","CountyName":"台中市"},{"CountyCode":"6700000000","CountyName":"台南市"},
+    {"CountyCode":"6300000000","CountyName":"台北市"},{"CountyCode":"1001700000","CountyName":"基隆市"},
+    {"CountyCode":"1000200000","CountyName":"宜蘭縣"},{"CountyCode":"1001800000","CountyName":"新竹市"},
+    {"CountyCode":"1000400000","CountyName":"新竹縣"},{"CountyCode":"1000300000","CountyName":"桃園縣"},
+    {"CountyCode":"1000500000","CountyName":"苗栗縣"},{"CountyCode":"1000700000","CountyName":"彰化縣"},
+    {"CountyCode":"1000800000","CountyName":"南投縣"},{"CountyCode":"1002000000","CountyName":"嘉義市"},
+    {"CountyCode":"1001000000","CountyName":"嘉義縣"},{"CountyCode":"1000900000","CountyName":"雲林縣"},
+    {"CountyCode":"1001600000","CountyName":"澎湖縣"},{"CountyCode":"1001300000","CountyName":"屏東縣"},
+    {"CountyCode":"1001400000","CountyName":"台東縣"},{"CountyCode":"1001500000","CountyName":"花蓮縣"},
+    {"CountyCode":"0902000000","CountyName":"金門縣"},{"CountyCode":"0900700000","CountyName":"連江縣"}
+  ];
+}
+
+// 高雄市行政區
+export let DistrictCodesKaohsiung = (isIncludeNoArea?: boolean) => {
+  const wholeDistrict: any[] = [
     {"DistrictCode":"6400100000","DistrictName":"鹽埕區"}, {"DistrictCode":"6400200000","DistrictName":"鼓山區"},
     {"DistrictCode":"6400300000","DistrictName":"左營區"}, {"DistrictCode":"6400400000","DistrictName":"楠梓區"},
     {"DistrictCode":"6400500000","DistrictName":"三民區"}, {"DistrictCode":"6400600000","DistrictName":"新興區"},
@@ -25,10 +60,18 @@ export let DistrictCodes = () => {
     {"DistrictCode":"6403500000","DistrictName":"內門區"}, {"DistrictCode":"6403600000","DistrictName":"茂林區"},
     {"DistrictCode":"6403700000","DistrictName":"桃源區"}, {"DistrictCode":"6403800000","DistrictName":"那瑪夏區"},
     {"DistrictCode":"6411100000","DistrictName":"無法分區"}];
+
+  if (isIncludeNoArea){
+    return wholeDistrict;
+  }
+  else{
+    wholeDistrict.splice(38, 1);
+    return wholeDistrict;
+  }
 }
 
 // http://soweb.kcg.gov.tw/webapi/api/AddrCode/3?p1=6400100000
-export let RegionCodes = (districtCode: string) => {
+export let RegionCodesKaohsiung = (districtCode: string) => {
   switch (districtCode) {
     case '6400100000':
       return [{"RegionCode":"6400100001","RegionName":"藍橋里"},{"RegionCode":"6400100002","RegionName":"慈愛里"},{"RegionCode":"6400100003","RegionName":"博愛里"},{"RegionCode":"6400100004","RegionName":"壽星里"},{"RegionCode":"6400100005","RegionName":"中山里"},{"RegionCode":"6400100006","RegionName":"教仁里"},{"RegionCode":"6400100007","RegionName":"新樂里"},{"RegionCode":"6400100008","RegionName":"中原里"},{"RegionCode":"6400100009","RegionName":"光明里"},{"RegionCode":"6400100010","RegionName":"育仁里"},{"RegionCode":"6400100011","RegionName":"河濱里"},{"RegionCode":"6400100012","RegionName":"沙地里"},{"RegionCode":"6400100013","RegionName":"南端里"},{"RegionCode":"6400100014","RegionName":"港都里"},{"RegionCode":"6400100015","RegionName":"江西里"},{"RegionCode":"6400100016","RegionName":"新豐里"},{"RegionCode":"6400100017","RegionName":"府北里"},{"RegionCode":"6400100018","RegionName":"陸橋里"},{"RegionCode":"6400100019","RegionName":"瀨南里"},{"RegionCode":"6400100020","RegionName":"新化里"},{"RegionCode":"6400100021","RegionName":"江南里"}];
