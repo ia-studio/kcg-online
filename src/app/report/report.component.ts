@@ -6,7 +6,13 @@ import { ReportService }      from '../services/report.service';
 @Component({
   selector: 'app-report',
   templateUrl: 'report.component.html',
-  providers: [ReportService]
+  providers: [ReportService],
+  styles: [`
+    @media screen and (max-width: 480px){
+      #call.visible-report {
+          display : block !important;
+      }
+    }`]
 })
 export class ReportComponent implements OnInit {
   caseTypes: CaseType[];
