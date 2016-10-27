@@ -48,6 +48,7 @@ export class QueryComponent implements OnInit {
 
   ngOnInit() {
     this.setTitle('案件查詢 - 高雄市政府線上即時服務平台');
+    window.scrollTo(0, 0);
   }
 
   queryB(){ //市長信箱查詢

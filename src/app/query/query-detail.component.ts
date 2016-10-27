@@ -24,6 +24,6 @@ export class QueryDetailComponent implements OnInit {
 
   ngOnInit() {
     this.setTitle('案件明細 - 高雄市政府線上即時服務平台');
-    //console.log(this.searchCase);
+    window.scrollTo(0, 0);
   }
 }

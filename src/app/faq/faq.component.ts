@@ -63,11 +63,10 @@ export class FaqComponent implements OnInit {
     this.setTitle('常見問題 FAQ - 高雄市政府線上即時服務平台');
     this.getFaqs();
     this.getCategories();
-
     this.sub = this.route.params.subscribe(params => {
       if (params['page'] !== undefined) {
         this.page = parseInt(params['page']);
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
       }
     });
   }

@@ -14,5 +14,6 @@ export class ProcessComponent implements OnInit {
 
   ngOnInit() {
     this.setTitle('服務流程 - 高雄市政府線上即時服務平台');
+    window.scrollTo(0, 0);
   }
 }
