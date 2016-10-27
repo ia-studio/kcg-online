@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ActivatedRoute }    from '@angular/router';
 import { NewsService, News } from './services/news.service';
 
 @Component({
@@ -12,8 +13,9 @@ export class AppComponent {
   showSlideMenu = false;
   newsCount = 0;
   news: News[] = [];
+  sub: any;
 
-  public constructor(private newsService: NewsService) { }
+  public constructor(private route: ActivatedRoute, private newsService: NewsService) { }
 
   showNowNews(idx: number) {
     return (this.newsCount % this.news.length) === idx;
@@ -27,8 +29,12 @@ export class AppComponent {
           error => this.news = []);
   }
 
+  @Input() 
+  showPhone:boolean;
+  
   ngOnInit() {
     this.getNews();
-    setInterval(() => { if(this.showNews) { this.newsCount++ } }, 3000)
+    
+    setInterval(() => { if(this.showNews) { this.newsCount++ } }, 3000);
   }
 }
