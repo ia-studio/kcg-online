@@ -64682,7 +64682,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var FeedbackService = (function () {
     function FeedbackService(http) {
         this.http = http;
-        this.mock = false;
+        this.mock = true;
         this.pointFeedbackUrl = this.mock ? 'assets/pointFeedback.json' : 'http://soweb.kcg.gov.tw/webapi/api/satPool/1';
         this.countFeedbackUrl = this.mock ? 'assets/countFeedback.json' : 'http://soweb.kcg.gov.tw/webapi/api/satPool/2';
         this.effectiveFeedbackUrl = this.mock ? 'assets/effectiveFeedback.json' : 'http://soweb.kcg.gov.tw/webapi/api/satPool/3';
