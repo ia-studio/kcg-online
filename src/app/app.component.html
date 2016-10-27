@@ -74,7 +74,7 @@
         <li class="menu-item " routerLinkActive="active" (click)="showSlideMenu=false"><a [routerLink]="['/query']">案件查詢</a></li>
         <li class="menu-item " routerLinkActive="active" (click)="showSlideMenu=false"><a [routerLink]="['/process']">服務流程</a></li>
         <li class="menu-item " routerLinkActive="active" (click)="showSlideMenu=false"><a [routerLink]="['/faq', '1']">常見問題 FAQ</a></li>
-        <li class="menu-item " ><a [routerLink]="['/feedback', 'point']" (click)="showSlideMenu=false">案件處理滿意度</a>
+        <li class="menu-item " (click)="showSlideMenu=false"><a [routerLink]="['/feedback', 'point']">案件處理滿意度</a>
             <ul class="mob-sub-menu">
                 <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/feedback', 'point']">各項滿意度調查</a></li>
                 <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/feedback', 'count']">各問題次數分配表</a></li>
