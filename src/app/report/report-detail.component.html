@@ -26,10 +26,8 @@
 						<p class="article-lable require">子項目 </p>
 						<div class="row">
 							<div class="col-xs-12">
-								<input class="fall-width" type="text" *ngIf="subCaseType" value="{{subCaseType.Subitem}} {{subCaseType.SubitemName}}" readonly
-								/>
-								<input type="hidden" name="Subj_Subitem" *ngIf="subCaseType" value="{{subCaseType.Subitem}}" [ngModel]="Subj_Subitem" #subj_subitem
-								/>
+								<input class="fall-width" type="text" *ngIf="subCaseType" value="{{subCaseType.Subitem}} {{subCaseType.SubitemName}}" readonly />
+								<input type="hidden" name="Subj_Subitem" *ngIf="subCaseType" value="{{subCaseType.Subitem}}" [ngModel]="Subj_Subitem" #subj_subitem />
 							</div>
 						</div>
 					</div>
@@ -38,16 +36,15 @@
 						<div class="row">
 							<div class="col-md-3 combine-icon combine-after">
 								<input class="fall-width" type="text" [value]="Subj_District_name">
-								<select class="input-alpha" name="Subj_District" [ngModel]="Subj_District" (change)="changeAreaCodes($event.target)">
+								<select class="input-alpha" name="Subj_District" [ngModel]="Subj_District" (change)="onChangeAreaCodes($event.target)">
                   <option>請選擇地區</option>
                   <option *ngFor="let item of areaCodes" value="{{item.DistrictCode}}" [selected]="item.DistrictName === gpsDistrict" #subj_district >{{item.DistrictName}}</option>
                 </select>
 								<i class="fa fa-chevron-down"></i>
 							</div>
 							<div class="col-md-9">
-								<input class="fall-width" type="text" *ngIf="address && address[0]" [value]="address[0].formatted_address" [placeholder]="placeholder"
-								/>
-								<input class="fall-width" type="text" *ngIf="!address || !address[0]" [placeholder]="placeholder" />
+								<input class="fall-width" type="text" *ngIf="gpsFormattedAddress && gpsFormattedAddress.length > 0" [value]="gpsFormattedAddress" [placeholder]="placeholder" />
+								<input class="fall-width" type="text" *ngIf="!gpsFormattedAddress || !gpsFormattedAddress[0]" [placeholder]="placeholder" />
 							</div>
 							<p class="col-md-12 text-gray"><br>請選擇建議事項內容所屬高雄行政區，若內容無法分區或其他縣市事項請選擇「無法分區」</p>
 						</div>
@@ -111,23 +108,26 @@
 					<p class="article-lable require maT2x">地址 <small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
 					<div class="row">
 						<div class="col-md-4 combine-icon combine-after">
-							<input class="fall-width" type="text" value="高雄市">
-							<input name="Sugg_Addr1" type="hidden" value="6400000000" [ngModel]="Sugg_Addr1" />
+              <input class="fall-width" type="text" [value]="Sugg_Addr1_name" readonly>
+              <select class="input-alpha" name="Sugg_Addr1" [ngModel]="Sugg_Addr1" (change)="onChangeCountyCode($event.target)">
+                <option value="">請選擇縣市</option>
+                <option *ngFor="let item of countyCodes" value="{{item.CountyCode}}" #sugg_county >{{item.CountyName}}</option>
+              </select>
 							<i class="fa fa-chevron-down"></i>
 						</div>
 						<div class="col-md-4 combine-icon combine-after">
 							<input class="fall-width" type="text" [value]="Sugg_Addr2_name" readonly>
 							<select class="input-alpha" name="Sugg_Addr2" [ngModel]="Sugg_Addr2" (change)="onDistrictChanged($event.target)">
-                  <option value="" selected="selected">請選擇地區</option>
-                  <option *ngFor="let item of areaCodes" value="{{item.DistrictCode}}" #sugg_district>{{item.DistrictName}}</option>
+                  <option value="">請選擇地區</option>
+                  <option *ngFor="let item of districtCodes" value="{{item.DistrictCode}}" #sugg_district>{{item.DistrictName}}</option>
               </select>
 							<i class="fa fa-chevron-down"></i>
 						</div>
 						<div class="col-md-4 combine-icon combine-after">
 							<input class="fall-width" type="text" [value]="Sugg_Addr3_name" readonly>
 							<select class="input-alpha" name="Sugg_Addr3" [ngModel]="Sugg_Addr3" (change)="onRegionChanged($event.target)">
-                <option value="" selected="selected">請選擇里別</option>
-                <option *ngFor="let item of sugg_region_data" value="{{item.RegionCode}}" #sugg_region>{{item.RegionName}}</option>
+                <option value="">請選擇里別</option>
+                <option *ngFor="let item of regionCodes" value="{{item.RegionCode}}" #sugg_region>{{item.RegionName}}</option>
               </select>
 							<i class="fa fa-chevron-down"></i>
 						</div>
