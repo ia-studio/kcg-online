@@ -34,6 +34,7 @@ export class NewsComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       if (params['id'] !== undefined) {
         this.getNewsById(params['id']);
+        window.scrollTo(0, 0);
       }
     });
     this.getNews();

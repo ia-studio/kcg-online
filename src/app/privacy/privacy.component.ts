@@ -63,6 +63,7 @@ export class PrivacyComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
         if (params['lable'] !== undefined ) {
           this.scrollTo(params['lable']);
+          window.scrollTo(0, 0);
         }
       });
     

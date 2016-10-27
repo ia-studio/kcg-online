@@ -104,6 +104,7 @@ export class FeedbackComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       if (params['type'] !== undefined) {
         this.getFeedback(params['type']);
+        window.scrollTo(0, 0);
       }
     });
     this.setTitle('案件處理滿意度 - 高雄市政府線上即時服務平台');
