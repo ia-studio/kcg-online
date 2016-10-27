@@ -27,8 +27,8 @@ export class ReportComponent implements OnInit, OnDestroy {
 
   getTypes() {
     this.reportService
-        .getTypes()
-        .subscribe(types => this.caseTypes = types);
+      .getTypes()
+      .subscribe(types => this.caseTypes = types);
   }
 
   ngOnInit() {

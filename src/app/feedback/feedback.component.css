@@ -77,8 +77,18 @@
 .bg-orange-darken-2 {
     background: #C66B01;
 }
+.btn-reset {
+    margin-top: 45px;
+}
+
 @media screen and (min-width: 480px){
     .chart-title {
         max-width: 110px;
+    }
+}
+@media screen and (max-width: 768px){
+.btn-reset {
+        width: 100% !important;
+        margin-top: 15px;
     }
 }
