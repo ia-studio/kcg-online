@@ -52,7 +52,7 @@
 				高雄市政府聯合服務中心電話：</small>
                     <h5 class="font-lg">(07) 336-8333 #2819、#2833、#2834</h5>
                     <div class="text-center">
-                        <a href="tel:073368333" onclick="return confirm('即將撥打高雄市政府聯合服務中心電話，是否繼續?')" class="btn btn-orange visible-sm visible-xs"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;撥打電話</a>
+                        <a href="tel:073368333" onclick="return confirm('即將撥打高雄市政府聯合服務中心電話，是否繼續?')" *ngIf="showPhone" class="btn btn-orange visible-sm visible-xs"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;撥打電話</a>
                     </div>
                 </div>
                 <div class="col-md-2">
@@ -83,5 +83,9 @@
         </li>
         <li class="menu-item"><a href="http://work1999.kcg.gov.tw/Rptdownload.aspx" target="_blank">案件反應排行榜</a></li>
         <li class="menu-item"><a href="http://disdp.kcg.gov.tw/exchange/feedback.php" target="_blank">廉政案件</a></li>
+        <li class="menu-item"><a [routerLink]="['/privacy','privacy']">隱私權保護政策</a></li>
+        <li class="menu-item"><a [routerLink]="['/privacy','security']">網站安全政策</a></li>
+        <li class="menu-item"><a [routerLink]="['/privacy','copyright']">著作權聲明</a></li>
+        <li class="menu-item"><a href="http://www.kcg.gov.tw/" target="blank">高雄市政府全球資訊網</a></li>
     </ul>
 </div>

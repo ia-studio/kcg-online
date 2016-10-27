@@ -1,4 +1,4 @@
-import { Component, OnInit }  from '@angular/core';
+import { Component, OnInit, Output }  from '@angular/core';
 import { Title }              from '@angular/platform-browser';
 import { CaseType }           from '../case';
 import { ReportService }      from '../services/report.service';
@@ -23,9 +23,12 @@ export class ReportComponent implements OnInit {
         .getTypes()
         .subscribe(types => this.caseTypes = types);
   }
+  @Output()
+  showPhone = true;
 
   ngOnInit() {
     this.setTitle('市長信箱 - 高雄市政府線上即時服務平台');
     this.getTypes();
+    
   }
 }
