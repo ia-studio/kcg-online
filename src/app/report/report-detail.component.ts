@@ -17,7 +17,8 @@ import { Md5 } from './md5';
 @Component({
   selector: 'my-report-detail',
   templateUrl: 'report-detail.component.html',
-  providers: [ReportService, GeoAddressService, GeolocationService, UploadService]
+  providers: [ReportService, GeoAddressService, GeolocationService, UploadService],
+  styleUrls: ['report-detail.component.scss']
 })
 export class ReportDetailComponent implements OnInit, OnDestroy {
   error: any;
@@ -26,7 +27,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   caseType: CaseType;
   subCaseType: SubCaseType;
   getReportDone = false;
-
+  reportAttention = true;
   areaCodes: any[];
   hasher: string; //caseType, subCaseType 的密鑰，避免篡改
 
@@ -133,6 +134,8 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
           //this.gpsDistrict = data.results[2].address_components[1].long_name; //830台灣高雄市鳳山區五甲一路564巷2-8號 會出現高雄市而非鳳山市
           let addr = data.results[2].formatted_address;
           this.gpsDistrict = addr.substring(addr.indexOf('市') + 1);
+          this.Subj_District_name = addr.substring(addr.indexOf('市') + 1,addr.indexOf('區') + 1);
+          // addr.substring(addr.indexOf('市') + 1);
         }
       }
     );
