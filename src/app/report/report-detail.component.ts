@@ -17,7 +17,8 @@ import { Md5 } from './md5';
 @Component({
   selector: 'my-report-detail',
   templateUrl: 'report-detail.component.html',
-  providers: [ReportService, GeoAddressService, GeolocationService, UploadService]
+  providers: [ReportService, GeoAddressService, GeolocationService, UploadService],
+  styleUrls: ['report-detail.component.scss']
 })
 export class ReportDetailComponent implements OnInit, OnDestroy {
   error: any;
