@@ -173,8 +173,8 @@
 		</div>
 	</div>
 </div>
-<div class="pop" style="display:block;">
-	<div class="pop-content fat-content" style="">
+<div class="pop" style="display:block;" *ngIf="reportAttention">
+	<div class="pop-content fat-content">
 		<div class="check">
 			<div class="check-panel">
 				<div class="check-mark"><i class="fa fa-check"></i></div>
@@ -201,7 +201,7 @@
 					當系統處於定期維護時間每日凌晨01:00~02:00時，主機可能會停止所有服務，如有不便還請見諒。</p>
 				</div>
 				<h4 class="check-footer navy text-center">高雄市政府市長信箱處理小組 敬上</h4>
-				<a href="/" class="btn btn-green">回到首頁</a>
+				<a href="javascript:void(0)" class="btn btn-green" (click)="reportAttention=!reportAttention">我瞭解了</a>
 			</div>
 		</div>
 	</div>
