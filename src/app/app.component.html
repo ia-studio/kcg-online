@@ -29,7 +29,9 @@
             <div class="header-news" *ngIf="showNews">
                 <div class="news-visble">
                   <ul class="news-list">
-                    <li [ngClass]="{'active':showNowNews(i)}" *ngFor="let newsItem of news; let i = index"><a [routerLink]="['/news', newsItem.MsgID]">{{newsItem.MsgTitle}}</a></li>
+                    <li [ngClass]="{'active':showNowNews(i)}" *ngFor="let newsItem of news; let i = index">
+                      <a [routerLink]="['/news', newsItem.MsgID]">{{newsItem.MsgTitle}}</a>
+                    </li>
                   </ul>
                   <span class="pull-right" (click)="showNews=false"><i class="fa fa-times-circle"></i></span>
                 </div>
@@ -50,7 +52,7 @@
 				高雄市政府聯合服務中心電話：</small>
                     <h5 class="font-lg">(07) 336-8333 #2819、#2833、#2834</h5>
                     <div class="text-center">
-                        <a *ngIf="showPhoneButton" href="tel:073368333" onclick="return confirm('即將撥打高雄市政府聯合服務中心電話，是否繼續?')" class="btn btn-orange visible-sm visible-xs"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;撥打電話</a>
+                        <a href="tel:073368333" onclick="return confirm('即將撥打高雄市政府聯合服務中心電話，是否繼續?')" class="btn btn-orange visible-sm visible-xs"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;撥打電話</a>
                     </div>
                 </div>
                 <div class="col-md-2">
