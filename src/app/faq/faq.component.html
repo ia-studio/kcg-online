@@ -35,7 +35,7 @@
       <div class="article-content">
         <div class="faq row maB2x">
           <div class="faq-head col-md-12 hidden-xs hidden-sm">
-            <div class="col-md-7">陳情內容</div>
+            <div class="col-md-7">問題內容</div>
             <div class="col-md-2">單位</div>
             <div class="col-md-1">人氣</div>
             <div class="col-md-2"></div>
@@ -50,12 +50,12 @@
             <div class="col-md-2 text-black">{{item.OrganName}}</div>
             <div class="col-md-1 text-black">{{item.ViewCount}}</div>
             <div class="col-md-2 text-right">
-              <a class="text-orange" href="javascript:void(0)" (click)="getReply(item.OrganNo, item.SeqNo)">詳細陳情內容
+              <a class="text-orange" href="javascript:void(0)" (click)="getReply(item.OrganNo, item.SeqNo)">詳細問題內容
                 <i class="fa fa-angle-double-right"></i>
               </a>
             </div>
           </div>
-          <div class="faq-item col-md-12 navy" *ngIf="faqs.length==0">沒有符合的陳情內容</div>
+          <div class="faq-item col-md-12 navy" *ngIf="faqs.length==0">沒有符合的問題內容</div>
         </div>
         <div class="text-center">
           <ul class="page">
