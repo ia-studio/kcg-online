@@ -40,12 +40,17 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   gpsFormattedAddress: string;
   gpsDistrict: string;
 
+  readonly county_placeholder: string = '請選擇縣市';
+  readonly district_placeholder: string = '請選擇地區';
+  readonly region_placeholder: string = '請選擇里別';
+  readonly addr4_placeholder: string = '請輸入居住地址';
+
   private subscribes: Subscription[] = []; // put all subscribes into this array, while component ondestroy to unsubscribe them.
 
-  Subj_District_name: string = '請選擇地區';
-  Sugg_Addr1_name: string = '請選擇縣市';
-  Sugg_Addr2_name: string = '請選擇地區';
-  Sugg_Addr3_name: string = '請選擇里別';
+  Subj_District_name: string = this.district_placeholder;
+  Sugg_Addr1_name: string = this.county_placeholder;
+  Sugg_Addr2_name: string = this.district_placeholder;
+  Sugg_Addr3_name: string = this.region_placeholder;
 
   //form settings
   Subj_Item: string;
@@ -78,7 +83,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     this.Case_Token = this.genCaseToken(12);
 
     this.areaCodes = DistrictCodesKaohsiung(true); // 左側行政區 gps
-    this.districtCodes = DistrictCodesKaohsiung(false); // 右側行政區下拉項目
+    this.districtCodes = []; // 右側行政區下拉項目
     this.gpsDistrict = '';
     this.Subj_District = '6411100000';
     this.countyCodes = CountyCodes();
@@ -493,6 +498,9 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     else{
       this.districtCodes = [];
     }
+    this.regionCodes = [];
+    this.Sugg_Addr3_name = this.region_placeholder;
+    this.Sugg_Addr2_name = this.district_placeholder;
     //console.log(`onChangeCountyCode: ${this.Sugg_Addr1}`);
   }
 
