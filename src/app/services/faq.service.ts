@@ -10,19 +10,19 @@ export class FaqService {
 
   constructor(private http: Http) { }
 
-  getCategories() : Observable<any> {
+  getCategories() : Observable<Category[]> {
     return this.http.get(this.categoryUrl)
                .map(this.extractData)
                .catch(this.handleError);
   }
 
-  getFaqs(q = "", kind = "") : Observable<any[]> {
+  getFaqs(q = "", kind = "") : Observable<Faq[]> {
     return this.http.get(this.faqUrl + q + '?kind=' + kind)
                .map(this.extractData)
                .catch(this.handleError);
   }
 
-  getReply(organNo: string, seqNo: number) : Observable<any> {
+  getReply(organNo: string, seqNo: number) : Observable<Reply> {
     var key = organNo + '-' + seqNo;
     var flag = sessionStorage.getItem(key) ? 'R' : 'N';
     sessionStorage.setItem(key, new Date().toString());
@@ -41,4 +41,29 @@ export class FaqService {
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     return Observable.throw(errMsg);
   }
+}
+
+export class Reply {
+  IssueContent: string;
+  IssueKind: string;
+  PostDate: string;
+  ReplyContent: string;
+  ReplyOrganName: string;
+  ReviseDate: string;
+  ViewCount: string;
+  Name: string;
+}
+
+export class Faq {
+  CaseContent: string;
+  OrganName: string;
+  OrganNo: string;
+  SeqNo: number;
+  SerialNo: number;
+  ViewCount: string;
+}
+
+export class Category {
+  kind: string;
+  kind_name: string;
 }
