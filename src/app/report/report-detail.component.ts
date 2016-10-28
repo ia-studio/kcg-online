@@ -70,7 +70,8 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   Sugg_Addr4: string;
   Sugg_Sex: string;
 
-  uploadFiles: string[] = [];
+  //uploadFiles: string[] = [];
+  uploadFiles: File[] = [];
 
   constructor(
     private route: ActivatedRoute,
@@ -187,8 +188,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     return text;
   }
 
-  @ViewChild("fileInput")
-  fileInput: any;
+  @ViewChild("fileInput") fileInput: any;
   addFile(): void {
     let fi: any = this.fileInput.nativeElement;
     if (fi.files) {
@@ -198,17 +198,9 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       if (!check)
         return;
 
-      this.Subj_FileCount = fi.files.length;
-
       for(var i=0; i < fi.files.length; i++){
-        this.Atth_FileNames += fi.files[i].name + ';';
-        this.uploadFiles.push(fi.files[i].name);
+        this.uploadFiles.push(fi.files[i]);
       }
-      //console.log(`this.Atth_FileNames-1: ${this.Atth_FileNames}`);
-      if (this.Atth_FileNames.substring(this.Atth_FileNames.length - 1) === ';'){
-        this.Atth_FileNames = this.Atth_FileNames.substring(0, this.Atth_FileNames.length - 1);
-      }
-      //console.log(`this.Atth_FileNames-2: ${this.Atth_FileNames}`);
 
       let upurl: string = `http://soweb.kcg.gov.tw/webapi/api/AttachFile/Upload/${this.Case_Token}`;
       this.subscribes.push(
@@ -365,8 +357,12 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       return false;
     }
 
+    // 處理上傳內容
+    this.Subj_FileCount = this.uploadFiles.length;
+    this.Atth_FileNames = this.joinUploadedFileName(this.uploadFiles);
+
     // 上傳附件的資料可能有誤，basically, this will not happen
-    if ((this.Subj_FileCount && this.Subj_FileCount > 0) && (!this.Atth_FileNames || this.Atth_FileNames.length === 0)){
+    if ((this.Subj_FileCount && this.Subj_FileCount > 0) && (!this.Atth_FileNames || this.Atth_FileNames.split(';').length === 0)){
       //console.log(`Subj_FileCount: ${this.Subj_FileCount}\nAtth_FileNames: ${this.Atth_FileNames}`);
       alert(`請重新上傳附件`);
       return false;
@@ -452,6 +448,18 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   private validateEmail(email): boolean {
     let regx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regx.test(email);
+  }
+
+  private joinUploadedFileName(files: File[]): string {
+    var result = '';
+    for(var i=0; i < files.length; i++){
+      result += files[i].name + ';';
+    }
+    if (result.substring(result.length - 1) === ';'){
+      result = result.substring(0, result.length - 1);
+    }
+    //console.log(result);
+    return result;
   }
 
   onDistrictChanged(s: HTMLSelectElement): void{

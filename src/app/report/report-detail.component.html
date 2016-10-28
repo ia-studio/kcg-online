@@ -78,7 +78,7 @@
                 </a>
 							</div>
 							<div class="col-md-6 navy">
-								<p *ngFor="let item of uploadFiles"><i class="fa fa-paperclip"></i> {{ item }}</p>
+								<p *ngFor="let item of uploadFiles"><i class="fa fa-paperclip"></i> {{ item.name }}</p>
 							</div>
 						</div>
 						<input type="hidden" value="{{Case_Token}}" name="Case_Token" [ngModel]="Case_Token" #case_token />
