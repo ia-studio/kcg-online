@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Title }             from '@angular/platform-browser';
-import { FaqService }        from '../services/faq.service';
+import { FaqService, Reply, Faq, Category }        from '../services/faq.service';
 import { ActivatedRoute }    from '@angular/router';
 
 @Component({
@@ -12,8 +12,9 @@ import { ActivatedRoute }    from '@angular/router';
 export class FaqComponent implements OnInit {
   error: any;
   isSearch = false;
-  faqs = [];
-  categories = [];
+  faqs: Faq[] = [];
+  categories: Category[] = [];
+  reply: Reply;
   selectedCategory = {
     value: '',
     text: '請選擇處理單位'
@@ -30,6 +31,10 @@ export class FaqComponent implements OnInit {
     this.titleService.setTitle(newTitle);
   }
 
+   closeReply() {
+    this.reply = null;
+  }
+
   getFaqs(q = '', kind = '') {
     this.faqService
         .getFaqs(q, kind)
@@ -39,6 +44,12 @@ export class FaqComponent implements OnInit {
             this.totalPage = Math.floor(faq.length / this.pageSize) + ((faq.length % this.pageSize === 0) ? 0 : 1)
           },
           error => this.faqs = []);
+  }
+
+  getReply(organNo: string, seqNo: number){
+       this.faqService
+        .getReply(organNo, seqNo)
+        .subscribe(reply => { this.reply = reply, window.scrollTo(0, 0) });
   }
 
   getCategories() {
