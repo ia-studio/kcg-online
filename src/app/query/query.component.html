@@ -35,15 +35,15 @@
                     <p class="article-lable require">案件編號 </p>
                     <div class="row maB1x">
                         <div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" type="text" value="B" readonly></div>
-                        <div class="col-xs-10"><input class="col-xs-12" type="text" [(ngModel)]="caseNo"></div>
+                        <div class="col-xs-10"><input class="col-xs-12" tabindex="1" type="text" [(ngModel)]="caseNo"></div>
                     </div>
                     <p class="article-lable require">E-Mail </p>
                     <div class="row">
-                        <div class="col-xs-12"><input class="col-xs-12" type="text" placeholder="example@kcg.gov.tw" [(ngModel)]="email"></div>
+                        <div class="col-xs-12"><input class="col-xs-12" tabindex="2" type="text" placeholder="example@kcg.gov.tw" [(ngModel)]="email"></div>
                     </div>
                     <p class="validation-info"> {{queryBErr}}</p>
                     <div class="row text-center maT2x">
-                      <a href="javascript:;" class="btn btn-orange" (click)="queryB()">查詢</a>
+                      <a href="javascript:void(0);" tabindex="3"  class="btn btn-orange" (click)="queryB()">查詢</a>
                     </div>
                 </div>
             </div>
@@ -53,21 +53,21 @@
                 <h4 id="mayor" class="article-title">人民陳情案件</h4>
             </div>
             <div class="article-content block-separate">
-                <p class="navy">透案件來源：透過電話、信件、傳真等非網路途徑</p>
+                <p class="navy">透案件來源：透過電話、信件、傳真等非網路途徑<br><br></p>
                 <p class="article-lable require">案件編號 </p>
                 <div class="row maB1x">
-                  <div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" type="text" value="A"></div>
-                  <div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" type="text" value="TB" [(ngModel)]="vp1"></div>
-                  <div class="col-xs-3 input-separate"><input class="col-xs-12 text-center" type="text" [(ngModel)]="vyear"></div>
-                  <div class="col-xs-5"><input class="col-xs-12" type="text" [(ngModel)]="vp3"></div>
+                  <div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" tabindex="4" type="text" value="A"></div>
+                  <div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" tabindex="5" type="text" value="TB" [(ngModel)]="vp1"></div>
+                  <div class="col-xs-3 input-separate"><input class="col-xs-12 text-center" tabindex="6" type="text" [(ngModel)]="vyear"></div>
+                  <div class="col-xs-5"><input class="col-xs-12" tabindex="7" type="text" [(ngModel)]="vp3"></div>
                 </div>
                 <p class="article-lable require">來電時的姓名 </p>
                 <div class="row">
-                  <div class="col-xs-12"><input class="col-xs-12" type="text" placeholder="您的姓名" [(ngModel)]="callerName"></div>
+                  <div class="col-xs-12"><input class="col-xs-12" tabindex="8" type="text" placeholder="您的姓名" [(ngModel)]="callerName"></div>
                 </div>
                 <p class="validation-info"> {{queryVErr}}</p>
                 <div class="row text-center maT2x">
-                  <a class="btn btn-orange" (click)="queryV()">查詢</a>
+                  <a class="btn btn-orange" tabindex="9" (click)="queryV()">查詢</a>
                 </div>
             </div>
         </div>
