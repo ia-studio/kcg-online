@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { CaseType } from '../case';
+import { CaseType, SubCaseType } from '../case';
 import { ReportService } from '../services/report.service';
 import { GlobalService } from '../services/global.service';
 
@@ -18,6 +18,8 @@ import { GlobalService } from '../services/global.service';
 export class ReportComponent implements OnInit, OnDestroy {
   caseTypes: CaseType[];
   error: any;
+  selectedCaseType: CaseType;
+  selectedSubCaseType: SubCaseType;
 
   public constructor(private titleService: Title, private reportService: ReportService, private globalService: GlobalService) { }
 
@@ -29,6 +31,20 @@ export class ReportComponent implements OnInit, OnDestroy {
     this.reportService
       .getTypes()
       .subscribe(types => this.caseTypes = types);
+  }
+
+  onSelected(id: string, subId: string){
+     this.reportService
+        .getType(id)
+        .subscribe(type => {
+          this.selectedCaseType = type;
+          this.selectedSubCaseType = type.Subitems.filter(item => item.Subitem == subId)[0];
+        });
+  }
+
+  closeReport() {
+    this.selectedCaseType = null;
+    this.selectedSubCaseType = null;
   }
 
   ngOnInit() {

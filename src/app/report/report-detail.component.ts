@@ -1,7 +1,7 @@
 /* *
 * ref: https://github.com/jkuri/ng2-uploader
 * */
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ViewChild } from "@angular/core/src/metadata/di";
 import { Subscription } from "rxjs";
@@ -17,7 +17,7 @@ import {DistrictCodesKaohsiung, RegionCodesKaohsiung, CountyCodes, District, Cou
 import { Md5 } from './md5';
 
 @Component({
-  selector: 'my-report-detail',
+  selector: 'app-report-detail',
   templateUrl: 'report-detail.component.html',
   providers: [ReportService, GeoAddressService, GeolocationService, UploadService, AreaService],
   styleUrls: ['report-detail.component.scss']
@@ -25,7 +25,9 @@ import { Md5 } from './md5';
 export class ReportDetailComponent implements OnInit, OnDestroy {
   error: any;
   navigated = false; // true if navigated here
+  @Input()
   caseType: CaseType;
+  @Input()
   subCaseType: SubCaseType;
   getReportDone = false;
   reportAttention = true;
@@ -73,6 +75,9 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   //uploadFiles: string[] = [];
   uploadFiles: File[] = [];
 
+  @Output()
+  closeReport = new EventEmitter();
+
   constructor(
     private route: ActivatedRoute,
     private reportService: ReportService,
@@ -97,29 +102,15 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.subscribes.push(
-      this.route.params.subscribe(params => {
-        if (params['id'] !== undefined && params['subId'] !== undefined) {
-          this.navigated = true;
-          this.getType(params['id'], params['subId']);
-          window.scrollTo(0, 0);
-        }
-      })
-    );
-
+    window.scrollTo(0, 0);
     this.hasher = Md5(this.genHasherMajorKey());
     this.getLocation();
   }
 
-  getType(id: string, subId: string) {
-    this.subscribes.push(
-      this.reportService
-        .getType(id)
-        .subscribe(type => {
-          this.caseType = type;
-          this.subCaseType = type.Subitems.filter(item => item.Subitem == subId)[0];
-        })
-    );
+  goBack(){
+    if(confirm('確定取消申報?')) {
+      this.closeReport.emit();
+    }
   }
 
   private genHasherMajorKey(): string{
