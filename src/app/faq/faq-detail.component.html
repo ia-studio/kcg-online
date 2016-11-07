@@ -28,6 +28,9 @@
                         <p class="article-lable require">人氣指數</p>
                         <p class="navy maB2x pdLHalfX">{{reply.ViewCount}}</p>
                     </div>
+                    <div class="text-center col-md-12">
+                        <a class="btn btn-green hidden-xs hidden-sm" href="javascript:void(0);" (click)="goBack()">繼續查詢問題</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -36,11 +39,10 @@
                 <p class="article-lable require">處理情形(答覆內容)</p>
                 <p class="navy maB2x" style="white-space: pre-line;">{{reply.ReplyContent}}</p>
             </div>
+            <div class="text-center">
+                <a class="btn btn-green hidden-md hidden-lg" href="javascript:void(0);" (click)="goBack()">繼續查詢問題</a>
+            </div>
         </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <a class="btn btn-green" (click)="goBack()">回到常見問題集</a>
-      </div>
+
     </div>
 </div>

@@ -5415,8 +5415,12 @@ Copyright (c) 2014 Daniel Eden
     width: 1px;
     background-color: #797C83
 }
-.article-lable+p {
-    line-height: 1.5em
+.article-content {
+    font-size: 16px;
+}
+.article-lable + p,
+.article-lable + ol {
+    line-height: 1.75em
 }
 .article-content p {
     text-align: justify
@@ -5630,6 +5634,9 @@ textarea {
 .btn.btn-orange {
     background-color: #F49A44
 }
+.btn.btn-grey {
+    background-color: #DEDEDE
+}
 .btn.btn-green {
     background: linear-gradient(-45deg, rgba(128, 203, 196, 0.83) 0%, rgba(84, 162, 178, 0.83) 100%)
 }
@@ -5777,7 +5784,9 @@ footer {
     color: #797C83
 }
 .body-content {
-    min-height: 550px
+    min-height: 550px;
+    font-size: 16px;
+
 }
 @media screen and (max-width: 768px) {
     .body-content {
@@ -6635,10 +6644,13 @@ footer {
 }
 .case-list a {
     color: rgba(255, 255, 255, 0.9);
-    text-decoration: none
+    text-decoration: none;
 }
 .case-list a:hover {
     color: #fff
+}
+.case-list .case-item {
+
 }
 .news-all {
     padding: 0;
