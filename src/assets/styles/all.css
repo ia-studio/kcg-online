@@ -5634,6 +5634,9 @@ textarea {
 .btn.btn-orange {
     background-color: #F49A44
 }
+.btn.btn-grey {
+    background-color: #DEDEDE
+}
 .btn.btn-green {
     background: linear-gradient(-45deg, rgba(128, 203, 196, 0.83) 0%, rgba(84, 162, 178, 0.83) 100%)
 }
