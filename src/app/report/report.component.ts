@@ -30,6 +30,11 @@ export class ReportComponent implements OnInit, OnDestroy {
       .getTypes()
       .subscribe(types => this.caseTypes = types);
   }
+  
+  scrollTo (targetAnchor:string){
+      let offset = document.getElementById(targetAnchor).offsetTop+500;
+      window.scrollTo(0,offset);
+  }
 
   ngOnInit() {
     this.setTitle('市長信箱 - 高雄市政府線上即時服務平台');
@@ -37,7 +42,7 @@ export class ReportComponent implements OnInit, OnDestroy {
     this.globalService.showPhoneButton = true;
     window.scrollTo(0, 0);
   }
-
+  
   ngOnDestroy() {
     this.globalService.showPhoneButton = false;
   }
