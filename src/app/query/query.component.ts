@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Title }             from '@angular/platform-browser';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import {Subscription} from "rxjs";
 import 'rxjs/Rx';
 
-import { Case }         from '../case';
+import { Case } from '../case';
 import { QueryService } from '../services/query.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { QueryService } from '../services/query.service';
   templateUrl: 'query.component.html',
   providers: [QueryService]
 })
-export class QueryComponent implements OnInit {
+export class QueryComponent implements OnInit, OnDestroy {
   public constructor(
     private titleService: Title,
     private qService: QueryService
@@ -19,6 +20,7 @@ export class QueryComponent implements OnInit {
   }
   searchCase: Case;
   error: any;
+  private subscriptions: Subscription[] = [];
 
 
   private isMayorMail?: boolean; //市長信箱 Result
@@ -51,6 +53,10 @@ export class QueryComponent implements OnInit {
     window.scrollTo(0, 0);
   }
 
+  ngOnDestroy() {
+    this.subscriptions.forEach(s => s.unsubscribe());
+  }
+
   queryB(){ //市長信箱查詢
     if (!this.validateCaseNo(this.caseNo)){
 
@@ -61,18 +67,20 @@ export class QueryComponent implements OnInit {
       return this.queryBErr = this.errType.mailErr;
     }
 
-    this.qService.getBResult(this.caseNo, this.email).subscribe(data => {
-      this.searchCase = data;
-      //console.log(data);
-      this.displayDetail = true;
-      this.isMayorMail = true;
-      this.searchCase.isMayorMail = true;
-    }, (err: any) => {
-      //console.log(err);
-      if (err.status !== 200){
-        return this.queryBErr = this.errType.notFound;
-      }
-    });
+    this.subscriptions.push(
+      this.qService.getBResult(this.caseNo, this.email).subscribe(data => {
+        this.searchCase = data;
+        //console.log(data);
+        this.displayDetail = true;
+        this.isMayorMail = true;
+        this.searchCase.isMayorMail = true;
+      }, (err: any) => {
+        //console.log(err);
+        if (err.status !== 200){
+          return this.queryBErr = this.errType.notFound;
+        }
+      })
+    );
   }
 
   private validateCaseNo(caseNo): boolean {
@@ -96,18 +104,20 @@ export class QueryComponent implements OnInit {
       return this.queryVErr = this.errType.nameErr;
     }
 
-    //this.vp1 = 'AK';
-    this.qService.getVResult(this.vp1, this.vyear, this.vp3, this.callerName).subscribe(data => {
-      this.searchCase = data;
-      //console.log(data);
-      this.displayDetail = true;
-      this.isCivilianSuggest = true;
-      this.searchCase.isCivilianSuggest = true;
-    }, (err: any) => {
-      if (err.status !== 200){
-        return this.queryVErr = this.errType.notFound;
-      }
-    });
+    this.subscriptions.push(
+      //this.vp1 = 'AK';
+      this.qService.getVResult(this.vp1, this.vyear, this.vp3, this.callerName).subscribe(data => {
+        this.searchCase = data;
+        //console.log(data);
+        this.displayDetail = true;
+        this.isCivilianSuggest = true;
+        this.searchCase.isCivilianSuggest = true;
+      }, (err: any) => {
+        if (err.status !== 200){
+          return this.queryVErr = this.errType.notFound;
+        }
+      })
+    );
   }
 
 }

@@ -92,7 +92,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
 
     this.Subj_FileCount = 0;
     this.Atth_FileNames = '';
-    this.Subj_Security = '1'; // 保密等級，預設為一般 1
+    this.Subj_Security = '2'; // 保密等級，always 預設為保密 2
     this.Sugg_Sex = '2'; // 性別，預設為男 2
   }
 
@@ -132,7 +132,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   }
 
   private getLocation(){
-    var opt = {
+    let opt = {
       enableHighAccuracy : true,
       timeout : 5000,
       maximumAge : 0
@@ -180,9 +180,9 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   *
   * */
   private genCaseToken(length: number): string {
-    var text: string = ''; //final result
-    var possibilities = 'ABCDEFGHJKMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789';
-    for( var i = 0; i < length; i++ ){
+    let text: string = ''; //final result
+    let possibilities = 'ABCDEFGHJKMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789';
+    for(let i = 0; i < length; i++ ){
       text += possibilities.charAt(Math.floor(Math.random() * possibilities.length));
     }
     return text;
@@ -194,17 +194,21 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     if (fi.files) {
       //console.log(fi.files);
 
-      let check = this.checkFiles(fi.files);
+      let refiles = this.checkFilenameIsExist(fi.files);
+      if (!refiles || refiles.length <= 0)
+        return;
+
+      let check = this.checkFiles(refiles);
       if (!check)
         return;
 
-      for(var i=0; i < fi.files.length; i++){
-        this.uploadFiles.push(fi.files[i]);
+      for(let i=0; i < refiles.length; i++){
+        this.uploadFiles.push(refiles[i]);
       }
 
       let upurl: string = `http://soweb.kcg.gov.tw/webapi/api/AttachFile/Upload/${this.Case_Token}`;
       this.subscribes.push(
-        this.uploadService.sendFileRequest(upurl, fi.files).subscribe(
+        this.uploadService.sendFileRequest(upurl, refiles).subscribe(
           resp => {
             console.log(resp);
           }
@@ -218,7 +222,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     if (!r0)
       return false;
 
-    for(var i=0; i<files.length; i++){
+    for(let i=0; i<files.length; i++){
       let f = files[i];
       let r1 = this.checkFilesSize(f);
       if (!r1)
@@ -236,11 +240,11 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   }
 
   /*
-  * check single file size
-  * ok = true,
-  * > 10MB = false
-  *
-  * */
+   * check single file size
+   * ok = true,
+   * > 10MB = false
+   *
+   * */
   private checkFilesSize(f: File): boolean {
     const limit: number = 10485760; // 10MB = 10 * 1024 * 1024
 
@@ -252,15 +256,15 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   }
 
   /*
-  * check total files size
-  * ok = true
-  * >20MB = false
-  *
-  * */
+   * check total files size
+   * ok = true
+   * >20MB = false
+   *
+   * */
   private checkTotalFilesSize(f: File[]): boolean {
     const limit: number = 20971520; //20MB = 20 * 1024 * 1024
     let tsize: number = 0;
-    for(var i=0; i<f.length; i++){
+    for(let i=0; i<f.length; i++){
       tsize += f[i].size;
     }
 
@@ -272,11 +276,11 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   }
 
   /*
-  * check file name contains a ;
-  * ok = true;
-  * has ; = false;
-  *
-  * */
+   * check file name contains a ;
+   * ok = true;
+   * has ; = false;
+   *
+   * */
   private checkFileName(f: File): boolean {
     let name = '';
     if (f.name.split('.')[0])
@@ -290,10 +294,10 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   }
 
   /*
-  * check file's ext name
-  * ok = true
-  *
-  * */
+   * check file's ext name
+   * ok = true
+   *
+   * */
   private checkExtName(f: File): boolean {
     let extName = '';
     if (f.name.toLowerCase().split('.')[1])
@@ -303,12 +307,43 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       'pdf', 'txt',
       'bmp', 'jpg', 'jpeg', 'gif', 'png', 'odt', 'ods',
       'zip'];
-    let ret = available.indexOf(extName) >= 0;
+    let ret = available.indexOf(extName.toLowerCase()) >= 0;
     if (!ret){
       alert(`'${f.name}' 副檔名不屬於允許上傳類型`);
     }
     return ret;
   }
+
+  private checkFilenameIsExist(files: File[]): File[]{
+    let temp: File[] = [];
+    for(let j = 0; j < files.length; j++){
+      let fname = files[j].name;
+      for(let i = 0; i < this.uploadFiles.length; i++){
+        let sameFileName = this.uploadFiles[i].name.indexOf(fname) > -1;
+        if (sameFileName){
+          alert(`'${fname}' 檔名已存在，請重新選擇檔案`);
+          temp = this.sliceItem(files, j);
+          return temp;
+        }
+      } // i
+    } // j
+    return files;
+  }
+  private sliceItem(fs: File[], delIndex: number): File[]{
+    //wtf! array.splice | slice cannot use here! why?
+    let ret: File[] = [];
+    if (!fs || !delIndex)
+      return [];
+
+    for(let i = 0; i < fs.length; i++){
+      if (i !== delIndex){
+        ret.push(fs[i]);
+      }
+    }
+    return ret;
+  }
+
+
 
   private getItemCode(): void {
     let hp = location.href.split('/'); //直接從目前 url 路徑抓出 主/次項目
@@ -451,8 +486,8 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   }
 
   private joinUploadedFileName(files: File[]): string {
-    var result = '';
-    for(var i=0; i < files.length; i++){
+    let result = '';
+    for(let i=0; i < files.length; i++){
       result += files[i].name + ';';
     }
     if (result.substring(result.length - 1) === ';'){
@@ -545,6 +580,5 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       )
     );
   }
-
 
 }

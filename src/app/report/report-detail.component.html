@@ -48,15 +48,6 @@
 							</div>
 							<p class="col-md-12 text-gray"><br>請選擇建議事項內容所屬高雄行政區，若內容無法分區或其他縣市事項請選擇「無法分區」</p>
 						</div>
-						<div class="col-md-12 maB1x">
-							<p class="article-lable require">是否保密？<small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
-							<div class="col-md-9">
-								<input type="radio" name="Subj_Security" value="1" checked="true" [ngModel]="Subj_Security" (click)="Subj_Security = '1'"
-								/>&nbsp; 一般&nbsp;&nbsp;&nbsp;
-								<input type="radio" name="Subj_Security" value="2" [ngModel]="Subj_Security" (click)="Subj_Security = '2'" />&nbsp;
-								保密
-							</div>
-						</div>
 					</div>
 					<div class="col-md-12 maB1x">
 						<p class="article-lable require">建議事項 <small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
@@ -84,6 +75,7 @@
 						<input type="hidden" value="{{Case_Token}}" name="Case_Token" [ngModel]="Case_Token" #case_token />
 						<input type="hidden" value="0" name="Subj_FileCount" [ngModel]="Subj_FileCount" />
 						<input type="hidden" value="" name="Atth_FileNames" [ngModel]="Atth_FileNames" />
+            <input type="hidden" value="2" name="Subj_Security" [ngModel]="Subj_Security" />
 					</div>
 				</div>
 			</div>
