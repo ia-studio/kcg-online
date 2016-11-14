@@ -1,8 +1,7 @@
 /* *
 * ref: https://github.com/jkuri/ng2-uploader
 * */
-import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
 import { ViewChild } from "@angular/core/src/metadata/di";
 import { Subscription } from "rxjs";
 
@@ -18,7 +17,7 @@ import { Md5 } from './modules/md5';
 import { checkFilesSize, checkTotalFilesSize, checkFileName, checkExtName, checkFilenameIsExist } from './modules/file-checker';
 
 @Component({
-  selector: 'my-report-detail',
+  selector: 'app-report-detail',
   templateUrl: 'report-detail.component.html',
   providers: [ReportService, GeoAddressService, GeolocationService, UploadService, AreaService],
   styleUrls: ['report-detail.component.scss']
@@ -26,8 +25,8 @@ import { checkFilesSize, checkTotalFilesSize, checkFileName, checkExtName, check
 export class ReportDetailComponent implements OnInit, OnDestroy {
   error: any;
   navigated = false; // true if navigated here
-  caseType: CaseType;
-  subCaseType: SubCaseType;
+  @Input() caseType: CaseType;
+  @Input() subCaseType: SubCaseType;
   getReportDone = false;
   reportAttention = true;
   areaCodes: District[]; // 左側檢舉址 地區 gps
@@ -71,21 +70,19 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   Sugg_Addr4: string;
   Sugg_Sex: string;
 
-  //uploadFiles: string[] = [];
   uploadFiles: File[] = [];
 
-  @Output()
-  closeReport = new EventEmitter();
+  @Output() closeReport = new EventEmitter();
 
   constructor(
-    private route: ActivatedRoute,
-    private reportService: ReportService,
     private geoLocationService: GeolocationService,
     private geoAddressService: GeoAddressService,
     private uploadService: UploadService,
     private areaService: AreaService
   ) {
     this.Case_Token = this.genCaseToken(12);
+    //this.Subj_Item = this.caseType.Item;
+    //this.Subj_Subitem = this.subCaseType.Item;
 
     this.areaCodes = DistrictCodesKaohsiung(true); // 左側行政區 gps
     this.districtCodes = []; // 右側行政區下拉項目
@@ -101,19 +98,12 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.subscribes.push(
-      this.route.params.subscribe(params => {
-        if (params['id'] !== undefined && params['subId'] !== undefined) {
-          this.navigated = true;
-          this.getType(params['id'], params['subId']);
-          window.scrollTo(0, 0);
-        }
-      })
-    );
-
     window.scrollTo(0, 0);
     this.hasher = Md5(this.genHasherMajorKey());
     this.getLocation();
+
+    this.Subj_Item = this.caseType.Item;
+    this.Subj_Subitem = this.subCaseType.Item;
   }
 
   goBack(){
@@ -122,19 +112,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     }
   }
 
-  getType(id: string, subId: string) {
-    this.subscribes.push(
-      this.reportService
-        .getType(id)
-        .subscribe(type => {
-          this.caseType = type;
-          this.subCaseType = type.Subitems.filter(item => item.Subitem == subId)[0];
-        })
-    );
-  }
-
   private genHasherMajorKey(): string{
-    this.getItemCode();
     return `${this.Subj_Subitem}-${this.Case_Token}-${this.Subj_Item}`
   }
 
@@ -249,15 +227,6 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     return true;
   }
 
-
-  private getItemCode(): void {
-    let hp = location.href.split('/'); //直接從目前 url 路徑抓出 主/次項目
-    if (hp && hp[hp.length -2] && hp[hp.length -1]){
-      this.Subj_Item = hp[hp.length -2];
-      this.Subj_Subitem = hp[hp.length -1];
-    }
-  }
-
   //hasher hidden
   @ViewChild('subj_item') subj_item: any;
   @ViewChild('subj_subitem') subj_subitem: any;
@@ -275,13 +244,13 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   onSubmitClick(): boolean{
     // 檢查資料、收集資料
 
-    let hidden_hasher = Md5(`${this.subj_subitem.nativeElement.value}-${this.case_token.nativeElement.value}-${this.subj_item.nativeElement.value}`);
+    /*let hidden_hasher = Md5(`${this.subj_subitem.nativeElement.value}-${this.case_token.nativeElement.value}-${this.subj_item.nativeElement.value}`);
     //console.log(`${this.subj_subitem.nativeElement.value}-${this.case_token.nativeElement.value}-${this.subj_item.nativeElement.value}`);
     //console.log(`hasher: ${hidden_hasher}\nthis.hasher: ${this.hasher}`)
     if (hidden_hasher !== this.hasher){
       alert(`主項目或子項目不符合`); //此項錯誤，表示主/子項目/CaseToken 的 hidden 內容遭篡改!!
       return false;
-    }
+    }*/
 
     this.Subj_District = this.subj_district.nativeElement.value;
     if (!this.Subj_District) {
@@ -467,7 +436,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     //console.log(value);
 
     let formData = `Case_Token=${value.Case_Token}&Atth_FileNames=${value.Atth_FileNames}&Subj_Content=${value.Subj_Content}&Subj_District=${value.Subj_District}&Subj_FileCount=${value.Subj_FileCount}&Subj_Item=${value.Subj_Item}&Subj_Security=${value.Subj_Security}&Subj_Subitem=${value.Subj_Subitem}&Sugg_Addr1=${value.Sugg_Addr1}&Sugg_Addr2=${value.Sugg_Addr2}&Sugg_Addr3=${value.Sugg_Addr3}&Sugg_Addr4=${value.Sugg_Addr4}&Sugg_Email=${value.Sugg_Email}&Sugg_Name=${value.Sugg_Name}&Sugg_Sex=${value.Sugg_Sex}&Sugg_Telno=${value.Sugg_Telno}`;
-    //console.log(`formData on submit: ${formData}`);
+    console.log(`formData on submit: ${formData}`);
 
     this.subscribes.push(
       this.uploadService.postData(formData).subscribe(
