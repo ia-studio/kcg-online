@@ -1,7 +1,7 @@
 /* *
 * ref: https://github.com/jkuri/ng2-uploader
 * */
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ViewChild } from "@angular/core/src/metadata/di";
 import { Subscription } from "rxjs";
@@ -13,8 +13,9 @@ import { GeolocationService } from '../services/geoLocation.service';
 import { UploadService } from '../services/upload.service';
 import { AreaService } from '../services/area.service';
 
-import {DistrictCodesKaohsiung, RegionCodesKaohsiung, CountyCodes, District, County, Region} from './area';
-import { Md5 } from './md5';
+import { DistrictCodesKaohsiung, RegionCodesKaohsiung, CountyCodes, District, County, Region} from './modules/area';
+import { Md5 } from './modules/md5';
+import { checkFilesSize, checkTotalFilesSize, checkFileName, checkExtName, checkFilenameIsExist } from './modules/file-checker';
 
 @Component({
   selector: 'my-report-detail',
@@ -73,6 +74,9 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   //uploadFiles: string[] = [];
   uploadFiles: File[] = [];
 
+  @Output()
+  closeReport = new EventEmitter();
+
   constructor(
     private route: ActivatedRoute,
     private reportService: ReportService,
@@ -107,8 +111,15 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       })
     );
 
+    window.scrollTo(0, 0);
     this.hasher = Md5(this.genHasherMajorKey());
     this.getLocation();
+  }
+
+  goBack(){
+    if(confirm('確定取消申報?')) {
+      this.closeReport.emit();
+    }
   }
 
   getType(id: string, subId: string) {
@@ -194,7 +205,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     if (fi.files) {
       //console.log(fi.files);
 
-      let refiles = this.checkFilenameIsExist(fi.files);
+      let refiles = checkFilenameIsExist(fi.files, this.uploadFiles);
       if (!refiles || refiles.length <= 0)
         return;
 
@@ -216,133 +227,27 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       );
     }
   }
-
   private checkFiles(files: File[]): boolean {
-    let r0 = this.checkTotalFilesSize(files);
+    let r0 = checkTotalFilesSize(files);
     if (!r0)
       return false;
 
     for(let i=0; i<files.length; i++){
       let f = files[i];
-      let r1 = this.checkFilesSize(f);
+      let r1 = checkFilesSize(f);
       if (!r1)
         return false;
 
-      let r2 = this.checkFileName(f);
+      let r2 = checkFileName(f);
       if (!r2)
         return false;
 
-      let r3 = this.checkExtName(f);
+      let r3 = checkExtName(f);
       if (!r3)
         return false;
     }
     return true;
   }
-
-  /*
-   * check single file size
-   * ok = true,
-   * > 10MB = false
-   *
-   * */
-  private checkFilesSize(f: File): boolean {
-    const limit: number = 10485760; // 10MB = 10 * 1024 * 1024
-
-    let ret = f.size <= limit;
-    if (!ret) {
-      alert(`'${f.name}' 超過單檔 10MB 上限`);
-    }
-    return ret;
-  }
-
-  /*
-   * check total files size
-   * ok = true
-   * >20MB = false
-   *
-   * */
-  private checkTotalFilesSize(f: File[]): boolean {
-    const limit: number = 20971520; //20MB = 20 * 1024 * 1024
-    let tsize: number = 0;
-    for(let i=0; i<f.length; i++){
-      tsize += f[i].size;
-    }
-
-    let ret = tsize <= limit;
-    if (!ret){
-      alert('上傳檔案超過總合 20MB 上限');
-    }
-    return ret;
-  }
-
-  /*
-   * check file name contains a ;
-   * ok = true;
-   * has ; = false;
-   *
-   * */
-  private checkFileName(f: File): boolean {
-    let name = '';
-    if (f.name.split('.')[0])
-      name = f.name.split('.')[0];
-
-    let ret = name.indexOf(';') == -1;
-    if (!ret){
-      alert(`'${f.name}' 檔名包含 ; 分號`);
-    }
-    return ret;
-  }
-
-  /*
-   * check file's ext name
-   * ok = true
-   *
-   * */
-  private checkExtName(f: File): boolean {
-    let extName = '';
-    if (f.name.toLowerCase().split('.')[1])
-      extName = f.name.split('.')[1];
-
-    const available = ['doc', 'docx', 'xls', 'xlsx',
-      'pdf', 'txt',
-      'bmp', 'jpg', 'jpeg', 'gif', 'png', 'odt', 'ods',
-      'zip'];
-    let ret = available.indexOf(extName.toLowerCase()) >= 0;
-    if (!ret){
-      alert(`'${f.name}' 副檔名不屬於允許上傳類型`);
-    }
-    return ret;
-  }
-
-  private checkFilenameIsExist(files: File[]): File[]{
-    let temp: File[] = [];
-    for(let j = 0; j < files.length; j++){
-      let fname = files[j].name;
-      for(let i = 0; i < this.uploadFiles.length; i++){
-        let sameFileName = this.uploadFiles[i].name.indexOf(fname) > -1;
-        if (sameFileName){
-          alert(`'${fname}' 檔名已存在，請重新選擇檔案`);
-          temp = this.sliceItem(files, j);
-          return temp;
-        }
-      } // i
-    } // j
-    return files;
-  }
-  private sliceItem(fs: File[], delIndex: number): File[]{
-    //wtf! array.splice | slice cannot use here! why?
-    let ret: File[] = [];
-    if (!fs || !delIndex)
-      return [];
-
-    for(let i = 0; i < fs.length; i++){
-      if (i !== delIndex){
-        ret.push(fs[i]);
-      }
-    }
-    return ret;
-  }
-
 
 
   private getItemCode(): void {

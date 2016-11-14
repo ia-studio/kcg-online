@@ -6,7 +6,7 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import '../shared/rxjs-operators';
 
-import { District, Region } from "../report/area";
+import { District, Region } from "../report/modules/area";
 
 @Injectable()
 export class AreaService {

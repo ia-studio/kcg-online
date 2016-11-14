@@ -26,8 +26,10 @@
 						<p class="article-lable require">子項目 </p>
 						<div class="row">
 							<div class="col-xs-12">
-								<input class="fall-width" type="text" *ngIf="subCaseType" value="{{subCaseType.Subitem}} {{subCaseType.SubitemName}}" readonly />
-								<input type="hidden" name="Subj_Subitem" *ngIf="subCaseType" value="{{subCaseType.Subitem}}" [ngModel]="Subj_Subitem" #subj_subitem />
+								<input class="fall-width" type="text" *ngIf="subCaseType" value="{{subCaseType.Subitem}} {{subCaseType.SubitemName}}" readonly
+								/>
+								<input type="hidden" name="Subj_Subitem" *ngIf="subCaseType" value="{{subCaseType.Subitem}}" [ngModel]="Subj_Subitem" #subj_subitem
+								/>
 							</div>
 						</div>
 					</div>
@@ -37,46 +39,56 @@
 							<div class="col-md-3 combine-icon combine-after">
 								<input class="fall-width" type="text" [value]="Subj_District_name">
 								<select class="input-alpha" name="Subj_District" [ngModel]="Subj_District" (change)="onChangeAreaCodes($event.target)">
-                  <option>請選擇地區</option>
-                  <option *ngFor="let item of areaCodes" value="{{item.DistrictCode}}" [selected]="item.DistrictName === Subj_District_name" #subj_district >{{item.DistrictName}}</option>
-                </select>
+									<option>請選擇地區</option>
+									<option *ngFor="let item of areaCodes" value="{{item.DistrictCode}}" [selected]="item.DistrictName === Subj_District_name" #subj_district >{{item.DistrictName}}</option>
+								</select>
 								<i class="fa fa-chevron-down"></i>
 							</div>
 							<div class="col-md-9">
-								<input class="fall-width" type="text" *ngIf="gpsFormattedAddress && gpsFormattedAddress.length > 0" [value]="gpsFormattedAddress" [placeholder]="placeholder" />
-								<input class="fall-width" type="text" *ngIf="!gpsFormattedAddress || !gpsFormattedAddress[0]" [placeholder]="placeholder" />
+								<input class="fall-width" type="text" *ngIf="gpsFormattedAddress && gpsFormattedAddress.length > 0" [value]="gpsFormattedAddress"
+									[placeholder]="placeholder" />
+								<input class="fall-width" type="text" *ngIf="!gpsFormattedAddress || !gpsFormattedAddress[0]" [placeholder]="placeholder"
+								/>
 							</div>
 							<p class="col-md-12 text-gray"><br>請選擇建議事項內容所屬高雄行政區，若內容無法分區或其他縣市事項請選擇「無法分區」</p>
 						</div>
-					</div>
-					<div class="col-md-12 maB1x">
-						<p class="article-lable require">建議事項 <small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
-						<div class="row">
-							<div class="col-xs-12">
-								<textarea name="Subj_Content" class="fall-width" rows="8" placeholder="請填寫建議事項" [(ngModel)]="Subj_Content"></textarea>
-							</div>
-							<p class="col-md-12 text-gray"><br>為避免送出失敗造成「建議內容」遺失，請先備份「建議內容」!!!</p>
-						</div>
-					</div>
-					<div class="col-md-12 maB1x">
-						<div class="row">
-							<div class="col-md-2">
-								<p class="article-lable require maT1x">附件</p>
-							</div>
-							<div class="col-md-4">
-								<a class="btn btn-green" href="">
-                  選擇檔案<input class="input-alpha" type="file" multiple="true" name="" value="" (change)="addFile()" #fileInput>
-                </a>
-							</div>
-							<div class="col-md-6 navy">
-								<p *ngFor="let item of uploadFiles"><i class="fa fa-paperclip"></i> {{ item.name }}</p>
+						<div class="col-md-12 maB1x">
+							<p class="article-lable require">是否保密？<small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
+							<div class="col-md-9">
+								<input type="radio" name="Subj_Security" value="1" checked="true" [ngModel]="Subj_Security" (click)="Subj_Security = '1'"
+								/>&nbsp; 一般&nbsp;&nbsp;&nbsp;
+								<input type="radio" name="Subj_Security" value="2" [ngModel]="Subj_Security" (click)="Subj_Security = '2'" />&nbsp;
+								保密
 							</div>
 						</div>
-						<input type="hidden" value="{{Case_Token}}" name="Case_Token" [ngModel]="Case_Token" #case_token />
-						<input type="hidden" value="0" name="Subj_FileCount" [ngModel]="Subj_FileCount" />
-						<input type="hidden" value="" name="Atth_FileNames" [ngModel]="Atth_FileNames" />
-            <input type="hidden" value="2" name="Subj_Security" [ngModel]="Subj_Security" />
+						<div class="col-md-12 maB1x">
+							<p class="article-lable require">建議事項 <small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
+							<div class="row">
+								<div class="col-xs-12">
+									<textarea name="Subj_Content" class="fall-width" rows="8" placeholder="請填寫建議事項" [(ngModel)]="Subj_Content"></textarea>
+								</div>
+								<div class="clearfix"></div>
+								<p class="col-md-12 text-gray"><br>為避免送出失敗造成「建議內容」遺失，請先備份「建議內容」!!!</p>
+							</div>
+						</div>
+						<div class="col-md-12 maB1x">
+							<div class="row">
+								<div class="col-md-2">
+									<p class="article-lable require maT1x">附件</p>
+								</div>
+								<div class="col-md-4">
+									<a class="btn btn-green" href="">選擇檔案<input class="input-alpha" type="file" multiple="true" name="" value="" (change)="addFile()" #fileInput></a>
+								</div>
+								<div class="col-md-6 navy">
+									<p *ngFor="let item of uploadFiles"><i class="fa fa-paperclip"></i> {{ item.name }}</p>
+								</div>
+							</div>
+							<input type="hidden" value="{{Case_Token}}" name="Case_Token" [ngModel]="Case_Token" #case_token />
+							<input type="hidden" value="0" name="Subj_FileCount" [ngModel]="Subj_FileCount" />
+							<input type="hidden" value="" name="Atth_FileNames" [ngModel]="Atth_FileNames" />
+						</div>
 					</div>
+
 				</div>
 			</div>
 			<div class="col-md-5 page-block">
@@ -100,8 +112,8 @@
 					<p class="article-lable require maT2x">地址 <small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
 					<div class="row">
 						<div class="col-md-4 combine-icon combine-after">
-              <input class="fall-width" type="text" [value]="Sugg_Addr1_name" readonly>
-              <select class="input-alpha" name="Sugg_Addr1" [ngModel]="Sugg_Addr1" (change)="onChangeCountyCode($event.target)">
+							<input class="fall-width" type="text" [value]="Sugg_Addr1_name" readonly>
+							<select class="input-alpha" name="Sugg_Addr1" [ngModel]="Sugg_Addr1" (change)="onChangeCountyCode($event.target)">
                 <option value="">{{county_placeholder}}</option>
                 <option *ngFor="let item of countyCodes" value="{{item.CountyCode}}" #sugg_county >{{item.CountyName}}</option>
               </select>
@@ -137,12 +149,17 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-12 page-block"><hr></div>
+				<div class="col-md-12 page-block">
+					<hr>
+				</div>
 				<div class="col-md-4 col-md-offset-4 maT2x">
 					<!--<img src="" alt="" style="height:100px; width:100%; background: #eee;">-->
 				</div>
-				<div class="col-md-2 col-md-offset-5 maT1x">
-					<input type="submit" class="btn btn-orange fall-width" value=" 填寫完成 " (click)="onSubmitClick()" />
+				<div class="col-md-2 col-md-offset-4 maT1x">
+					<input type="submit" class="btn btn-orange fall-width" value="填寫完成 " (click)="onSubmitClick()" />
+				</div>
+				<div class="col-md-2 maT1x">
+					<input type="reset" class="btn btn-grey fall-width" value="取消申報 " (click)="goBack()" />
 				</div>
 			</div>
 		</form>
@@ -174,23 +191,20 @@
 				<br>
 				<div class="check-info navy">
 
-					<p>若你現在陳情案件其內容屬市民生命財產安全相關的事項者請速撥打「1999」。<br>
-					-<br>
-					為維護陳情人及被陳情人的權益，並有效運用行政資源，請您提供真實姓名、聯絡方式(市話、行動電話、地址及電子郵件)
-					及具體內容，方便機關迅速處理，若經查證所留個資並非屬實，辦理機關得不予處理。<br>
-					-<br>
-					提醒您冒用他人資料將負法律刑責，依據個人資料保護法，您的個資僅提供本府承辦機關通知聯繫，不另做其他用途使用。
-					請儘量以一件mail反映一件事情，以利案件處理，若有二件以上事情，請分別發送。建議(檢舉)類別倘有多項，
-					請選「90 非屬前述各類的其他事項」。<br>
-					-<br>
-					建議事項請求簡潔、明確，並以真實案件為限，本系統不受理非理性情緒發洩、漫罵及惡意檢舉之案件。<br>
-					-<br>
-					請於收到系統發出的確認信後７天內進行確認，否則該案件系統將不予受理。<br>
-					-<br>
-					案件確定成立後，原則上辦理期限為五個工作天(不含週六、週日及例假日或因天災及其他不可抗力因素所致之停止上班日)，
-						辦理機關得依案情複雜程度辦理展期。<br>
-					-<br>
-					當系統處於定期維護時間每日凌晨01:00~02:00時，主機可能會停止所有服務，如有不便還請見諒。</p>
+					<p>若你現在陳情案件其內容屬市民生命財產安全相關的事項者請速撥打「1999」。<br> -
+						<br> 為維護陳情人及被陳情人的權益，並有效運用行政資源，請您提供真實姓名、聯絡方式(市話、行動電話、地址及電子郵件) 及具體內容，方便機關迅速處理，若經查證所留個資並非屬實，辦理機關得不予處理。
+						<br> -
+						<br> 提醒您冒用他人資料將負法律刑責，依據個人資料保護法，您的個資僅提供本府承辦機關通知聯繫，不另做其他用途使用。 請儘量以一件mail反映一件事情，以利案件處理，若有二件以上事情，請分別發送。建議(檢舉)類別倘有多項， 請選「90
+						非屬前述各類的其他事項」。
+						<br> -
+						<br> 建議事項請求簡潔、明確，並以真實案件為限，本系統不受理非理性情緒發洩、漫罵及惡意檢舉之案件。
+						<br> -
+						<br> 請於收到系統發出的確認信後７天內進行確認，否則該案件系統將不予受理。
+						<br> -
+						<br> 案件確定成立後，原則上辦理期限為五個工作天(不含週六、週日及例假日或因天災及其他不可抗力因素所致之停止上班日)， 辦理機關得依案情複雜程度辦理展期。
+						<br> -
+						<br> 當系統處於定期維護時間每日凌晨01:00~02:00時，主機可能會停止所有服務，如有不便還請見諒。
+					</p>
 				</div>
 				<h4 class="check-footer navy text-center">高雄市政府市長信箱處理小組 敬上</h4>
 				<a href="javascript:void(0)" class="btn btn-green" (click)="reportAttention=!reportAttention">我瞭解了</a>
