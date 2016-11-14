@@ -10,13 +10,11 @@ import { Case }        from '../case';
 export class QueryDetailComponent implements OnInit {
   public constructor(private titleService: Title) { }
 
-  @Input()
-  searchCase: Case;
+  @Input() searchCase: Case;
 
   error: any;
 
-  @Input()
-  isMayorMail?: boolean; //true = MayorMail, fasle = CivilianSuggest
+  @Input() isMayorMail?: boolean; //true = MayorMail, fasle = CivilianSuggest
 
   public setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);
@@ -25,5 +23,9 @@ export class QueryDetailComponent implements OnInit {
   ngOnInit() {
     this.setTitle('案件明細 - 高雄市政府線上即時服務平台');
     window.scrollTo(0, 0);
+  }
+
+  gotoquery() {
+    window.location.reload();
   }
 }

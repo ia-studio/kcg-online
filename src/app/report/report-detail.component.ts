@@ -1,7 +1,7 @@
 /* *
 * ref: https://github.com/jkuri/ng2-uploader
 * */
-import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ViewChild } from "@angular/core/src/metadata/di";
 import { Subscription } from "rxjs";
@@ -13,11 +13,12 @@ import { GeolocationService } from '../services/geoLocation.service';
 import { UploadService } from '../services/upload.service';
 import { AreaService } from '../services/area.service';
 
-import {DistrictCodesKaohsiung, RegionCodesKaohsiung, CountyCodes, District, County, Region} from './area';
-import { Md5 } from './md5';
+import { DistrictCodesKaohsiung, RegionCodesKaohsiung, CountyCodes, District, County, Region} from './modules/area';
+import { Md5 } from './modules/md5';
+import { checkFilesSize, checkTotalFilesSize, checkFileName, checkExtName, checkFilenameIsExist } from './modules/file-checker';
 
 @Component({
-  selector: 'app-report-detail',
+  selector: 'my-report-detail',
   templateUrl: 'report-detail.component.html',
   providers: [ReportService, GeoAddressService, GeolocationService, UploadService, AreaService],
   styleUrls: ['report-detail.component.scss']
@@ -25,9 +26,7 @@ import { Md5 } from './md5';
 export class ReportDetailComponent implements OnInit, OnDestroy {
   error: any;
   navigated = false; // true if navigated here
-  @Input()
   caseType: CaseType;
-  @Input()
   subCaseType: SubCaseType;
   getReportDone = false;
   reportAttention = true;
@@ -97,11 +96,21 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
 
     this.Subj_FileCount = 0;
     this.Atth_FileNames = '';
-    this.Subj_Security = '1'; // 保密等級，預設為一般 1
+    this.Subj_Security = '2'; // 保密等級，always 預設為保密 2
     this.Sugg_Sex = '2'; // 性別，預設為男 2
   }
 
   ngOnInit() {
+    this.subscribes.push(
+      this.route.params.subscribe(params => {
+        if (params['id'] !== undefined && params['subId'] !== undefined) {
+          this.navigated = true;
+          this.getType(params['id'], params['subId']);
+          window.scrollTo(0, 0);
+        }
+      })
+    );
+
     window.scrollTo(0, 0);
     this.hasher = Md5(this.genHasherMajorKey());
     this.getLocation();
@@ -111,6 +120,17 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     if(confirm('確定取消申報?')) {
       this.closeReport.emit();
     }
+  }
+
+  getType(id: string, subId: string) {
+    this.subscribes.push(
+      this.reportService
+        .getType(id)
+        .subscribe(type => {
+          this.caseType = type;
+          this.subCaseType = type.Subitems.filter(item => item.Subitem == subId)[0];
+        })
+    );
   }
 
   private genHasherMajorKey(): string{
@@ -123,7 +143,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   }
 
   private getLocation(){
-    var opt = {
+    let opt = {
       enableHighAccuracy : true,
       timeout : 5000,
       maximumAge : 0
@@ -171,9 +191,9 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   *
   * */
   private genCaseToken(length: number): string {
-    var text: string = ''; //final result
-    var possibilities = 'ABCDEFGHJKMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789';
-    for( var i = 0; i < length; i++ ){
+    let text: string = ''; //final result
+    let possibilities = 'ABCDEFGHJKMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789';
+    for(let i = 0; i < length; i++ ){
       text += possibilities.charAt(Math.floor(Math.random() * possibilities.length));
     }
     return text;
@@ -185,17 +205,21 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     if (fi.files) {
       //console.log(fi.files);
 
-      let check = this.checkFiles(fi.files);
+      let refiles = checkFilenameIsExist(fi.files, this.uploadFiles);
+      if (!refiles || refiles.length <= 0)
+        return;
+
+      let check = this.checkFiles(refiles);
       if (!check)
         return;
 
-      for(var i=0; i < fi.files.length; i++){
-        this.uploadFiles.push(fi.files[i]);
+      for(let i=0; i < refiles.length; i++){
+        this.uploadFiles.push(refiles[i]);
       }
 
       let upurl: string = `http://soweb.kcg.gov.tw/webapi/api/AttachFile/Upload/${this.Case_Token}`;
       this.subscribes.push(
-        this.uploadService.sendFileRequest(upurl, fi.files).subscribe(
+        this.uploadService.sendFileRequest(upurl, refiles).subscribe(
           resp => {
             console.log(resp);
           }
@@ -203,103 +227,28 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       );
     }
   }
-
   private checkFiles(files: File[]): boolean {
-    let r0 = this.checkTotalFilesSize(files);
+    let r0 = checkTotalFilesSize(files);
     if (!r0)
       return false;
 
-    for(var i=0; i<files.length; i++){
+    for(let i=0; i<files.length; i++){
       let f = files[i];
-      let r1 = this.checkFilesSize(f);
+      let r1 = checkFilesSize(f);
       if (!r1)
         return false;
 
-      let r2 = this.checkFileName(f);
+      let r2 = checkFileName(f);
       if (!r2)
         return false;
 
-      let r3 = this.checkExtName(f);
+      let r3 = checkExtName(f);
       if (!r3)
         return false;
     }
     return true;
   }
 
-  /*
-  * check single file size
-  * ok = true,
-  * > 10MB = false
-  *
-  * */
-  private checkFilesSize(f: File): boolean {
-    const limit: number = 10485760; // 10MB = 10 * 1024 * 1024
-
-    let ret = f.size <= limit;
-    if (!ret) {
-      alert(`'${f.name}' 超過單檔 10MB 上限`);
-    }
-    return ret;
-  }
-
-  /*
-  * check total files size
-  * ok = true
-  * >20MB = false
-  *
-  * */
-  private checkTotalFilesSize(f: File[]): boolean {
-    const limit: number = 20971520; //20MB = 20 * 1024 * 1024
-    let tsize: number = 0;
-    for(var i=0; i<f.length; i++){
-      tsize += f[i].size;
-    }
-
-    let ret = tsize <= limit;
-    if (!ret){
-      alert('上傳檔案超過總合 20MB 上限');
-    }
-    return ret;
-  }
-
-  /*
-  * check file name contains a ;
-  * ok = true;
-  * has ; = false;
-  *
-  * */
-  private checkFileName(f: File): boolean {
-    let name = '';
-    if (f.name.split('.')[0])
-      name = f.name.split('.')[0];
-
-    let ret = name.indexOf(';') == -1;
-    if (!ret){
-      alert(`'${f.name}' 檔名包含 ; 分號`);
-    }
-    return ret;
-  }
-
-  /*
-  * check file's ext name
-  * ok = true
-  *
-  * */
-  private checkExtName(f: File): boolean {
-    let extName = '';
-    if (f.name.toLowerCase().split('.')[1])
-      extName = f.name.split('.')[1];
-
-    const available = ['doc', 'docx', 'xls', 'xlsx',
-      'pdf', 'txt',
-      'bmp', 'jpg', 'jpeg', 'gif', 'png', 'odt', 'ods',
-      'zip'];
-    let ret = available.indexOf(extName) >= 0;
-    if (!ret){
-      alert(`'${f.name}' 副檔名不屬於允許上傳類型`);
-    }
-    return ret;
-  }
 
   private getItemCode(): void {
     let hp = location.href.split('/'); //直接從目前 url 路徑抓出 主/次項目
@@ -442,8 +391,8 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   }
 
   private joinUploadedFileName(files: File[]): string {
-    var result = '';
-    for(var i=0; i < files.length; i++){
+    let result = '';
+    for(let i=0; i < files.length; i++){
       result += files[i].name + ';';
     }
     if (result.substring(result.length - 1) === ';'){
@@ -536,6 +485,5 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       )
     );
   }
-
 
 }

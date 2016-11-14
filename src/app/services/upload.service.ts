@@ -34,6 +34,8 @@ export class UploadService {
     });
   }
 
+
+
   public postData(formData: string): Observable<any> {
     //ref: https://scotch.io/tutorials/angular-2-http-requests-with-observables
     //ref: https://developer.mozilla.org/zh-TW/docs/HTTP/Access_control_CORS
