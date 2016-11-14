@@ -105,3 +105,15 @@ function sliceItem(fs: File[], delIndex: number): File[]{
   }
   return ret;
 }
+
+export let joinUploadedFileName = (files: File[]): string => {
+  let result = '';
+  for(let i=0; i < files.length; i++){
+    result += files[i].name + ';';
+  }
+  if (result.substring(result.length - 1) === ';'){
+    result = result.substring(0, result.length - 1);
+  }
+  //console.log(result);
+  return result;
+}
