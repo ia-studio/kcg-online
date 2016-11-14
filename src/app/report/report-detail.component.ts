@@ -6,12 +6,12 @@ import { ActivatedRoute } from '@angular/router';
 import { ViewChild } from "@angular/core/src/metadata/di";
 import { Subscription } from "rxjs";
 
-import { CaseType, SubCaseType } from '../case';
-import { ReportService } from '../services/report.service';
-import { GeoAddressService } from '../services/geoAddress.service';
-import { GeolocationService } from '../services/geoLocation.service';
-import { UploadService } from '../services/upload.service';
-import { AreaService } from '../services/area.service';
+import { CaseType, SubCaseType } from '../shared/case';
+import { ReportService } from './report.service';
+import { GeoAddressService } from './geoAddress.service';
+import { GeolocationService } from './geoLocation.service';
+import { UploadService } from './upload.service';
+import { AreaService } from './area.service';
 
 import {DistrictCodesKaohsiung, RegionCodesKaohsiung, CountyCodes, District, County, Region} from './area';
 import { Md5 } from './md5';

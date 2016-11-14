@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Reply }        from '../services/faq.service';
+import { Reply }                                  from './faq';
 
 @Component({
   selector: 'app-faq-detail',

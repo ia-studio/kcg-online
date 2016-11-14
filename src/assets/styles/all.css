@@ -6107,7 +6107,7 @@ footer {
     background-color: #fff
 }
 @media screen and (max-width: 736px) {
-    
+
     .menu-item:first-child:after {
         display: none
     }
@@ -6322,7 +6322,7 @@ footer {
 }
 @media screen and (max-width: 768px) {
     .faq .faq-item div:first-child a {
-        width: 90%
+        width: 88%
     }
 }
 @media screen and (max-width: 768px) {

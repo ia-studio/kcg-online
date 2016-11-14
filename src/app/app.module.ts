@@ -12,11 +12,10 @@ import { FeedbackComponent }                                    from './feedback
 import { ProcessComponent }                                     from './process/process.component';
 import { QueryComponent,QueryDetailComponent }                  from './query';
 import { ReportComponent,ReportDetailComponent }                from './report';
-import { PrivacyComponent }                                     from './privacy/privacy.component';
+import { TermComponent }                                        from './term/term.component';
 import { NewsComponent }                                        from './news/news.component';
 
-import { ReplaceNewLinePipe }                                   from './filters/Replace.pipe';
-import { GlobalService }                                        from './services/global.service';
+import { GlobalService }                                        from './shared/global.service';
 
 @NgModule({
   imports: [
@@ -37,9 +36,8 @@ import { GlobalService }                                        from './services
     FaqDetailComponent,
     QueryDetailComponent,
     ReportDetailComponent,
-    PrivacyComponent,
-    NewsComponent,
-    ReplaceNewLinePipe
+    TermComponent,
+    NewsComponent
   ],
   providers: [
     appRoutingProviders,

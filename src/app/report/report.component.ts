@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { CaseType, SubCaseType } from '../case';
-import { ReportService } from '../services/report.service';
-import { GlobalService } from '../services/global.service';
+import { CaseType, SubCaseType } from '../shared/case';
+import { ReportService } from './report.service';
+import { GlobalService } from '../shared/global.service';
 
 @Component({
   selector: 'app-report',
@@ -32,7 +32,7 @@ export class ReportComponent implements OnInit, OnDestroy {
       .getTypes()
       .subscribe(types => this.caseTypes = types);
   }
-  
+
   scrollTo (targetAnchor:string){
       let offset = document.getElementById(targetAnchor).offsetTop+500;
       window.scrollTo(0,offset);
@@ -58,7 +58,7 @@ export class ReportComponent implements OnInit, OnDestroy {
     this.globalService.showPhoneButton = true;
     window.scrollTo(0, 0);
   }
-  
+
   ngOnDestroy() {
     this.globalService.showPhoneButton = false;
   }
