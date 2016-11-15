@@ -1,7 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
-import { Title }       from '@angular/platform-browser';
-
-import { Case }        from '../case';
+import { Title }                  from '@angular/platform-browser';
+import { Case }                   from '../shared/case';
 
 @Component({
   selector: 'app-query-detail',

@@ -1,7 +1,8 @@
 import { Component, Input }   from '@angular/core';
 import { ActivatedRoute }     from '@angular/router';
-import { NewsService, News }  from './services/news.service';
-import { GlobalService }      from './services/global.service';
+import { NewsService }        from './news/news.service';
+import { News }               from './news/news';
+import { GlobalService }      from './shared/global.service';
 
 @Component({
   selector: 'kcg-app',

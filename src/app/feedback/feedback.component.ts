@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute }    from '@angular/router';
 import { Title }             from '@angular/platform-browser';
-import { FeedbackService }   from '../services/feedback.service';
+import { FeedbackService }   from './feedback.service';
 import * as moment           from 'moment';
 
 @Component({
@@ -66,12 +66,12 @@ export class FeedbackComponent implements OnInit {
       break;
     }
   }
-  
+
   getNum (val){
     return Math.round(val*100)/100+"%";
   }
 
-  
+
   getChartColor (idx){
     let bg : string;
     switch (idx){

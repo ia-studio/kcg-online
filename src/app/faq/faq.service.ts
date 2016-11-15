@@ -1,7 +1,8 @@
-import { Injectable }     from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { Observable }     from 'rxjs/Observable';
+import { Injectable }             from '@angular/core';
+import { Http, Response }         from '@angular/http';
+import { Observable }             from 'rxjs/Observable';
 import '../shared/rxjs-operators';
+import { Category, Faq, Reply }   from './faq';
 
 @Injectable()
 export class FaqService {
@@ -41,29 +42,4 @@ export class FaqService {
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     return Observable.throw(errMsg);
   }
-}
-
-export class Reply {
-  IssueContent: string;
-  IssueKind: string;
-  PostDate: string;
-  ReplyContent: string;
-  ReplyOrganName: string;
-  ReviseDate: string;
-  ViewCount: string;
-  Name: string;
-}
-
-export class Faq {
-  CaseContent: string;
-  OrganName: string;
-  OrganNo: string;
-  SeqNo: number;
-  SerialNo: number;
-  ViewCount: string;
-}
-
-export class Category {
-  kind: string;
-  kind_name: string;
 }

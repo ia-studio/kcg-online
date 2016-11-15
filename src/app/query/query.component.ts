@@ -3,8 +3,8 @@ import { Title } from '@angular/platform-browser';
 import {Subscription} from "rxjs";
 import 'rxjs/Rx';
 
-import { Case } from '../case';
-import { QueryService } from '../services/query.service';
+import { Case }         from '../shared/case';
+import { QueryService } from './query.service';
 
 @Component({
   selector: 'app-query',

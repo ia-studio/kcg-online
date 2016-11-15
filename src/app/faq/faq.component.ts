@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Title }             from '@angular/platform-browser';
-import { FaqService, Reply, Faq, Category }        from '../services/faq.service';
-import { ActivatedRoute }    from '@angular/router';
+import { Component, OnInit }                from '@angular/core';
+import { ActivatedRoute }                   from '@angular/router';
+import { Title }                            from '@angular/platform-browser';
+import { FaqService }                       from './faq.service';
+import { Reply, Faq, Category }             from './faq';
 
 @Component({
   selector: 'app-faq',

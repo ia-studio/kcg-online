@@ -2,22 +2,24 @@ import { Injectable }     from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable }     from 'rxjs/Observable';
 import '../shared/rxjs-operators';
+import { CaseType }       from '../shared/case';
 
 @Injectable()
-export class NewsService {
-  private newsListUrl = 'http://soweb.kcg.gov.tw/webapi/api/bulletin';
+export class ReportService {
+  private readonly baseApiUrl = 'http://soweb.kcg.gov.tw/webapi/api/';
+  private reportTypesUrl = this.baseApiUrl + 'items/';
 
   constructor(private http: Http) { }
 
-  getNews(): Observable<News[]> {
-    return this.http.get(this.newsListUrl)
-               .map(res => res.json() || [])
+  getTypes() : Observable<CaseType[]> {
+    return this.http.get(this.reportTypesUrl)
+               .map((res: Response) => res.json())
                .catch(this.handleError);
   }
 
-  getNewsById(id:string): Observable<News>{
-      return this.http.get(this.newsListUrl+"/"+id)
-               .map(res => res.json()[0] || {})
+  getType(id: string) : Observable<CaseType> {
+    return this.http.get(this.reportTypesUrl + id)
+               .map((res: Response) => res.json()[0])
                .catch(this.handleError);
   }
 
@@ -27,10 +29,4 @@ export class NewsService {
     console.error(errMsg);
     return Observable.throw(errMsg);
   }
-}
-
-export class News{
-  MsgContent: string;
-  MsgID: string;
-  MsgTitle: string;
 }

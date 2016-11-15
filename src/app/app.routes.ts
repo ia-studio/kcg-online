@@ -9,7 +9,7 @@ import { ProcessComponent }             from './process/process.component';
 import { FaqComponent }                 from './faq/faq.component';
 import { FaqDetailComponent }           from './faq/faq-detail.component';
 import { FeedbackComponent }            from './feedback/feedback.component';
-import { PrivacyComponent }             from './privacy/privacy.component';
+import { TermComponent }                from './term/term.component';
 
 const appRoutes: Routes = [
   {
@@ -58,8 +58,8 @@ const appRoutes: Routes = [
     component: FeedbackComponent
   },
   {
-    path: 'privacy/:lable',
-    component: PrivacyComponent
+    path: 'term/:lable',
+    component: TermComponent
   },
   {
     path: '**',
