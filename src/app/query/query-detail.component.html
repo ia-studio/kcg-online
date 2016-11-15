@@ -69,7 +69,7 @@
                     </div>
                   </div>
                   <p class="article-lable require">處理情形(答覆內容)</p>
-                  <p class="navy maB2x">{{item.Reply | replaceNewLine}}</p>
+                  <p class="navy maB2x" style="white-space: pre-line;">{{item.Reply | replaceNewLine}}</p>
                   <div *ngIf="item.Atth_FileNames && item.Atth_FileNames.length > 0">
                     <p class="article-lable require">附加檔案 </p>
                     <p class="navy maB2x pdLHalfX">

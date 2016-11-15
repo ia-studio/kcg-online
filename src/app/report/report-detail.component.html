@@ -26,10 +26,8 @@
 						<p class="article-lable require">子項目 </p>
 						<div class="row">
 							<div class="col-xs-12">
-								<input class="fall-width" type="text" *ngIf="subCaseType" value="{{subCaseType.Subitem}} {{subCaseType.SubitemName}}" readonly
-								/>
-								<input type="hidden" name="Subj_Subitem" *ngIf="subCaseType" value="{{subCaseType.Subitem}}" [ngModel]="Subj_Subitem" #subj_subitem
-								/>
+								<input class="fall-width" type="text" *ngIf="subCaseType" value="{{subCaseType.Subitem}} {{subCaseType.SubitemName}}" readonly />
+								<input type="hidden" name="Subj_Subitem" *ngIf="subCaseType" value="{{subCaseType.Subitem}}" [ngModel]="Subj_Subitem" #subj_subitem />
 							</div>
 						</div>
 					</div>
@@ -45,21 +43,10 @@
 								<i class="fa fa-chevron-down"></i>
 							</div>
 							<div class="col-md-9">
-								<input class="fall-width" type="text" *ngIf="gpsFormattedAddress && gpsFormattedAddress.length > 0" [value]="gpsFormattedAddress"
-									[placeholder]="placeholder" />
-								<input class="fall-width" type="text" *ngIf="!gpsFormattedAddress || !gpsFormattedAddress[0]" [placeholder]="placeholder"
-								/>
+								<input class="fall-width" type="text" *ngIf="gpsFormattedAddress && gpsFormattedAddress.length > 0" [value]="gpsFormattedAddress" [placeholder]="placeholder" />
+								<input class="fall-width" type="text" *ngIf="!gpsFormattedAddress || !gpsFormattedAddress[0]" [placeholder]="placeholder" />
 							</div>
 							<p class="col-md-12 text-gray"><br>請選擇建議事項內容所屬高雄行政區，若內容無法分區或其他縣市事項請選擇「無法分區」</p>
-						</div>
-						<div class="col-md-12 maB1x">
-							<p class="article-lable require">是否保密？<small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
-							<div class="col-md-9">
-								<input type="radio" name="Subj_Security" value="1" checked="true" [ngModel]="Subj_Security" (click)="Subj_Security = '1'"
-								/>&nbsp; 一般&nbsp;&nbsp;&nbsp;
-								<input type="radio" name="Subj_Security" value="2" [ngModel]="Subj_Security" (click)="Subj_Security = '2'" />&nbsp;
-								保密
-							</div>
 						</div>
 						<div class="col-md-12 maB1x">
 							<p class="article-lable require">建議事項 <small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
@@ -86,9 +73,9 @@
 							<input type="hidden" value="{{Case_Token}}" name="Case_Token" [ngModel]="Case_Token" #case_token />
 							<input type="hidden" value="0" name="Subj_FileCount" [ngModel]="Subj_FileCount" />
 							<input type="hidden" value="" name="Atth_FileNames" [ngModel]="Atth_FileNames" />
+              <input type="hidden" value="2" name="Subj_Security" [ngModel]="Subj_Security" />
 						</div>
 					</div>
-
 				</div>
 			</div>
 			<div class="col-md-5 page-block">
@@ -177,7 +164,7 @@
 					謝謝您！
 				</p>
 				<h4 class="check-footer navy text-center">高雄市政府市長信箱處理小組 敬上</h4>
-				<a [routerLink]="['/report']" class="btn btn-green">回到首頁</a>
+				<a href="javascript:;" class="btn btn-green" (click)="goBack(true)">回到首頁</a>
 			</div>
 		</div>
 	</div>
@@ -190,7 +177,6 @@
 				<h4 class="check-title navy text-center">市長信箱提醒您</h4>
 				<br>
 				<div class="check-info navy">
-
 					<p>若你現在陳情案件其內容屬市民生命財產安全相關的事項者請速撥打「1999」。<br> -
 						<br> 為維護陳情人及被陳情人的權益，並有效運用行政資源，請您提供真實姓名、聯絡方式(市話、行動電話、地址及電子郵件) 及具體內容，方便機關迅速處理，若經查證所留個資並非屬實，辦理機關得不予處理。
 						<br> -

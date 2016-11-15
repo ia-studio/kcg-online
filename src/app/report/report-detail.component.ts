@@ -2,7 +2,6 @@
 * ref: https://github.com/jkuri/ng2-uploader
 * */
 import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { ViewChild } from "@angular/core/src/metadata/di";
 import { Subscription } from "rxjs";
 
@@ -13,8 +12,13 @@ import { GeolocationService } from '../services/geoLocation.service';
 import { UploadService } from '../services/upload.service';
 import { AreaService } from '../services/area.service';
 
-import {DistrictCodesKaohsiung, RegionCodesKaohsiung, CountyCodes, District, County, Region} from './area';
-import { Md5 } from './md5';
+import {
+  DistrictCodesKaohsiung, RegionCodesKaohsiung, CountyCodes, District, County, Region,
+  validateEmail,
+  checkFilesSize, checkTotalFilesSize, checkFileName, checkExtName, checkFilenameIsExist, joinUploadedFileName,
+  genCaseToken,
+  Md5
+} from './modules';
 
 @Component({
   selector: 'app-report-detail',
@@ -25,10 +29,6 @@ import { Md5 } from './md5';
 export class ReportDetailComponent implements OnInit, OnDestroy {
   error: any;
   navigated = false; // true if navigated here
-  @Input()
-  caseType: CaseType;
-  @Input()
-  subCaseType: SubCaseType;
   getReportDone = false;
   reportAttention = true;
   areaCodes: District[]; // 左側檢舉址 地區 gps
@@ -72,21 +72,19 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   Sugg_Addr4: string;
   Sugg_Sex: string;
 
-  //uploadFiles: string[] = [];
   uploadFiles: File[] = [];
 
-  @Output()
-  closeReport = new EventEmitter();
+  @Input() caseType: CaseType;
+  @Input() subCaseType: SubCaseType;
+  @Output() closeReport = new EventEmitter();
 
   constructor(
-    private route: ActivatedRoute,
-    private reportService: ReportService,
     private geoLocationService: GeolocationService,
     private geoAddressService: GeoAddressService,
     private uploadService: UploadService,
     private areaService: AreaService
   ) {
-    this.Case_Token = this.genCaseToken(12);
+    this.Case_Token = genCaseToken(12);
 
     this.areaCodes = DistrictCodesKaohsiung(true); // 左側行政區 gps
     this.districtCodes = []; // 右側行政區下拉項目
@@ -97,24 +95,32 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
 
     this.Subj_FileCount = 0;
     this.Atth_FileNames = '';
-    this.Subj_Security = '1'; // 保密等級，預設為一般 1
+    this.Subj_Security = '2'; // 保密等級，always 預設為保密 2
     this.Sugg_Sex = '2'; // 性別，預設為男 2
   }
 
   ngOnInit() {
     window.scrollTo(0, 0);
-    this.hasher = Md5(this.genHasherMajorKey());
     this.getLocation();
+
+    this.Subj_Item = this.caseType.Item;
+    this.Subj_Subitem = this.subCaseType.Subitem;
+    this.hasher = Md5(this.genHasherMajorKey());
   }
 
-  goBack(){
-    if(confirm('確定取消申報?')) {
-      this.closeReport.emit();
+  goBack(directlyRedirect?: boolean){
+    let emit = this.closeReport.emit();
+    if (directlyRedirect === true){
+      emit;
+    }
+    else{
+      if(confirm('確定取消申報?')) {
+        this.closeReport.emit();
+      }
     }
   }
 
   private genHasherMajorKey(): string{
-    this.getItemCode();
     return `${this.Subj_Subitem}-${this.Case_Token}-${this.Subj_Item}`
   }
 
@@ -123,7 +129,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   }
 
   private getLocation(){
-    var opt = {
+    let opt = {
       enableHighAccuracy : true,
       timeout : 5000,
       maximumAge : 0
@@ -156,8 +162,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       )
     );
   }
-
-  adjustGpsResolving(gpsDistrict: string){
+  private adjustGpsResolving(gpsDistrict: string){
     this.districtCodes.filter((data) => {
       if (data.DistrictName === gpsDistrict){
         this.Subj_District = data.DistrictCode;
@@ -166,18 +171,6 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     });
   }
 
-  /*
-  * generate key string as case token
-  *
-  * */
-  private genCaseToken(length: number): string {
-    var text: string = ''; //final result
-    var possibilities = 'ABCDEFGHJKMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789';
-    for( var i = 0; i < length; i++ ){
-      text += possibilities.charAt(Math.floor(Math.random() * possibilities.length));
-    }
-    return text;
-  }
 
   @ViewChild("fileInput") fileInput: any;
   addFile(): void {
@@ -185,17 +178,21 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     if (fi.files) {
       //console.log(fi.files);
 
-      let check = this.checkFiles(fi.files);
+      let refiles = checkFilenameIsExist(fi.files, this.uploadFiles);
+      if (!refiles || refiles.length <= 0)
+        return;
+
+      let check = this.checkFiles(refiles);
       if (!check)
         return;
 
-      for(var i=0; i < fi.files.length; i++){
-        this.uploadFiles.push(fi.files[i]);
+      for(let i=0; i < refiles.length; i++){
+        this.uploadFiles.push(refiles[i]);
       }
 
       let upurl: string = `http://soweb.kcg.gov.tw/webapi/api/AttachFile/Upload/${this.Case_Token}`;
       this.subscribes.push(
-        this.uploadService.sendFileRequest(upurl, fi.files).subscribe(
+        this.uploadService.sendFileRequest(upurl, refiles).subscribe(
           resp => {
             console.log(resp);
           }
@@ -203,110 +200,26 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       );
     }
   }
-
   private checkFiles(files: File[]): boolean {
-    let r0 = this.checkTotalFilesSize(files);
+    let r0 = checkTotalFilesSize(files);
     if (!r0)
       return false;
 
-    for(var i=0; i<files.length; i++){
+    for(let i=0; i<files.length; i++){
       let f = files[i];
-      let r1 = this.checkFilesSize(f);
+      let r1 = checkFilesSize(f);
       if (!r1)
         return false;
 
-      let r2 = this.checkFileName(f);
+      let r2 = checkFileName(f);
       if (!r2)
         return false;
 
-      let r3 = this.checkExtName(f);
+      let r3 = checkExtName(f);
       if (!r3)
         return false;
     }
     return true;
-  }
-
-  /*
-  * check single file size
-  * ok = true,
-  * > 10MB = false
-  *
-  * */
-  private checkFilesSize(f: File): boolean {
-    const limit: number = 10485760; // 10MB = 10 * 1024 * 1024
-
-    let ret = f.size <= limit;
-    if (!ret) {
-      alert(`'${f.name}' 超過單檔 10MB 上限`);
-    }
-    return ret;
-  }
-
-  /*
-  * check total files size
-  * ok = true
-  * >20MB = false
-  *
-  * */
-  private checkTotalFilesSize(f: File[]): boolean {
-    const limit: number = 20971520; //20MB = 20 * 1024 * 1024
-    let tsize: number = 0;
-    for(var i=0; i<f.length; i++){
-      tsize += f[i].size;
-    }
-
-    let ret = tsize <= limit;
-    if (!ret){
-      alert('上傳檔案超過總合 20MB 上限');
-    }
-    return ret;
-  }
-
-  /*
-  * check file name contains a ;
-  * ok = true;
-  * has ; = false;
-  *
-  * */
-  private checkFileName(f: File): boolean {
-    let name = '';
-    if (f.name.split('.')[0])
-      name = f.name.split('.')[0];
-
-    let ret = name.indexOf(';') == -1;
-    if (!ret){
-      alert(`'${f.name}' 檔名包含 ; 分號`);
-    }
-    return ret;
-  }
-
-  /*
-  * check file's ext name
-  * ok = true
-  *
-  * */
-  private checkExtName(f: File): boolean {
-    let extName = '';
-    if (f.name.toLowerCase().split('.')[1])
-      extName = f.name.split('.')[1];
-
-    const available = ['doc', 'docx', 'xls', 'xlsx',
-      'pdf', 'txt',
-      'bmp', 'jpg', 'jpeg', 'gif', 'png', 'odt', 'ods',
-      'zip'];
-    let ret = available.indexOf(extName) >= 0;
-    if (!ret){
-      alert(`'${f.name}' 副檔名不屬於允許上傳類型`);
-    }
-    return ret;
-  }
-
-  private getItemCode(): void {
-    let hp = location.href.split('/'); //直接從目前 url 路徑抓出 主/次項目
-    if (hp && hp[hp.length -2] && hp[hp.length -1]){
-      this.Subj_Item = hp[hp.length -2];
-      this.Subj_Subitem = hp[hp.length -1];
-    }
   }
 
   //hasher hidden
@@ -327,8 +240,6 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     // 檢查資料、收集資料
 
     let hidden_hasher = Md5(`${this.subj_subitem.nativeElement.value}-${this.case_token.nativeElement.value}-${this.subj_item.nativeElement.value}`);
-    //console.log(`${this.subj_subitem.nativeElement.value}-${this.case_token.nativeElement.value}-${this.subj_item.nativeElement.value}`);
-    //console.log(`hasher: ${hidden_hasher}\nthis.hasher: ${this.hasher}`)
     if (hidden_hasher !== this.hasher){
       alert(`主項目或子項目不符合`); //此項錯誤，表示主/子項目/CaseToken 的 hidden 內容遭篡改!!
       return false;
@@ -350,7 +261,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
 
     // 處理上傳內容
     this.Subj_FileCount = this.uploadFiles.length;
-    this.Atth_FileNames = this.joinUploadedFileName(this.uploadFiles);
+    this.Atth_FileNames = joinUploadedFileName(this.uploadFiles);
 
     // 上傳附件的資料可能有誤，basically, this will not happen
     if ((this.Subj_FileCount && this.Subj_FileCount > 0) && (!this.Atth_FileNames || this.Atth_FileNames.split(';').length === 0)){
@@ -360,7 +271,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     }
 
     // case toekn check
-    if (this.Case_Token !== this.Case_Token){
+    if (!this.Case_Token || this.Case_Token.length <= 0){
       //console.log(`Case_Token: ${this.Case_Token}`);
       alert(`個案標識 資料異常`);
       return false;
@@ -383,7 +294,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       alert(`請填寫基本資料 Email`);
       return false;
     }
-    if (!this.validateEmail(this.Sugg_Email)){
+    if (!validateEmail(this.Sugg_Email)){
       //console.log(`Sugg_Email: ${this.Sugg_Email}`);
       alert(`基本資料 Email 格式有誤，請重新填寫`);
       return false;
@@ -436,23 +347,6 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     return true; //return false 則不會使 onSubmit 觸發
   }
 
-  private validateEmail(email): boolean {
-    let regx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return regx.test(email);
-  }
-
-  private joinUploadedFileName(files: File[]): string {
-    var result = '';
-    for(var i=0; i < files.length; i++){
-      result += files[i].name + ';';
-    }
-    if (result.substring(result.length - 1) === ';'){
-      result = result.substring(0, result.length - 1);
-    }
-    //console.log(result);
-    return result;
-  }
-
   onDistrictChanged(s: HTMLSelectElement): void{
     this.Sugg_Addr2 = s.value;
     this.Sugg_Addr2_name = this.getDropdownName(s);
@@ -471,19 +365,16 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     else {
       this.regionCodes = [];
     }
-    //console.log(`onDistrictChanged: ${this.Sugg_Addr2}`);
   }
 
   onRegionChanged(s: HTMLSelectElement): void{
     this.Sugg_Addr3 = s.value;
     this.Sugg_Addr3_name = this.getDropdownName(s);
-    //console.log(`onRegionChanged: ${this.Sugg_Addr3}`);
   }
 
   onChangeCountyCode(s: HTMLSelectElement): void {
     this.Sugg_Addr1_name = this.getDropdownName(s);
     this.Sugg_Addr1 = s.value;
-    //console.log(`this.Sugg_Addr1: ${this.Sugg_Addr1} ; s.value: ${s.value}`);
     if (s.value === '6400000000'){ // 高雄市，則不使用 api 取行政區內容
       this.districtCodes = DistrictCodesKaohsiung();
     }
@@ -500,7 +391,6 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     this.regionCodes = [];
     this.Sugg_Addr3_name = this.region_placeholder;
     this.Sugg_Addr2_name = this.district_placeholder;
-    //console.log(`onChangeCountyCode: ${this.Sugg_Addr1}`);
   }
 
   private getDropdownName(e: HTMLSelectElement): string {
@@ -511,7 +401,6 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   onChangeAreaCodes(s: HTMLSelectElement): void {
     this.Subj_District = s.value;
     this.Subj_District_name = this.getDropdownName(s);
-    //console.log(`onChangeAreaCodes: ${this.Subj_District_name}\nthis.Subj_District: ${this.Subj_District}\n${s.value}`);
   }
 
   onSubmit(value: any): void {
@@ -535,7 +424,5 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
         }
       )
     );
-  }
-
-
-}
+  } // onSubmit
+} // export class ReportDetailComponent
