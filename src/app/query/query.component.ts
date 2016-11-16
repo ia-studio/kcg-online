@@ -29,7 +29,7 @@ export class QueryComponent implements OnInit, OnDestroy {
   private queryVErr: string;
   private errType = {
     notFound: '您查詢的內容不存在，請重新輸入。',
-    numErr: '查詢案件編號不足6碼。請重新輸入。',
+    numErr: '案件編號欄位為必填',
     mailErr: '查詢email有誤。請重新輸入。',
     yearErr: '案件編號-年份有誤。請重新輸入。',
     keyErr: '案件編號有誤。請重新輸入。',
@@ -84,7 +84,8 @@ export class QueryComponent implements OnInit, OnDestroy {
   }
 
   private validateCaseNo(caseNo): boolean {
-    return caseNo.length >= 6;
+    // 改驗證該欄位為必填
+    return caseNo !== '';
   }
 
   private validateEmail(email): boolean {
