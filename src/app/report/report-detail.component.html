@@ -18,7 +18,7 @@
 						<div class="row maB1x">
 							<div class="col-xs-12">
 								<input class="fall-width" type="text" *ngIf="caseType" value="{{caseType.Item}} {{caseType.ItemName}}" readonly />
-								<input type="hidden" name="Subj_Item" *ngIf="caseType" value="{{caseType.Item}}" [ngModel]="Subj_Item" #subj_item />
+								<input type="hidden" name="Subj_Item" *ngIf="caseType" value="{{caseType.Item}}" [ngModel]="Subj_Item" />
 							</div>
 						</div>
 					</div>
@@ -27,7 +27,7 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<input class="fall-width" type="text" *ngIf="subCaseType" value="{{subCaseType.Subitem}} {{subCaseType.SubitemName}}" readonly />
-								<input type="hidden" name="Subj_Subitem" *ngIf="subCaseType" value="{{subCaseType.Subitem}}" [ngModel]="Subj_Subitem" #subj_subitem />
+								<input type="hidden" name="Subj_Subitem" *ngIf="subCaseType" value="{{subCaseType.Subitem}}" [ngModel]="Subj_Subitem" />
 							</div>
 						</div>
 					</div>
@@ -37,8 +37,8 @@
 							<div class="col-md-3 combine-icon combine-after">
 								<input class="fall-width" type="text" [value]="Subj_District_name">
 								<select class="input-alpha" name="Subj_District" [ngModel]="Subj_District" (change)="onChangeAreaCodes($event.target)">
-									<option>請選擇地區</option>
-									<option *ngFor="let item of areaCodes" value="{{item.DistrictCode}}" [selected]="item.DistrictName === Subj_District_name" #subj_district >{{item.DistrictName}}</option>
+									<option value="">請選擇地區</option>
+									<option *ngFor="let item of areaCodes" value="{{item.DistrictCode}}" [selected]="item.DistrictName === Subj_District_name">{{item.DistrictName}}</option>
 								</select>
 								<i class="fa fa-chevron-down"></i>
 							</div>
@@ -70,7 +70,7 @@
 									<p *ngFor="let item of uploadFiles"><i class="fa fa-paperclip"></i> {{ item.name }}</p>
 								</div>
 							</div>
-							<input type="hidden" value="{{Case_Token}}" name="Case_Token" [ngModel]="Case_Token" #case_token />
+							<input type="hidden" value="{{Case_Token}}" name="Case_Token" [ngModel]="Case_Token" />
 							<input type="hidden" value="0" name="Subj_FileCount" [ngModel]="Subj_FileCount" />
 							<input type="hidden" value="" name="Atth_FileNames" [ngModel]="Atth_FileNames" />
               <input type="hidden" value="2" name="Subj_Security" [ngModel]="Subj_Security" />
@@ -102,7 +102,7 @@
 							<input class="fall-width" type="text" [value]="Sugg_Addr1_name" readonly>
 							<select class="input-alpha" name="Sugg_Addr1" [ngModel]="Sugg_Addr1" (change)="onChangeCountyCode($event.target)">
                 <option value="">{{county_placeholder}}</option>
-                <option *ngFor="let item of countyCodes" value="{{item.CountyCode}}" #sugg_county >{{item.CountyName}}</option>
+                <option *ngFor="let item of countyCodes" value="{{item.CountyCode}}">{{item.CountyName}}</option>
               </select>
 							<i class="fa fa-chevron-down"></i>
 						</div>
@@ -110,7 +110,7 @@
 							<input class="fall-width" type="text" [value]="Sugg_Addr2_name" readonly>
 							<select class="input-alpha" name="Sugg_Addr2" [ngModel]="Sugg_Addr2" (change)="onDistrictChanged($event.target)">
                   <option value="">{{district_placeholder}}</option>
-                  <option *ngFor="let item of districtCodes" value="{{item.DistrictCode}}" #sugg_district>{{item.DistrictName}}</option>
+                  <option *ngFor="let item of districtCodes" value="{{item.DistrictCode}}">{{item.DistrictName}}</option>
               </select>
 							<i class="fa fa-chevron-down"></i>
 						</div>
@@ -118,7 +118,7 @@
 							<input class="fall-width" type="text" [value]="Sugg_Addr3_name" readonly>
 							<select class="input-alpha" name="Sugg_Addr3" [ngModel]="Sugg_Addr3" (change)="onRegionChanged($event.target)">
                 <option value="">{{region_placeholder}}</option>
-                <option *ngFor="let item of regionCodes" value="{{item.RegionCode}}" #sugg_region>{{item.RegionName}}</option>
+                <option *ngFor="let item of regionCodes" value="{{item.RegionCode}}">{{item.RegionName}}</option>
               </select>
 							<i class="fa fa-chevron-down"></i>
 						</div>

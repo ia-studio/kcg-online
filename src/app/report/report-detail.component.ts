@@ -89,7 +89,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     this.areaCodes = DistrictCodesKaohsiung(true); // 左側行政區 gps
     this.districtCodes = []; // 右側行政區下拉項目
     this.gpsDistrict = '';
-    this.Subj_District = '6411100000';
+    this.Subj_District = ''; // default
     this.countyCodes = CountyCodes();
     this.regionCodes = [];
 
@@ -149,28 +149,25 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     this.subscribes.push(
       this.geoAddressService.getAddressResult(lat, lng).subscribe(
         data => {
-          //console.log(data);
           if (data.results[0] !== null && data.results[0].formatted_address !== null) {
             let addr = data.results[0].formatted_address;
             this.gpsFormattedAddress = addr;
             this.gpsDistrict = addr.substring(addr.indexOf('市') + 1, addr.indexOf('區') + 1);
             this.Subj_District_name = this.gpsDistrict;
             this.adjustGpsResolving(this.gpsDistrict);
-            //console.log(this.gpsDistrict);
           }
         }
       )
     );
   }
+
   private adjustGpsResolving(gpsDistrict: string){
-    this.districtCodes.filter((data) => {
+    this.areaCodes.filter((data) => {
       if (data.DistrictName === gpsDistrict){
         this.Subj_District = data.DistrictCode;
       }
-      //console.log(`gpsDistrict: ${gpsDistrict} ; this.Subj_District: ${this.Subj_District}`);
     });
   }
-
 
   @ViewChild("fileInput") fileInput: any;
   addFile(): void {
@@ -222,30 +219,14 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     return true;
   }
 
-  //hasher hidden
-  @ViewChild('subj_item') subj_item: any;
-  @ViewChild('subj_subitem') subj_subitem: any;
-  @ViewChild('case_token') case_token: any;
-
-  // 檢舉地址：區
-  @ViewChild('subj_district') subj_district: any;
-  // 基本資料：縣市
-  @ViewChild('sugg_county') sugg_county: any;
-  // 基本資料：行政區
-  @ViewChild('sugg_district') sugg_district: any;
-  // 基本資料：里別
-  @ViewChild('sugg_region') sugg_region: any;
-
   onSubmitClick(): boolean{
     // 檢查資料、收集資料
-
-    let hidden_hasher = Md5(`${this.subj_subitem.nativeElement.value}-${this.case_token.nativeElement.value}-${this.subj_item.nativeElement.value}`);
+    let hidden_hasher = Md5(`${this.Subj_Subitem}-${this.Case_Token}-${this.Subj_Item}`);
     if (hidden_hasher !== this.hasher){
       alert(`主項目或子項目不符合`); //此項錯誤，表示主/子項目/CaseToken 的 hidden 內容遭篡改!!
       return false;
     }
 
-    this.Subj_District = this.subj_district.nativeElement.value;
     if (!this.Subj_District) {
       alert(`請選擇檢舉地址區域`);
       //console.log(`Subj_District: ${this.Subj_District}`);
@@ -301,14 +282,14 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     }
 
     // 地址1-4
-    let value_addr1 = this.sugg_county.nativeElement.value;
+    let value_addr1 = this.Sugg_Addr1;
     //console.log(`Sugg_Addr1: ${this.Sugg_Addr1}`);
     if (!value_addr1 || value_addr1.length === 0){
       this.Sugg_Addr1 = '';
       alert(`請選擇基本資料 地址 縣市別`);
       return false;
     }
-    let value_addr2 = this.sugg_district.nativeElement.value;
+    let value_addr2 = this.Sugg_Addr2;
     //console.log(`Sugg_Addr2: ${this.Sugg_Addr2}`);
     if (!value_addr2 || value_addr2.length === 0){
       this.Sugg_Addr2 = '';
@@ -316,7 +297,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       return false;
     }
     // 里別，非必填
-    let value_addr3 = this.sugg_region.nativeElement.value;
+    let value_addr3 = this.Sugg_Addr3;
     if (!value_addr3){
       this.Sugg_Addr3 = '';
     }
@@ -347,6 +328,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     return true; //return false 則不會使 onSubmit 觸發
   }
 
+  // 右側 區選擇
   onDistrictChanged(s: HTMLSelectElement): void{
     this.Sugg_Addr2 = s.value;
     this.Sugg_Addr2_name = this.getDropdownName(s);
@@ -367,11 +349,13 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     }
   }
 
+  // 右側 里選擇
   onRegionChanged(s: HTMLSelectElement): void{
     this.Sugg_Addr3 = s.value;
     this.Sugg_Addr3_name = this.getDropdownName(s);
   }
 
+  // 右側 市鎮選擇
   onChangeCountyCode(s: HTMLSelectElement): void {
     this.Sugg_Addr1_name = this.getDropdownName(s);
     this.Sugg_Addr1 = s.value;
