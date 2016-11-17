@@ -96,7 +96,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     this.Subj_FileCount = 0;
     this.Atth_FileNames = '';
     this.Subj_Security = '2'; // 保密等級，always 預設為保密 2
-    this.Sugg_Sex = '2'; // 性別，預設為男 2
+    this.Sugg_Sex = '3'; // 性別，預設為其他 3
   }
 
   ngOnInit() {
