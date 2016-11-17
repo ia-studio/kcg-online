@@ -64,7 +64,7 @@
 									<p class="article-lable require maT1x">附件</p>
 								</div>
 								<div class="col-md-4">
-									<a class="btn btn-green" href="">選擇檔案<input class="input-alpha" type="file" multiple="true" name="" value="" (change)="addFile()" #fileInput></a>
+									<a class="btn btn-green" href="javascript:void(0);">選擇檔案<input class="input-alpha" type="file" multiple="true" name="" value="" (change)="addFile()" #fileInput></a>
 								</div>
 								<div class="col-md-6 navy">
 									<p *ngFor="let item of uploadFiles"><i class="fa fa-paperclip"></i> {{ item.name }}</p>
@@ -130,7 +130,8 @@
 					<div class="row">
 						<div class="col-xs-12 combine-icon combine-after">
 							<input type="radio" name="Sugg_Sex" value="1" (click)="Sugg_Sex = '1'" [ngModel]="Sugg_Sex" />&nbsp;女&nbsp;&nbsp;&nbsp;
-							<input type="radio" name="Sugg_Sex" value="2" (click)="Sugg_Sex = '2'" [ngModel]="Sugg_Sex" checked="true" />&nbsp;男
+							<input type="radio" name="Sugg_Sex" value="2" (click)="Sugg_Sex = '2'" [ngModel]="Sugg_Sex" checked="true" />&nbsp;男&nbsp;&nbsp;&nbsp;
+							<input type="radio" name="Sugg_Sex" value="3" (click)="Sugg_Sex = '3'" [ngModel]="Sugg_Sex" checked="true" />&nbsp;不方便公開
 						</div>
 					</div>
 				</div>
@@ -164,7 +165,7 @@
 					謝謝您！
 				</p>
 				<h4 class="check-footer navy text-center">高雄市政府市長信箱處理小組 敬上</h4>
-				<a href="javascript:;" class="btn btn-green" (click)="goBack(true)">回到首頁</a>
+				<a href="javascript:void(0);" class="btn btn-green" (click)="goBack(true)">回到首頁</a>
 			</div>
 		</div>
 	</div>
