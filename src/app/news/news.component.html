@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="banner row">
+		<div class="banner-page-name">
+			<h2 class="dk-green">最新訊息</h2>
+			<p class="dk-green">Latest News</p>
+		</div>
+		<img src="./assets/images/banner/banner_pic_news.png" alt="">
+	</div>
+	<div class="row" style="min-height:300px">
+		<div class="col-md-8 page-block">
+			<div class="article-content">
+				<p class="article-lable">主題</p>
+				<p class="navy maB2x">
+					{{newsDetail.MsgTitle}}
+				</p>
+				<p class="article-lable">內容</p>
+				<p class="navy maB2x" style="white-space: pre;">{{newsDetail.MsgContent}}</p>
+			</div>
+		</div>
+		<div class="col-md-4 page-block info-separate">
+			<div class="article-content block-separate">
+				<p class="article-lable">其他訊息</p>
+				<ul class="news-all">
+					<li *ngFor="let newsItem of news">
+            <a routerLinkActive="active" [routerLink]="['/news', newsItem.MsgID]">{{newsItem.MsgTitle}}</a>
+          </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

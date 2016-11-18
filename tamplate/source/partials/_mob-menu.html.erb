@@ -1,0 +1,19 @@
+<div class="mob-menu-list" ng-class="{'active':m.isActive}">
+	
+    <div class="mob-menu-close" ng-class="{'active':m.isActive}" ng-click="m.isActive = !m.isActive"></div>
+	<ul class="header-menu" ng-class="{'active':m.isActive}"> 
+	  <li class="menu-item <%= is_page_selected('') %>"><a href="index.html">市長信箱</a></li>
+	  <li class="menu-item <%= is_page_selected('about.html') %>"><a href="">即時服務案件查詢</a></li>
+	  <li class="menu-item <%= is_page_selected('product.html') %>"><a href="">服務流程</a></li>
+	  <li class="menu-item <%= is_page_selected('contact.html') %>"><a href="">常見問題集 FAQ</a></li>
+	  <li class="menu-item"><a href="http://work1999.kcg.gov.tw/Rptdownload.aspx" target="_blank">案件反應排行榜</a></li>
+	  <li class="menu-item <%= is_page_selected('contact.html') %>"><a href="">案件處理滿意度</a>
+		<ul class="mob-sub-menu">
+			<li class="menu-item"><a href="">各項滿意度調查</a></li>
+			<li class="menu-item"><a href="">各問題次數分配表</a></li>
+			<li class="menu-item"><a href="">各問題有效值與遺漏值</a></li>
+		</ul>
+	  </li>
+	  <li class="menu-item"><a href="http://disdp.kcg.gov.tw/exchange/feedback.php" target="_blank">廉政案件</a></li>
+	</ul>
+</div>

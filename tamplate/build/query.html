@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="Author" content="Ilandy &nbsp; Austin">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>案件查詢 - 高雄市政府線上即時服務平台</title>
+    <script src="https://use.fontawesome.com/2c72f40202.js"></script>
+    <link href="stylesheets/all.css?v=33" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-sanitize.js"></script>
+    <script src="javascripts/all.js"></script>
+    <script src="javascripts/ctrl.js"></script>
+    <script src="javascripts/product.directive.js"></script>
+
+  </head>
+  <body ng-app="myApp" ng-controller="myCtrl as m">
+    <div class="wrap " ng-class="{'active':m.isActive}">
+      <div class="container shadow-3d">
+        <nav class="header row ">
+  
+    <h1 class="header-band">
+      <img calss="pull-left" src="images/Kao_logo.png" width="40" alt="">
+      <p>
+        <span class="navy">線上即時服務系統</span><br>
+        <small class="navy">Service online</small>
+      </p>
+      
+      <div class="news visible-xs maT1x" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></div>
+      <div class="mob-menu visible-xs" ng-click="m.isActive=!m.isActive"></div>
+    </h1>
+  <div class="header-right hidden-xs">
+    
+    <div class="mob-menu visible-md visible-sm" ng-click="m.isActive=!m.isActive"></div>
+    <div class="news visible-md visible-sm maT1x" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></div>
+    <ul class="header-menu visible-lg">
+      <li class="menu-item "><a href="index.html">市長信箱</a></li>
+      <li class="menu-item active"><a href="query.html">案件查詢</a></li>
+      <li class="menu-item "><a href="Service.html">服務流程</a></li>
+      <li class="menu-item "><a href="faq.html">常見問題 FAQ</a></li>
+      <li class="menu-item"><a href="http://work1999.kcg.gov.tw/Rptdownload.aspx" target="_blank">案件反應排行榜</a></li>
+      <li class="menu-item "><a href="Satisfaction.html">案件處理滿意度</a></li>
+      <li class="menu-item"><a href="http://disdp.kcg.gov.tw/exchange/feedback.php" target="_blank">廉政案件</a></li>
+      <li class="menu-item" ng-click="m.newsActive=true"><a href="###"><i class="fa fa-info"></i></a></li>
+    </ul>
+  </div>
+  <div class="header-news" ng-if="m.newsActive">
+      <div class="news-visble">
+        <ul class="news-list">
+          <li class="active"><a href="">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a></li>
+          <li><a href="">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a></li>
+          <li><a href="">如果您是用 Yahoo! 、Hinet 、PChome 等免費信箱，可以先至「垃圾信匣」找看看，有可能被誤判為垃圾信。</a></li>
+        </ul>
+        <span class="pull-right" ng-click="m.newsActive = false"><i class="fa fa-times-circle"></i></span>
+      </div>
+  </div>
+</nav>
+            <div class="banner row">
+                <div class="banner-page-name">
+                    <h2 class="dk-green">案件查詢</h2>
+                    <p class="dk-green">Search My Case</p>  
+                </div>
+                <img src="images/query/banner_pic_query.png" alt="">
+            </div>
+        
+<div class="row">
+	<div class="col-md-4 page-block">
+		<div class="article-header text-center">
+			<h4 id="mayor" class="article-title">操作說明</h4>
+		</div>
+		<div class="article-content">
+			<p class="article-lable require">查詢方式 </p>
+			<p class="navy maB1x">
+				請先點選您要查詢的方式，再輸入相關查詢條件。
+			</p>
+			<p class="article-lable require">注意事項 </p>
+			<p class="navy">
+				請注意您輸入的內容(Email、姓名)須與當時反映時所提供之資料一致，俾利系統正確判讀。<br>
+				限查詢現有資料庫期限內案件。<br>
+				當系統處於定期維護時間每日凌晨01:00~02:00時，主機可能會停止所有服務，如有不便還請見諒。<br>
+				為加強民眾投訴案件資料之安全，即日起不提供市長信箱查詢案件(案件編號+姓名)與人民陳情案件(姓名+電話)兩種查詢方式，如有不便還請見諒。<br>
+			</p>
+		</div>
+	</div>
+	<div class="col-md-4 page-block">
+		<div class="article-header text-center">
+			<h4 id="mayor" class="article-title">市長信箱</h4>
+		</div>
+		<div class="article-content block-separate">
+			<p class="navy">透過線上即時服系統及市長信箱等網路途徑</p>
+			<form action="">
+				<p class="article-lable require">案件編號 </p>
+				<div class="row maB1x">
+					<div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" type="text" value="B" readonly></div>
+					<div class="col-xs-10"><input class="col-xs-12" type="text"></div>
+				</div>
+				<p class="article-lable require">E-Mail </p>
+				<div class="row">
+					<div class="col-xs-12"><input class="col-xs-12" type="text" placeholder="example@kcg.gov.tw"></div>
+				</div>
+				<p class="validation-info">您輸入的編號錯誤</p>
+				<div class="row text-center maT2x">
+					<a href="javascript:void(0)" class="btn btn-orange" ng-click="vm.pop">查詢</a>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="col-md-4 page-block">
+		<div class="article-header text-center">
+			<h4 id="mayor" class="article-title">人民陳情案件</h4>
+		</div>
+		<div class="article-content block-separate">
+			<p class="navy">透案件來源：透過電話、信件、傳真等非網路途徑</p>
+			<form action="">
+				<p class="article-lable require">案件編號 </p>
+				<div class="row maB1x">
+					<div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" type="text" value="A" readonly></div>
+					<div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" type="text" value="TB" readonly></div>
+					<div class="col-xs-3 input-separate"><input class="col-xs-12 text-center" type="text" value="2016" readonly></div>
+					<div class="col-xs-5"><input class="col-xs-12" type="text"></div>
+				</div>
+				<p class="article-lable require">來電時的姓名 </p>
+				<div class="row">
+					<div class="col-xs-12"><input class="col-xs-12" type="text" placeholder="您的姓名"></div>
+				</div>
+				<p class="validation-info"> </p>
+				<div class="row text-center maT2x">
+					<a href="javascript:void(0)" class="btn btn-orange" ng-click="vm.pop">查詢</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+      </div>
+      <footer>
+	<div class="container">
+		<div class="row pdLR1x">
+			<div class="footer col-md-10 col-sm-12 col-xs-12">
+				<img class="pull-left pdR1x visible-lg visible-md" src="images/qrcode.png" alt="">
+
+				<p class="footer-info">
+					本系統由 <a class="link">高雄市政府資訊中心</a> 維護<br>
+				</p>
+				<small class="pdT2x font-sm">當系統處於定期維護時間每日凌晨 01:00 ~ 02:00 時，<br>主機可能會停止所有服務，如有不便還請見諒。<br><br>
+				高雄市政府聯合服務中心電話：</small>
+				<h5 class="font-lg">(07) 336-8333 #2819、#2833、#2834</h5>
+
+			</div>
+			<div class="col-md-2">
+				<ul class="link-group font-md hidden-sm hidden-xs">
+					<li><a href="index.html">隱私權保護政策</a></li>
+					<li><a href="about.html">網站安全政策</a></li>
+					<li><a href="product.html">著作權聲明</a></li>
+					<li><a href="contact.html">高雄市政府全球資訊網</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+    </div>
+      <div class="mob-menu-list" ng-class="{'active':m.isActive}">
+	
+    <div class="mob-menu-close" ng-class="{'active':m.isActive}" ng-click="m.isActive = !m.isActive"></div>
+	<ul class="header-menu" ng-class="{'active':m.isActive}"> 
+	  <li class="menu-item "><a href="index.html">市長信箱</a></li>
+	  <li class="menu-item "><a href="">即時服務案件查詢</a></li>
+	  <li class="menu-item "><a href="">服務流程</a></li>
+	  <li class="menu-item "><a href="">常見問題集 FAQ</a></li>
+	  <li class="menu-item"><a href="http://work1999.kcg.gov.tw/Rptdownload.aspx" target="_blank">案件反應排行榜</a></li>
+	  <li class="menu-item "><a href="">案件處理滿意度</a>
+		<ul class="mob-sub-menu">
+			<li class="menu-item"><a href="">各項滿意度調查</a></li>
+			<li class="menu-item"><a href="">各問題次數分配表</a></li>
+			<li class="menu-item"><a href="">各問題有效值與遺漏值</a></li>
+		</ul>
+	  </li>
+	  <li class="menu-item"><a href="http://disdp.kcg.gov.tw/exchange/feedback.php" target="_blank">廉政案件</a></li>
+	</ul>
+</div>
+      <!-- <div class="pop" style="display:block;">
+	<div class="pop-content">
+		<div class="check">
+	      <div class="check-panel">
+	        <div class="check-mark"><i class="fa fa-check"></i></div>
+	        <h4 class="check-title navy text-center">親愛的 ilandy，您好！</h4>
+	        <br>
+	        <p class="check-info navy">
+	          我們已收到您對本府的反映案件，為確認您的信箱未遭冒用，我們即將寄出確認信至您所填寫的：w9874123@gmail.com 信箱， 請您於收到該確認信後，點選「確認信件」連結，以便完成您的案件反映流程，我們在收到您的確認後，將由系統自動寄出案件編號至您的信箱並立即進行分案處理。
+	          謝謝您！
+	        </p>
+	        <h4 class="check-footer navy text-center">高雄市政府市長信箱處理小組 敬上</h4>
+	        <a href="javascript:void(0);" class="btn btn-green">回到首頁</a>
+	      </div>
+	    </div>
+	</div>
+</div> -->
+      <!-- <div class="pop active pop-inner" style="display:block;_footer.html.erb">
+	<div class="pop-content">
+		<div class="mk-spinner-doublecircle"></div>
+		<span class="loading-words">Loading ...</span>
+	</div>
+</div> -->
+
+  </body>
+</html>
