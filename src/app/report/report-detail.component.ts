@@ -39,13 +39,13 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
 
   readonly placeholder: string = '輸入所在地址';
   coords: any;
-  gpsFormattedAddress: string;
+  // gpsFormattedAddress: string;
   gpsDistrict: string;
 
-  readonly county_placeholder: string = '請選擇縣市';
-  readonly district_placeholder: string = '請選擇地區';
-  readonly region_placeholder: string = '請選擇里別';
-  readonly addr4_placeholder: string = '請輸入居住地址';
+  readonly county_placeholder: string = '縣市';
+  readonly district_placeholder: string = '地區';
+  readonly region_placeholder: string = '里別';
+  readonly addr4_placeholder: string = '居住地址';
 
   private subscribes: Subscription[] = []; // put all subscribes into this array, while component ondestroy to unsubscribe them.
 
@@ -151,7 +151,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
         data => {
           if (data.results[0] !== null && data.results[0].formatted_address !== null) {
             let addr = data.results[0].formatted_address;
-            this.gpsFormattedAddress = addr;
+            // this.gpsFormattedAddress = addr; // 檢舉地址
             this.gpsDistrict = addr.substring(addr.indexOf('市') + 1, addr.indexOf('區') + 1);
             this.Subj_District_name = this.gpsDistrict;
             this.adjustGpsResolving(this.gpsDistrict);

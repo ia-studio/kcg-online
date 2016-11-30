@@ -32,9 +32,9 @@
 						</div>
 					</div>
 					<div class="col-md-12 maB1x">
-						<p class="article-lable require">檢舉地址 <small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
+						<p class="article-lable require">區別 <small class="text-orange"><i class="fa fa-asterisk"></i></small></p>
 						<div class="row">
-							<div class="col-md-3 combine-icon combine-after">
+							<div class="col-md-5 combine-icon combine-after">
 								<input class="fall-width" type="text" [value]="Subj_District_name">
 								<select class="input-alpha" name="Subj_District" [ngModel]="Subj_District" (change)="onChangeAreaCodes($event.target)">
 									<option value="">請選擇地區</option>
@@ -42,9 +42,9 @@
 								</select>
 								<i class="fa fa-chevron-down"></i>
 							</div>
-							<div class="col-md-9">
-								<input class="fall-width" type="text" *ngIf="gpsFormattedAddress && gpsFormattedAddress.length > 0" [value]="gpsFormattedAddress" [placeholder]="placeholder" />
-								<input class="fall-width" type="text" *ngIf="!gpsFormattedAddress || !gpsFormattedAddress[0]" [placeholder]="placeholder" />
+							<div class="col-md-7">
+								<!--<input class="fall-width" type="text" *ngIf="gpsFormattedAddress && gpsFormattedAddress.length > 0" [value]="gpsFormattedAddress" [placeholder]="placeholder" />
+								<input class="fall-width" type="text" *ngIf="!gpsFormattedAddress || !gpsFormattedAddress[0]" [placeholder]="placeholder" />-->
 							</div>
 							<p class="col-md-12 text-gray"><br>請選擇建議事項內容所屬高雄行政區，若內容無法分區或其他縣市事項請選擇「無法分區」</p>
 						</div>
