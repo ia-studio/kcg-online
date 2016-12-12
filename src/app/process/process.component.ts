@@ -3,7 +3,7 @@ import { Title }             from '@angular/platform-browser';
 
 @Component({
   selector: 'app-process',
-  templateUrl: 'process.component.html',
+  templateUrl: './process.component.html',
 })
 export class ProcessComponent implements OnInit {
   public constructor(private titleService: Title) { }

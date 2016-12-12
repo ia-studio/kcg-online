@@ -6,9 +6,9 @@ import * as moment           from 'moment';
 
 @Component({
   selector: 'app-feedback',
-  templateUrl: 'feedback.component.html',
+  templateUrl: './feedback.component.html',
   providers: [FeedbackService],
-  styleUrls: ['feedback.component.css']
+  styleUrls: ['./feedback.component.css']
 })
 export class FeedbackComponent implements OnInit {
 

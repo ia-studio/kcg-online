@@ -1,10 +1,10 @@
-import { Demo0813Page } from './app.po';
+import { KcgOnlinePage } from './app.po';
 
-describe('demo0813 App', function() {
-  let page: Demo0813Page;
+describe('kcg-online App', function() {
+  let page: KcgOnlinePage;
 
   beforeEach(() => {
-    page = new Demo0813Page();
+    page = new KcgOnlinePage();
   });
 
   it('should display message saying app works', () => {

@@ -1,4 +1,6 @@
-export class Demo0813Page {
+import { browser, element, by } from 'protractor';
+
+export class KcgOnlinePage {
   navigateTo() {
     return browser.get('/');
   }

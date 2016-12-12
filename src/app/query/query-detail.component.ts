@@ -4,7 +4,7 @@ import { Case }                   from '../shared/case';
 
 @Component({
   selector: 'app-query-detail',
-  templateUrl: 'query-detail.component.html'
+  templateUrl: './query-detail.component.html'
 })
 export class QueryDetailComponent implements OnInit {
   public constructor(private titleService: Title) { }

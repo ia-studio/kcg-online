@@ -3,7 +3,7 @@ import { Reply }                                  from './faq';
 
 @Component({
   selector: 'app-faq-detail',
-  templateUrl: 'faq-detail.component.html',
+  templateUrl: './faq-detail.component.html',
 })
 export class FaqDetailComponent {
   @Input()

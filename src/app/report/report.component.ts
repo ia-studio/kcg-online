@@ -6,7 +6,7 @@ import { GlobalService } from '../shared/global.service';
 
 @Component({
   selector: 'app-report',
-  templateUrl: 'report.component.html',
+  templateUrl: './report.component.html',
   providers: [ReportService],
   styles: [`
     @media screen and (max-width: 480px){

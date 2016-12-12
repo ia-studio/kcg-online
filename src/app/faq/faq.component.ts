@@ -6,9 +6,9 @@ import { Reply, Faq, Category }             from './faq';
 
 @Component({
   selector: 'app-faq',
-  templateUrl: 'faq.component.html',
+  templateUrl: './faq.component.html',
   providers: [FaqService],
-  styleUrls: ['faq.component.scss']
+  styleUrls: ['./faq.component.scss']
 })
 export class FaqComponent implements OnInit {
   error: any;

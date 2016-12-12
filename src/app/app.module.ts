@@ -16,6 +16,7 @@ import { TermComponent }                                        from './term/ter
 import { NewsComponent }                                        from './news/news.component';
 
 import { GlobalService }                                        from './shared/global.service';
+import { ReCaptchaModule }                                      from 'angular2-recaptcha';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import { GlobalService }                                        from './shared/g
     ReactiveFormsModule,
     FormsModule,
     HttpModule,
+    ReCaptchaModule,
     routing
   ],
   declarations: [

@@ -22,9 +22,9 @@ import {
 
 @Component({
   selector: 'app-report-detail',
-  templateUrl: 'report-detail.component.html',
+  templateUrl: './report-detail.component.html',
   providers: [ReportService, GeoAddressService, GeolocationService, UploadService, AreaService],
-  styleUrls: ['report-detail.component.scss']
+  styleUrls: ['./report-detail.component.scss']
 })
 export class ReportDetailComponent implements OnInit, OnDestroy {
   error: any;
@@ -73,6 +73,8 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   Sugg_Sex: string;
 
   uploadFiles: File[] = [];
+
+  RecaptchaToken: string;
 
   @Input() caseType: CaseType;
   @Input() subCaseType: SubCaseType;
@@ -319,6 +321,11 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       return false;
     }
 
+    if(!this.RecaptchaToken){
+      alert(`請檢核我不是機器人選項`);
+      return false;
+    }
+
     //console.log(`Sugg_Sex: ${this.Sugg_Sex}`);
 
     //let formData = `Case_Token=${this.Case_Token}&Atth_FileNames=${this.Atth_FileNames}&Subj_Content=${this.Subj_Content}&Subj_District=${this.Subj_District}&Subj_FileCount=${this.Subj_FileCount}&Subj_Item=${this.Subj_Item}&Subj_Security=${this.Subj_Security}&Subj_Subitem=${this.Subj_Subitem}&Sugg_Addr1=${this.Sugg_Addr1}&Sugg_Addr2=${this.Sugg_Addr2}&Sugg_Addr3=${this.Sugg_Addr3}&Sugg_Addr4=${this.Sugg_Addr4}&Sugg_Email=${this.Sugg_Email}&Sugg_Name=${this.Sugg_Name}&Sugg_Sex=${this.Sugg_Sex}&Sugg_Telno=${this.Sugg_Telno}`;
@@ -387,10 +394,14 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     this.Subj_District_name = this.getDropdownName(s);
   }
 
+  handleCorrectCaptcha(event): void{
+    this.RecaptchaToken = event;
+  }
+
   onSubmit(value: any): void {
     //console.log(value);
 
-    let formData = `Case_Token=${value.Case_Token}&Atth_FileNames=${value.Atth_FileNames}&Subj_Content=${value.Subj_Content}&Subj_District=${value.Subj_District}&Subj_FileCount=${value.Subj_FileCount}&Subj_Item=${value.Subj_Item}&Subj_Security=${value.Subj_Security}&Subj_Subitem=${value.Subj_Subitem}&Sugg_Addr1=${value.Sugg_Addr1}&Sugg_Addr2=${value.Sugg_Addr2}&Sugg_Addr3=${value.Sugg_Addr3}&Sugg_Addr4=${value.Sugg_Addr4}&Sugg_Email=${value.Sugg_Email}&Sugg_Name=${value.Sugg_Name}&Sugg_Sex=${value.Sugg_Sex}&Sugg_Telno=${value.Sugg_Telno}`;
+    let formData = `Case_Token=${value.Case_Token}&Atth_FileNames=${value.Atth_FileNames}&Subj_Content=${value.Subj_Content}&Subj_District=${value.Subj_District}&Subj_FileCount=${value.Subj_FileCount}&Subj_Item=${value.Subj_Item}&Subj_Security=${value.Subj_Security}&Subj_Subitem=${value.Subj_Subitem}&Sugg_Addr1=${value.Sugg_Addr1}&Sugg_Addr2=${value.Sugg_Addr2}&Sugg_Addr3=${value.Sugg_Addr3}&Sugg_Addr4=${value.Sugg_Addr4}&Sugg_Email=${value.Sugg_Email}&Sugg_Name=${value.Sugg_Name}&Sugg_Sex=${value.Sugg_Sex}&Sugg_Telno=${value.Sugg_Telno}&RecaptchaToken=${this.RecaptchaToken}`;
     //console.log(`formData on submit: ${formData}`);
 
     this.subscribes.push(

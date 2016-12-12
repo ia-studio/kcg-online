@@ -8,7 +8,7 @@ import { QueryService } from './query.service';
 
 @Component({
   selector: 'app-query',
-  templateUrl: 'query.component.html',
+  templateUrl: './query.component.html',
   providers: [QueryService]
 })
 export class QueryComponent implements OnInit, OnDestroy {
