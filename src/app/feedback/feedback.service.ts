@@ -34,7 +34,7 @@ export class FeedbackService {
   }
 
   private handleError (error: any) {
-    let errMsg = error.status == 500 ? error.json().Message : error.json();
+    let errMsg = error.status == 500 ? "目前無法提供查詢資料。" : error.json().Message ;
     return Observable.throw(errMsg);
   }
 }

@@ -266,7 +266,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
 
     if (!this.Sugg_Telno || this.Sugg_Telno.length < 8){
       //console.log(`Sugg_Telno: ${this.Sugg_Telno}`);
-      alert(`請填寫基本資料 電話，或格式有誤`);
+      alert(`請填寫基本資料電話或格式有誤。\n僅接受 *#()- 0-9 等半形字元`);
       return false;
     }
 
@@ -277,7 +277,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     }
     if (!validateEmail(this.Sugg_Email)){
       //console.log(`Sugg_Email: ${this.Sugg_Email}`);
-      alert(`基本資料 Email 格式有誤，請重新填寫`);
+      alert(`基本資料 Email 格式有誤。\n正確格式為 example@example.com`);
       return false;
     }
 
@@ -286,14 +286,14 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     //console.log(`Sugg_Addr1: ${this.Sugg_Addr1}`);
     if (!value_addr1 || value_addr1.length === 0){
       this.Sugg_Addr1 = '';
-      alert(`請選擇基本資料 地址 縣市別`);
+      alert(`基本資料「縣市」為必填`);
       return false;
     }
     let value_addr2 = this.Sugg_Addr2;
     //console.log(`Sugg_Addr2: ${this.Sugg_Addr2}`);
     if (!value_addr2 || value_addr2.length === 0){
       this.Sugg_Addr2 = '';
-      alert(`請選擇基本資料 地址 行政區別`);
+      alert(`基本資料「行政區域」為必填`);
       return false;
     }
     // 里別，非必填
@@ -315,7 +315,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
 
     //console.log(`Sugg_Addr4: ${this.Sugg_Addr4}`);
     if (!this.Sugg_Addr4){
-      alert(`請填寫基本資料 地址 路段屋號`);
+      alert(`請填寫基本資料，地址路段門牌號碼`);
       return false;
     }
 

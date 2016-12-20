@@ -13,6 +13,7 @@ import * as moment           from 'moment';
 export class FeedbackComponent implements OnInit {
 
   feedbacks = {};
+  isSearch = false;
   feedbackType = 'point';
   sub: any;
   startDate: string;
@@ -30,7 +31,7 @@ export class FeedbackComponent implements OnInit {
     this.feedbackService
         .getPointFeedback(moment(this.startDate).format('YYYYMMDD'), moment(this.endDate).format('YYYYMMDD'))
         .subscribe(
-          feedbacks => this.feedbacks = feedbacks,
+          feedbacks => { this.feedbacks = feedbacks, this.errorMsg = '' },
           error => { this.feedbacks = {}, this.errorMsg = error });
   }
 
@@ -39,7 +40,7 @@ export class FeedbackComponent implements OnInit {
     this.feedbackService
         .getCountFeedback(moment(this.startDate).format('YYYYMMDD'), moment(this.endDate).format('YYYYMMDD'))
         .subscribe(
-          feedbacks => this.feedbacks = feedbacks,
+          feedbacks => { this.feedbacks = feedbacks, this.errorMsg = '' },
           error => { this.feedbacks = {}, this.errorMsg = error });
   }
 
@@ -48,11 +49,12 @@ export class FeedbackComponent implements OnInit {
     this.feedbackService
         .getEffectiveFeedback(moment(this.startDate).format('YYYYMMDD'), moment(this.endDate).format('YYYYMMDD'))
         .subscribe(
-          feedbacks => this.feedbacks = feedbacks,
+          feedbacks => { this.feedbacks = feedbacks, this.errorMsg = '' },
           error => { this.feedbacks = {}, this.errorMsg = error });
   }
 
   getFeedback(type: string){
+    this.feedbacks = {};
     switch (type){
       case 'effective':
         this.getEffectiveFeedbacks();
