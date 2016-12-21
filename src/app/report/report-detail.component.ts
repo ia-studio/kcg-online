@@ -6,7 +6,7 @@ import { ViewChild } from "@angular/core/src/metadata/di";
 import { Subscription } from "rxjs";
 
 import { CaseType, SubCaseType } from '../shared/case';
-import { ReportService } from './report.service';
+import { ReportService, RecaptchaCode } from './report.service';
 import { GeoAddressService } from './geoAddress.service';
 import { GeolocationService } from './geoLocation.service';
 import { UploadService } from './upload.service';
@@ -36,6 +36,8 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   hasher: string; //caseType, subCaseType 的密鑰，避免篡改
   countyCodes: County[]; // 右側基本資料 地址 縣市別
   regionCodes: Region[]; // 右側基本資料 地址 里別
+  recaptchaCode: RecaptchaCode;
+  recaptchaImg: string;
 
   readonly placeholder: string = '輸入所在地址';
   coords: any;
@@ -71,6 +73,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   Sugg_Addr3: string;
   Sugg_Addr4: string;
   Sugg_Sex: string;
+  Input_ValidationCode: string;
 
   uploadFiles: File[] = [];
 
@@ -82,29 +85,38 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     private geoLocationService: GeolocationService,
     private geoAddressService: GeoAddressService,
     private uploadService: UploadService,
-    private areaService: AreaService
+    private areaService: AreaService,
+    private reportService: ReportService
+    
   ) {
     this.Case_Token = genCaseToken(12);
-
     this.areaCodes = DistrictCodesKaohsiung(true); // 左側行政區 gps
     this.districtCodes = []; // 右側行政區下拉項目
     this.gpsDistrict = '';
     this.Subj_District = ''; // default
     this.countyCodes = CountyCodes();
     this.regionCodes = [];
-
+    this.Input_ValidationCode = "";
     this.Subj_FileCount = 0;
     this.Atth_FileNames = '';
     this.Subj_Security = '2'; // 保密等級，always 預設為保密 2
     this.Sugg_Sex = '3'; // 性別，預設為其他 3
   }
 
+  getValidation() {
+    this.reportService
+      .getValidationCode()
+      .subscribe(recaptcha => {
+       this.recaptchaCode = recaptcha,
+       this.recaptchaImg = "data:image/gif;base64,"+ recaptcha.ValidationCode; });
+  }
+
   ngOnInit() {
     window.scrollTo(0, 0);
-
     this.Subj_Item = this.caseType.Item;
     this.Subj_Subitem = this.subCaseType.Subitem;
     this.hasher = Md5(this.genHasherMajorKey());
+    this.getValidation();
   }
 
   goBack(directlyRedirect?: boolean){
@@ -313,8 +325,11 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
 
     //console.log(`Sugg_Addr4: ${this.Sugg_Addr4}`);
     if (!this.Sugg_Addr4){
-      checkList.push('請填寫基本資料，地址路段門牌號碼');
+      checkList.push('請填寫基本資料，地址路段門牌號碼\n-\n');
       
+    }
+    if (this.Input_ValidationCode.length === 0){
+      checkList.push('請填寫驗證碼');
     }
 
     //console.log(`Sugg_Sex: ${this.Sugg_Sex}`);
@@ -397,21 +412,30 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   onSubmit(value: any): void {
     //console.log(value);
 
-    let formData = `Case_Token=${value.Case_Token}&Atth_FileNames=${value.Atth_FileNames}&Subj_Content=${value.Subj_Content}&Subj_District=${value.Subj_District}&Subj_FileCount=${value.Subj_FileCount}&Subj_Item=${value.Subj_Item}&Subj_Security=${value.Subj_Security}&Subj_Subitem=${value.Subj_Subitem}&Sugg_Addr1=${value.Sugg_Addr1}&Sugg_Addr2=${value.Sugg_Addr2}&Sugg_Addr3=${value.Sugg_Addr3}&Sugg_Addr4=${value.Sugg_Addr4}&Sugg_Email=${value.Sugg_Email}&Sugg_Name=${value.Sugg_Name}&Sugg_Sex=${value.Sugg_Sex}&Sugg_Telno=${value.Sugg_Telno}`;
+    let formData = `Case_Token=${value.Case_Token}&Atth_FileNames=${value.Atth_FileNames}&Subj_Content=${value.Subj_Content}&Subj_District=${value.Subj_District}&Subj_FileCount=${value.Subj_FileCount}&Subj_Item=${value.Subj_Item}&Subj_Security=${value.Subj_Security}&Subj_Subitem=${value.Subj_Subitem}&Sugg_Addr1=${value.Sugg_Addr1}&Sugg_Addr2=${value.Sugg_Addr2}&Sugg_Addr3=${value.Sugg_Addr3}&Sugg_Addr4=${value.Sugg_Addr4}&Sugg_Email=${value.Sugg_Email}&Sugg_Name=${value.Sugg_Name}&Sugg_Sex=${value.Sugg_Sex}&Sugg_Telno=${value.Sugg_Telno}&Input_ValidationCode=${this.Input_ValidationCode}&Hash_Code=${this.recaptchaCode.HashCode}&Time_Stamp=${this.recaptchaCode.TimeStamp}`;
     //console.log(`formData on submit: ${formData}`);
 
     this.subscribes.push(
       this.uploadService.postData(formData).subscribe(
         data => {
-          if (data){
+          if (data) {
+            
             this.getReportDone = !this.getReportDone;
           }
-          else{
+          else {
             alert(`資料上傳不成功。請檢查！`);
           }
         },
         err => {
-          console.log(`err: ${err}`)
+          console.log(err.status)
+          if(err.status === 400){
+            alert(err.json());
+            this.getValidation();
+            this.Input_ValidationCode = '';
+          } else {
+            console.log(err);
+          }
+            
         }
       )
     );
