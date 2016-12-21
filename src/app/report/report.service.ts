@@ -8,6 +8,7 @@ import { CaseType }       from '../shared/case';
 export class ReportService {
   private readonly baseApiUrl = 'http://soweb.kcg.gov.tw/webapi/api/';
   private reportTypesUrl = this.baseApiUrl + 'items/';
+  private validationCodeUrl = this.baseApiUrl + 'ValidationCode/';//'../../assets/vd.json';
 
   constructor(private http: Http) { }
 
@@ -23,10 +24,22 @@ export class ReportService {
                .catch(this.handleError);
   }
 
+  getValidationCode() : Observable<RecaptchaCode> {
+    return this.http.get(this.validationCodeUrl)
+               .map((res: Response) => res.json())
+               .catch(this.handleError);
+  }
+
   private handleError (error: any) {
     let errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
     console.error(errMsg);
     return Observable.throw(errMsg);
   }
+}
+
+export interface RecaptchaCode {
+    HashCode: string;
+    TimeStamp: string;
+    ValidationCode: string;
 }

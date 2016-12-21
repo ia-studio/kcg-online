@@ -8,6 +8,7 @@ import { Observable } from 'rxjs/Rx';
 @Injectable()
 export class UploadService {
   constructor (private _http: Http) {}
+  public uploadStatus: number;
 
   public sendFileRequest (url: string, files: File[]): Observable<any> {
     return Observable.create(observer => {
@@ -48,10 +49,13 @@ export class UploadService {
 
     const url = `http://soweb.kcg.gov.tw/webapi/api/Case/`;
     return this._http.post(url, formData, options) // ...using post request
-      .map((resp: Response) => {
-        return this.retrieveData(resp);
-      }) // ...and calling .json() on the response to return data
-      .catch((error: any) => Observable.throw(error.json().error || 'Server error')); //...errors if
+      .map((resp: Response) => resp.json())
+        /*{
+        //this.uploadStatus = resp.status;
+        // return this.retrieveData(resp);
+        })*/
+       // ...and calling .json() on the response to return data
+      //.catch((error: any) => Observable.throw(error.json() || '目前系統暫停服務')); //...errors if
   }
 
   private retrieveData(data: Response): boolean {
@@ -59,8 +63,7 @@ export class UploadService {
     //console.log(message);
     if (data.status == 200 && data.text().indexOf('登錄個案上傳成功') >= 0){
       return true;
-    }
-    else {
+    } else {
       return false;
     }
   }

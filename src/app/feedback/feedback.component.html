@@ -17,7 +17,7 @@
 		</div>
 		<div class="col-md-9 page-block">
 			<p class="article-lable">建議統計日期起迄不要超過一個月，以免執行時間過長影響其它作業</p>
-			<div class="row">
+			<div class="row block-separate">
 				<div class="col-md-4 maT1x">
 					<span>統計日期(來信日期)：</span>
 					<input class="fall-width" type="date" [(ngModel)]="startDate">
@@ -33,8 +33,9 @@
 				<div class="clearfix"></div>
 			</div>
 			<p class="validation-info"><br><br>{{ errorMsg }}</p>
+			
 			<div class="maB2x" *ngFor="let sheet of feedbacks.Topic; let i = index ">
-				<div class="article-content block-separate">
+				<div class="article-content ">
 					<p class="article-lable">問卷版本:{{sheet.VersionNo}}　共 {{sheet.ReplyCount}} 筆</p>
 					<div class="maB2x" *ngFor="let item of feedbacks.Question">
 						<!-- point -->
@@ -44,38 +45,38 @@
 							</p>
 							<div class="chart">
 								<div class="chart-set">
-									<div class="chart-title">{{item.SatLvl1Reply}}</div>
+									<div class="chart-title">{{item.ReplyItems[0].SatLvl1Reply}}</div>
 									<div class="chart-line">
-										<div class="chart-range bg-green-darken" [ngStyle]="{'width':getNum(item.SatLevel1)}"></div>
-										<div class="chart-num">{{getNum(item.SatLevel1)}}</div>
+										<div class="chart-range bg-green-darken" [ngStyle]="{'width':getNum(item.ReplyItems[0].SatLevel1)}"></div>
+										<div class="chart-num">{{getNum(item.ReplyItems[0].SatLevel1)}}</div>
 									</div>
 								</div>
 								<div class="chart-set">
-									<div class="chart-title ">{{item.SatLvl2Reply}}</div>
+									<div class="chart-title ">{{item.ReplyItems[1].SatLvl2Reply}}</div>
 									<div class="chart-line">
-										<div class="chart-range bg-green-lighten" [ngStyle]="{'width':getNum(item.SatLevel2)}"></div>
-										<div class="chart-num">{{getNum(item.SatLevel2)}}</div>
+										<div class="chart-range bg-green-lighten" [ngStyle]="{'width':getNum(item.ReplyItems[1].SatLevel2)}"></div>
+										<div class="chart-num">{{getNum(item.ReplyItems[1].SatLevel2)}}</div>
 									</div>
 								</div>
 								<div class="chart-set">
-									<div class="chart-title">{{item.SatLvl3Reply}}</div>
+									<div class="chart-title">{{item.ReplyItems[2].SatLvl3Reply}}</div>
 									<div class="chart-line">
-										<div class="chart-range bg-green" [ngStyle]="{'width':getNum(item.SatLevel3)}"></div>
-										<div class="chart-num">{{getNum(item.SatLevel3)}}</div>
+										<div class="chart-range bg-green" [ngStyle]="{'width':getNum(item.ReplyItems[2].SatLevel3)}"></div>
+										<div class="chart-num">{{getNum(item.ReplyItems[2].SatLevel3)}}</div>
 									</div>
 								</div>
 								<div class="chart-set">
-									<div class="chart-title">{{item.SatLvl4Reply}}</div>
+									<div class="chart-title">{{item.ReplyItems[3].SatLvl4Reply}}</div>
 									<div class="chart-line">
-										<div class="chart-range bg-orange-lighten" [ngStyle]="{'width':getNum(item.SatLevel4)}"></div>
-										<div class="chart-num">{{getNum(item.SatLevel4)}}</div>
+										<div class="chart-range bg-orange-lighten" [ngStyle]="{'width':getNum(item.ReplyItems[3].SatLevel4)}"></div>
+										<div class="chart-num">{{getNum(item.ReplyItems[3].SatLevel4)}}</div>
 									</div>
 								</div>
 								<div class="chart-set">
-									<div class="chart-title">{{item.SatLvl5Reply}}</div>
+									<div class="chart-title">{{item.ReplyItems[4].SatLvl5Reply}}</div>
 									<div class="chart-line">
-										<div class="chart-range bg-orange-darken" [ngStyle]="{'width':getNum(item.SatLevel5)}"></div>
-										<div class="chart-num">{{getNum(item.SatLevel5)}}</div>
+										<div class="chart-range bg-orange-darken" [ngStyle]="{'width':getNum(item.ReplyItems[4].SatLevel5)}"></div>
+										<div class="chart-num">{{getNum(item.ReplyItems[4].SatLevel5)}}</div>
 									</div>
 								</div>
 							</div>
@@ -135,5 +136,11 @@
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
+<div *ngIf="feedbacks==={}" class="pop" style="display:block;">
+	<div class="pop-content">
+		<div class="mk-spinner-doublecircle"></div>
+		<span class="loading-words">Loading ...</span>
 	</div>
 </div>
