@@ -22,7 +22,6 @@ export class QueryComponent implements OnInit, OnDestroy {
   error: any;
   private subscriptions: Subscription[] = [];
 
-
   private isMayorMail?: boolean; //市長信箱 Result
   private isCivilianSuggest?: boolean; //人民陳情 Result
   private queryBErr: string;
@@ -38,7 +37,8 @@ export class QueryComponent implements OnInit, OnDestroy {
   displayDetail: boolean = false;
   caseNo: string = '';
   email: string = ''; // 市長信箱 Email
-
+  
+  vp0: string = 'A';
   vp1: string = 'TB';
   vyear: number = new Date().getFullYear(); //as p2
   vp3: string;
@@ -53,11 +53,16 @@ export class QueryComponent implements OnInit, OnDestroy {
     window.scrollTo(0, 0);
   }
 
+  closeDetail() {
+    this.displayDetail = false;
+    this.searchCase = null;
+  }
   ngOnDestroy() {
     this.subscriptions.forEach(s => s.unsubscribe());
   }
 
   queryB(){ //市長信箱查詢
+    this.queryVErr = "";
     if (!this.validateCaseNo(this.caseNo)){
 
       return this.queryBErr = this.errType.numErr;
@@ -95,6 +100,7 @@ export class QueryComponent implements OnInit, OnDestroy {
 
   queryV(){ //人民陳情查詢
     //
+    this.queryVErr = "";
     if (this.vyear == null || this.vyear.toString().length < 4){
       return this.queryVErr = this.errType.yearErr;
     }
@@ -107,7 +113,7 @@ export class QueryComponent implements OnInit, OnDestroy {
 
     this.subscriptions.push(
       //this.vp1 = 'AK';
-      this.qService.getVResult(this.vp1, this.vyear, this.vp3, this.callerName).subscribe(data => {
+      this.qService.getVResult(this.vp0, this.vp1, this.vyear, this.vp3, this.callerName).subscribe(data => {
         this.searchCase = data;
         //console.log(data);
         this.displayDetail = true;

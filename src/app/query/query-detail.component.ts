@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Title }                  from '@angular/platform-browser';
 import { Case }                   from '../shared/case';
 
@@ -18,6 +18,7 @@ export class QueryDetailComponent implements OnInit {
   public setTitle(newTitle: string) {
     this.titleService.setTitle(newTitle);
   }
+  @Output() closeDetail = new EventEmitter();
 
   ngOnInit() {
     this.setTitle('案件明細 - 高雄市政府線上即時服務平台');
@@ -26,5 +27,8 @@ export class QueryDetailComponent implements OnInit {
 
   gotoquery() {
     window.location.reload();
+  }
+  goBack() {
+    this.closeDetail.emit();
   }
 }
