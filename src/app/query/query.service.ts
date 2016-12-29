@@ -20,8 +20,8 @@ export class QueryService{
   }
 
   //人民陳情
-  getVResult(p1: string, p2: number, p3: string, p4: string){
-    return this._http.get(this._base_api_url + 'V?p1=' + p1 + '&p2=' + p2 + '&p3=' + p3 + '&p4=' + p4)
+  getVResult(p0:string ,p1: string, p2: number, p3: string, p4: string){
+    return this._http.get(this._base_api_url + p0 + '?p1=' + p1 + '&p2=' + p2 + '&p3=' + p3 + '&p4=' + p4)
       .map((resp: Response) => resp.json());
   }
 }

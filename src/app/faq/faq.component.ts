@@ -32,7 +32,7 @@ export class FaqComponent implements OnInit {
     this.titleService.setTitle(newTitle);
   }
 
-   closeReply() {
+  closeReply() {
     this.reply = null;
   }
 

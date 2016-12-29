@@ -56,7 +56,7 @@
                 <p class="navy">透案件來源：透過電話、信件、傳真等非網路途徑<br><br></p>
                 <p class="article-lable require">案件編號 </p>
                 <div class="row maB1x">
-                  <div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" tabindex="4" type="text" value="A"></div>
+                  <div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" tabindex="4" type="text" value="A" [(ngModel)]="vp0"></div>
                   <div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" tabindex="5" type="text" value="TB" [(ngModel)]="vp1"></div>
                   <div class="col-xs-3 input-separate"><input class="col-xs-12 text-center" tabindex="6" type="text" [(ngModel)]="vyear"></div>
                   <div class="col-xs-5"><input class="col-xs-12" tabindex="7" type="text" [(ngModel)]="vp3"></div>
@@ -73,6 +73,6 @@
         </div>
     </div>
 </div>
-<div *ngIf="displayDetail && searchCase != null">
-  <app-query-detail [searchCase]="searchCase"></app-query-detail>
+<div *ngIf="displayDetail && searchCase != null" >
+  <app-query-detail [searchCase]="searchCase" (closeDetail)="closeDetail()"></app-query-detail>
 </div>
