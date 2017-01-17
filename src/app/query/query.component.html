@@ -40,8 +40,18 @@
                     <p class="article-lable require">E-Mail </p>
                     <div class="row">
                         <div class="col-xs-12"><input class="col-xs-12" tabindex="2" type="text" placeholder="example@kcg.gov.tw" [(ngModel)]="email"></div>
+                        <p class="col-xs-12 validation-info"> {{queryBErr}}</p>
                     </div>
-                    <p class="validation-info"> {{queryBErr}}</p>
+                    
+                    <div class="row">
+						<div class="col-md-4 text-center"><img style="width:100%" [src]="recaptchaImg" alt="驗證碼" title="點擊可重新產生驗證碼" (click)="getValidation()"></div>
+						<div class="col-md-8">
+							<input class="fall-width text-center" type="text" [(ngModel)]="bCapcha" [ngModelOptions]="{standalone: true}" placeholder="請輸入驗證碼">
+						</div>
+						<div class="col-md-12 text-center">
+							驗證碼不區分大小寫。 <a href="javascript:void(0);" class="text-orange" (click)="getValidation()">重新產生驗證碼？</a>						
+						</div>
+					</div>
                     <div class="row text-center maT2x">
                       <a href="javascript:void(0);" tabindex="3"  class="btn btn-orange" (click)="queryB()">查詢</a>
                     </div>
@@ -64,8 +74,17 @@
                 <p class="article-lable require">來電時的姓名 </p>
                 <div class="row">
                   <div class="col-xs-12"><input class="col-xs-12" tabindex="8" type="text" placeholder="您的姓名" [(ngModel)]="callerName"></div>
+                  <p class="col-xs-12 validation-info"> {{queryVErr}}</p>
                 </div>
-                <p class="validation-info"> {{queryVErr}}</p>
+                <div class="row">
+                    <div class="col-md-4 text-center"><img style="width:100%" [src]="recaptchaImg2" alt="驗證碼" title="點擊可重新產生驗證碼" (click)="getValidation2()"></div>
+                    <div class="col-md-8">
+                        <input class="fall-width text-center" type="text" [(ngModel)]="aCapcha" [ngModelOptions]="{standalone: true}" placeholder="請輸入驗證碼">
+                    </div>
+                    <div class="col-md-12 text-center">
+                        驗證碼不區分大小寫。 <a href="javascript:void(0);" class="text-orange" (click)="getValidation2()">重新產生驗證碼？</a>						
+                    </div>
+                </div>
                 <div class="row text-center maT2x">
                   <a class="btn btn-orange" tabindex="9" (click)="queryV()">查詢</a>
                 </div>
