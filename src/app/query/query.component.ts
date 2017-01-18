@@ -4,7 +4,7 @@ import {Subscription} from "rxjs";
 import 'rxjs/Rx';
 
 import { Case }         from '../shared/case';
-import { QueryService } from './query.service';
+import { QueryService, RecaptchaCode } from './query.service';
 
 @Component({
   selector: 'app-query',
@@ -26,6 +26,10 @@ export class QueryComponent implements OnInit, OnDestroy {
   private isCivilianSuggest?: boolean; //人民陳情 Result
   private queryBErr: string;
   private queryVErr: string;
+  private recaptchaCode: RecaptchaCode;
+  private recaptchaCode2: RecaptchaCode;
+  private recaptchaImg: string;
+  private recaptchaImg2: string;
   private errType = {
     notFound: '您查詢的內容不存在，請重新輸入。',
     numErr: '案件編號欄位為必填',
@@ -37,11 +41,14 @@ export class QueryComponent implements OnInit, OnDestroy {
   displayDetail: boolean = false;
   caseNo: string = '';
   email: string = ''; // 市長信箱 Email
+  bCapcha: string;
   
   vp0: string = 'A';
   vp1: string = 'TB';
   vyear: number = new Date().getFullYear(); //as p2
   vp3: string;
+  aCapcha: string; 
+  validateTime = 9*60*1000;
   callerName: string = ''; // 人民陳情 來電時的姓名
 
   public setTitle(newTitle: string) {
@@ -51,6 +58,11 @@ export class QueryComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.setTitle('案件查詢 - 高雄市政府線上即時服務平台');
     window.scrollTo(0, 0);
+    this.getValidation();
+    setTimeout(() => { this.getValidation2(); }, 500);
+    setInterval(() => { this.getValidation(); }, this.validateTime);
+    setInterval(() => { this.getValidation2(); }, this.validateTime+500);
+    
   }
 
   closeDetail() {
@@ -59,6 +71,20 @@ export class QueryComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy() {
     this.subscriptions.forEach(s => s.unsubscribe());
+  }
+  getValidation() {
+    this.qService
+      .getValidationCode()
+      .subscribe(recaptcha => {
+       this.recaptchaCode = recaptcha,
+       this.recaptchaImg = "data:image/gif;base64,"+ recaptcha.ValidationCode; });
+  }
+  getValidation2() {
+    this.qService
+      .getValidationCode()
+      .subscribe(recaptcha => {
+       this.recaptchaCode2 = recaptcha,
+       this.recaptchaImg2 = "data:image/gif;base64,"+ recaptcha.ValidationCode; });
   }
 
   queryB(){ //市長信箱查詢
@@ -73,7 +99,7 @@ export class QueryComponent implements OnInit, OnDestroy {
     }
 
     this.subscriptions.push(
-      this.qService.getBResult(this.caseNo, this.email).subscribe(data => {
+      this.qService.getBResult(this.caseNo, this.email, this.recaptchaCode.TimeStamp+this.bCapcha+this.recaptchaCode.HashCode).subscribe(data => {
         this.searchCase = data;
         //console.log(data);
         this.displayDetail = true;
@@ -81,9 +107,13 @@ export class QueryComponent implements OnInit, OnDestroy {
         this.searchCase.isMayorMail = true;
       }, (err: any) => {
         //console.log(err);
-        if (err.status !== 200){
+        if (err.status == 404){
           return this.queryBErr = this.errType.notFound;
         }
+        else if (err.status == 400){
+          return this.queryBErr = err.json();
+        }
+        
       })
     );
   }
@@ -113,15 +143,17 @@ export class QueryComponent implements OnInit, OnDestroy {
 
     this.subscriptions.push(
       //this.vp1 = 'AK';
-      this.qService.getVResult(this.vp0, this.vp1, this.vyear, this.vp3, this.callerName).subscribe(data => {
+      this.qService.getVResult(this.vp0, this.vp1, this.vyear, this.vp3, this.callerName, this.recaptchaCode2.TimeStamp+this.aCapcha+this.recaptchaCode2.HashCode).subscribe(data => {
         this.searchCase = data;
         //console.log(data);
         this.displayDetail = true;
         this.isCivilianSuggest = true;
         this.searchCase.isCivilianSuggest = true;
       }, (err: any) => {
-        if (err.status !== 200){
+        if (err.status == 404){
           return this.queryVErr = this.errType.notFound;
+        } else if (err.status == 400){
+          return this.queryVErr = err.json();
         }
       })
     );

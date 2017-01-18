@@ -38,6 +38,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   regionCodes: Region[]; // 右側基本資料 地址 里別
   recaptchaCode: RecaptchaCode;
   recaptchaImg: string;
+  validateTime = 9*60*1000;
 
   readonly placeholder: string = '輸入所在地址';
   coords: any;
@@ -117,6 +118,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     this.Subj_Subitem = this.subCaseType.Subitem;
     this.hasher = Md5(this.genHasherMajorKey());
     this.getValidation();
+    setInterval(() => { this.getValidation(); }, this.validateTime);
   }
 
   goBack(directlyRedirect?: boolean){
@@ -429,7 +431,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
         err => {
           console.log(err.status)
           if(err.status === 400){
-            alert(err.json());
+            
             this.getValidation();
             this.Input_ValidationCode = '';
           } else {
