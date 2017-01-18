@@ -42,7 +42,7 @@
                         <div class="col-xs-12"><input class="col-xs-12" tabindex="2" type="text" placeholder="example@kcg.gov.tw" [(ngModel)]="email"></div>
                         <p class="col-xs-12 validation-info"> {{queryBErr}}</p>
                     </div>
-                    
+                    <br>
                     <div class="row">
 						<div class="col-md-4 text-center"><img style="width:100%" [src]="recaptchaImg" alt="驗證碼" title="點擊可重新產生驗證碼" (click)="getValidation()"></div>
 						<div class="col-md-8">
@@ -76,6 +76,7 @@
                   <div class="col-xs-12"><input class="col-xs-12" tabindex="8" type="text" placeholder="您的姓名" [(ngModel)]="callerName"></div>
                   <p class="col-xs-12 validation-info"> {{queryVErr}}</p>
                 </div>
+                <br>
                 <div class="row">
                     <div class="col-md-4 text-center"><img style="width:100%" [src]="recaptchaImg2" alt="驗證碼" title="點擊可重新產生驗證碼" (click)="getValidation2()"></div>
                     <div class="col-md-8">

@@ -431,7 +431,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
         err => {
           console.log(err.status)
           if(err.status === 400){
-            alert(err.json());
+            
             this.getValidation();
             this.Input_ValidationCode = '';
           } else {

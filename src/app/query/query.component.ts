@@ -107,12 +107,13 @@ export class QueryComponent implements OnInit, OnDestroy {
         this.searchCase.isMayorMail = true;
       }, (err: any) => {
         //console.log(err);
-        if (err.status !== 200){
+        if (err.status == 404){
           return this.queryBErr = this.errType.notFound;
         }
         else if (err.status == 400){
-          return this.queryVErr = err;
+          return this.queryBErr = err.json();
         }
+        
       })
     );
   }
@@ -149,11 +150,10 @@ export class QueryComponent implements OnInit, OnDestroy {
         this.isCivilianSuggest = true;
         this.searchCase.isCivilianSuggest = true;
       }, (err: any) => {
-        if (err.status !== 200){
+        if (err.status == 404){
           return this.queryVErr = this.errType.notFound;
-        }
-        else if (err.status == 400){
-          return this.queryVErr = err;
+        } else if (err.status == 400){
+          return this.queryVErr = err.json();
         }
       })
     );
