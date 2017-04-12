@@ -1,0 +1,20 @@
+.pop .pop-content.fat-content {
+    top:30%;
+    .check-info {
+        max-height: 60vh;
+        overflow: auto;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .pop .pop-content.fat-content {
+    min-width: 500px;
+    top:30%;
+        .check {
+            width: 470px;
+        }
+        .check-mark {
+            left: 200px;
+        }
+    }
+}

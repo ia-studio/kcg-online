@@ -1,0 +1,146 @@
+<div class="container">
+	<div class="banner row">
+		<div class="banner-page-name">
+			<h2 class="dk-green">案件處理滿意度</h2>
+			<p class="dk-green">User Feedback</p>
+		</div>
+		<img src="./assets/images/banner/banner_pic_feedback.png" alt="">
+	</div>
+	<div class="row">
+		<div class="col-md-3 page-block hidden-sm hidden-xs">
+			<p class="article-lable">案件處理滿意指標 </p>
+			<ul class="news-all" id="anchorList">
+				<li><a routerLinkActive="active" [routerLink]="['/feedback', 'point']">各項滿意度指標</a></li>
+				<li><a routerLinkActive="active" [routerLink]="['/feedback', 'count']">各問題次數分配表</a></li>
+				<li><a routerLinkActive="active" [routerLink]="['/feedback', 'effective']">各問題有效值與遺漏值</a></li>
+			</ul>
+		</div>
+		<div class="col-md-9 page-block">
+			<p class="article-lable">建議統計日期起迄不要超過一個月，以免執行時間過長影響其它作業</p>
+			<div class="row block-separate">
+				<div class="col-md-4 maT1x">
+					<span>統計日期(來信日期)：</span>
+					<input class="fall-width" type="date" [(ngModel)]="startDate">
+				</div>
+				<div class="col-md-4 maT1x">
+					<span>迄日：</span>
+					<input class="fall-width" type="date" [(ngModel)]="endDate">
+				</div>
+				<div class="col-md-4">
+					<span>&nbsp;&nbsp;&nbsp;</span>
+					<button class="btn btn-reset btn-orange maT2x" type="button" (click)="getFeedback(feedbackType)">查詢</button>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<p class="validation-info"><br><br>{{ errorMsg }}</p>
+			
+			<div class="maB2x" *ngFor="let sheet of feedbacks.Topic; let i = index ">
+				<div class="article-content ">
+					<p class="article-lable">問卷版本:{{sheet.VersionNo}}　共 {{sheet.ReplyCount}} 筆</p>
+					<div class="maB2x" *ngFor="let item of feedbacks.Question">
+						<!-- point -->
+						<div *ngIf="item.VersionNo === sheet.VersionNo && feedbackType === 'point'">
+							<p class="navy font-lg">
+								{{item.Question}}
+							</p>
+							<div class="chart">
+								<div class="chart-set">
+									<div class="chart-title">{{item.ReplyItems[0].SatLvl1Reply}}</div>
+									<div class="chart-line">
+										<div class="chart-range bg-green-darken" [ngStyle]="{'width':getNum(item.ReplyItems[0].SatLevel1)}"></div>
+										<div class="chart-num">{{getNum(item.ReplyItems[0].SatLevel1)}}</div>
+									</div>
+								</div>
+								<div class="chart-set">
+									<div class="chart-title ">{{item.ReplyItems[1].SatLvl2Reply}}</div>
+									<div class="chart-line">
+										<div class="chart-range bg-green-lighten" [ngStyle]="{'width':getNum(item.ReplyItems[1].SatLevel2)}"></div>
+										<div class="chart-num">{{getNum(item.ReplyItems[1].SatLevel2)}}</div>
+									</div>
+								</div>
+								<div class="chart-set">
+									<div class="chart-title">{{item.ReplyItems[2].SatLvl3Reply}}</div>
+									<div class="chart-line">
+										<div class="chart-range bg-green" [ngStyle]="{'width':getNum(item.ReplyItems[2].SatLevel3)}"></div>
+										<div class="chart-num">{{getNum(item.ReplyItems[2].SatLevel3)}}</div>
+									</div>
+								</div>
+								<div class="chart-set">
+									<div class="chart-title">{{item.ReplyItems[3].SatLvl4Reply}}</div>
+									<div class="chart-line">
+										<div class="chart-range bg-orange-lighten" [ngStyle]="{'width':getNum(item.ReplyItems[3].SatLevel4)}"></div>
+										<div class="chart-num">{{getNum(item.ReplyItems[3].SatLevel4)}}</div>
+									</div>
+								</div>
+								<div class="chart-set">
+									<div class="chart-title">{{item.ReplyItems[4].SatLvl5Reply}}</div>
+									<div class="chart-line">
+										<div class="chart-range bg-orange-darken" [ngStyle]="{'width':getNum(item.ReplyItems[4].SatLevel5)}"></div>
+										<div class="chart-num">{{getNum(item.ReplyItems[4].SatLevel5)}}</div>
+									</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<br>
+							<br>
+						</div>
+						<!-- count -->
+						<div *ngIf="(item.VersionNo === sheet.VersionNo) && feedbackType === 'count'">
+							<p class="navy font-lg">
+								{{item.Question}}
+							</p>
+							<div class="chart-set" *ngFor="let replys of item.ReplyItems; let i = index">
+								<div class="chart-title">{{replys.ReplyItem}}</div>
+								<div class="chart-line">
+									<div class="chart-range bg-green-darken" [ngClass]="getChartColor(i)" [ngStyle]="{'width':getNum(replys.Percentage)}"></div>
+									<div class="chart-num">{{getNum(replys.Percentage)}}</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<br>
+							<ul class="chart-info">
+								<li *ngFor="let replys of item.ReplyItems; let i = index"><span [ngClass]="getChartColor(i)"></span>{{replys.ReplyItem}}</li>
+							</ul>
+							<br>
+							<br>
+						</div>
+						<!-- effect -->
+						<div *ngIf="(item.VersionNo === sheet.VersionNo) && feedbackType === 'effective'">
+							<p class="navy font-lg">
+								{{item.Question}}
+							</p>
+							<div class="chart">
+								<div class="chart-set">
+									<div class="chart-title">有效值</div>
+									<div class="chart-line">
+										<div class="chart-range bg-green-lighten" [ngStyle]="{'width':getNum(item.ValidPercent)}"></div>
+									</div>
+								</div>
+								<div class="chart-set">
+									<div class="chart-title">遺漏值</div>
+									<div class="chart-line">
+										<div class="chart-range bg-orange-lighten" [ngStyle]="{'width':getNum(item.SkipPercent)}"></div>
+									</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<br>
+							<ul class="chart-info">
+								<li><span class="bg-green-lighten"></span>{{item.ValidCount}} ({{getNum(item.ValidPercent)}})</li>
+								<li><span class="bg-orange-lighten"></span>{{item.SkipCount}} ({{getNum(item.SkipPercent)}})</li>
+							</ul>
+							<br>
+							<br>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div *ngIf="feedbacks==={}" class="pop" style="display:block;">
+	<div class="pop-content">
+		<div class="mk-spinner-doublecircle"></div>
+		<span class="loading-words">Loading ...</span>
+	</div>
+</div>
