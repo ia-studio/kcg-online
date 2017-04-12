@@ -6,11 +6,12 @@ import { CaseType }       from '../shared/case';
 
 @Injectable()
 export class ReportService {
-  private readonly baseApiUrl = 'http://soweb.kcg.gov.tw/webapi/api/';
+  private baseApiUrl = 'http://soweb.kcg.gov.tw/webapi/api/';//'/webapi/api/';
   private reportTypesUrl = this.baseApiUrl + 'items/';
-  private validationCodeUrl = this.baseApiUrl + 'ValidationCode/';//'../../assets/vd.json';
+  private validationCodeUrl = this.baseApiUrl + 'ValidationCode/'; //'../../assets/vd.json';
 
-  constructor(private http: Http) { }
+  constructor(private http: Http ) {
+  }
 
   getTypes() : Observable<CaseType[]> {
     return this.http.get(this.reportTypesUrl)

@@ -10,7 +10,7 @@ import { District, Region } from "../report/modules/area";
 
 @Injectable()
 export class AreaService {
-  private readonly baseApiUrl = 'http://soweb.kcg.gov.tw/webapi/api/AddrCode';
+  private readonly baseApiUrl = '/webapi/api/AddrCode';
 
   constructor(private _http: Http) { }
 

@@ -88,7 +88,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     private uploadService: UploadService,
     private areaService: AreaService,
     private reportService: ReportService
-    
+
   ) {
     this.Case_Token = genCaseToken(12);
     this.areaCodes = DistrictCodesKaohsiung(true); // 左側行政區 gps
@@ -200,7 +200,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
         this.uploadFiles.push(refiles[i]);
       }
 
-      let upurl: string = `http://soweb.kcg.gov.tw/webapi/api/AttachFile/Upload/${this.Case_Token}`;
+      let upurl: string = `/webapi/api/AttachFile/Upload/${this.Case_Token}`;
       this.subscribes.push(
         this.uploadService.sendFileRequest(upurl, refiles).subscribe(
           resp => {
@@ -237,15 +237,15 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     let hidden_hasher = Md5(`${this.Subj_Subitem}-${this.Case_Token}-${this.Subj_Item}`);
     var checkList = [];
     if (hidden_hasher !== this.hasher){
-      
+
       checkList.push('主項目或子項目不符合\n-\n'); //此項錯誤，表示主/子項目/CaseToken 的 hidden 內容遭篡改!!
-      
+
     }
 
     if (!this.Subj_District) {
       checkList.push('請選擇檢舉地址區域\n-\n');
       //console.log(`Subj_District: ${this.Subj_District}`);
-      
+
     }
 
     //console.log(`Subj_Security: ${this.Subj_Security}`);
@@ -262,14 +262,14 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     if ((this.Subj_FileCount && this.Subj_FileCount > 0) && (!this.Atth_FileNames || this.Atth_FileNames.split(';').length === 0)){
       //console.log(`Subj_FileCount: ${this.Subj_FileCount}\nAtth_FileNames: ${this.Atth_FileNames}`);
       checkList.push('請重新上傳附件\n-\n');
-      
+
     }
 
     // case toekn check
     if (!this.Case_Token || this.Case_Token.length <= 0){
       //console.log(`Case_Token: ${this.Case_Token}`);
       checkList.push('個案標識資料異常\n-\n');
-      
+
     }
 
     if (!this.Sugg_Name || this.Sugg_Name.length < 2){
@@ -277,19 +277,25 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       checkList.push('請填寫基本資料姓名\n-\n');
     }
 
-    if (!this.Sugg_Telno || this.Sugg_Telno.length < 8){
+    let phoneExp = /^([0-9]|\*|\#|\(|\)|\-|\s){7,20}$/;
+    if (!this.Sugg_Telno || this.Sugg_Telno.search(phoneExp) === -1){
       //console.log(`Sugg_Telno: ${this.Sugg_Telno}`);
-      checkList.push('請填寫基本資料電話或格式有誤。\n僅接受 *#()- 0-9 等半形字元\n-\n');
+      if(!this.Sugg_Telno){
+        checkList.push('請填寫基本資料電話\n-\n');
+      } else {
+        checkList.push('格式有誤。\n僅接受以下字元*#()- 0-9 等半形字元\n-\n');
+      }
+
     }
 
     if (!this.Sugg_Email){
       //console.log(`Sugg_Email: ${this.Sugg_Email}`);
       checkList.push('請填寫基本資料 Email\n-\n');
-      
+
     }
     if (!validateEmail(this.Sugg_Email)){
       checkList.push('基本資料 Email 格式有誤。\n正確格式為 example@example.com\n-\n');
-      
+
     }
 
     // 地址1-4
@@ -298,14 +304,14 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     if (!value_addr1 || value_addr1.length === 0){
       this.Sugg_Addr1 = '';
       checkList.push('基本資料「縣市」為必填\n-\n');
-      
+
     }
     let value_addr2 = this.Sugg_Addr2;
     //console.log(`Sugg_Addr2: ${this.Sugg_Addr2}`);
     if (!value_addr2 || value_addr2.length === 0){
       this.Sugg_Addr2 = '';
       checkList.push('基本資料「行政區域」為必填\n-\n');
-      
+
     }
     // 里別，非必填
     let value_addr3 = this.Sugg_Addr3;
@@ -320,15 +326,15 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     //console.log(`county_code_starts3: ${county_code_starts3}`);
     if (this.Sugg_Addr2 && this.Sugg_Addr2.length > 0 && this.Sugg_Addr2.substring(0, 3) !== county_code_starts3
         || (this.Sugg_Addr3 && this.Sugg_Addr3.length > 0 && this.Sugg_Addr3.substring(0, 3) !== county_code_starts3)){
-     
+
       checkList.push('行政選擇有誤，請重新選擇\n-\n');
-      
+
     }
 
     //console.log(`Sugg_Addr4: ${this.Sugg_Addr4}`);
     if (!this.Sugg_Addr4){
       checkList.push('請填寫基本資料，地址路段門牌號碼\n-\n');
-      
+
     }
     if (this.Input_ValidationCode.length === 0){
       checkList.push('請填寫驗證碼');
@@ -340,14 +346,14 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     //console.log(`formData of submit click: ${formData}`);
     //return false;
     if (checkList.length === 0) {
-      return true; 
+      return true;
     } else {
       var attention = "";
       checkList.forEach(function(item){
           attention = attention+item
       })
       alert(attention)
-      return false;        
+      return false;
   }
     ; //return false 則不會使 onSubmit 觸發
   }
@@ -421,7 +427,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       this.uploadService.postData(formData).subscribe(
         data => {
           if (data) {
-            
+
             this.getReportDone = !this.getReportDone;
           }
           else {
@@ -431,13 +437,13 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
         err => {
           console.log(err.status)
           if(err.status === 400){
-            
+
             this.getValidation();
             this.Input_ValidationCode = '';
           } else {
             console.log(err);
           }
-            
+
         }
       )
     );
