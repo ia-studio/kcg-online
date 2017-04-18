@@ -63,8 +63,8 @@ export let checkFileName = (f: File): boolean => {
  * */
 export let checkExtName = (f: File): boolean => {
   let extName = '';
-  if (f.name.toLowerCase().split('.')[1])
-    extName = f.name.split('.')[1];
+  if (f.name.toLowerCase().split('.'))
+    extName = f.name.split('.').pop();
 
   const available = ['doc', 'docx', 'xls', 'xlsx',
     'pdf', 'txt',
