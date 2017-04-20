@@ -1,6 +1,11 @@
 <div class="wrap index" [ngClass]="{active: showSlideMenu}">
     <div class="container shadow-3d">
         <nav class="header row index">
+            <ul class="other-links">
+              <li><a href="./">首頁</a><small>|</small></li>
+              <li><a href="http://work1999.kcg.gov.tw/list.aspx" target="_blank">派工案件查詢</a><small>|</small></li>
+              <li><a href="http://www.kcg.gov.tw/" target="_blank">高雄市政府全球資訊網</a></li>
+            </ul>
             <h1 class="header-band">
                 <a href='./'>
                   <img calss="pull-left" src="./assets/images/Kao_logo.png" width="40" alt="">
@@ -83,6 +88,8 @@
         </li>
         <li class="menu-item"><a href="http://work1999.kcg.gov.tw/Rptdownload.aspx" target="_blank">案件反應排行榜</a></li>
         <li class="menu-item"><a href="http://disdp.kcg.gov.tw/exchange/feedback.php" target="_blank">廉政案件</a></li>
+        <li class="menu-item"><a href="http://work1999.kcg.gov.tw/list.aspx" target="_blank">派工案件查詢</a></li>
+
         <li class="menu-item"><a [routerLink]="['/term','privacy']" (click)="showSlideMenu=false">隱私權保護政策</a></li>
         <li class="menu-item"><a [routerLink]="['/term','security']" (click)="showSlideMenu=false">網站安全政策</a></li>
         <li class="menu-item"><a [routerLink]="['/term','copyright']" (click)="showSlideMenu=false">著作權聲明</a></li>

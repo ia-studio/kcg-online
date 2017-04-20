@@ -21,7 +21,7 @@
           <h1 id="mayor" class="article-title">市長信箱</h1>
         </div>
       </div>
-      <div class="row pdLR1x body-content" *ngIf="caseTypes">
+      <div class="row pdLR1x body-content" *ngIf="caseTypes.length > 0">
         <div class="col-md-4">
           <div class="case-type" *ngFor="let type of caseTypes | slice:0:7" (click)="type.active=!type.active" [ngClass]="{active:type.active}">
             <p class="case-type-name"><span class="case-type-num">
@@ -59,7 +59,7 @@
           </div>
         </div>
       </div>
-      <div class="pop" *ngIf="!caseTypes">
+      <div class="pop pop-inner" style="display:block;" *ngIf="caseTypes.length == 0">
         <div class="pop-content">
           <div class="mk-spinner-doublecircle"></div>
           <span class="loading-words">Loading ...</span>

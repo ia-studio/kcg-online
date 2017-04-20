@@ -54,7 +54,9 @@ export class ReportComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.setTitle('市長信箱 - 高雄市政府線上即時服務平台');
+    this.caseTypes = [];
     this.getTypes();
+
     this.globalService.showPhoneButton = true;
     window.scrollTo(0, 0);
   }

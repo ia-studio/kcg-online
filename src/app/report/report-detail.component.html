@@ -67,8 +67,15 @@
 									<a class="btn btn-green" href="javascript:void(0);">選擇檔案<input class="input-alpha" type="file" multiple="true" name="" value="" (change)="addFile()" #fileInput></a>
 								</div>
 								<div class="col-md-6 navy">
-									<p *ngFor="let item of uploadFiles"><i class="fa fa-paperclip"></i> {{ item.name }}</p>
 								</div>
+                <div class="col-md-12 text-gray">
+                  <br>
+                  <p *ngFor="let item of uploadFiles"><i class="fa fa-paperclip"></i> {{ item.name }}</p>
+                  <hr/>
+                  <small>*每個上傳檔案大小限制為10ＭＢ，總上傳容量上限20ＭＢ，檔名建議使用半形英數字(A-Z,a-z,0-9)命名 <br/>
+                  *允許上傳的檔案格式為.doc .docx .xls .xlsx .pdf .txt .bmp .jpg .gif.odt.ods<br/>
+                  ，其餘格式請壓縮成zip檔再上傳！</small>
+                </div>
 							</div>
 							<input type="hidden" value="{{Case_Token}}" name="Case_Token" [ngModel]="Case_Token" />
 							<input type="hidden" value="0" name="Subj_FileCount" [ngModel]="Subj_FileCount" />

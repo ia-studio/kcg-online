@@ -101,6 +101,7 @@ export class FeedbackComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.feedbacks = {};
     this.startDate =  moment().add(-1, 'M').startOf('month').format('YYYY-MM-DD');
     this.endDate =  moment().add(-1, 'M').endOf('month').format('YYYY-MM-DD');
     this.sub = this.route.params.subscribe(params => {
