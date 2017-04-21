@@ -10,6 +10,7 @@ import { FaqComponent }                 from './faq/faq.component';
 import { FaqDetailComponent }           from './faq/faq-detail.component';
 import { FeedbackComponent }            from './feedback/feedback.component';
 import { TermComponent }                from './term/term.component';
+import { ConfirmComponent }                from './confirm/confirm.component';
 
 const appRoutes: Routes = [
   {
@@ -60,6 +61,10 @@ const appRoutes: Routes = [
   {
     path: 'term/:lable',
     component: TermComponent
+  },
+  {
+    path: 'confirm',
+    component: ConfirmComponent
   },
   {
     path: '**',

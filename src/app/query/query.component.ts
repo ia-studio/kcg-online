@@ -42,12 +42,12 @@ export class QueryComponent implements OnInit, OnDestroy {
   caseNo: string = '';
   email: string = ''; // 市長信箱 Email
   bCapcha: string;
-  
+
   vp0: string = 'A';
   vp1: string = 'TB';
   vyear: number = new Date().getFullYear(); //as p2
   vp3: string;
-  aCapcha: string; 
+  aCapcha: string;
   validateTime = 9*60*1000;
   callerName: string = ''; // 人民陳情 來電時的姓名
 
@@ -62,12 +62,18 @@ export class QueryComponent implements OnInit, OnDestroy {
     setTimeout(() => { this.getValidation2(); }, 500);
     setInterval(() => { this.getValidation(); }, this.validateTime);
     setInterval(() => { this.getValidation2(); }, this.validateTime+500);
-    
+
   }
 
   closeDetail() {
     this.displayDetail = false;
     this.searchCase = null;
+    this.caseNo = "";
+    this.email = "";
+    this.bCapcha = "";
+    this.vp3 = "";
+    this.callerName = "";
+    this.aCapcha = "";
   }
   ngOnDestroy() {
     this.subscriptions.forEach(s => s.unsubscribe());
@@ -99,7 +105,11 @@ export class QueryComponent implements OnInit, OnDestroy {
     }
 
     this.subscriptions.push(
-      this.qService.getBResult(this.caseNo, this.email, this.recaptchaCode.TimeStamp+this.bCapcha+this.recaptchaCode.HashCode).subscribe(data => {
+      this.qService.getBResult(
+          this.caseNo,
+          this.email,
+          this.recaptchaCode.TimeStamp+this.bCapcha+encodeURIComponent(this.recaptchaCode.HashCode)
+        ).subscribe(data => {
         this.searchCase = data;
         //console.log(data);
         this.displayDetail = true;
@@ -113,7 +123,7 @@ export class QueryComponent implements OnInit, OnDestroy {
         else if (err.status == 400){
           return this.queryBErr = err.json();
         }
-        
+
       })
     );
   }
@@ -143,7 +153,14 @@ export class QueryComponent implements OnInit, OnDestroy {
 
     this.subscriptions.push(
       //this.vp1 = 'AK';
-      this.qService.getVResult(this.vp0, this.vp1, this.vyear, this.vp3, this.callerName, this.recaptchaCode2.TimeStamp+this.aCapcha+this.recaptchaCode2.HashCode).subscribe(data => {
+      this.qService.getVResult(
+          this.vp0,
+          this.vp1,
+          this.vyear,
+          this.vp3,
+          this.callerName,
+          this.recaptchaCode2.TimeStamp+this.aCapcha+ encodeURIComponent(this.recaptchaCode2.HashCode)
+        ).subscribe(data => {
         this.searchCase = data;
         //console.log(data);
         this.displayDetail = true;

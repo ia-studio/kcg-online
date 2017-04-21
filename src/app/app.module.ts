@@ -16,6 +16,7 @@ import { TermComponent }                                        from './term/ter
 import { NewsComponent }                                        from './news/news.component';
 
 import { GlobalService }                                        from './shared/global.service';
+import { ConfirmComponent } from './confirm/confirm.component';
 
 @NgModule({
   imports: [
@@ -37,7 +38,8 @@ import { GlobalService }                                        from './shared/g
     QueryDetailComponent,
     ReportDetailComponent,
     TermComponent,
-    NewsComponent
+    NewsComponent,
+    ConfirmComponent
   ],
   providers: [
     appRoutingProviders,

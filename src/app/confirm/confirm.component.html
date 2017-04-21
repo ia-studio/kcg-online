@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="banner row">
+        <div class="banner-page-name">
+            <h2 class="dk-green">案件確認</h2>
+            <p class="dk-green">Case Confirm</p>
+        </div>
+        <img src="./assets/images/banner/banner_pic_query.png" alt="">
+    </div>
+    <div class="row">
+        親愛的網友，您好！
+        <div *ngIf="!queryExist">
+          有事嗎？
+        </div>
+        <div *ngIf="queryExist">
+          <div *ngIf="key === 'caseNo'">
+            您已經確認過並且在辦理中。您的案號是 {{val}}。
+          </div>
+          <div *ngIf="key === 'firstconfirm'">
+            已經確認成功系統後續將自動寄出案件編號至您的信箱並立即進行分案處理。
+          </div>
+          <div *ngIf="key === 'datetime'">
+            您已經在西元 {{getdate()}} 確認過了
+            
+          </div>
+          <div *ngIf="key === 'error'">
+            確認案件失敗
+          </div>
+          謝謝您。
+        </div>
+    </div>
+</div>

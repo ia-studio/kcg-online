@@ -26,7 +26,8 @@ export class CaseContent {
     case_no2: string;
     case_no3: string;
     case_no4: number;
-    subj_time: any;
+    subj_date: string;
+    subj_time: any = '2017/08/25';
     sugg_name: string;
     addr1: any;
     addr2: any;

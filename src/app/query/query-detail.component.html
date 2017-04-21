@@ -10,20 +10,24 @@
         <div class="col-md-4 page-block maB2x" *ngIf="searchCase.Content[0] != null">
 
             <div class="article-content">
-                <p class="article-lable require">主旨</p>
-                <p class="navy maB2x">{{searchCase.Content[0].subject}}</p>
+                <p class="article-lable require" *ngIf="searchCase.Content[0].e_subject">主旨</p>
+                <p class="navy maB2x" *ngIf="searchCase.Content[0].e_subject">{{searchCase.Content[0].e_subject}}</p>
                 <p class="article-lable require">建議事項</p>
                 <p class="navy maB2x">{{searchCase.Content[0].subject}}</p>
                 <div class="row">
                     <div class="col-md-6">
                         <p class="article-lable require">收件編號</p>
-                        <p class="navy maB2x pdLHalfX">{{searchCase.Content[0].case_no4}}</p>
+                        <p class="navy maB2x pdLHalfX">
+                          <span *ngIf="!searchCase.Content[0].e_subject">
+                            {{searchCase.Content[0].case_no1+'-'+searchCase.Content[0].case_no2+'-'+searchCase.Content[0].case_no3}}
+                          </span>
+                          {{searchCase.Content[0].case_no4}}</p>
                         <p class="article-lable require">來源別</p>
                         <p class="navy maB2x pdLHalfX">{{searchCase.Content[0].Source}}</p>
                     </div>
                     <div class="col-md-6">
                         <p class="article-lable require">時間</p>
-                        <p class="navy maB2x pdLHalfX">{{searchCase.Content[0].subj_time}}</p>
+                        <p class="navy maB2x pdLHalfX"><span *ngIf="!searchCase.Content[0].e_subject">{{searchCase.Content[0].subj_date}}</span>{{searchCase.Content[0].subj_time}}</p>
                         <p class="article-lable require">機密等級</p>
                         <p class="navy maB2x pdLHalfX">{{searchCase.Content[0].Security}}</p>
                     </div>
