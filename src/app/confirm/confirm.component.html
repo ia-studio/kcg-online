@@ -11,19 +11,20 @@
                 <p>有事嗎？</p>
               </div>
               <div *ngIf="queryExist">
-                <div class="check-info navy" *ngIf="key === 'caseNo'">
+                <div class="check-info navy" *ngIf="key === 'CaseNo'">
                   <p class="text-center">您已經確認過並且在辦理中<br>您的申報案號是</p>
-                  <h2 class="text-center">{{val}}</h2> 
+                  <h2 class="text-center">{{val}}</h2>
                 </div>
-                <div class="check-info navy" *ngIf="key === 'firstconfirm'">
+                <div class="check-info navy" *ngIf="key === 'FirstConfirm'">
                   已經確認成功！<br>系統後續將自動寄出案件編號至您的申報所填寫的信箱並立即進行分案處理。
                 </div>
-                <div class="check-info navy" *ngIf="key === 'datetime'">
+                <div class="check-info navy" *ngIf="key === 'DateTime'">
                   <p>已經完成確認，第一次確認時間如下： </p>
                   <h4>{{getdate()}}</h4>
                 </div>
-                <div class="check-info navy" *ngIf="key === 'error'">
-                  Sorry，確認案件失敗！
+                <div class="check-info navy" *ngIf="key === 'Error'">
+                  Sorry，確認案件失敗！<br>
+                  {{val}}
                 </div>
                 <br>
                 <br>
@@ -36,6 +37,5 @@
         </div>
       </div>
   </div>
-   
 
-   
+

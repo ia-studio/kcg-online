@@ -16,7 +16,7 @@ export class ConfirmComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute) {
       this.querySet= window.location.href.split('?')[1].split('=');
-      this.queryExist = (this.querySet[0]=='firstconfirm' || this.querySet[0]=='datetime' || this.querySet[0]=='caseNo' || this.querySet[0]== 'error')? true : false;
+      this.queryExist = (this.querySet[0]=='FirstConfirm' || this.querySet[0]=='DateTime' || this.querySet[0]=='CaseNo' || this.querySet[0]== 'error')? true : false;
       
   }
 
