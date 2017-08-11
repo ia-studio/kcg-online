@@ -10,7 +10,8 @@ import { FaqComponent }                 from './faq/faq.component';
 import { FaqDetailComponent }           from './faq/faq-detail.component';
 import { FeedbackComponent }            from './feedback/feedback.component';
 import { TermComponent }                from './term/term.component';
-import { ConfirmComponent }                from './confirm/confirm.component';
+import { ConfirmComponent }             from './confirm/confirm.component';
+import { QuestionComponent }            from './question/question.component';
 
 const appRoutes: Routes = [
   {
@@ -63,8 +64,12 @@ const appRoutes: Routes = [
     component: TermComponent
   },
   {
-    path: 'confirm',
+    path: 'Confirm',
     component: ConfirmComponent
+  },
+  {
+    path: 'Question',
+    component: QuestionComponent
   },
   {
     path: '**',

@@ -1,3 +1,4 @@
+import { platformBrowserDynamic }                               from '@angular/platform-browser-dynamic';
 import { BrowserModule }                                        from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA }                           from '@angular/core';
 import { CommonModule, LocationStrategy, HashLocationStrategy } from '@angular/common';
@@ -17,6 +18,7 @@ import { NewsComponent }                                        from './news/new
 
 import { GlobalService }                                        from './shared/global.service';
 import { ConfirmComponent } from './confirm/confirm.component';
+import { QuestionComponent } from './question/question.component';
 
 @NgModule({
   imports: [
@@ -39,7 +41,8 @@ import { ConfirmComponent } from './confirm/confirm.component';
     ReportDetailComponent,
     TermComponent,
     NewsComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    QuestionComponent
   ],
   providers: [
     appRoutingProviders,

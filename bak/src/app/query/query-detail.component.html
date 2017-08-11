@@ -7,27 +7,37 @@
         <img src="./assets/images/banner/banner_pic_query.png" alt="">
     </div>
     <div class="row">
-        <div class="col-md-4 page-block maB2x" *ngIf="searchCase.Content[0] != null">
+        <div class="col-md-4 page-block maB2x">
 
             <div class="article-content">
-                <p class="article-lable require" *ngIf="searchCase.Content[0].e_subject">主旨</p>
-                <p class="navy maB2x" *ngIf="searchCase.Content[0].e_subject">{{searchCase.Content[0].e_subject}}</p>
+                <p class="article-lable require" *ngIf="searchCase.Content[0].Source === '0'">主旨</p>
+                <p class="navy maB2x" *ngIf="searchCase.Content[0].Source !== '0'">{{searchCase.Content[0].e_subject}}</p>
                 <p class="article-lable require">建議事項</p>
                 <p class="navy maB2x">{{searchCase.Content[0].subject}}</p>
                 <div class="row">
                     <div class="col-md-6">
                         <p class="article-lable require">收件編號</p>
                         <p class="navy maB2x pdLHalfX">
-                          <span *ngIf="!searchCase.Content[0].e_subject">
-                            {{searchCase.Content[0].case_no1+'-'+searchCase.Content[0].case_no2+'-'+searchCase.Content[0].case_no3}}
+                          <span *ngIf="searchCase.Content[0].source_id === '0'">
+                            {{searchCase.Content[0].case_no1+'-'+searchCase.Content[0].case_no4}}
                           </span>
-                          {{searchCase.Content[0].case_no4}}</p>
+                          <span *ngIf="searchCase.Content[0].source_id === '1'">
+                            {{searchCase.Content[0].case_no1+'-'+searchCase.Content[0].case_no2+'-'+searchCase.Content[0].case_no3+'-'+searchCase.Content[0].case_no4}}
+                          </span>
+                          </p>
                         <p class="article-lable require">來源別</p>
                         <p class="navy maB2x pdLHalfX">{{searchCase.Content[0].Source}}</p>
                     </div>
                     <div class="col-md-6">
                         <p class="article-lable require">時間</p>
-                        <p class="navy maB2x pdLHalfX"><span *ngIf="!searchCase.Content[0].e_subject">{{searchCase.Content[0].subj_date}}</span>{{searchCase.Content[0].subj_time}}</p>
+                        <p class="navy maB2x pdLHalfX">
+                          <span *ngIf="searchCase.Content[0].source_id === '1'">
+                            {{searchCase.Content[0].subj_date}}
+                          </span>
+                          <span *ngIf="searchCase.Content[0].source_id === '0'">
+                            {{searchCase.Content[0].subj_time}}
+                          </span>
+                        </p>
                         <p class="article-lable require">機密等級</p>
                         <p class="navy maB2x pdLHalfX">{{searchCase.Content[0].Security}}</p>
                     </div>
@@ -36,7 +46,7 @@
                   <p class="article-lable require">附加檔案 </p>
                   <p class="navy maB2x pdLHalfX">
                     <listgroup *ngFor="let item of searchCase.Content[0].Atth_FileNames">
-                      <a target="_blank" href="http://soweb.kcg.gov.tw/webapi/api/attachfile/1?fileName={{item.FileName}}&caseNo={{searchCase.Content[0].case_no1}}-{{searchCase.Content[0].case_no2}}-{{searchCase.Content[0].case_no3}}-{{searchCase.Content[0].case_no4}}&suggName={{searchCase.Content[0].sugg_name}}">
+                      <a class="word-break" target="_blank" href="/webapi/api/attachfile/1?fileName={{item.FileName}}&caseNo={{searchCase.Content[0].case_no1}}-{{searchCase.Content[0].case_no2}}-{{searchCase.Content[0].case_no3}}-{{searchCase.Content[0].case_no4}}&suggName={{searchCase.Content[0].sugg_name}}">
                         <i class="fa fa-paperclip"></i>&nbsp;{{item.FileName}}
                       </a><br/>
                     </listgroup>
@@ -48,7 +58,7 @@
             </div>
         </div>
         <div class="col-md-8 page-block">
-            <div class="article-content block-separate">
+            <div class="article-content block-separate" *ngIf="searchCase.ProcessStatus.length !== 0">
                 <div *ngFor="let item of searchCase.ProcessStatus" aria-describedby="searchCase.ProcessStatus">
                   <div class="row">
                     <div class="col-md-6">
@@ -72,18 +82,28 @@
                       <p class="navy maB2x pdLHalfX">{{item.proc_telno}}</p>
                     </div>
                   </div>
-                  <p class="article-lable require">處理情形(答覆內容)</p>
-                  <p class="navy maB2x" style="white-space: pre-line;">{{ item.Reply }}</p>
-                  <div *ngIf="item.Atth_FileNames && item.Atth_FileNames.length > 0">
+                  <p class="article-lable require" *ngIf="item.Reply">處理情形(答覆內容)</p>
+                  <p class="navy maB2x" style="white-space: pre-line;" *ngIf="item.Reply">{{ item.Reply }}</p>
+                  <div *ngIf="item.Atth_FileNames && item.Atth_FileNames.length !== 0">
                     <p class="article-lable require">附加檔案 </p>
                     <p class="navy maB2x pdLHalfX">
-                      <a target="_blank" href="http://soweb.kcg.gov.tw/webapi/api/attachfile/1?fileName={{item.Atth_FileNames}}&caseNo={{searchCase.Content[0].case_no1}}-{{searchCase.Content[0].case_no2}}-{{searchCase.Content[0].case_no3}}-{{searchCase.Content[0].case_no4}}&suggName={{searchCase.Content[0].sugg_name}}&organNo={{item.org_no}}&seqNo={{item.seq_no}}&sNo={{item.s_no}}">
+                      <a target="_blank" href="/webapi/api/attachfile/1?fileName={{item.Atth_FileNames}}&caseNo={{searchCase.Content[0].case_no1}}-{{searchCase.Content[0].case_no2}}-{{searchCase.Content[0].case_no3}}-{{searchCase.Content[0].case_no4}}&suggName={{searchCase.Content[0].sugg_name}}&organNo={{item.org_no}}&seqNo={{item.seq_no}}&sNo={{item.s_no}}">
                         <i class="fa fa-paperclip"></i>&nbsp;{{item.Atth_FileNames}}
                       </a>
                     </p>
                   </div>
                   <hr/>
                 </div>
+            </div>
+            <div class="article-content block-separate" *ngIf="searchCase.ProcessStatus.length === 0">
+              <div class="row">
+                <div class="col-md-12">
+                  親愛的網友，您好！
+                  <br>
+                  目前您的申報案件正在分案中。
+                  <br/>
+                </div>
+              </div>
             </div>
             <a class="btn btn-green hidden-lg hidden-md" href="javascript:void(0);" (click)="goBack()">繼續查詢陳報案件</a>
         </div>

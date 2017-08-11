@@ -140,8 +140,9 @@ export class QueryComponent implements OnInit, OnDestroy {
 
   queryV(){ //人民陳情查詢
     //
-    this.queryVErr = "";
+    this.queryVErr = "請稍候正在查詢中...";
     if (this.vyear == null || this.vyear.toString().length < 4){
+
       return this.queryVErr = this.errType.yearErr;
     }
     if (this.vp3 == null || this.vp3.length == 0){

@@ -1064,7 +1064,7 @@ hr {
     margin-bottom: 20px;
     width: 100%;
     border: 0;
-    border-top: 1px solid #eee
+    border-top: 4px solid #eee
 }
 .sr-only {
     position: absolute;
@@ -5709,7 +5709,7 @@ a:focus {
     background-color: #fff
 }
 .banner {
-    
+
     position: relative;
     top: 28px;
     height: 150px;
@@ -6984,4 +6984,7 @@ footer {
 }
 .visible-report {
     display: none;
+}
+.word-break {
+  word-break: break-word;
 }

@@ -45,6 +45,8 @@
 							<div class="col-md-7">
 								<!--<input class="fall-width" type="text" *ngIf="gpsFormattedAddress && gpsFormattedAddress.length > 0" [value]="gpsFormattedAddress" [placeholder]="placeholder" />
 								<input class="fall-width" type="text" *ngIf="!gpsFormattedAddress || !gpsFormattedAddress[0]" [placeholder]="placeholder" />-->
+                <input class="fall-width" type="text" placeholder="緯度 23.481315">
+                <input class="fall-width" type="text" placeholder="經度 120.4524993">
 							</div>
 							<p class="col-md-12 text-gray"><br>請選擇建議事項內容所屬高雄行政區，若內容無法分區或其他縣市事項請選擇「無法分區」</p>
 						</div>
@@ -158,7 +160,7 @@
 							<input class="fall-width text-center" type="text" [(ngModel)]="Input_ValidationCode" [ngModelOptions]="{standalone: true}" placeholder="請輸入驗證碼">
 						</div>
 						<div class="col-md-12 text-center">
-							驗證碼不區分大小寫。 <a href="javascript:void(0);" class="text-orange" (click)="getValidation()">重新產生驗證碼？</a>						
+							驗證碼不區分大小寫。 <a href="javascript:void(0);" class="text-orange" (click)="getValidation()">重新產生驗證碼？</a>
 						</div>
 					</div>
 				</div>
