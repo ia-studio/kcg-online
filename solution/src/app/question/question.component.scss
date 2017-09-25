@@ -1,0 +1,27 @@
+$main-color: #3C8F87;
+
+.topics {
+  border-left: 1px solid $main-color;
+  margin-bottom: 3em;
+  .topic-title {
+    padding: .5em 1em;
+    color: $main-color;
+    background: rgba(128, 203, 196, 0.2);
+
+  }
+  .topic-list {
+    list-style: none;
+    letter-spacing: 3px;
+    line-height: 1.8em;
+
+  }
+
+}
+.question {
+  margin-top: 2em;
+  .question-title {
+    font-size: 1.125em;
+    line-height: inherit;
+    font-weight: 900;
+  }
+}

@@ -1,0 +1,98 @@
+<div class="wrap index" [ngClass]="{active: showSlideMenu}">
+    <div class="container shadow-3d">
+        <nav class="header row index">
+            <ul class="other-links">
+              <li><a href="./">首頁</a><small>|</small></li>
+              <li><a href="http://work1999.kcg.gov.tw/list.aspx" target="_blank">派工案件查詢</a><small>|</small></li>
+              <li><a href="http://www.kcg.gov.tw/" target="_blank">高雄市政府全球資訊網</a></li>
+            </ul>
+            <h1 class="header-band">
+                <a href='./'>
+                  <img calss="pull-left" src="./assets/images/Kao_logo.png" width="40" alt="">
+                  <p>
+                      <span class="navy">線上即時服務系統 </span><br>
+                      <small class="navy">Service online</small>
+                  </p>
+                </a>
+                <div class="news visible-xs maT1x" (click)="showNews=!showNews"><a href="javascript:void(0)"><i class="fa fa-info"></i></a></div>
+                <div class="mob-menu visible-xs" (click)="showSlideMenu=!showSlideMenu"></div>
+            </h1>
+            <div class="header-right hidden-xs">
+                <div class="mob-menu visible-md visible-sm" (click)="showSlideMenu=!showSlideMenu"></div>
+                <div class="news visible-md visible-sm maT1x" (click)="showNews=!showNews"><a href="javascript:void(0)"><i class="fa fa-info"></i></a></div>
+                <ul class="header-menu visible-lg">
+                    <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/report']">市長信箱</a></li>
+                    <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/query']">案件查詢</a></li>
+                    <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/process']">服務流程</a></li>
+                    <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/faq', '1']">常見問題 FAQ</a></li>
+                    <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/feedback', 'point']">案件處理滿意度</a></li>
+                    <li class="menu-item"><a href="http://work1999.kcg.gov.tw/Rptdownload.aspx" target="_blank">案件反應排行榜</a></li>
+                    <li class="menu-item"><a href="http://disdp.kcg.gov.tw/exchange/feedback.php" target="_blank">廉政案件</a></li>
+                    <li class="menu-item" (click)="showNews=!showNews"><a><i class="fa fa-info"></i></a></li>
+                </ul>
+            </div>
+            <div class="header-news" *ngIf="showNews">
+                <div class="news-visble">
+                  <ul class="news-list">
+                    <li [ngClass]="{'active':showNowNews(i)}" *ngFor="let newsItem of news; let i = index">
+                      <a [routerLink]="['/news', newsItem.MsgID]">{{newsItem.MsgTitle}}</a>
+                    </li>
+                  </ul>
+                  <span class="pull-right" (click)="showNews=false"><i class="fa fa-times-circle"></i></span>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <router-outlet></router-outlet>
+    <footer>
+        <div class="container">
+            <div class="row pdLR1x">
+                <div class="footer col-md-10 col-sm-12 col-xs-12">
+                    <img class="pull-left pdR1x visible-lg visible-md" src="./assets/images/qrcode.png" alt="">
+
+                    <p class="footer-info">
+                        本系統由 <a class="link">高雄市政府資訊中心</a> 維護<br>
+                    </p>
+                    <small class="pdT2x font-sm">當系統處於定期維護時間每日凌晨 01:00 ~ 02:00 時，<br>主機可能會停止所有服務，如有不便還請見諒。<br><br>
+				高雄市政府聯合服務中心電話：</small>
+                    <h5 class="font-lg">(07) 336-8333 #2819、#2833、#2834</h5>
+                    <div class="text-center" *ngIf="globalService.showPhoneButton">
+                        <a href="tel:073368333" class="btn btn-orange visible-sm visible-xs"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;撥打電話</a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <ul class="link-group font-md hidden-sm hidden-xs">
+                        <li><a [routerLink]="['/term','privacy']">隱私權保護政策</a></li>
+                        <li><a [routerLink]="['/term','security']">網站安全政策</a></li>
+                        <li><a [routerLink]="['/term','copyright']">著作權聲明</a></li>
+                        <li><a href="http://www.kcg.gov.tw/" target="blank">高雄市政府全球資訊網</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<div class="mob-menu-list" [ngClass]="{active: showSlideMenu}">
+    <div class="mob-menu-close" [ngClass]="{active: showSlideMenu}" (click)="showSlideMenu=false"></div>
+    <ul class="header-menu active">
+        <li class="menu-item " routerLinkActive="active" (click)="showSlideMenu=false"><a [routerLink]="['/report']">市長信箱</a></li>
+        <li class="menu-item " routerLinkActive="active" (click)="showSlideMenu=false"><a [routerLink]="['/query']">案件查詢</a></li>
+        <li class="menu-item " routerLinkActive="active" (click)="showSlideMenu=false"><a [routerLink]="['/process']">服務流程</a></li>
+        <li class="menu-item " routerLinkActive="active" (click)="showSlideMenu=false"><a [routerLink]="['/faq', '1']">常見問題 FAQ</a></li>
+        <li class="menu-item " (click)="showSlideMenu=false"><a [routerLink]="['/feedback', 'point']">案件處理滿意度</a>
+            <ul class="mob-sub-menu">
+                <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/feedback', 'point']">各項滿意度調查</a></li>
+                <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/feedback', 'count']">各問題次數分配表</a></li>
+                <li class="menu-item" routerLinkActive="active"><a [routerLink]="['/feedback', 'effective']">各問題有效值與遺漏值</a></li>
+            </ul>
+        </li>
+        <li class="menu-item"><a href="http://work1999.kcg.gov.tw/Rptdownload.aspx" target="_blank">案件反應排行榜</a></li>
+        <li class="menu-item"><a href="http://disdp.kcg.gov.tw/exchange/feedback.php" target="_blank">廉政案件</a></li>
+        <li class="menu-item"><a href="http://work1999.kcg.gov.tw/list.aspx" target="_blank">派工案件查詢</a></li>
+
+        <li class="menu-item"><a [routerLink]="['/term','privacy']" (click)="showSlideMenu=false">隱私權保護政策</a></li>
+        <li class="menu-item"><a [routerLink]="['/term','security']" (click)="showSlideMenu=false">網站安全政策</a></li>
+        <li class="menu-item"><a [routerLink]="['/term','copyright']" (click)="showSlideMenu=false">著作權聲明</a></li>
+        <li class="menu-item"><a href="http://www.kcg.gov.tw/" target="blank">高雄市政府全球資訊網</a></li>
+    </ul>
+</div>

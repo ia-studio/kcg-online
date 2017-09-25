@@ -1,0 +1,48 @@
+<div class="container" *ngIf="reply">
+    <div class="banner row">
+        <div class="banner-page-name">
+            <h2 class="dk-green">常見問與答</h2>
+            <p class="dk-green">Frequently Asked Questions</p>
+        </div>
+        <img src="./assets/images/banner/banner_pic_faq.png" alt="">
+    </div>
+    <div class="row" *ngIf="reply">
+        <div class="col-md-4 page-block maB2x">
+            <div class="article-content">
+                <p class="article-lable require">問題內容</p>
+                <p class="navy maB2x">{{reply.IssueContent}}</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="article-lable require">回覆單位 </p>
+                        <p class="navy maB2x pdLHalfX">{{reply.ReplyOrganName}}</p>
+                        <p class="article-lable require">張貼日期</p>
+                        <p class="navy maB2x pdLHalfX">{{reply.PostDate}}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="article-lable require">問題類別</p>
+                        <p class="navy maB2x pdLHalfX">{{reply.IssueKind}}</p>
+                        <p class="article-lable require">修改日期</p>
+                        <p class="navy maB2x pdLHalfX">{{reply.ReviseDate}}</p>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="article-lable require">人氣指數</p>
+                        <p class="navy maB2x pdLHalfX">{{reply.ViewCount}}</p>
+                    </div>
+                    <div class="text-center col-md-12">
+                        <a class="btn btn-green hidden-xs hidden-sm" href="javascript:void(0);" (click)="goBack()">繼續查詢問題</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 page-block">
+            <div class="article-content block-separate">
+                <p class="article-lable require">處理情形(答覆內容)</p>
+                <p class="navy maB2x" style="white-space: pre-line;">{{reply.ReplyContent}}</p>
+            </div>
+            <div class="text-center">
+                <a class="btn btn-green hidden-md hidden-lg" href="javascript:void(0);" (click)="goBack()">繼續查詢問題</a>
+            </div>
+        </div>
+
+    </div>
+</div>

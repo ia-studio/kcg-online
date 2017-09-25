@@ -1,0 +1,81 @@
+<div class="container" >
+  <form #f="ngForm" action="" *ngIf="poll">
+    <div class="banner row">
+      <div class="banner-page-name">
+        <h2 class="dk-green">{{qusTitle.Title}}</h2>
+        <p class="dk-green">KCG.GOV.TW Feedback Poll</p>
+      </div>
+      <img src="./assets/images/banner/banner_pic_faq.png" alt="">
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+      <pre>{{question[2].QNA |json}}</pre>
+
+        <header>
+          <h3></h3>
+          <p class="foreword" [innerHTML]="qusTitle.Foreword"></p>
+        </header>
+
+      </div>
+      <div class="col-md-8">
+
+        <div class="topics" *ngFor="let t of question">
+          <h3 class="topic-title">第{{t.TopicID}}部分-{{t.Topic}}</h3>
+          <ul class="topic-list">
+            <li class="question" *ngFor="let q of t.QnR; let i = index">
+              <h5 class="question-title">{{t.TopicID}}-{{i+1}}.{{q.Question}}</h5>
+              <div class="question-content">
+                <div *ngFor="let r of q.ReplyItems; let k = index" >
+                    <!-- lv0 -->
+                    <label>
+                      <input [type]="getInputType(r.ReplyType)" [name]="'lv0'+t.TopicID+q.QuestionNo+r.ReplyID" (change)="setSelect(q,'ReplyItems',k,r.ReplyType)"> <span [innerHTML]="r.ReplyItem"></span>
+                    </label>
+                    <input *ngIf="getTextFeild(r.ReplyType)" type="text" [name]="'lv0T'+t.TopicID+q.QuestionNo+r.ReplyID" (keyup)="setCommnet($event.target,'ReplyItems',q,k)">
+                    <!-- lv1 -->
+                    <div *ngIf="r.ItemOptions" style="margin-left: 20px;">
+                      <p *ngFor="let or of r.ItemOptions; let o = index" >
+                        <label>
+                          <input [type]="getInputType(or.ReplyType)" [name]="'lv1'+t.TopicID+r.ReplyID+or.ReplyID" (change)="setSelect(r,'ItemOptions',o,or.ReplyType)"> <span [innerHTML]="or.ReplyItem"></span>
+                        </label>
+                        <input *ngIf="getTextFeild(or.ReplyType)" type="text" [name]="'lv0T'+t.TopicID+r.ReplyID+or.ReplyID" (keyup)="setCommnet($event.target,'Lvl1ItemOptions',r,o)">
+                      </p>
+                    </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+              <input type="submit" class="btn btn-orange fall-width" value="填寫完成 " (click)="getAns()" />
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+
+      </div>
+    </div>
+    <pre>
+      {{ question.QNA | json}}
+    </pre>
+</form>
+</div>
+<div class="pop" style="display:block;" *ngIf="getReportDone">
+	<div class="pop-content">
+		<div class="check">
+			<div class="check-panel">
+				<div class="check-mark"><i class="fa fa-check"></i></div>
+				<h4 class="check-title navy text-center">親愛的市民，您好！</h4>
+				<br>
+				<p class="check-info navy">
+          問卷調查資料已順利送出，
+          謝謝您的寶貴意見，並感謝您撥冗填寫!
+				</p>
+				<h4 class="check-footer navy text-center">高雄市政府市長信箱處理小組 敬上</h4>
+				<a href="javascript:void(0);" class="btn btn-green" (click)="goBack(true)">前往市長信箱</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--<p>works</p>-->

@@ -1,0 +1,98 @@
+<div class="container" *ngIf="!displayDetail">
+    <div class="banner row">
+        <div class="banner-page-name">
+            <h2 class="dk-green">案件查詢</h2>
+            <p class="dk-green">Search Case</p>
+        </div>
+        <img src="./assets/images/banner/banner_pic_query.png" alt="">
+    </div>
+    <div class="row">
+        <div class="col-md-4 page-block">
+            <div class="article-header text-center">
+                <h4 id="mayor_describe" class="article-title">操作說明</h4>
+            </div>
+            <div class="article-content">
+                <p class="article-lable require">查詢方式 </p>
+                <p class="navy maB1x">
+                    請先點選您要查詢的方式，再輸入相關查詢條件。
+                </p>
+                <p class="article-lable require">注意事項 </p>
+                <p class="navy">
+                    請注意您輸入的內容(Email、姓名)須與當時反映時所提供之資料一致，俾利系統正確判讀。<br> 限查詢現有資料庫期限內案件。
+                    <br> 當系統處於定期維護時間每日凌晨01:00~02:00時，主機可能會停止所有服務，如有不便還請見諒。
+                    <br> 為加強民眾投訴案件資料之安全，即日起不提供市長信箱查詢案件(案件編號+姓名)與人民陳情案件(姓名+電話)兩種查詢方式，如有不便還請見諒。
+                    <br>
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4 page-block">
+            <div class="article-header text-center">
+                <h4 id="mayor_mailbox" class="article-title">市長信箱</h4>
+            </div>
+            <div class="article-content block-separate">
+                <p class="navy">透過線上即時服系統及市長信箱等網路途徑<br><br><br></p>
+                <div>
+                    <p class="article-lable require">案件編號 </p>
+                    <div class="row maB1x">
+                        <div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" type="text" value="B" readonly></div>
+                        <div class="col-xs-10"><input class="col-xs-12" tabindex="1" type="text" [(ngModel)]="caseNo"></div>
+                    </div>
+                    <p class="article-lable require">E-Mail </p>
+                    <div class="row">
+                        <div class="col-xs-12"><input class="col-xs-12" tabindex="2" type="text" placeholder="example@kcg.gov.tw" [(ngModel)]="email"></div>
+                        <p class="col-xs-12 validation-info"> {{queryBErr}}</p>
+                    </div>
+                    <br>
+                    <div class="row">
+						<div class="col-md-4 text-center"><img style="width:100%" [src]="recaptchaImg" alt="驗證碼" title="點擊可重新產生驗證碼" (click)="getValidation()"></div>
+						<div class="col-md-8">
+							<input class="fall-width text-center" type="text" [(ngModel)]="bCapcha" [ngModelOptions]="{standalone: true}" placeholder="請輸入驗證碼">
+						</div>
+						<div class="col-md-12 text-center">
+							驗證碼不區分大小寫。 <a href="javascript:void(0);" class="text-orange" (click)="getValidation()">重新產生驗證碼？</a>						
+						</div>
+					</div>
+                    <div class="row text-center maT2x">
+                      <a href="javascript:void(0);" tabindex="3"  class="btn btn-orange" (click)="queryB()">查詢</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 page-block">
+            <div class="article-header text-center">
+                <h4 id="mayor" class="article-title">人民陳情案件</h4>
+            </div>
+            <div class="article-content block-separate">
+                <p class="navy">透案件來源：透過電話、信件、傳真等非網路途徑<br><br></p>
+                <p class="article-lable require">案件編號 </p>
+                <div class="row maB1x">
+                  <div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" tabindex="4" type="text" value="A" [(ngModel)]="vp0"></div>
+                  <div class="col-xs-2 input-separate"><input class="col-xs-12 text-center" tabindex="5" type="text" value="TB" [(ngModel)]="vp1"></div>
+                  <div class="col-xs-3 input-separate"><input class="col-xs-12 text-center" tabindex="6" type="text" [(ngModel)]="vyear"></div>
+                  <div class="col-xs-5"><input class="col-xs-12" tabindex="7" type="text" [(ngModel)]="vp3"></div>
+                </div>
+                <p class="article-lable require">來電時的姓名 </p>
+                <div class="row">
+                  <div class="col-xs-12"><input class="col-xs-12" tabindex="8" type="text" placeholder="您的姓名" [(ngModel)]="callerName"></div>
+                  <p class="col-xs-12 validation-info"> {{queryVErr}}</p>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-4 text-center"><img style="width:100%" [src]="recaptchaImg2" alt="驗證碼" title="點擊可重新產生驗證碼" (click)="getValidation2()"></div>
+                    <div class="col-md-8">
+                        <input class="fall-width text-center" type="text" [(ngModel)]="aCapcha" [ngModelOptions]="{standalone: true}" placeholder="請輸入驗證碼">
+                    </div>
+                    <div class="col-md-12 text-center">
+                        驗證碼不區分大小寫。 <a href="javascript:void(0);" class="text-orange" (click)="getValidation2()">重新產生驗證碼？</a>						
+                    </div>
+                </div>
+                <div class="row text-center maT2x">
+                  <a class="btn btn-orange" tabindex="9" (click)="queryV()">查詢</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="displayDetail && searchCase != null" >
+  <app-query-detail [searchCase]="searchCase" (closeDetail)="closeDetail()"></app-query-detail>
+</div>
