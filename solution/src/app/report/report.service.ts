@@ -6,7 +6,7 @@ import { CaseType }       from '../shared/case';
 
 @Injectable()
 export class ReportService {
-  private baseApiUrl = '/webapi/api/';//;
+  private baseApiUrl = 'http://soweb.kcg.gov.tw/webapi/api/';//;
   private reportTypesUrl = this.baseApiUrl + 'items/';
   private validationCodeUrl = this.baseApiUrl + 'ValidationCode/'; //'../../assets/vd.json';
 

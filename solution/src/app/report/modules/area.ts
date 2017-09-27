@@ -71,7 +71,7 @@ export let DistrictCodesKaohsiung = (isIncludeNoArea?: boolean) => {
   }
 }
 
-// /webapi/api/AddrCode/3?p1=6400100000
+// http://soweb.kcg.gov.tw/webapi/api/AddrCode/3?p1=6400100000
 export let RegionCodesKaohsiung = (districtCode: string) => {
   switch (districtCode) {
     case '6400100000':
