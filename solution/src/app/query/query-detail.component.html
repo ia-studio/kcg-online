@@ -87,8 +87,8 @@
                   <div *ngIf="item.Atth_FileNames && item.Atth_FileNames.length !== 0">
                     <p class="article-lable require">附加檔案 </p>
                     <p class="navy maB2x pdLHalfX">
-                      <a target="_blank" href="/webapi/api/attachfile/1?fileName={{item.Atth_FileNames}}&caseNo={{searchCase.Content[0].case_no1}}-{{searchCase.Content[0].case_no2}}-{{searchCase.Content[0].case_no3}}-{{searchCase.Content[0].case_no4}}&suggName={{searchCase.Content[0].sugg_name}}&organNo={{item.org_no}}&seqNo={{item.seq_no}}&sNo={{item.s_no}}">
-                        <i class="fa fa-paperclip"></i>&nbsp;{{item.Atth_FileNames}}
+                      <a target="_blank" *ngFor="let file of item.Atth_FileNames" href="http://soweb.kcg.gov.tw/webapi/api/attachfile/1?fileName={{file.FileName}}&caseNo={{searchCase.Content[0].case_no1}}-{{searchCase.Content[0].case_no2}}-{{searchCase.Content[0].case_no3}}-{{searchCase.Content[0].case_no4}}&suggName={{searchCase.Content[0].sugg_name}}&organNo={{item.org_no}}&seqNo={{item.seq_no}}&sNo={{item.s_no}}">
+                        <i class="fa fa-paperclip"></i>&nbsp;{{file.FileName}}
                       </a>
                     </p>
                   </div>
