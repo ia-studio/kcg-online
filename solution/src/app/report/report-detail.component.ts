@@ -37,9 +37,10 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
   validateTime = 9*60*1000;
 
   readonly placeholder: string = '輸入所在地址';
-  coords: any;
-  // gpsFormattedAddress: string;
-  gpsDistrict: string;
+  // 經緯度
+  coords: { latitude: string, longitude: string };
+  // 完整檢舉地址
+  geoAddress: string;
 
   readonly county_placeholder: string = '縣市';
   readonly district_placeholder: string = '地區';
@@ -89,7 +90,6 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     this.Case_Token = genCaseToken(12);
     this.areaCodes = DistrictCodesKaohsiung(true); // 左側行政區 gps
     this.districtCodes = []; // 右側行政區下拉項目
-    this.gpsDistrict = '';
     this.Subj_District = ''; // default
     this.countyCodes = CountyCodes();
     this.regionCodes = [];
@@ -115,6 +115,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     this.hasher = Md5(this.genHasherMajorKey());
     this.getValidation();
     setInterval(() => { this.getValidation(); }, this.validateTime);
+    this.getLocation();
   }
 
   goBack(directlyRedirect?: boolean){
@@ -146,9 +147,11 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     this.subscribes.push(
       this.geoLocationService.getLocation(opt).subscribe(
         data => {
-          //console.log(data.coords);
-          this.coords = data.coords;
-          this.getAddressData(data.coords.latitude, data.coords.longitude);
+          this.coords = {
+            latitude: data.coords.latitude,
+            longitude: data.coords.longitude
+          };
+          this.getAddressData(this.coords.latitude, this.coords.longitude);
         }
       )
     );
@@ -158,12 +161,11 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
     this.subscribes.push(
       this.geoAddressService.getAddressResult(lat, lng).subscribe(
         data => {
-          if (data.results[0] !== null && data.results[0].formatted_address !== null) {
+          if (data.results[0] && data.results[0].formatted_address) {
             let addr = data.results[0].formatted_address;
-            // this.gpsFormattedAddress = addr; // 檢舉地址
-            this.gpsDistrict = addr.substring(addr.indexOf('市') + 1, addr.indexOf('區') + 1);
-            this.Subj_District_name = this.gpsDistrict;
-            this.adjustGpsResolving(this.gpsDistrict);
+            this.geoAddress = addr; // 檢舉地址
+            this.Subj_District_name = addr.substring(addr.indexOf('市') + 1, addr.indexOf('區') + 1);
+            this.adjustGpsResolving(this.Subj_District_name);
           }
         }
       )
@@ -176,6 +178,16 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
         this.Subj_District = data.DistrictCode;
       }
     });
+
+    if(!this.Subj_District) {
+      this.Subj_District_name = '無法分區';
+      this.Subj_District = '6411100000';
+    }
+  }
+
+  changeMarker(e){
+    [this.coords.latitude, this.coords.longitude] = [e.coords.lat, e.coords.lng];
+    this.getAddressData(this.coords.latitude, this.coords.longitude);
   }
 
   @ViewChild("fileInput") fileInput: any;

@@ -105,15 +105,16 @@
 								</select>
 								<i class="fa fa-chevron-down"></i>
 							</div>
-							<div class="col-md-7">
-
+							<div class="col-md-12">
                 <!-- <input class="fall-width" type="text" placeholder="緯度 23.481315">
-                <input class="fall-width" type="text" placeholder="經度 120.4524993"> -->
+								<input class="fall-width" type="text" placeholder="經度 120.4524993"> -->
+								<input name="geoAddress" class="fall-width" type="text" placeholder="完整地址" [(ngModel)]="geoAddress">
 							</div>
-              <!-- <div class="col-md-12">
-                <iframe src="" frameborder="0"></iframe>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.2362418728912!2d120.29438131481035!3d22.71945898510741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0f75e51a9f05%3A0xa01ddbbe33226cf9!2zODEx6auY6ZuE5biC5qWg5qKT5Y2A5qiC576k6LevMTk36Jmf!5e0!3m2!1szh-TW!2stw!4v1498806827852" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-              </div> -->
+              <div class="col-md-12">
+								<agm-map *ngIf="coords" [latitude]="coords.latitude" [longitude]="coords.longitude" [zoom]="18" (mapClick)="changeMarker($event)">
+									<agm-marker [latitude]="coords.latitude" [longitude]="coords.longitude"></agm-marker>
+								</agm-map>
+              </div>
 							<p class="col-md-12 text-gray"><br>請選擇建議事項內容所屬高雄行政區，若內容無法分區或其他縣市事項請選擇「無法分區」</p>
 						</div>
 						<div class="col-md-12 maB1x">

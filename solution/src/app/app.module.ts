@@ -20,6 +20,9 @@ import { GlobalService }                                        from './shared/g
 import { ConfirmComponent } from './confirm/confirm.component';
 import { QuestionComponent } from './question/question.component';
 
+import { environment } from '../environments/environment';
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -27,7 +30,10 @@ import { QuestionComponent } from './question/question.component';
     ReactiveFormsModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    AgmCoreModule.forRoot({
+      apiKey: environment.googleMapApiKey
+    })
   ],
   declarations: [
     AppComponent,
