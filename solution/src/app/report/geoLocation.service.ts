@@ -5,6 +5,7 @@
  */
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Http, Response } from "@angular/http";
 
 const GEOLOCATION_ERRORS = {
   'errors.location.unsupportedBrowser': 'Browser does not support location services',
@@ -15,7 +16,7 @@ const GEOLOCATION_ERRORS = {
 
 @Injectable()
 export class GeolocationService {
-
+  constructor(private _http: Http){ }
   /**
    * Obtains the geographic position, in terms of latitude and longitude coordinates, of the device.
    * @param {Object} [opts] An object literal to specify one or more of the following attributes and desired values:
@@ -31,8 +32,8 @@ export class GeolocationService {
    */
   public getLocation(opts): Observable<any> {
 
-    return Observable.create(observer => {
 
+    return Observable.create(observer => {
       if (window.navigator && window.navigator.geolocation) {
         window.navigator.geolocation.getCurrentPosition(
           (position) => {
