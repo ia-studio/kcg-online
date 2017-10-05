@@ -1,0 +1,3243 @@
+{
+  "PollVersion": [
+    {
+      "VersionNo": 2007120602,
+      "AppealerId": 123,
+      "Title": "「高雄市市長電子信箱」滿意度調查之研究",
+      "Foreword": "<p align=\"center\">\r\n<span style=\"COLOR: navy\"><font SIZE=5>@qTitle@</font></span>\r\n</p>\r\n<P align=\"center\"><span style=\"color: red\"><font size=\"4\" >&lt;請使用 800 x 600 或以上的解析度瀏覽此問卷&gt;</font></span></P>\r\n<table border=\"1\" width=\"100%\" bordercolor=\"#FFFFFF\" cellspacing=\"0\" cellpadding=\"5\" bordercolorlight=\"#666666\" \r\n    style=\"font-size: 10pt; color: #333333; line-height: 165%\">\r\n<tr>\r\n<td width=\"100%\">\r\n    <p>\r\n    您的回答，將是本府改進「市長電子信箱」及人民陳情案件的重要參考，您回答的電子郵件內容將不會透過任何其他管道流出或引用。現在請您花費約五分鐘的時間填答以下問題（三部份共23題），並於問卷結束後點按&lt;送出答覆&gt;\r\n    將您的寶貴意見傳給我們。<br>\r\n    <span style=\"COLOR: black\">如果您有其他任何有關案件處理的問題，請洽詢：</span>\r\n    <span style=\"COLOR: navy\">聯合服務中心  主任 王嘉東 或 謝虹娘、崔寶綢小姐 TEL：(07)3360521、3360522</span>\r\n     <br>\r\n     <span style=\"COLOR: black\">有關其他任何技術方面的問題，請洽詢：</span>\r\n     <span style=\"COLOR: navy\">資訊中心  作業設計組長　莊孟杰 或 郭瓊蓉、李鈺瑩小姐 TEL：(07)3373628 </span>\r\n    </p>\r\n</td>\r\n</tr>\r\n\r\n</table><div style=\"display:none\">infidelity signs <a href=\"http://www.phuckedporn.com/page/women-cheat-on-their-husbands.aspx\">phuckedporn.com</a> what makes husbands cheat</div>"
+    }
+  ],
+  "Topics": [
+    {
+      "SerialNo": 1,
+      "TopicID": 1,
+      "Topic": "反映事由的性質（單選）",
+      "QnR": [
+        {
+          "QuestionNo": 4,
+          "Question": "請問您本次透過「市長電子信箱」的反映事由（以下簡稱本次反映事由），您是否曾透過同樣途徑向高雄市政府反映過？",
+          "ReplyItems": [
+            {
+              "ParentID": "4",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "5",
+              "ReplyItem": "否，本次反映事由為 第一次 向高雄市政府反映\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "4",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "6",
+              "ReplyItem": "是，本次反映事由曾向高雄市政府反映過（請勾選次數）\\n",
+              "ItemOptions": [
+                {
+                  "ParentID": "6",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "7",
+                  "ReplyItem": "一次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "6",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "8",
+                  "ReplyItem": "兩次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "6",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "9",
+                  "ReplyItem": "三次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "6",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "10",
+                  "ReplyItem": "四次或四次以上",
+                  "ItemOptions": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionNo": 11,
+          "Question": "針對本次反映事由，您是否曾透過「市長電子信箱」以外的途徑向高雄市政府反映過？",
+          "ReplyItems": [
+            {
+              "ParentID": "11",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "12",
+              "ReplyItem": "否，只用「市長電子信箱」向高雄市政府反映過\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "11",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "13",
+              "ReplyItem": "是，曾透過下列途徑向高雄市政府反映過（請勾選途徑）\\n",
+              "ItemOptions": [
+                {
+                  "ParentID": "13",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "14",
+                  "ReplyItem": "傳統書信",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "13",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "15",
+                  "ReplyItem": "傳真",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "13",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "16",
+                  "ReplyItem": "電話",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "13",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "17",
+                  "ReplyItem": "口頭",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "13",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "18",
+                  "ReplyItem": "民意代表機構",
+                  "ItemOptions": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionNo": 19,
+          "Question": "針對本次反映事由，您是否向其他非高雄市政府的機構反映過？",
+          "ReplyItems": [
+            {
+              "ParentID": "19",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "20",
+              "ReplyItem": "否，只向高雄市政府反映過\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "19",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "21",
+              "ReplyItem": "是，曾向其他政府機構反映過（請勾選次數 \\n",
+              "ItemOptions": [
+                {
+                  "ParentID": "21",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "22",
+                  "ReplyItem": "一次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "21",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "23",
+                  "ReplyItem": "兩次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "21",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "24",
+                  "ReplyItem": "三次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "21",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "25",
+                  "ReplyItem": "四次或四次以上",
+                  "ItemOptions": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionNo": 26,
+          "Question": "針對本次反映事由，您是以下列何者的立場發出？",
+          "ReplyItems": [
+            {
+              "ParentID": "26",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "27",
+              "ReplyItem": "您個人自己",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "26",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "28",
+              "ReplyItem": "代表某特定他人",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "26",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "29",
+              "ReplyItem": "代表某團體",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "26",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "30",
+              "ReplyItem": "代表某民意代表（市議員、立法委員等）\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "26",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "31",
+              "ReplyItem": "其他，請描述：",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 32,
+          "Question": "請回想先前您反映意見的當時，以反映事由的難易度而言，您預期高雄市政府會給您滿意的回覆或處理嗎？",
+          "ReplyItems": [
+            {
+              "ParentID": "32",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "33",
+              "ReplyItem": "預期會收到不滿意的回覆或處理，本次反映事由本質上就很棘手",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "32",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "34",
+              "ReplyItem": "預期將會收到不太滿意的回覆或處理\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "32",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "35",
+              "ReplyItem": "預期將會收到有些滿意的回覆或處理",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "32",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "36",
+              "ReplyItem": "預期將會收到滿意的回覆或處理，本次反映事由應該很好處理",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "32",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "37",
+              "ReplyItem": "無法判斷",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 38,
+          "Question": "請問下列何者，最能描述您本次反映事由的原因？",
+          "ReplyItems": [
+            {
+              "ParentID": "38",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "39",
+              "ReplyItem": "行政興革建議─各項市府政策、建設、革新…等建議\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "38",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "40",
+              "ReplyItem": "行政法令查詢─申辦程序、法令、規章、資訊 … 等問題諮詢 \\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "38",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "41",
+              "ReplyItem": "行政違失舉發─路燈、坑洞、環保、污染、公害、安全、違建 … 等通報或舉發\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "38",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "42",
+              "ReplyItem": "行政權益維護─權益受損、不當罰單…等權益之表達與維護\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "38",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "43",
+              "ReplyItem": "其他─涉及公務操守舉發、推薦書函、個人感受抒發、理念陳述、無特定事由...等",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 44,
+          "Question": "請問您是否贊成高雄市政府採用類似上（6）題的彙整、歸類，透過網路圈選方式接受陳情？",
+          "ReplyItems": [
+            {
+              "ParentID": "44",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "45",
+              "ReplyItem": "是，同意此作法，是否要補充分類項目：",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "44",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "46",
+              "ReplyItem": "否，不同意此作法，請說明原因：",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 47,
+          "Question": "針對本次反映事由，您認為高雄市政府處理時間長短如何？",
+          "ReplyItems": [
+            {
+              "ParentID": "47",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "48",
+              "ReplyItem": "在很短的時間內就收到回覆",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "47",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "49",
+              "ReplyItem": "覺得沒有多久便收到回覆",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "47",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "50",
+              "ReplyItem": "普通、尚可\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "47",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "51",
+              "ReplyItem": "覺得過了一段時間才收到回覆",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "47",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "52",
+              "ReplyItem": "很久才收到回覆",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 53,
+          "Question": "根據市府對您本次反映事由的回覆內容，您認為高雄市政府是否實際解決您的問題？",
+          "ReplyItems": [
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "54",
+              "ReplyItem": "完全解決反映的問題",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "55",
+              "ReplyItem": "解決了相當部分的問題",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "56",
+              "ReplyItem": "普通、尚可\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "57",
+              "ReplyItem": "相當部分的問題尚未解決",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "58",
+              "ReplyItem": "完全沒有解決反映的問題",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "59",
+              "ReplyItem": "無法判斷",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 60,
+          "Question": "根據市府對您本次反映事由的回覆內容，您認為市府答覆您的語氣如何？",
+          "ReplyItems": [
+            {
+              "ParentID": "60",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "61",
+              "ReplyItem": "語氣非常自然親切",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "60",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "62",
+              "ReplyItem": "語氣尚稱親切",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "60",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "63",
+              "ReplyItem": "普通、尚可\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "60",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "64",
+              "ReplyItem": "語氣過度正式，令人有不親切的感覺",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "60",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "65",
+              "ReplyItem": "完全制式例稿，根本是打官腔",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 66,
+          "Question": "整體而言，針對本次反映事由，您對高雄市政府的回覆內容及處理結果的評價為何？",
+          "ReplyItems": [
+            {
+              "ParentID": "66",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "67",
+              "ReplyItem": "很滿意",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "66",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "68",
+              "ReplyItem": "滿意",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "66",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "69",
+              "ReplyItem": "普通、尚可",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "66",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "70",
+              "ReplyItem": "不滿意",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "66",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "71",
+              "ReplyItem": "很不滿意",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 72,
+          "Question": "您認為「市長電子信箱」作為一種民眾意見反映途徑恰當否？",
+          "ReplyItems": [
+            {
+              "ParentID": "72",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "73",
+              "ReplyItem": "很恰當，是很好的意見表達與溝通的途徑\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "72",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "74",
+              "ReplyItem": "恰當，不錯的意見表達與溝通途徑  \\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "72",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "75",
+              "ReplyItem": "普通、尚可\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "72",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "76",
+              "ReplyItem": "不恰當，不太能作為意見表達與溝通的途徑\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "72",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "77",
+              "ReplyItem": "很不恰當，完全不能作為意見表達與溝通的途徑\\n",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 78,
+          "Question": "您認為高雄市政府「市長電子信箱」最應改善的地方為何？",
+          "ReplyItems": [
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "79",
+              "ReplyItem": "處理結果與期望有差距\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "80",
+              "ReplyItem": "回覆內容與實際處理情形不符\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "81",
+              "ReplyItem": "相關市府單位推諉責任 \\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "82",
+              "ReplyItem": "處理效率太差\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "83",
+              "ReplyItem": "回覆內容為制式例稿、或語氣冷淡\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "84",
+              "ReplyItem": "市府承辦人員處理態度不佳\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "85",
+              "ReplyItem": "其他，請描述：",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 86,
+          "Question": "請問您的性別：",
+          "ReplyItems": [
+            {
+              "ParentID": "86",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "87",
+              "ReplyItem": "女",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "86",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "88",
+              "ReplyItem": "男",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 89,
+          "Question": "請問您的年齡？",
+          "ReplyItems": [
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "90",
+              "ReplyItem": "20歲以下",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "91",
+              "ReplyItem": "21-30歲",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "92",
+              "ReplyItem": "31-40歲",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "93",
+              "ReplyItem": "41-50歲",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "94",
+              "ReplyItem": "51-60歲",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "95",
+              "ReplyItem": "61歲以上",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 96,
+          "Question": "請問您的最高學歷？",
+          "ReplyItems": [
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "97",
+              "ReplyItem": "小學(含以下)",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "98",
+              "ReplyItem": "國中",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "99",
+              "ReplyItem": "高中、高職",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "100",
+              "ReplyItem": "專科",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "101",
+              "ReplyItem": "大學\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "102",
+              "ReplyItem": "研究所碩士",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "103",
+              "ReplyItem": "研究所博士",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 104,
+          "Question": "請問您的職業？",
+          "ReplyItems": [
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "105",
+              "ReplyItem": "軍、公、教",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "106",
+              "ReplyItem": "農、漁、牧",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "107",
+              "ReplyItem": "金融業",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "108",
+              "ReplyItem": "觀光、旅遊業",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "109",
+              "ReplyItem": "製造業\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "110",
+              "ReplyItem": "自由、服務業",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "111",
+              "ReplyItem": "學生",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "112",
+              "ReplyItem": "其他",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 113,
+          "Question": "請問您住高雄市多久時間？",
+          "ReplyItems": [
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "114",
+              "ReplyItem": "1年以內",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "115",
+              "ReplyItem": "1 - 5年",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "116",
+              "ReplyItem": "6 -10 年",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "117",
+              "ReplyItem": "11-20年",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "118",
+              "ReplyItem": "21 -30 年",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "119",
+              "ReplyItem": "31年以上",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 120,
+          "Question": "自從有「市長電子信箱」以來，請問您總共透過它向高雄市政府的反映意見次數約為幾次？",
+          "ReplyItems": [
+            {
+              "ParentID": "120",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "121",
+              "ReplyItem": "本次反映事由是第一次",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "120",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "122",
+              "ReplyItem": "其他，請填入大約次數：",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 123,
+          "Question": "請問您是否會繼續使用「市長電子信箱」？",
+          "ReplyItems": [
+            {
+              "ParentID": "123",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "124",
+              "ReplyItem": "是，會繼續使用，請描述原因：",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "123",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "125",
+              "ReplyItem": "否，不會再使用，請描述原因：",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 126,
+          "Question": "請問對市政意見的反映與建議，您最喜歡透過何種途徑？",
+          "ReplyItems": [
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "127",
+              "ReplyItem": "「市長電子信箱」",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "128",
+              "ReplyItem": "傳統書信",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "129",
+              "ReplyItem": "傳真",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "130",
+              "ReplyItem": "電話",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "131",
+              "ReplyItem": "口頭",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "132",
+              "ReplyItem": "間接透過民意代表機構",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 133,
+          "Question": "請問對除使用過「市長電子信箱」外，是否用過政府其他的網路申辦、查詢機制？",
+          "ReplyItems": [
+            {
+              "ParentID": "133",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "134",
+              "ReplyItem": "否，只用過「市長電子信箱」\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "133",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "135",
+              "ReplyItem": "是，（請勾選，可複選）\\n",
+              "ItemOptions": [
+                {
+                  "ParentID": "135",
+                  "ReplyLevel": "2",
+                  "ReplyType": "C",
+                  "ReplyID": "136",
+                  "ReplyItem": "網路資訊查詢（如招標公告、戶政資訊、地政資訊、工商資訊、監理資訊..）",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "135",
+                  "ReplyLevel": "2",
+                  "ReplyType": "C",
+                  "ReplyID": "137",
+                  "ReplyItem": "網路申辦（如網路報稅、網路繳款..）",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "135",
+                  "ReplyLevel": "2",
+                  "ReplyType": "C",
+                  "ReplyID": "138",
+                  "ReplyItem": "申辦案件進度查詢 （如工廠、公司、營利事業…案件處理進度）",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "135",
+                  "ReplyLevel": "2",
+                  "ReplyType": "C",
+                  "ReplyID": "139",
+                  "ReplyItem": "表單下載（如各類案件申辦所需表格下載）",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "135",
+                  "ReplyLevel": "2",
+                  "ReplyType": "CT",
+                  "ReplyID": "140",
+                  "ReplyItem": "其他，非政府機關提供的各項網路服務請描述：",
+                  "ItemOptions": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionNo": 141,
+          "Question": "最後，如果您對高雄市「市長電子信箱」有任何問題與建議，可直接將您的意見填入下方的空白格內。",
+          "ReplyItems": [
+            {
+              "ParentID": "141",
+              "ReplyLevel": "1",
+              "ReplyType": "T",
+              "ReplyID": "142",
+              "ReplyItem": "",
+              "ItemOptions": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SerialNo": 2,
+      "TopicID": 2,
+      "Topic": "對反映及回覆程序的滿意度 （單選）",
+      "QnR": [
+        {
+          "QuestionNo": 4,
+          "Question": "請問您本次透過「市長電子信箱」的反映事由（以下簡稱本次反映事由），您是否曾透過同樣途徑向高雄市政府反映過？",
+          "ReplyItems": [
+            {
+              "ParentID": "4",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "5",
+              "ReplyItem": "否，本次反映事由為 第一次 向高雄市政府反映\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "4",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "6",
+              "ReplyItem": "是，本次反映事由曾向高雄市政府反映過（請勾選次數）\\n",
+              "ItemOptions": [
+                {
+                  "ParentID": "6",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "7",
+                  "ReplyItem": "一次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "6",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "8",
+                  "ReplyItem": "兩次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "6",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "9",
+                  "ReplyItem": "三次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "6",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "10",
+                  "ReplyItem": "四次或四次以上",
+                  "ItemOptions": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionNo": 11,
+          "Question": "針對本次反映事由，您是否曾透過「市長電子信箱」以外的途徑向高雄市政府反映過？",
+          "ReplyItems": [
+            {
+              "ParentID": "11",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "12",
+              "ReplyItem": "否，只用「市長電子信箱」向高雄市政府反映過\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "11",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "13",
+              "ReplyItem": "是，曾透過下列途徑向高雄市政府反映過（請勾選途徑）\\n",
+              "ItemOptions": [
+                {
+                  "ParentID": "13",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "14",
+                  "ReplyItem": "傳統書信",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "13",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "15",
+                  "ReplyItem": "傳真",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "13",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "16",
+                  "ReplyItem": "電話",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "13",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "17",
+                  "ReplyItem": "口頭",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "13",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "18",
+                  "ReplyItem": "民意代表機構",
+                  "ItemOptions": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionNo": 19,
+          "Question": "針對本次反映事由，您是否向其他非高雄市政府的機構反映過？",
+          "ReplyItems": [
+            {
+              "ParentID": "19",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "20",
+              "ReplyItem": "否，只向高雄市政府反映過\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "19",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "21",
+              "ReplyItem": "是，曾向其他政府機構反映過（請勾選次數 \\n",
+              "ItemOptions": [
+                {
+                  "ParentID": "21",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "22",
+                  "ReplyItem": "一次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "21",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "23",
+                  "ReplyItem": "兩次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "21",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "24",
+                  "ReplyItem": "三次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "21",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "25",
+                  "ReplyItem": "四次或四次以上",
+                  "ItemOptions": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionNo": 26,
+          "Question": "針對本次反映事由，您是以下列何者的立場發出？",
+          "ReplyItems": [
+            {
+              "ParentID": "26",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "27",
+              "ReplyItem": "您個人自己",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "26",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "28",
+              "ReplyItem": "代表某特定他人",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "26",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "29",
+              "ReplyItem": "代表某團體",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "26",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "30",
+              "ReplyItem": "代表某民意代表（市議員、立法委員等）\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "26",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "31",
+              "ReplyItem": "其他，請描述：",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 32,
+          "Question": "請回想先前您反映意見的當時，以反映事由的難易度而言，您預期高雄市政府會給您滿意的回覆或處理嗎？",
+          "ReplyItems": [
+            {
+              "ParentID": "32",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "33",
+              "ReplyItem": "預期會收到不滿意的回覆或處理，本次反映事由本質上就很棘手",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "32",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "34",
+              "ReplyItem": "預期將會收到不太滿意的回覆或處理\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "32",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "35",
+              "ReplyItem": "預期將會收到有些滿意的回覆或處理",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "32",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "36",
+              "ReplyItem": "預期將會收到滿意的回覆或處理，本次反映事由應該很好處理",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "32",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "37",
+              "ReplyItem": "無法判斷",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 38,
+          "Question": "請問下列何者，最能描述您本次反映事由的原因？",
+          "ReplyItems": [
+            {
+              "ParentID": "38",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "39",
+              "ReplyItem": "行政興革建議─各項市府政策、建設、革新…等建議\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "38",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "40",
+              "ReplyItem": "行政法令查詢─申辦程序、法令、規章、資訊 … 等問題諮詢 \\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "38",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "41",
+              "ReplyItem": "行政違失舉發─路燈、坑洞、環保、污染、公害、安全、違建 … 等通報或舉發\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "38",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "42",
+              "ReplyItem": "行政權益維護─權益受損、不當罰單…等權益之表達與維護\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "38",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "43",
+              "ReplyItem": "其他─涉及公務操守舉發、推薦書函、個人感受抒發、理念陳述、無特定事由...等",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 44,
+          "Question": "請問您是否贊成高雄市政府採用類似上（6）題的彙整、歸類，透過網路圈選方式接受陳情？",
+          "ReplyItems": [
+            {
+              "ParentID": "44",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "45",
+              "ReplyItem": "是，同意此作法，是否要補充分類項目：",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "44",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "46",
+              "ReplyItem": "否，不同意此作法，請說明原因：",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 47,
+          "Question": "針對本次反映事由，您認為高雄市政府處理時間長短如何？",
+          "ReplyItems": [
+            {
+              "ParentID": "47",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "48",
+              "ReplyItem": "在很短的時間內就收到回覆",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "47",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "49",
+              "ReplyItem": "覺得沒有多久便收到回覆",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "47",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "50",
+              "ReplyItem": "普通、尚可\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "47",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "51",
+              "ReplyItem": "覺得過了一段時間才收到回覆",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "47",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "52",
+              "ReplyItem": "很久才收到回覆",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 53,
+          "Question": "根據市府對您本次反映事由的回覆內容，您認為高雄市政府是否實際解決您的問題？",
+          "ReplyItems": [
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "54",
+              "ReplyItem": "完全解決反映的問題",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "55",
+              "ReplyItem": "解決了相當部分的問題",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "56",
+              "ReplyItem": "普通、尚可\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "57",
+              "ReplyItem": "相當部分的問題尚未解決",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "58",
+              "ReplyItem": "完全沒有解決反映的問題",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "59",
+              "ReplyItem": "無法判斷",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 60,
+          "Question": "根據市府對您本次反映事由的回覆內容，您認為市府答覆您的語氣如何？",
+          "ReplyItems": [
+            {
+              "ParentID": "60",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "61",
+              "ReplyItem": "語氣非常自然親切",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "60",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "62",
+              "ReplyItem": "語氣尚稱親切",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "60",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "63",
+              "ReplyItem": "普通、尚可\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "60",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "64",
+              "ReplyItem": "語氣過度正式，令人有不親切的感覺",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "60",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "65",
+              "ReplyItem": "完全制式例稿，根本是打官腔",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 66,
+          "Question": "整體而言，針對本次反映事由，您對高雄市政府的回覆內容及處理結果的評價為何？",
+          "ReplyItems": [
+            {
+              "ParentID": "66",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "67",
+              "ReplyItem": "很滿意",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "66",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "68",
+              "ReplyItem": "滿意",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "66",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "69",
+              "ReplyItem": "普通、尚可",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "66",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "70",
+              "ReplyItem": "不滿意",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "66",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "71",
+              "ReplyItem": "很不滿意",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 72,
+          "Question": "您認為「市長電子信箱」作為一種民眾意見反映途徑恰當否？",
+          "ReplyItems": [
+            {
+              "ParentID": "72",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "73",
+              "ReplyItem": "很恰當，是很好的意見表達與溝通的途徑\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "72",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "74",
+              "ReplyItem": "恰當，不錯的意見表達與溝通途徑  \\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "72",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "75",
+              "ReplyItem": "普通、尚可\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "72",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "76",
+              "ReplyItem": "不恰當，不太能作為意見表達與溝通的途徑\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "72",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "77",
+              "ReplyItem": "很不恰當，完全不能作為意見表達與溝通的途徑\\n",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 78,
+          "Question": "您認為高雄市政府「市長電子信箱」最應改善的地方為何？",
+          "ReplyItems": [
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "79",
+              "ReplyItem": "處理結果與期望有差距\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "80",
+              "ReplyItem": "回覆內容與實際處理情形不符\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "81",
+              "ReplyItem": "相關市府單位推諉責任 \\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "82",
+              "ReplyItem": "處理效率太差\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "83",
+              "ReplyItem": "回覆內容為制式例稿、或語氣冷淡\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "84",
+              "ReplyItem": "市府承辦人員處理態度不佳\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "85",
+              "ReplyItem": "其他，請描述：",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 86,
+          "Question": "請問您的性別：",
+          "ReplyItems": [
+            {
+              "ParentID": "86",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "87",
+              "ReplyItem": "女",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "86",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "88",
+              "ReplyItem": "男",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 89,
+          "Question": "請問您的年齡？",
+          "ReplyItems": [
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "90",
+              "ReplyItem": "20歲以下",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "91",
+              "ReplyItem": "21-30歲",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "92",
+              "ReplyItem": "31-40歲",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "93",
+              "ReplyItem": "41-50歲",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "94",
+              "ReplyItem": "51-60歲",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "95",
+              "ReplyItem": "61歲以上",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 96,
+          "Question": "請問您的最高學歷？",
+          "ReplyItems": [
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "97",
+              "ReplyItem": "小學(含以下)",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "98",
+              "ReplyItem": "國中",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "99",
+              "ReplyItem": "高中、高職",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "100",
+              "ReplyItem": "專科",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "101",
+              "ReplyItem": "大學\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "102",
+              "ReplyItem": "研究所碩士",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "103",
+              "ReplyItem": "研究所博士",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 104,
+          "Question": "請問您的職業？",
+          "ReplyItems": [
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "105",
+              "ReplyItem": "軍、公、教",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "106",
+              "ReplyItem": "農、漁、牧",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "107",
+              "ReplyItem": "金融業",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "108",
+              "ReplyItem": "觀光、旅遊業",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "109",
+              "ReplyItem": "製造業\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "110",
+              "ReplyItem": "自由、服務業",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "111",
+              "ReplyItem": "學生",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "112",
+              "ReplyItem": "其他",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 113,
+          "Question": "請問您住高雄市多久時間？",
+          "ReplyItems": [
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "114",
+              "ReplyItem": "1年以內",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "115",
+              "ReplyItem": "1 - 5年",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "116",
+              "ReplyItem": "6 -10 年",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "117",
+              "ReplyItem": "11-20年",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "118",
+              "ReplyItem": "21 -30 年",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "119",
+              "ReplyItem": "31年以上",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 120,
+          "Question": "自從有「市長電子信箱」以來，請問您總共透過它向高雄市政府的反映意見次數約為幾次？",
+          "ReplyItems": [
+            {
+              "ParentID": "120",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "121",
+              "ReplyItem": "本次反映事由是第一次",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "120",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "122",
+              "ReplyItem": "其他，請填入大約次數：",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 123,
+          "Question": "請問您是否會繼續使用「市長電子信箱」？",
+          "ReplyItems": [
+            {
+              "ParentID": "123",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "124",
+              "ReplyItem": "是，會繼續使用，請描述原因：",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "123",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "125",
+              "ReplyItem": "否，不會再使用，請描述原因：",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 126,
+          "Question": "請問對市政意見的反映與建議，您最喜歡透過何種途徑？",
+          "ReplyItems": [
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "127",
+              "ReplyItem": "「市長電子信箱」",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "128",
+              "ReplyItem": "傳統書信",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "129",
+              "ReplyItem": "傳真",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "130",
+              "ReplyItem": "電話",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "131",
+              "ReplyItem": "口頭",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "132",
+              "ReplyItem": "間接透過民意代表機構",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 133,
+          "Question": "請問對除使用過「市長電子信箱」外，是否用過政府其他的網路申辦、查詢機制？",
+          "ReplyItems": [
+            {
+              "ParentID": "133",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "134",
+              "ReplyItem": "否，只用過「市長電子信箱」\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "133",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "135",
+              "ReplyItem": "是，（請勾選，可複選）\\n",
+              "ItemOptions": [
+                {
+                  "ParentID": "135",
+                  "ReplyLevel": "2",
+                  "ReplyType": "C",
+                  "ReplyID": "136",
+                  "ReplyItem": "網路資訊查詢（如招標公告、戶政資訊、地政資訊、工商資訊、監理資訊..）",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "135",
+                  "ReplyLevel": "2",
+                  "ReplyType": "C",
+                  "ReplyID": "137",
+                  "ReplyItem": "網路申辦（如網路報稅、網路繳款..）",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "135",
+                  "ReplyLevel": "2",
+                  "ReplyType": "C",
+                  "ReplyID": "138",
+                  "ReplyItem": "申辦案件進度查詢 （如工廠、公司、營利事業…案件處理進度）",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "135",
+                  "ReplyLevel": "2",
+                  "ReplyType": "C",
+                  "ReplyID": "139",
+                  "ReplyItem": "表單下載（如各類案件申辦所需表格下載）",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "135",
+                  "ReplyLevel": "2",
+                  "ReplyType": "CT",
+                  "ReplyID": "140",
+                  "ReplyItem": "其他，非政府機關提供的各項網路服務請描述：",
+                  "ItemOptions": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionNo": 141,
+          "Question": "最後，如果您對高雄市「市長電子信箱」有任何問題與建議，可直接將您的意見填入下方的空白格內。",
+          "ReplyItems": [
+            {
+              "ParentID": "141",
+              "ReplyLevel": "1",
+              "ReplyType": "T",
+              "ReplyID": "142",
+              "ReplyItem": "",
+              "ItemOptions": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "SerialNo": 3,
+      "TopicID": 3,
+      "Topic": "背景資料（單選）",
+      "QnR": [
+        {
+          "QuestionNo": 4,
+          "Question": "請問您本次透過「市長電子信箱」的反映事由（以下簡稱本次反映事由），您是否曾透過同樣途徑向高雄市政府反映過？",
+          "ReplyItems": [
+            {
+              "ParentID": "4",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "5",
+              "ReplyItem": "否，本次反映事由為 第一次 向高雄市政府反映\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "4",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "6",
+              "ReplyItem": "是，本次反映事由曾向高雄市政府反映過（請勾選次數）\\n",
+              "ItemOptions": [
+                {
+                  "ParentID": "6",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "7",
+                  "ReplyItem": "一次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "6",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "8",
+                  "ReplyItem": "兩次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "6",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "9",
+                  "ReplyItem": "三次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "6",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "10",
+                  "ReplyItem": "四次或四次以上",
+                  "ItemOptions": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionNo": 11,
+          "Question": "針對本次反映事由，您是否曾透過「市長電子信箱」以外的途徑向高雄市政府反映過？",
+          "ReplyItems": [
+            {
+              "ParentID": "11",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "12",
+              "ReplyItem": "否，只用「市長電子信箱」向高雄市政府反映過\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "11",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "13",
+              "ReplyItem": "是，曾透過下列途徑向高雄市政府反映過（請勾選途徑）\\n",
+              "ItemOptions": [
+                {
+                  "ParentID": "13",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "14",
+                  "ReplyItem": "傳統書信",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "13",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "15",
+                  "ReplyItem": "傳真",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "13",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "16",
+                  "ReplyItem": "電話",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "13",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "17",
+                  "ReplyItem": "口頭",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "13",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "18",
+                  "ReplyItem": "民意代表機構",
+                  "ItemOptions": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionNo": 19,
+          "Question": "針對本次反映事由，您是否向其他非高雄市政府的機構反映過？",
+          "ReplyItems": [
+            {
+              "ParentID": "19",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "20",
+              "ReplyItem": "否，只向高雄市政府反映過\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "19",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "21",
+              "ReplyItem": "是，曾向其他政府機構反映過（請勾選次數 \\n",
+              "ItemOptions": [
+                {
+                  "ParentID": "21",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "22",
+                  "ReplyItem": "一次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "21",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "23",
+                  "ReplyItem": "兩次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "21",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "24",
+                  "ReplyItem": "三次",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "21",
+                  "ReplyLevel": "2",
+                  "ReplyType": "R",
+                  "ReplyID": "25",
+                  "ReplyItem": "四次或四次以上",
+                  "ItemOptions": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionNo": 26,
+          "Question": "針對本次反映事由，您是以下列何者的立場發出？",
+          "ReplyItems": [
+            {
+              "ParentID": "26",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "27",
+              "ReplyItem": "您個人自己",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "26",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "28",
+              "ReplyItem": "代表某特定他人",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "26",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "29",
+              "ReplyItem": "代表某團體",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "26",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "30",
+              "ReplyItem": "代表某民意代表（市議員、立法委員等）\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "26",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "31",
+              "ReplyItem": "其他，請描述：",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 32,
+          "Question": "請回想先前您反映意見的當時，以反映事由的難易度而言，您預期高雄市政府會給您滿意的回覆或處理嗎？",
+          "ReplyItems": [
+            {
+              "ParentID": "32",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "33",
+              "ReplyItem": "預期會收到不滿意的回覆或處理，本次反映事由本質上就很棘手",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "32",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "34",
+              "ReplyItem": "預期將會收到不太滿意的回覆或處理\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "32",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "35",
+              "ReplyItem": "預期將會收到有些滿意的回覆或處理",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "32",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "36",
+              "ReplyItem": "預期將會收到滿意的回覆或處理，本次反映事由應該很好處理",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "32",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "37",
+              "ReplyItem": "無法判斷",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 38,
+          "Question": "請問下列何者，最能描述您本次反映事由的原因？",
+          "ReplyItems": [
+            {
+              "ParentID": "38",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "39",
+              "ReplyItem": "行政興革建議─各項市府政策、建設、革新…等建議\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "38",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "40",
+              "ReplyItem": "行政法令查詢─申辦程序、法令、規章、資訊 … 等問題諮詢 \\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "38",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "41",
+              "ReplyItem": "行政違失舉發─路燈、坑洞、環保、污染、公害、安全、違建 … 等通報或舉發\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "38",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "42",
+              "ReplyItem": "行政權益維護─權益受損、不當罰單…等權益之表達與維護\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "38",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "43",
+              "ReplyItem": "其他─涉及公務操守舉發、推薦書函、個人感受抒發、理念陳述、無特定事由...等",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 44,
+          "Question": "請問您是否贊成高雄市政府採用類似上（6）題的彙整、歸類，透過網路圈選方式接受陳情？",
+          "ReplyItems": [
+            {
+              "ParentID": "44",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "45",
+              "ReplyItem": "是，同意此作法，是否要補充分類項目：",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "44",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "46",
+              "ReplyItem": "否，不同意此作法，請說明原因：",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 47,
+          "Question": "針對本次反映事由，您認為高雄市政府處理時間長短如何？",
+          "ReplyItems": [
+            {
+              "ParentID": "47",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "48",
+              "ReplyItem": "在很短的時間內就收到回覆",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "47",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "49",
+              "ReplyItem": "覺得沒有多久便收到回覆",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "47",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "50",
+              "ReplyItem": "普通、尚可\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "47",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "51",
+              "ReplyItem": "覺得過了一段時間才收到回覆",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "47",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "52",
+              "ReplyItem": "很久才收到回覆",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 53,
+          "Question": "根據市府對您本次反映事由的回覆內容，您認為高雄市政府是否實際解決您的問題？",
+          "ReplyItems": [
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "54",
+              "ReplyItem": "完全解決反映的問題",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "55",
+              "ReplyItem": "解決了相當部分的問題",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "56",
+              "ReplyItem": "普通、尚可\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "57",
+              "ReplyItem": "相當部分的問題尚未解決",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "58",
+              "ReplyItem": "完全沒有解決反映的問題",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "53",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "59",
+              "ReplyItem": "無法判斷",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 60,
+          "Question": "根據市府對您本次反映事由的回覆內容，您認為市府答覆您的語氣如何？",
+          "ReplyItems": [
+            {
+              "ParentID": "60",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "61",
+              "ReplyItem": "語氣非常自然親切",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "60",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "62",
+              "ReplyItem": "語氣尚稱親切",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "60",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "63",
+              "ReplyItem": "普通、尚可\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "60",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "64",
+              "ReplyItem": "語氣過度正式，令人有不親切的感覺",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "60",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "65",
+              "ReplyItem": "完全制式例稿，根本是打官腔",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 66,
+          "Question": "整體而言，針對本次反映事由，您對高雄市政府的回覆內容及處理結果的評價為何？",
+          "ReplyItems": [
+            {
+              "ParentID": "66",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "67",
+              "ReplyItem": "很滿意",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "66",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "68",
+              "ReplyItem": "滿意",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "66",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "69",
+              "ReplyItem": "普通、尚可",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "66",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "70",
+              "ReplyItem": "不滿意",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "66",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "71",
+              "ReplyItem": "很不滿意",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 72,
+          "Question": "您認為「市長電子信箱」作為一種民眾意見反映途徑恰當否？",
+          "ReplyItems": [
+            {
+              "ParentID": "72",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "73",
+              "ReplyItem": "很恰當，是很好的意見表達與溝通的途徑\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "72",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "74",
+              "ReplyItem": "恰當，不錯的意見表達與溝通途徑  \\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "72",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "75",
+              "ReplyItem": "普通、尚可\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "72",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "76",
+              "ReplyItem": "不恰當，不太能作為意見表達與溝通的途徑\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "72",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "77",
+              "ReplyItem": "很不恰當，完全不能作為意見表達與溝通的途徑\\n",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 78,
+          "Question": "您認為高雄市政府「市長電子信箱」最應改善的地方為何？",
+          "ReplyItems": [
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "79",
+              "ReplyItem": "處理結果與期望有差距\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "80",
+              "ReplyItem": "回覆內容與實際處理情形不符\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "81",
+              "ReplyItem": "相關市府單位推諉責任 \\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "82",
+              "ReplyItem": "處理效率太差\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "83",
+              "ReplyItem": "回覆內容為制式例稿、或語氣冷淡\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "84",
+              "ReplyItem": "市府承辦人員處理態度不佳\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "78",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "85",
+              "ReplyItem": "其他，請描述：",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 86,
+          "Question": "請問您的性別：",
+          "ReplyItems": [
+            {
+              "ParentID": "86",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "87",
+              "ReplyItem": "女",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "86",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "88",
+              "ReplyItem": "男",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 89,
+          "Question": "請問您的年齡？",
+          "ReplyItems": [
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "90",
+              "ReplyItem": "20歲以下",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "91",
+              "ReplyItem": "21-30歲",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "92",
+              "ReplyItem": "31-40歲",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "93",
+              "ReplyItem": "41-50歲",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "94",
+              "ReplyItem": "51-60歲",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "89",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "95",
+              "ReplyItem": "61歲以上",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 96,
+          "Question": "請問您的最高學歷？",
+          "ReplyItems": [
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "97",
+              "ReplyItem": "小學(含以下)",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "98",
+              "ReplyItem": "國中",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "99",
+              "ReplyItem": "高中、高職",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "100",
+              "ReplyItem": "專科",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "101",
+              "ReplyItem": "大學\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "102",
+              "ReplyItem": "研究所碩士",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "96",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "103",
+              "ReplyItem": "研究所博士",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 104,
+          "Question": "請問您的職業？",
+          "ReplyItems": [
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "105",
+              "ReplyItem": "軍、公、教",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "106",
+              "ReplyItem": "農、漁、牧",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "107",
+              "ReplyItem": "金融業",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "108",
+              "ReplyItem": "觀光、旅遊業",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "109",
+              "ReplyItem": "製造業\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "110",
+              "ReplyItem": "自由、服務業",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "111",
+              "ReplyItem": "學生",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "104",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "112",
+              "ReplyItem": "其他",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 113,
+          "Question": "請問您住高雄市多久時間？",
+          "ReplyItems": [
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "114",
+              "ReplyItem": "1年以內",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "115",
+              "ReplyItem": "1 - 5年",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "116",
+              "ReplyItem": "6 -10 年",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "117",
+              "ReplyItem": "11-20年",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "118",
+              "ReplyItem": "21 -30 年",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "113",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "119",
+              "ReplyItem": "31年以上",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 120,
+          "Question": "自從有「市長電子信箱」以來，請問您總共透過它向高雄市政府的反映意見次數約為幾次？",
+          "ReplyItems": [
+            {
+              "ParentID": "120",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "121",
+              "ReplyItem": "本次反映事由是第一次",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "120",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "122",
+              "ReplyItem": "其他，請填入大約次數：",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 123,
+          "Question": "請問您是否會繼續使用「市長電子信箱」？",
+          "ReplyItems": [
+            {
+              "ParentID": "123",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "124",
+              "ReplyItem": "是，會繼續使用，請描述原因：",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "123",
+              "ReplyLevel": "1",
+              "ReplyType": "RT",
+              "ReplyID": "125",
+              "ReplyItem": "否，不會再使用，請描述原因：",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 126,
+          "Question": "請問對市政意見的反映與建議，您最喜歡透過何種途徑？",
+          "ReplyItems": [
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "127",
+              "ReplyItem": "「市長電子信箱」",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "128",
+              "ReplyItem": "傳統書信",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "129",
+              "ReplyItem": "傳真",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "130",
+              "ReplyItem": "電話",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "131",
+              "ReplyItem": "口頭",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "126",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "132",
+              "ReplyItem": "間接透過民意代表機構",
+              "ItemOptions": null
+            }
+          ]
+        },
+        {
+          "QuestionNo": 133,
+          "Question": "請問對除使用過「市長電子信箱」外，是否用過政府其他的網路申辦、查詢機制？",
+          "ReplyItems": [
+            {
+              "ParentID": "133",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "134",
+              "ReplyItem": "否，只用過「市長電子信箱」\\n",
+              "ItemOptions": null
+            },
+            {
+              "ParentID": "133",
+              "ReplyLevel": "1",
+              "ReplyType": "R",
+              "ReplyID": "135",
+              "ReplyItem": "是，（請勾選，可複選）\\n",
+              "ItemOptions": [
+                {
+                  "ParentID": "135",
+                  "ReplyLevel": "2",
+                  "ReplyType": "C",
+                  "ReplyID": "136",
+                  "ReplyItem": "網路資訊查詢（如招標公告、戶政資訊、地政資訊、工商資訊、監理資訊..）",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "135",
+                  "ReplyLevel": "2",
+                  "ReplyType": "C",
+                  "ReplyID": "137",
+                  "ReplyItem": "網路申辦（如網路報稅、網路繳款..）",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "135",
+                  "ReplyLevel": "2",
+                  "ReplyType": "C",
+                  "ReplyID": "138",
+                  "ReplyItem": "申辦案件進度查詢 （如工廠、公司、營利事業…案件處理進度）",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "135",
+                  "ReplyLevel": "2",
+                  "ReplyType": "C",
+                  "ReplyID": "139",
+                  "ReplyItem": "表單下載（如各類案件申辦所需表格下載）",
+                  "ItemOptions": null
+                },
+                {
+                  "ParentID": "135",
+                  "ReplyLevel": "2",
+                  "ReplyType": "CT",
+                  "ReplyID": "140",
+                  "ReplyItem": "其他，非政府機關提供的各項網路服務請描述：",
+                  "ItemOptions": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "QuestionNo": 141,
+          "Question": "最後，如果您對高雄市「市長電子信箱」有任何問題與建議，可直接將您的意見填入下方的空白格內。",
+          "ReplyItems": [
+            {
+              "ParentID": "141",
+              "ReplyLevel": "1",
+              "ReplyType": "T",
+              "ReplyID": "142",
+              "ReplyItem": "",
+              "ItemOptions": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
