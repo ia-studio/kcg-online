@@ -1,0 +1,90 @@
+{
+  "VersionNo": 1030708,
+  "ReplyCount": 334,
+  "SerialNo": 1,
+  "TopicID": 1,
+  "Topic": "服務品質的滿意度",
+  "QuestionSet": [
+    {
+      "QuestionId": "1",
+      "QuestionType": "radio",
+      "QuestionSubject": "使用市長電子信箱發送反映案件相當快速？",
+      "Questions": [
+        {
+          "ItemId": "5",
+          "ItemTitle": "強烈同意",
+          "ItemValue": "5",
+          "OtherComment": true
+        },
+        {
+          "ItemId": "4",
+          "ItemTitle": "同意",
+          "ItemValue": "4",
+          "OtherComment": false
+        },
+        {
+          "ItemId": "3",
+          "ItemTitle": "普通",
+          "ItemValue": "3",
+          "OtherComment": false
+        },
+        {
+          "ItemId": "2",
+          "ItemTitle": "不同意",
+          "ItemValue": "2",
+          "OtherComment": false
+        },
+        {
+          "ItemId": "1",
+          "ItemTitle": "強烈不同意",
+          "ItemValue": "1",
+          "OtherComment": false
+        }
+      ]
+    },
+    {
+      "QuestionId": "2",
+      "QuestionType": "checkbox",
+      "QuestionSubject": "您認為高雄市政府「市長電子信箱」最應改善的地方為何？(可複選) ",
+      "Questions": [
+        {
+          "ItemId": "6",
+          "ItemTitle": "市府承辦人員處理態度不佳 ",
+          "ItemValue": "5",
+          "OtherComment": false
+        },
+        {
+          "ItemId": "5",
+          "ItemTitle": "處理結果與期望有差距",
+          "ItemValue": "5",
+          "OtherComment": false
+        },
+        {
+          "ItemId": "4",
+          "ItemTitle": "回覆內容與實際處理情形不符 ",
+          "ItemValue": "4",
+          "OtherComment": false
+        },
+        {
+          "ItemId": "3",
+          "ItemTitle": "相關市府單位推諉責任 ",
+          "ItemValue": "3",
+          "OtherComment": false
+        },
+        {
+          "ItemId": "2",
+          "ItemTitle": "處理效率太差",
+          "ItemValue": "2",
+          "OtherComment": false
+        },
+        {
+          "ItemId": "1",
+          "ItemTitle": "回覆內容為制式例稿、或語氣冷淡",
+          "ItemValue": "1",
+          "OtherComment": false
+        }
+      ]
+    }
+
+  ]
+}
