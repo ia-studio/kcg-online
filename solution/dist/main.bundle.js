@@ -1769,7 +1769,7 @@ var GeoAddressService = (function () {
     function GeoAddressService(_http) {
         this._http = _http;
         //http://maps.googleapis.com/maps/api/geocode/json?latlng=22.604637500000003,120.2986576&key=yourapikey
-        this.baseApiUrl = 'http://maps.googleapis.com/maps/api/geocode/json?latlng=';
+        this.baseApiUrl = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=';
         //
     }
     GeoAddressService.prototype.getAddressResult = function (lat, lng) {

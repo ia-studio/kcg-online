@@ -11,7 +11,7 @@ import 'rxjs/Rx';
 export class GeoAddressService{
 
   //http://maps.googleapis.com/maps/api/geocode/json?latlng=22.604637500000003,120.2986576&key=yourapikey
-  private baseApiUrl: string = 'http://maps.googleapis.com/maps/api/geocode/json?latlng=';
+  private baseApiUrl: string = 'https://maps.googleapis.com/maps/api/geocode/json?latlng=';
 
   constructor(private _http: Http){
     //
