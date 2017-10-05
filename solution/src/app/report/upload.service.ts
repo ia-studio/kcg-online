@@ -47,7 +47,7 @@ export class UploadService {
     //let formData = `Case_Token=bxcvbxcvb-1&Subj_Content=111&Sugg_Email=1%401.1&Sugg_Name=abc&Sugg_Telno=978&Sugg_Sex=1&Sugg_Addr1=6400000000&Sugg_Addr2=6400300000&Sugg_Addr4=tr+tr&Subj_Item=01&Subj_Subitem=01&Subj_District=6400600000&Subj_Security=1&Subj_FileCount=0`;
     //formData = `Case_Token=thGwBgmBFngb&Atth_FileNames=&Subj_Content=rtdh&Subj_District=6400100000&Subj_FileCount=0&Subj_Item=01&Subj_Security=1&Subj_Subitem=02&Sugg_Addr1=6400000000&Sugg_Addr2=6400800000&Sugg_Addr3=6400800001&Sugg_Addr4=ghjngfhj&Sugg_Email=ryjh@dfgh.fgh&Sugg_Name=fyu&Sugg_Sex=2&Sugg_Telno=yumyukmruyu`;
 
-    const url = `http://soweb.kcg.gov.tw/webapi/api/Case/`;
+    const url = `https://soweb.kcg.gov.tw/webapi/api/Case/`;
     return this._http.post(url, formData, options) // ...using post request
       .map((resp: Response) => resp.json())
         /*{

@@ -209,7 +209,7 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
         this.uploadFiles.push(refiles[i]);
       }
 
-      let upurl: string = `http://soweb.kcg.gov.tw/webapi/api/AttachFile/Upload/${this.Case_Token}`;
+      let upurl: string = `https://soweb.kcg.gov.tw/webapi/api/AttachFile/Upload/${this.Case_Token}`;
       this.subscribes.push(
         this.uploadService.sendFileRequest(upurl, refiles).subscribe(
           resp => {

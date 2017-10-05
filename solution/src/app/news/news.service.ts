@@ -6,7 +6,7 @@ import '../shared/rxjs-operators';
 
 @Injectable()
 export class NewsService {
-  private newsListUrl = 'http://soweb.kcg.gov.tw/webapi/api/bulletin';
+  private newsListUrl = 'https://soweb.kcg.gov.tw/webapi/api/bulletin';
 
   constructor(private http: Http) { }
 

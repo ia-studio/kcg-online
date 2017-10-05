@@ -6,9 +6,9 @@ import '../shared/rxjs-operators';
 @Injectable()
 export class FeedbackService {
   public mock = false;
-  private pointFeedbackUrl = this.mock ? 'assets/pointFeedback.json' : 'http://soweb.kcg.gov.tw/webapi/api/satPool/1';
-  private countFeedbackUrl = this.mock ? 'assets/countFeedback.json' : 'http://soweb.kcg.gov.tw/webapi/api/satPool/2';
-  private effectiveFeedbackUrl = this.mock ? 'assets/effectiveFeedback.json' : 'http://soweb.kcg.gov.tw/webapi/api/satPool/3';
+  private pointFeedbackUrl = this.mock ? 'assets/pointFeedback.json' : 'https://soweb.kcg.gov.tw/webapi/api/satPool/1';
+  private countFeedbackUrl = this.mock ? 'assets/countFeedback.json' : 'https://soweb.kcg.gov.tw/webapi/api/satPool/2';
+  private effectiveFeedbackUrl = this.mock ? 'assets/effectiveFeedback.json' : 'https://soweb.kcg.gov.tw/webapi/api/satPool/3';
 
   constructor(private http: Http) { }
 

@@ -6,8 +6,8 @@ import { Category, Faq, Reply }   from './faq';
 
 @Injectable()
 export class FaqService {
-  private categoryUrl = 'http://soweb.kcg.gov.tw/webapi/api/category';
-  private faqUrl = 'http://soweb.kcg.gov.tw/webapi/api/faqqry/';
+  private categoryUrl = 'https://soweb.kcg.gov.tw/webapi/api/category';
+  private faqUrl = 'https://soweb.kcg.gov.tw/webapi/api/faqqry/';
 
   constructor(private http: Http) { }
 

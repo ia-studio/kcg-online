@@ -9,8 +9,8 @@ import { Observable }     from 'rxjs/Observable';
 @Injectable()
 export class QueryService{
 
-  private _base_api_url = 'http://soweb.kcg.gov.tw/webapi/api/case/';
-  private validationCodeUrl = 'http://soweb.kcg.gov.tw/webapi/api/ValidationCode/';//'../../assets/vd.json';
+  private _base_api_url = 'https://soweb.kcg.gov.tw/webapi/api/case/';
+  private validationCodeUrl = 'https://soweb.kcg.gov.tw/webapi/api/ValidationCode/';//'../../assets/vd.json';
 
   constructor(private _http: Http){
     //
