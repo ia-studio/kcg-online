@@ -29,14 +29,14 @@
                         <p class="navy maB2x pdLHalfX">{{searchCase.Content[0].Source}}</p>
                     </div>
                     <div class="col-md-6">
-                        <p class="article-lable require">時間</p>
+                        <p class="article-lable require">日期</p>
                         <p class="navy maB2x pdLHalfX">
-                          <span *ngIf="searchCase.Content[0].source_id === '1'">
-                            {{searchCase.Content[0].subj_date}}
+                          <span>
+                            {{changeDateFormat(searchCase.Content[0].subj_date)}}
                           </span>
-                          <span *ngIf="searchCase.Content[0].source_id === '0'">
+                          <!-- <span *ngIf="searchCase.Content[0].source_id === '0'">
                             {{searchCase.Content[0].subj_time}}
-                          </span>
+                          </span> -->
                         </p>
                         <p class="article-lable require">機密等級</p>
                         <p class="navy maB2x pdLHalfX">{{searchCase.Content[0].Security}}</p>

@@ -12,7 +12,7 @@ import * as moment           from 'moment';
 })
 export class FeedbackComponent implements OnInit {
 
-  feedbacks = {};
+  feedbacks:any= { };
   isSearch = false;
   feedbackType = 'point';
   sub: any;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Response } from '@angular/http';
+import {Router, ActivatedRoute, Params} from '@angular/router';
 import { Subscription, Observable } from "rxjs";
 import { Poll, QusTitle, QNA, QNATopic, AnwserPoll, FillItem, ReplyItems} from "./question";
 import { QuestionService } from './question.service';
@@ -17,8 +18,10 @@ export class QuestionComponent implements OnInit {
   question: QNATopic[];
   answer: AnwserPoll;
   BeSelect: any; // for debug
+  sub: any;
+  pollDone: boolean = false;
 
-  constructor(private questionService: QuestionService) {
+  constructor(private questionService: QuestionService, private activatedRoute: ActivatedRoute) {
     this.answer = {
       VersionNo: '',
       AppealerID: '',
@@ -48,7 +51,7 @@ export class QuestionComponent implements OnInit {
 
   questionAsync() {
       this.questionService
-      .getQuestion()
+      .getQuestion(this.getQueryString())
       .subscribe(data => {
         this.poll = data;
         this.qusTitle = data.PollVersion[0];
@@ -71,8 +74,7 @@ export class QuestionComponent implements OnInit {
   }
   getAns(){
     this.BeSelect = []; // for debug
-    this.answer.AppealerID = this.qusTitle.AppealerID;
-    this.answer.VersionNo = this.qusTitle.VersionNo;
+
     this.answer.FillItems = [];
     this.question.forEach((arr,idx1)=>{
 
@@ -102,12 +104,11 @@ export class QuestionComponent implements OnInit {
       })
     })
     // console.log(this.BeSelect) for debug
-    console.log(this.answer)
+    console.log(this.answer,this.answer.AppealerID)
+    this.onSubmit(this.answer);
   }
 
-  onSubmitClick (){
 
-  }
   getTextFeild (InputType: string){
     if ( InputType == "RT") {
         return true;
@@ -132,8 +133,58 @@ export class QuestionComponent implements OnInit {
       // console.log(sliceResult);
     }
   }
+  getQueryString(){
+    let Id;
+    let p;
+    this.sub = this.activatedRoute.params.subscribe(
+      params => {
+        if (params['Id'] !== undefined ) {
+          Id = params['Id'];
+        }
+      }
+    );
+    this.sub = this.activatedRoute.queryParams.subscribe(
+      params => {
+        if (params['p'] !== undefined ) {
+          p = params['p'];
+        }
+      }
+    );
+    this.answer.AppealerID = p;
+    this.answer.VersionNo = Id;
+    return Id+'?p='+p;
+  }
 
+  onSubmit (data:AnwserPoll){
+    let result : string;
+    // result = JSON.stringify(data);
+    result = `AppealerID=` + data.AppealerID +
+             `&PollVersionNo=`  + data.VersionNo +
+             `&Replies=`    + JSON.stringify(data.FillItems);
+    this.sub.push(
+    this.questionService.postData(result).subscribe(
+      data => {
+        if (data) {
 
+          this.pollDone = !this.pollDone;
+        }
+        else {
+          alert(`資料上傳不成功。請檢查！`);
+        }
+      },
+      err => {
+        console.log(err.status)
+        if(err.status === 400){
+
+          alert('sorry');
+        } else {
+          console.log(err);
+        }
+
+      }
+    )
+  );
+  }
   ngOnInit() {
     this.questionAsync();
   }

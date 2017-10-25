@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import { Http, Response, RequestOptions, Headers } from '@angular/http';
 import { Observable }     from 'rxjs/Observable';
 import {Poll} from "./question";
 import '../shared/rxjs-operators';
@@ -8,15 +8,22 @@ import '../shared/rxjs-operators';
 export class QuestionService {
   questionURL: string;
   constructor( private http: Http) {
-    this.questionURL = 'assets/poll_v2.json';
+    this.questionURL = 'http://ndemo.tw-futaba.com.tw/KCGWebAPI/api/poll/';
+
   }
 
-  getQuestion() : Observable<Poll> {
-    return this.http.get(this.questionURL)
+  getQuestion(urlQuery:string) : Observable<Poll> {
+    return this.http.get(this.questionURL+urlQuery)
     .map((res: Response) => res.json())
     .catch(this.handleError);
   }
+  postData(formData: string): Observable<any> {
+    let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
+    let options = new RequestOptions({ headers: headers }); // Create a request option
 
+    return this.http.post(this.questionURL, formData, options) // ...using post request
+      .map((resp: Response) => resp.json())
+  }
   private handleError (error: any) {
     let errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';

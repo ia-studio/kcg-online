@@ -1,6 +1,7 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Title }                  from '@angular/platform-browser';
 import { Case }                   from '../shared/case';
+import * as moment                from 'moment';
 
 @Component({
   selector: 'app-query-detail',
@@ -24,7 +25,9 @@ export class QueryDetailComponent implements OnInit {
     this.setTitle('案件明細 - 高雄市政府線上即時服務平台');
     window.scrollTo(0, 0);
   }
-
+  changeDateFormat(data:string){
+    return moment(data).format('YYYY-MM-DD');
+  }
   gotoquery() {
     window.location.reload();
   }

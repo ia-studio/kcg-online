@@ -68,7 +68,7 @@ const appRoutes: Routes = [
     component: ConfirmComponent
   },
   {
-    path: 'Question',
+    path: 'Question/:Id',
     component: QuestionComponent
   },
   {

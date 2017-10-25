@@ -17,7 +17,7 @@ export class AppComponent {
   news: News[] = [];
   sub: any;
 
-  public constructor(private route: ActivatedRoute, private newsService: NewsService, private globalService: GlobalService) {
+  public constructor(private route: ActivatedRoute, private newsService: NewsService, public globalService: GlobalService) {
   }
 
   showNowNews(idx: number) {
