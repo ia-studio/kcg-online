@@ -6,6 +6,8 @@ import { FormsModule, ReactiveFormsModule }                     from '@angular/f
 import { HttpModule }                                           from '@angular/http';
 import { Title }                                                from '@angular/platform-browser';
 
+import { Ng4GeoautocompleteModule } from 'ng4-geoautocomplete';
+
 import { AppComponent }                                         from './app.component';
 import { routing, appRoutingProviders }                         from './app.routes';
 import { FaqComponent,FaqDetailComponent }                      from './faq';
@@ -33,7 +35,8 @@ import { AgmCoreModule } from '@agm/core';
     routing,
     AgmCoreModule.forRoot({
       apiKey: environment.googleMapApiKey
-    })
+    }),
+    Ng4GeoautocompleteModule.forRoot()
   ],
   declarations: [
     AppComponent,

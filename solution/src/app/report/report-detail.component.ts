@@ -458,4 +458,17 @@ export class ReportDetailComponent implements OnInit, OnDestroy {
       )
     );
   } // onSubmit
+  public componentData1: any = '';
+
+  getCodeHtml(data: any): any {
+    let _temp: any = JSON.stringify(data);
+    _temp = _temp.split(',').join(',<br>');
+    _temp = _temp.split('{').join('{<br>');
+    _temp = _temp.split('}').join('<br>}');
+    return _temp;
+  }
+
+  autoCompleteCallback1(data: any): any {
+    this.componentData1 = JSON.stringify(data);
+  }
 } // export class ReportDetailComponent

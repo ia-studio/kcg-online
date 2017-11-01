@@ -106,7 +106,7 @@
 								<i class="fa fa-chevron-down"></i>
               </div>
 
-							<div class="col-md-12">
+							<div class="col-md-12" *ngIf="coords">
                 <input class="fall-width" type="text" readonly value="{{coords.latitude}}">
 								<input class="fall-width" type="text" readonly value="{{coords.longitude}}">
                 <input name="geoAddress" class="fall-width" type="text" placeholder="請點選地圖位置取讀您正確的位置" [(ngModel)]="geoAddress">
@@ -114,10 +114,15 @@
               <div class="col-md-12">
                 <p class="text-orange">可點選地圖，取得離您較近的區域。</p>
               </div>
-              <div class="col-md-12">
-								<agm-map *ngIf="coords" [latitude]="coords.latitude" [longitude]="coords.longitude" [zoom]="18" (mapClick)="changeMarker($event)">
+              <div class="col-md-12" *ngIf="coords">
+								<agm-map [latitude]="coords.latitude" [longitude]="coords.longitude" [zoom]="18" (mapClick)="changeMarker($event)">
 									<agm-marker [latitude]="coords.latitude" [longitude]="coords.longitude"></agm-marker>
-								</agm-map>
+                </agm-map>
+                <ng4geo-autocomplete (componentCallback)="autoCompleteCallback1($event)"></ng4geo-autocomplete>
+                <div class="well" style="float: left;width: 100%;margin-top: 20px;">
+                  <p>Sample Output:</p>
+                  <samp style="word-wrap: break-word;">{{componentData1}}</samp>
+                </div>
               </div>
 							<p class="col-md-12 text-gray"><br>請選擇建議事項內容所屬高雄行政區，若內容無法分區或其他縣市事項請選擇「無法分區」</p>
 						</div>

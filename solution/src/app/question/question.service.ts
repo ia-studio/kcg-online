@@ -8,7 +8,7 @@ import '../shared/rxjs-operators';
 export class QuestionService {
   questionURL: string;
   constructor( private http: Http) {
-    this.questionURL = 'https://ndemo.tw-futaba.com.tw/KCGWebAPI/api/poll/';
+    this.questionURL = 'http://ndemo.tw-futaba.com.tw/KCGWebAPI/api/poll/';
 
   }
 
